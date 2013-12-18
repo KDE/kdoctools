@@ -37,49 +37,53 @@
 extern "C" int xmlLoadExtDtdDefaultValue;
 #endif
 
-class MyPair {
+class MyPair
+{
 public:
     QString word;
-    int base;};
+    int base;
+};
 
 typedef QList<MyPair> PairList;
 
 void parseEntry(PairList &list, xmlNodePtr cur, int base)
 {
-    if ( !cur )
+    if (!cur) {
         return;
+    }
 
-    base += atoi( ( const char* )xmlGetProp(cur, ( const xmlChar* )"header") );
-    if ( base > 10 ) // 10 is the maximum
+    base += atoi((const char *)xmlGetProp(cur, (const xmlChar *)"header"));
+    if (base > 10) { // 10 is the maximum
         base = 10;
+    }
 
     /* We don't care what the top level element name is */
     cur = cur->xmlChildrenNode;
     while (cur != NULL) {
 
-        if ( cur->type == XML_TEXT_NODE ) {
-            QString words = QString::fromUtf8( ( char* )cur->content );
-            const QStringList wlist = words.simplified().split( QLatin1Char(' '), QString::SkipEmptyParts );
-            for ( QStringList::ConstIterator it = wlist.begin();
-                  it != wlist.end(); ++it )
-            {
+        if (cur->type == XML_TEXT_NODE) {
+            QString words = QString::fromUtf8((char *)cur->content);
+            const QStringList wlist = words.simplified().split(QLatin1Char(' '), QString::SkipEmptyParts);
+            for (QStringList::ConstIterator it = wlist.begin();
+                    it != wlist.end(); ++it) {
                 MyPair m;
                 m.word = *it;
                 m.base = base;
-                list.append( m );
+                list.append(m);
             }
-        } else if ( !xmlStrcmp( cur->name, (const xmlChar *) "entry") )
-            parseEntry( list, cur, base );
+        } else if (!xmlStrcmp(cur->name, (const xmlChar *) "entry")) {
+            parseEntry(list, cur, base);
+        }
 
         cur = cur->next;
     }
 
 }
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
 
     // xsltSetGenericDebugFunc(stderr, NULL);
-
 
     /*options.add("stylesheet <xsl>", ki18n("Stylesheet to use"));
     options.add("stdout", ki18n("Output whole document to stdout"));
@@ -92,7 +96,7 @@ int main(int argc, char **argv) {
     options.add("param <key>=<value>", ki18n("Parameters to pass to the stylesheet"));
     options.add("+xml", ki18n("The file to transform"));*/
 
-    QCoreApplication app( argc, argv );
+    QCoreApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("meinproc"));
     app.setApplicationVersion(QStringLiteral("5.0"));
 
@@ -113,27 +117,31 @@ int main(int argc, char **argv) {
 
     if (parser.positionalArguments().count() != 1) {
         parser.showHelp();
-        return ( 1 );
+        return (1);
     }
 
     exsltRegisterAll();
 
     // Need to set SRCDIR before calling setupStandardDirs
     QString srcdir;
-    if (parser.isSet(QStringLiteral("srcdir")))
+    if (parser.isSet(QStringLiteral("srcdir"))) {
         srcdir = QDir(parser.value(QStringLiteral("srcdir"))).absolutePath();
+    }
     setupStandardDirs(srcdir);
 
     LIBXML_TEST_VERSION
 
     const QString checkFilename = parser.positionalArguments().first();
-    CheckFileResult ckr = checkFile( checkFilename );
-    if ( ckr != CheckFileSuccess )
-    {
-        if ( ckr == CheckFileDoesNotExist ) qWarning() << "File '" << checkFilename << "' does not exist.";
-        else if ( ckr == CheckFileIsNotFile ) qWarning() << "'" << checkFilename << "' is not a file.";
-        else if ( ckr == CheckFileIsNotReadable ) qWarning() << "File '" << checkFilename << "' is not readable.";
-        return ( 2 );
+    CheckFileResult ckr = checkFile(checkFilename);
+    if (ckr != CheckFileSuccess) {
+        if (ckr == CheckFileDoesNotExist) {
+            qWarning() << "File '" << checkFilename << "' does not exist.";
+        } else if (ckr == CheckFileIsNotFile) {
+            qWarning() << "'" << checkFilename << "' is not a file.";
+        } else if (ckr == CheckFileIsNotReadable) {
+            qWarning() << "File '" << checkFilename << "' is not readable.";
+        }
+        return (2);
     }
 
     if (parser.isSet(QStringLiteral("check"))) {
@@ -145,14 +153,15 @@ int main(int argc, char **argv) {
 #if defined( XMLLINT )
         exe = QStringLiteral(XMLLINT);
 #endif
-        if ( !QFileInfo( exe ).isExecutable() ) {
+        if (!QFileInfo(exe).isExecutable()) {
             exe = QStandardPaths::findExecutable(QStringLiteral("xmllint"));
         }
 
-        CheckResult cr = check( checkFilename, exe, catalogs );
-        if ( cr != CheckSuccess )
-        {
-            if ( cr == CheckNoXmllint ) qWarning() << "couldn't find xmllint";
+        CheckResult cr = check(checkFilename, exe, catalogs);
+        if (cr != CheckSuccess) {
+            if (cr == CheckNoXmllint) {
+                qWarning() << "couldn't find xmllint";
+            }
             return 1;
         }
     }
@@ -175,44 +184,47 @@ int main(int argc, char **argv) {
         const QStringList paramList = parser.values(QStringLiteral("param"));
         QStringList::ConstIterator it = paramList.constBegin();
         QStringList::ConstIterator end = paramList.constEnd();
-        for ( ; it != end; ++it ) {
+        for (; it != end; ++it) {
             const QString tuple = *it;
-            const int ch = tuple.indexOf( QLatin1Char('=') );
-            if ( ch == -1 ) {
+            const int ch = tuple.indexOf(QLatin1Char('='));
+            if (ch == -1) {
                 qWarning() << "Key-Value tuple '" << tuple << "' lacks a '='!";
-                return( 2 );
+                return (2);
             }
-            params.append( qstrdup( tuple.left( ch ).toUtf8().constData() ) );
-            params.append( qstrdup( tuple.mid( ch + 1 ).toUtf8().constData() )  );
+            params.append(qstrdup(tuple.left(ch).toUtf8().constData()));
+            params.append(qstrdup(tuple.mid(ch + 1).toUtf8().constData()));
         }
     }
-    params.append( NULL );
+    params.append(NULL);
 
     bool index = parser.isSet(QStringLiteral("htdig"));
     QString tss = parser.value(QStringLiteral("stylesheet"));
-    if ( tss.isEmpty() )
+    if (tss.isEmpty()) {
         tss = QStringLiteral("customization/kde-chunk.xsl");
-    if ( index )
+    }
+    if (index) {
         tss = QStringLiteral("customization/htdig_index.xsl");
+    }
 
     tss = locateFileInDtdResource(tss);
 #ifndef MEINPROC_NO_KARCHIVE
     const QString cache = parser.value(QStringLiteral("cache"));
 #else
-    if(parser.isSet("cache"))
+    if (parser.isSet("cache")) {
         qWarning() << QCoreApplication::translate("The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
+    }
 #endif
     const bool usingStdOut = parser.isSet(QStringLiteral("stdout"));
     const bool usingOutput = parser.isSet(QStringLiteral("output"));
     const QString outputOption = parser.value(QStringLiteral("output"));
 
-    if ( index ) {
+    if (index) {
         xsltStylesheetPtr style_sheet =
             xsltParseStylesheetFile((const xmlChar *)tss.toLatin1().data());
 
         if (style_sheet != NULL) {
 
-            xmlDocPtr doc = xmlParseFile( QFile::encodeName( checkFilename ).constData() );
+            xmlDocPtr doc = xmlParseFile(QFile::encodeName(checkFilename).constData());
 
             xmlDocPtr res = xsltApplyStylesheet(style_sheet, doc, &params[0]);
 
@@ -221,17 +233,17 @@ int main(int argc, char **argv) {
             if (res != NULL) {
                 xmlNodePtr cur = xmlDocGetRootElement(res);
                 if (!cur || xmlStrcmp(cur->name, (const xmlChar *) "entry")) {
-                    fprintf(stderr,"document of the wrong type, root node != entry");
+                    fprintf(stderr, "document of the wrong type, root node != entry");
                     xmlFreeDoc(res);
-                    return(1);
+                    return (1);
                 }
                 PairList list;
-                parseEntry( list, cur, 0 );
+                parseEntry(list, cur, 0);
                 int wi = 0;
-                for ( PairList::ConstIterator it = list.constBegin(); it != list.constEnd();
-                      ++it, ++wi )
-                    fprintf( stdout, "w\t%s\t%d\t%d\n", ( *it ).word.toUtf8().data(),
-                             1000*wi/list.count(), ( *it ).base );
+                for (PairList::ConstIterator it = list.constBegin(); it != list.constEnd();
+                        ++it, ++wi)
+                    fprintf(stdout, "w\t%s\t%d\t%d\n", (*it).word.toUtf8().data(),
+                            1000 * wi / list.count(), (*it).base);
 
                 xmlFreeDoc(res);
             } else {
@@ -242,15 +254,15 @@ int main(int argc, char **argv) {
         }
 
     } else {
-        QString output = transform(checkFilename , tss, params);
+        QString output = transform(checkFilename, tss, params);
         if (output.isEmpty()) {
             fprintf(stderr, "unable to parse %s\n", checkFilename.toLocal8Bit().data());
-            return(1);
+            return (1);
         }
 
 #ifndef MEINPROC_NO_KARCHIVE
-        if ( !cache.isEmpty() ) {
-            if ( !saveToCache( output, cache ) ) {
+        if (!cache.isEmpty()) {
+            if (!saveToCache(output, cache)) {
                 qWarning() << QCoreApplication::translate("main", "Could not write to cache file %1.").arg(cache);
             }
             goto end;
@@ -260,10 +272,10 @@ int main(int argc, char **argv) {
         doOutput(output, usingStdOut, usingOutput, outputOption, true /* replaceCharset */);
     }
 #ifndef MEINPROC_NO_KARCHIVE
- end:
+end:
 #endif
     xmlCleanupParser();
     xmlMemoryDump();
-    return(0);
+    return (0);
 }
 

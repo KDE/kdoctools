@@ -5,18 +5,16 @@
 #include <QDebug>
 #include <QString>
 
-enum CheckFileResult
-{
+enum CheckFileResult {
     CheckFileSuccess,
     CheckFileDoesNotExist,
     CheckFileIsNotFile,
     CheckFileIsNotReadable
 };
 
-CheckFileResult checkFile( const QString &checkFilename );
+CheckFileResult checkFile(const QString &checkFilename);
 
-enum CheckResult
-{
+enum CheckResult {
     CheckSuccess,
     CheckNoOut,
     CheckNoXmllint

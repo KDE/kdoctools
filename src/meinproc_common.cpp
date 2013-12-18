@@ -8,19 +8,16 @@
 
 #include <cstdlib>
 
-CheckFileResult checkFile( const QString &checkFilename )
+CheckFileResult checkFile(const QString &checkFilename)
 {
     const QFileInfo checkFile(checkFilename);
-    if (!checkFile.exists())
-    {
+    if (!checkFile.exists()) {
         return CheckFileDoesNotExist;
     }
-    if (!checkFile.isFile())
-    {
+    if (!checkFile.isFile()) {
         return CheckFileIsNotFile;
     }
-    if (!checkFile.isReadable())
-    {
+    if (!checkFile.isReadable()) {
         return CheckFileIsNotReadable;
     }
     return CheckFileSuccess;
@@ -29,28 +26,29 @@ CheckFileResult checkFile( const QString &checkFilename )
 CheckResult check(const QString &checkFilename, const QString &exe, const QByteArray &catalogs)
 {
     const QString pwd_buffer = QDir::currentPath();
-    const QFileInfo file( checkFilename );
+    const QFileInfo file(checkFilename);
 
-    qputenv( "XML_CATALOG_FILES", catalogs);
-    if ( QFileInfo( exe ).isExecutable() ) {
-        QDir::setCurrent( file.absolutePath() );
+    qputenv("XML_CATALOG_FILES", catalogs);
+    if (QFileInfo(exe).isExecutable()) {
+        QDir::setCurrent(file.absolutePath());
         QString cmd = exe;
         cmd += QStringLiteral(" --valid --noout ");
         cmd += file.fileName();
         cmd += QStringLiteral(" 2>&1");
-        FILE *xmllint = popen( QFile::encodeName( cmd ).constData(), "r" );
+        FILE *xmllint = popen(QFile::encodeName(cmd).constData(), "r");
         char buf[ 512 ];
         bool noout = true;
         unsigned int n;
-        while ( ( n = fread(buf, 1, sizeof( buf ) - 1, xmllint ) ) ) {
+        while ((n = fread(buf, 1, sizeof(buf) - 1, xmllint))) {
             noout = false;
             buf[ n ] = '\0';
-            fputs( buf, stderr );
+            fputs(buf, stderr);
         }
-        pclose( xmllint );
-        QDir::setCurrent( pwd_buffer );
-        if ( !noout )
+        pclose(xmllint);
+        QDir::setCurrent(pwd_buffer);
+        if (!noout) {
             return CheckNoOut;
+        }
     } else {
         return CheckNoXmllint;
     }
@@ -59,19 +57,21 @@ CheckResult check(const QString &checkFilename, const QString &exe, const QByteA
 
 void doOutput(QString output, bool usingStdOut, bool usingOutput, const QString &outputOption, bool replaceCharset)
 {
-    if (output.indexOf( QStringLiteral("<FILENAME ") ) == -1 || usingStdOut || usingOutput )
-    {
+    if (output.indexOf(QStringLiteral("<FILENAME ")) == -1 || usingStdOut || usingOutput) {
         QFile file;
-        if ( usingStdOut ) {
-            file.open( stdout, QIODevice::WriteOnly );
+        if (usingStdOut) {
+            file.open(stdout, QIODevice::WriteOnly);
         } else {
-            if ( usingOutput )
-                file.setFileName( outputOption );
-            else
-                file.setFileName( QStringLiteral("index.html") );
+            if (usingOutput) {
+                file.setFileName(outputOption);
+            } else {
+                file.setFileName(QStringLiteral("index.html"));
+            }
             file.open(QIODevice::WriteOnly);
         }
-        if (replaceCharset) replaceCharsetHeader( output );
+        if (replaceCharset) {
+            replaceCharsetHeader(output);
+        }
 #ifdef Q_OS_WIN
         QByteArray data = output.toUtf8();
 #else
@@ -83,19 +83,22 @@ void doOutput(QString output, bool usingStdOut, bool usingOutput, const QString 
         int index = 0;
         while (true) {
             index = output.indexOf(QStringLiteral("<FILENAME "), index);
-            if (index == -1)
+            if (index == -1) {
                 break;
+            }
             int filename_index = index + strlen("<FILENAME filename=\"");
 
             const QString filename = output.mid(filename_index,
-                                            output.indexOf(QLatin1Char('\"'), filename_index) -
-                                            filename_index);
+                                                output.indexOf(QLatin1Char('\"'), filename_index) -
+                                                filename_index);
 
             QString filedata = splitOut(output, index);
             QFile file(filename);
             file.open(QIODevice::WriteOnly);
-            if (replaceCharset) replaceCharsetHeader( filedata );
-            const QByteArray data = fromUnicode( filedata );
+            if (replaceCharset) {
+                replaceCharsetHeader(filedata);
+            }
+            const QByteArray data = fromUnicode(filedata);
             file.write(data.data(), data.length());
             file.close();
 

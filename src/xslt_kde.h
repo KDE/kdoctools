@@ -3,6 +3,6 @@
 
 #include <QtCore/QString>
 
-bool saveToCache( const QString &contents, const QString &filename );
+bool saveToCache(const QString &contents, const QString &filename);
 
 #endif
