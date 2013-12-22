@@ -1,10 +1,10 @@
-# README for KDE's Doxygen tools
+# KDE's Doxygen tools
 
 Writing dox is beyond the scope of this README -- see the notes at
 <http://techbase.kde.org/Policies/Library_Documentation_Policy>.
 You can generate dox by hand -- without even having a configured
 build directory -- as explained below. There is also documentation
-for the special tags you can enter in Makefile.am anywhere
+for the special tags you can enter in Mainpage.dox anywhere
 in a module to modify dox generation.
 
 ## Generating the documentation
@@ -83,3 +83,9 @@ files that may be overridden are:
 - `Doxyfile.global`:
     The global (brief) Doxyfile. For a long-style Doxyfile, see KDE PIM's
     doc/api/Doxyfile.pim.
+
+## Links
+
+- Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
+- IRC channel: #kde-devel on Freenode
+- Git repository: <https://projects.kde.org/projects/frameworks/apidox/repository>
