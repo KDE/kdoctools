@@ -21,10 +21,13 @@ add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
 target_link_libraries(KF5XsltKde Qt5::Core KF5::Archive)
 set_target_properties(KF5XsltKde PROPERTIES EXPORT_NAME XsltKde)
+
+target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/XsltKde>")
+
 install(TARGETS KF5XsltKde ${INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES
     xslt.h xslt_kde.h
-    DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+    DESTINATION ${INCLUDE_INSTALL_DIR}/XsltKde COMPONENT Devel
 )
 install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
