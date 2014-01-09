@@ -1,6 +1,19 @@
-# KDE's Doxygen tools
+# KDE Doxygen Tools
 
-Writing dox is beyond the scope of this README -- see the notes at
+## Introduction
+
+This framework contains scripts and data for building API documentation (dox) in
+a standard format and style.
+
+The Doxygen tool is used to do the actual documentation extraction and
+formatting, but this framework provides a wrapper script to make generating the
+documentation more convenient (including reading settings from the target
+framework or other module) and a standard template for the generated
+documentation.
+
+## Writing documentation
+
+Writing dox is beyond the scope of this documentation -- see the notes at
 <http://techbase.kde.org/Policies/Library_Documentation_Policy>.
 You can generate dox by hand -- without even having a configured
 build directory -- as explained below. There is also documentation
@@ -88,4 +101,4 @@ files that may be overridden are:
 
 - Mailing list: <https://mail.kde.org/mailman/listinfo/kde-frameworks-devel>
 - IRC channel: #kde-devel on Freenode
-- Git repository: <https://projects.kde.org/projects/frameworks/apidox/repository>
+- Git repository: <https://projects.kde.org/projects/frameworks/kapidox/repository>
