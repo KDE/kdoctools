@@ -12,12 +12,12 @@
 </refentryinfo>
 
 <refmeta>
-<refentrytitle>qtoptions</refentrytitle>
+<refentrytitle>qt5options</refentrytitle>
 <manvolnum>7</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname>qtoptions</refname>
+<refname>qt5options</refname>
 <refpurpose>Common commandline options for all applications based on the Qt toolkit</refpurpose>
 </refnamediv>
 
@@ -232,7 +232,7 @@ visual on an 8-bit display.</para>
 
 <refsect1>
 <title>See Also</title>
-<para><replaceable>kdeoptions</replaceable>(7)</para>
+<para><replaceable>kf5options</replaceable>(7)</para>
 
 </refsect1>
 

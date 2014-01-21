@@ -1,5 +1,5 @@
-add_subdirectory(checkXML)
+add_subdirectory(checkXML5)
 add_subdirectory(meinproc5)
 
-add_subdirectory(kdeoptions)
-add_subdirectory(qtoptions)
+add_subdirectory(kf5options)
+add_subdirectory(qt5options)

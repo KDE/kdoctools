@@ -86,11 +86,11 @@ install(FILES
 )
 
 
-configure_file(checkXML.in.cmake ${CMAKE_CURRENT_BINARY_DIR}/checkXML )
+configure_file(checkXML5.in.cmake ${CMAKE_CURRENT_BINARY_DIR}/checkXML5 )
 include(ConfigureChecks.cmake)
 configure_file(config-kdoctools.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdoctools.h )
 
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/checkXML DESTINATION ${BIN_INSTALL_DIR} )
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/checkXML5 DESTINATION ${BIN_INSTALL_DIR} )
 
 install( FILES
     KF5DocToolsMacros.cmake

@@ -8,17 +8,17 @@
 <title>KDE User's Manual</title>
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
 <date>2004-02-02</date>
-<productname>K Desktop Environment</productname>
+<productname>KDE Software</productname>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle>kdeoptions</refentrytitle>
+<refentrytitle>kf5options</refentrytitle>
 <manvolnum>7</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname>kdeoptions</refname>
-<refpurpose>Common commandline options for all applications based on the KDE libraries</refpurpose>
+<refname>kf5options</refname>
+<refpurpose>Common commandline options for all applications based on KDE Frameworks 5</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -69,7 +69,7 @@ titlebar.</para></listitem>
 
 <refsect1>
 <title>See Also</title>
-<para><replaceable>qtoptions</replaceable>(7)</para>
+<para><replaceable>qt5options</replaceable>(7)</para>
 
 </refsect1>
 
