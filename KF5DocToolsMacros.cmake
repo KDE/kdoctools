@@ -162,7 +162,3 @@ macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
       install(FILES ${_outdoc} DESTINATION ${_installDest}/man${_section})
    endif(_installDest)
 endmacro (KDOCTOOLS_CREATE_MANPAGE)
-
-macro (KDE4_CREATE_HANDBOOK _docbook)
-    message(STATUS "KDE4_CREATE_HANDBOOK() is deprecated. Call the macro KDOCTOOLS_CREATE_HANDBOOK instead, this will give you targets htmlhandbook for creating the html help.")
-endmacro (KDE4_CREATE_HANDBOOK)
