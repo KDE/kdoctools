@@ -3,13 +3,13 @@ cmake_minimum_required(VERSION 2.8.12)
 project(KDocTools)
 
 # ECM setup
-find_package(ECM 0.0.9 REQUIRED NO_MODULE)
+find_package(ECM 0.0.10 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(FeatureSummary)
 include(ECMSetupVersion)
 
-set(KF5_VERSION "5.0.0")
+set(KF5_VERSION "4.96.0")
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfigVersion.cmake")
