@@ -18,7 +18,7 @@
 #
 #  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc5 executable
 #
-#  KDE4_SERIALIZE_TOOL - wrapper to serialize potentially resource-intensive commands during
+#  KDOCTOOLS_SERIALIZE_TOOL - wrapper to serialize potentially resource-intensive commands during
 #                      parallel builds (set to 'icecc' when using icecream)
 #
 # The following variables are defined for the various tools required to
@@ -27,12 +27,13 @@
 #  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc5 executable
 #
 
+set(KDOCTOOLS_SERIALIZE_TOOL "" CACHE STRING "Tool to serialize resource-intensive commands in parallel builds")
 set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF5::meinproc5")
 
-if(KDE4_SERIALIZE_TOOL)
+if(KDOCTOOLS_SERIALIZE_TOOL)
     # parallel build with many meinproc invocations can consume a huge amount of memory
-    set(KDOCTOOLS_MEINPROC_EXECUTABLE ${KDE4_SERIALIZE_TOOL} ${KDOCTOOLS_MEINPROC_EXECUTABLE})
-endif(KDE4_SERIALIZE_TOOL)
+    set(KDOCTOOLS_MEINPROC_EXECUTABLE ${KDOCTOOLS_SERIALIZE_TOOL} ${KDOCTOOLS_MEINPROC_EXECUTABLE})
+endif(KDOCTOOLS_SERIALIZE_TOOL)
 
 macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
    get_filename_component(_input ${_docbook} ABSOLUTE)
