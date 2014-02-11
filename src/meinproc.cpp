@@ -173,7 +173,7 @@ int main(int argc, char **argv)
 #ifndef Q_OS_WIN
     // libxslt parses the path given to outputFile as XPath expression which fails
     // see libxslt/xsltEvalUserParams
-    // this parameter is used only by share/apps/ksgmltools2/docbook/xsl/html/math.xsl
+    // this parameter is used only by share/kdoctools5/docbook/xsl/html/math.xsl
     // and is not supported on windows yet
     if (parser.isSet(QStringLiteral("output"))) {
         params.append(qstrdup("outputFile"));
