@@ -1,5 +1,12 @@
 #include "xslt.h"
 
+#ifdef Q_OS_WIN
+//one of the xslt/xml headers pulls in windows.h and breaks <limits>
+#define NOMINMAX
+#include "../config-kdoctools.h"
+#include <QtCore/QHash>
+#endif
+
 #include <libxslt/xsltconfig.h>
 #include <libxslt/xsltInternals.h>
 #include <libxslt/transform.h>
@@ -16,11 +23,6 @@
 #include <QtCore/QTextCodec>
 #include <QtCore/QUrl>
 #include <QtCore/QDebug>
-
-#ifdef Q_OS_WIN
-#include <config-kdoctools.h>
-#include <QtCore/QHash>
-#endif
 
 #if !defined( SIMPLE_XSLT )
 extern HelpProtocol *slave;

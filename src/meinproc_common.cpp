@@ -8,6 +8,18 @@
 
 #include <cstdlib>
 
+#ifdef Q_OS_WIN
+static inline FILE *popen(const char *command, const char *mode)
+{
+    return _popen(command, mode);
+}
+
+static inline int pclose(FILE* file)
+{
+    return _pclose(file);
+}
+#endif
+
 CheckFileResult checkFile(const QString &checkFilename)
 {
     const QFileInfo checkFile(checkFilename);
