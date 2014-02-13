@@ -384,7 +384,13 @@ QString locateFileInDtdResource(const QString &file)
         if (QFile::exists(test)) {
             return test;
         }
+        qDebug() << "Could not locate file:" << file;
         return QString();
     }
-    return QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kdoctools5/") + file);
+    const QString result = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+            QStringLiteral("kdoctools5/") + file);
+    if (result.isEmpty()) {
+        qDebug() << "Could not locate file:" << file;
+    }
+    return result;
 }
