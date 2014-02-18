@@ -9,6 +9,7 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 include(FeatureSummary)
 include(ECMSetupVersion)
 include(ECMMarkNonGuiExecutable)
+include(ECMPackageConfigHelpers)
 
 set(KF5_VERSION "4.96.0")
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
