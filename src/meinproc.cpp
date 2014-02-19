@@ -145,7 +145,7 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("check"))) {
 
         QByteArray catalogs;
-        catalogs += getKDocToolsCatalog();
+        catalogs += getKDocToolsCatalogs().join(" ").toLocal8Bit();
         QString exe;
 #if defined( XMLLINT )
         exe = QStringLiteral(XMLLINT);

@@ -361,7 +361,7 @@ void setupStandardDirs(const QString &srcdir)
     QByteArray catalogs;
 
     if (srcdir.isEmpty()) {
-        catalogs += getKDocToolsCatalog();
+        catalogs += getKDocToolsCatalogs().join(" ").toLocal8Bit();
     } else {
         catalogs += QUrl::fromLocalFile(srcdir + QStringLiteral("/customization/catalog.xml")).toEncoded();
         s_dtdDirs()->srcdir = srcdir;
@@ -371,7 +371,7 @@ void setupStandardDirs(const QString &srcdir)
     xmlInitializeCatalog();
 }
 
-QString locateFileInDtdResource(const QString &file)
+QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
 {
     QFileInfo info(file);
     if (info.exists() && info.isAbsolute()) {
@@ -388,19 +388,40 @@ QString locateFileInDtdResource(const QString &file)
         return QString();
     }
     const QString result = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
-            QStringLiteral("kdoctools5/") + file);
+            QStringLiteral("kdoctools5/") + file, option);
     if (result.isEmpty()) {
         qDebug() << "Could not locate file:" << file;
     }
     return result;
 }
 
-QByteArray getKDocToolsCatalog()
+QStringList getKDocToolsCatalogs()
 {
-    // find the catalog
-    const QString customizationCatalog = locateFileInDtdResource(QStringLiteral("customization/catalog.xml"));
-    if (customizationCatalog.isEmpty()) {
-        return QByteArray();
+    // find all catalogs as catalog*.xml, and add them to the list,
+    // starting from catalog.xml (the main one).
+    const QString customizationDirName = locateFileInDtdResource(QStringLiteral("customization"),
+                                                                 QStandardPaths::LocateDirectory);
+    if (customizationDirName.isEmpty()) {
+        return QStringList();
     }
-    return QUrl::fromLocalFile(customizationCatalog).toEncoded();
+    QDir customizationDir = QDir(customizationDirName);
+    const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
+    const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
+                                           QDir::Files | QDir::NoSymLinks, QDir::Name);
+    QStringList catalogFiles;
+    foreach (const QFileInfo &fileInfo, catalogInfoFiles) {
+        const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
+        if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {
+           catalogFiles.prepend(fullFileName);
+        } else {
+           catalogFiles.append(fullFileName);
+        }
+    }
+
+    QStringList catalogs;
+    foreach (const QString &aCatalog, catalogFiles) {
+        catalogs << aCatalog;
+    }
+    //qDebug() << "Found catalogs: " << catalogs;
+    return catalogs;
 }

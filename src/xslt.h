@@ -2,6 +2,7 @@
 #define _MEIN_XSLT_H_
 
 #include <libxml/parser.h>
+#include <QtCore/QStandardPaths>
 #include <QtCore/QString>
 #include <QtCore/QVector>
 
@@ -16,7 +17,7 @@ void replaceCharsetHeader(QString &output);
 bool saveToCache(const QString &contents, const QString &filename);
 
 void setupStandardDirs(const QString &srcdir = QString());
-QString locateFileInDtdResource(const QString &file);
-QByteArray getKDocToolsCatalog();
+QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option=QStandardPaths::LocateFile);
+QStringList getKDocToolsCatalogs();
 
 #endif
