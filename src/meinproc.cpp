@@ -145,8 +145,7 @@ int main(int argc, char **argv)
     if (parser.isSet(QStringLiteral("check"))) {
 
         QByteArray catalogs;
-        catalogs += QUrl::fromLocalFile(locateFileInDtdResource(QStringLiteral("customization/catalog.xml"))).toEncoded();
-
+        catalogs += getKDocToolsCatalog();
         QString exe;
 #if defined( XMLLINT )
         exe = QStringLiteral(XMLLINT);

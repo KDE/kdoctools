@@ -361,12 +361,12 @@ void setupStandardDirs(const QString &srcdir)
     QByteArray catalogs;
 
     if (srcdir.isEmpty()) {
-        catalogs += QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kdoctools5/customization/catalog.xml"))).toEncoded();
+        catalogs += getKDocToolsCatalog();
     } else {
         catalogs += QUrl::fromLocalFile(srcdir + QStringLiteral("/customization/catalog.xml")).toEncoded();
         s_dtdDirs()->srcdir = srcdir;
     }
-
+    //qDebug() << "XML_CATALOG_FILES: " << catalogs;
     qputenv("XML_CATALOG_FILES", catalogs);
     xmlInitializeCatalog();
 }
@@ -393,4 +393,14 @@ QString locateFileInDtdResource(const QString &file)
         qDebug() << "Could not locate file:" << file;
     }
     return result;
+}
+
+QByteArray getKDocToolsCatalog()
+{
+    // find the catalog
+    const QString customizationCatalog = locateFileInDtdResource(QStringLiteral("customization/catalog.xml"));
+    if (customizationCatalog.isEmpty()) {
+        return QByteArray();
+    }
+    return QUrl::fromLocalFile(customizationCatalog).toEncoded();
 }

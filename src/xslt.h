@@ -17,5 +17,6 @@ bool saveToCache(const QString &contents, const QString &filename);
 
 void setupStandardDirs(const QString &srcdir = QString());
 QString locateFileInDtdResource(const QString &file);
+QByteArray getKDocToolsCatalog();
 
 #endif
