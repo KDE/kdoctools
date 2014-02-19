@@ -178,6 +178,7 @@
 <!ENTITY karbon14	"<application>Karbon14</application>">
 <!ENTITY kasteroids	"<application>KAsteroids</application>">
 <!ENTITY kate	"<application>Kate</application>">
+<!ENTITY katepart	"<application>KatePart</application>">
 <!ENTITY katomic	"<application>KAtomic</application>">
 <!ENTITY kbabel	"<application>KBabel</application>">
 <!ENTITY kbabeldict	"<application>KBabelDict</application>">
