@@ -13,7 +13,7 @@ else()
     # removed using get_filename_component(... ABSOLUTE)
     install(CODE
         "get_filename_component(NORMALIZED_INSTALL_PATH \"${CMAKE_INSTALL_PREFIX}/${DATA_INSTALL_DIR}/kdoctools5/customization/dtd\" ABSOLUTE)
-        file(RELATIVE_PATH DOCBOOKXML_CURRENTDTD_DIR \"${NORMALIZED_INSTALL_PATH}\" \"${DOCBOOKXML_CURRENTDTD_DIR}\")
+        file(RELATIVE_PATH DocBookXML4_DTD_DIR \"${NORMALIZED_INSTALL_PATH}\" \"${DocBookXML4_DTD_DIR}\")
         configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install)"
     )
     get_filename_component(_custom_dtd_kdex_name ${_custom_dtd_kdex} NAME)
