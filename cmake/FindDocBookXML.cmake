@@ -1,59 +1,74 @@
 # Try to find DocBook XML DTDs
 # Once done, it will define:
 #
-#  DocBookXML_FOUND - system has the required DocBook XML DTDs
-#  DocBookXML_CURRENTDTD_VERSION - the version of currently used DocBook XML
+#  DocBookXML_FOUND - system has the requested DocBook XML DTDs
+#  DocBookXML_DTD_VERSION - the version of requested DocBook XML
 #     DTD
-#  DocBookXML_CURRENTDTD_DIR - the directory containing the definition of
-#     the currently used DocBook XML version
+#  DocBookXML_DTD_DIR - the directory containing the definition of
+#     the DocBook XML
 
-# Copyright (c) 2010, Luigi Toscano, <luigi.toscano@tiscali.it>
+# Copyright (c) 2010, 2014 Luigi Toscano, <luigi.toscano@tiscali.it>
 #
 # Redistribution and use is allowed according to the terms of the BSD license.
 # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
 
-set (DocBookXML_CURRENTDTD_VERSION "4.2"
-     CACHE INTERNAL "Required version of XML DTDs")
 
-set (DTD_PATH_LIST
-    share/xml/docbook/schema/dtd/${DocBookXML_CURRENTDTD_VERSION}
-    share/xml/docbook/xml-dtd-${DocBookXML_CURRENTDTD_VERSION}
-    share/sgml/docbook/xml-dtd-${DocBookXML_CURRENTDTD_VERSION}
-    share/xml/docbook/${DocBookXML_CURRENTDTD_VERSION}
-)
+if (NOT DocBookXML_FIND_VERSION)
+     set(DocBookXML_FIND_VERSION "4.2")
+endif ()
 
-find_path (DocBookXML_CURRENTDTD_DIR docbookx.dtd
-    PATHS ${CMAKE_SYSTEM_PREFIX_PATH}
-    PATH_SUFFIXES ${DTD_PATH_LIST}
-)
+set (DocBookXML_DTD_VERSION ${DocBookXML_FIND_VERSION}
+     CACHE INTERNAL "Required version of DocBook4 XML DTDs")
 
-if (NOT DocBookXML_CURRENTDTD_DIR)
-    # hacks for systems that use the package version in the DTD dirs,
-    # e.g. Fedora, OpenSolaris
-    set (DTD_PATH_LIST)
-    foreach (DTD_PREFIX_ITER ${CMAKE_SYSTEM_PREFIX_PATH})
-        file(GLOB DTD_SUFFIX_ITER RELATIVE ${DTD_PREFIX_ITER}
-            ${DTD_PREFIX_ITER}/share/sgml/docbook/xml-dtd-${DocBookXML_CURRENTDTD_VERSION}-*
-        )
-        if (DTD_SUFFIX_ITER)
-            list (APPEND DTD_PATH_LIST ${DTD_SUFFIX_ITER})
-        endif ()
-    endforeach ()
+function (locate_version version found_dir)
 
-    find_path (DocBookXML_CURRENTDTD_DIR docbookx.dtd
+    set (DTD_PATH_LIST
+        share/xml/docbook/schema/dtd/${version}
+        share/xml/docbook/xml-dtd-${version}
+        share/sgml/docbook/xml-dtd-${version}
+        share/xml/docbook/${version}
+    )
+
+    find_path (searched_dir docbookx.dtd
         PATHS ${CMAKE_SYSTEM_PREFIX_PATH}
         PATH_SUFFIXES ${DTD_PATH_LIST}
     )
-endif ()
+
+    if (NOT searched_dir)
+        # hacks for systems that use the package version in the DTD dirs,
+        # e.g. Fedora, OpenSolaris
+        set (DTD_PATH_LIST)
+        foreach (DTD_PREFIX_ITER ${CMAKE_SYSTEM_PREFIX_PATH})
+            file(GLOB DTD_SUFFIX_ITER RELATIVE ${DTD_PREFIX_ITER}
+                ${DTD_PREFIX_ITER}/share/sgml/docbook/xml-dtd-${version}-*
+            )
+            if (DTD_SUFFIX_ITER)
+                list (APPEND DTD_PATH_LIST ${DTD_SUFFIX_ITER})
+            endif ()
+        endforeach ()
+
+        find_path (searched_dir docbookx.dtd
+            PATHS ${CMAKE_SYSTEM_PREFIX_PATH}
+            PATH_SUFFIXES ${DTD_PATH_LIST}
+        )
+    endif ()
+    set (${found_dir} ${searched_dir} PARENT_SCOPE)
+endfunction()
+
+
+locate_version (${DocBookXML_DTD_VERSION} DocBookXML_DTD_DIR)
 
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args (DocBookXML
-    REQUIRED_VARS DocBookXML_CURRENTDTD_DIR DocBookXML_CURRENTDTD_VERSION
+    REQUIRED_VARS DocBookXML_DTD_DIR DocBookXML_DTD_VERSION
     FOUND_VAR DocBookXML_FOUND)
 
 #maintain backwards compatibility
-set(DOCBOOKXML_FOUND ${DocBookXML_FOUND})
-set(DOCBOOKXML_CURRENTDTD_DIR ${DocBookXML_CURRENTDTD_DIR})
-set(DOCBOOKXML_CURRENTDTD_VERSION ${DocBookXML_CURRENTDTD_VERSION})
+# legacy version
+locate_version ("4.2" DOCBOOKXML_CURRENTDTD_DIR)
+if (DOCBOOKXML_CURRENTDTD_DIR)
+    set(DOCBOOKXML_FOUND "TRUE")
+    set(DOCBOOKXML_CURRENTDTD_VERSION "4.2")
+endif ()
 
-mark_as_advanced (DocBookXML_CURRENTDTD_DIR DocBookXML_CURRENTDTD_VERSION)
+mark_as_advanced (DocBookXML_DTD_DIR DocBookXML_DTD_VERSION)
