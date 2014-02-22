@@ -1,11 +1,13 @@
-# Try to find DocBook XML DTDs
+# Try to find DocBook XML 4.x DTD.
+# By default it will find version 4.2. A different version can be specified
+# as parameter for find_package().
 # Once done, it will define:
 #
-#  DocBookXML_FOUND - system has the requested DocBook XML DTDs
-#  DocBookXML_DTD_VERSION - the version of requested DocBook XML
-#     DTD
-#  DocBookXML_DTD_DIR - the directory containing the definition of
-#     the DocBook XML
+#  DocBookXML4_FOUND - system has the requested DocBook4 XML DTDs
+#  DocBookXML4_DTD_VERSION - the version of requested DocBook4
+#     XML DTD
+#  DocBookXML4_DTD_DIR - the directory containing the definition of
+#     the DocBook4 XML
 
 # Copyright (c) 2010, 2014 Luigi Toscano, <luigi.toscano@tiscali.it>
 #
@@ -17,7 +19,7 @@ if (NOT DocBookXML_FIND_VERSION)
      set(DocBookXML_FIND_VERSION "4.2")
 endif ()
 
-set (DocBookXML_DTD_VERSION ${DocBookXML_FIND_VERSION}
+set (DocBookXML4_DTD_VERSION ${DocBookXML_FIND_VERSION}
      CACHE INTERNAL "Required version of DocBook4 XML DTDs")
 
 function (locate_version version found_dir)
@@ -56,12 +58,12 @@ function (locate_version version found_dir)
 endfunction()
 
 
-locate_version (${DocBookXML_DTD_VERSION} DocBookXML_DTD_DIR)
+locate_version (${DocBookXML4_DTD_VERSION} DocBookXML4_DTD_DIR)
 
 include(FindPackageHandleStandardArgs)
-find_package_handle_standard_args (DocBookXML
-    REQUIRED_VARS DocBookXML_DTD_DIR DocBookXML_DTD_VERSION
-    FOUND_VAR DocBookXML_FOUND)
+find_package_handle_standard_args (DocBookXML4
+    REQUIRED_VARS DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION
+    FOUND_VAR DocBookXML4_FOUND)
 
 #maintain backwards compatibility
 # legacy version
@@ -71,4 +73,4 @@ if (DOCBOOKXML_CURRENTDTD_DIR)
     set(DOCBOOKXML_CURRENTDTD_VERSION "4.2")
 endif ()
 
-mark_as_advanced (DocBookXML_DTD_DIR DocBookXML_DTD_VERSION)
+mark_as_advanced (DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION)

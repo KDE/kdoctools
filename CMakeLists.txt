@@ -44,9 +44,9 @@ set_package_properties(LibXml2 PROPERTIES
                       )
 
 
-find_package(DocBookXML)
+find_package(DocBookXML4)
 
-set_package_properties(DocBookXML PROPERTIES DESCRIPTION "DocBook XML"
+set_package_properties(DocBookXML4 PROPERTIES DESCRIPTION "DocBook XML 4"
                        URL "http://www.oasis-open.org/docbook/xml/${DOCBOOKXML_CURRENTDTD_VERSION}"
                        TYPE REQUIRED
                        PURPOSE "Required by the KDE help system to process DocBook XML"
