@@ -22,6 +22,11 @@ endif ()
 set (DocBookXML4_DTD_VERSION ${DocBookXML_FIND_VERSION}
      CACHE INTERNAL "Required version of DocBook4 XML DTDs")
 
+include(FeatureSummary)
+set_package_properties(DocBookXML4 PROPERTIES DESCRIPTION "DocBook XML 4"
+                       URL "http://www.oasis-open.org/docbook/xml/${DocBookXML4_DTD_VERSION}"
+                      )
+
 function (locate_version version found_dir)
 
     set (DTD_PATH_LIST
