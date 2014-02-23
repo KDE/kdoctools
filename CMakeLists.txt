@@ -52,8 +52,7 @@ set_package_properties(DocBookXML4 PROPERTIES
                       )
 
 find_package(DocBookXSL)
-set_package_properties(DocBookXSL PROPERTIES DESCRIPTION "DocBook XSL"
-                       URL "http://docbook.sourceforge.net/release/xsl/current/"
+set_package_properties(DocBookXSL PROPERTIES
                        TYPE REQUIRED
                        PURPOSE "Required by the KDE help system to process DocBook XML"
                       )

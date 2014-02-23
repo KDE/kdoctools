@@ -10,6 +10,11 @@
 # Redistribution and use is allowed according to the terms of the BSD license.
 # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
 
+include(FeatureSummary)
+set_package_properties(DocBookXSL PROPERTIES DESCRIPTION "DocBook XSL"
+                       URL "http://docbook.sourceforge.net/release/xsl/current/"
+                      )
+
 set (STYLESHEET_PATH_LIST
     share/xml/docbook/stylesheet/docbook-xsl
     share/xml/docbook/xsl-stylesheets
