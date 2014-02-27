@@ -24,7 +24,10 @@ endif()
 add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
 target_link_libraries(KF5XsltKde Qt5::Core KF5::Archive)
-set_target_properties(KF5XsltKde PROPERTIES EXPORT_NAME XsltKde)
+set_target_properties(KF5XsltKde PROPERTIES
+    POSITION_INDEPENDENT_CODE TRUE
+    EXPORT_NAME XsltKde
+)
 
 target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/XsltKde>")
 
