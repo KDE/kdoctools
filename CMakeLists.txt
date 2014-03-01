@@ -24,10 +24,8 @@ include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 
-if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  # KF5 frameworks
-  find_package(KF5Archive REQUIRED)
-endif()
+# KF5 frameworks
+find_package(KF5Archive REQUIRED)
 
 find_package(LibXslt)
 set_package_properties(LibXslt PROPERTIES
