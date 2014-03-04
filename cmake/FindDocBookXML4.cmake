@@ -70,12 +70,4 @@ find_package_handle_standard_args (DocBookXML4
     REQUIRED_VARS DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION
     FOUND_VAR DocBookXML4_FOUND)
 
-#maintain backwards compatibility
-# legacy version
-locate_version ("4.2" DOCBOOKXML_CURRENTDTD_DIR)
-if (DOCBOOKXML_CURRENTDTD_DIR)
-    set(DOCBOOKXML_FOUND "TRUE")
-    set(DOCBOOKXML_CURRENTDTD_VERSION "4.2")
-endif ()
-
 mark_as_advanced (DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION)
