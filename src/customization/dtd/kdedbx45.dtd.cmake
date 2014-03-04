@@ -25,12 +25,12 @@
 
     Refer to this DTD as
 
-      "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
+      "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 
     For instance:
 
-      <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
-                     "customization/dtd/kdex.dtd">
+      <!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+                     "customization/dtd/kdedbx45.dtd">
 
     and use catalog.xml or docbook.cat as the catalog file.
     Note: the system identifier is interpreted relative to the place
@@ -96,7 +96,7 @@
 <!-- ============================================================= -->
 
 <!ENTITY % DocBookDTD	    PUBLIC
-  "-//OASIS//DTD DocBook XML V4.2//EN"
+  "-//OASIS//DTD DocBook XML V4.5//EN"
   "@DocBookXML4_DTD_DIR@/docbookx.dtd"         >
 %DocBookDTD;
 

@@ -1,5 +1,5 @@
 # Try to find DocBook XML 4.x DTD.
-# By default it will find version 4.2. A different version can be specified
+# By default it will find version 4.5. A different version can be specified
 # as parameter for find_package().
 # Once done, it will define:
 #
@@ -16,7 +16,7 @@
 
 
 if (NOT DocBookXML_FIND_VERSION)
-     set(DocBookXML_FIND_VERSION "4.2")
+     set(DocBookXML_FIND_VERSION "4.5")
 endif ()
 
 set (DocBookXML4_DTD_VERSION ${DocBookXML_FIND_VERSION}

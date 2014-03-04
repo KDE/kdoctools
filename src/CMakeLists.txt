@@ -1,6 +1,6 @@
 include_directories( ${LIBXML2_INCLUDE_DIR} ${LIBXSLT_INCLUDE_DIR} )
 
-set (_custom_dtd_kdex "customization/dtd/kdex.dtd")
+set (_custom_dtd_kdex "customization/dtd/kdedbx45.dtd")
 configure_file(${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex} )
 # WARNING: this is due to severe limitations on the windows platform to keep the dtd relocateable
 # see the .xsl.cmake files for a more verbose explanation below

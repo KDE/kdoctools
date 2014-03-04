@@ -42,7 +42,7 @@ set_package_properties(LibXml2 PROPERTIES
                       )
 
 
-find_package(DocBookXML4 "4.2")
+find_package(DocBookXML4 "4.5")
 
 set_package_properties(DocBookXML4 PROPERTIES
                        TYPE REQUIRED

@@ -31,10 +31,10 @@ SGMLDECL "xml.dcl"
 
   <!-- DocBook -->
 
-  <!-- DocBook 4.2 KDE Variant V1.1 -->
+  <!-- DocBook 4.5 KDE Variant V1.1 -->
 
-  <public publicId="-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN"
-          uri="dtd/kdex.dtd"/>
+  <public publicId="-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+          uri="dtd/kdedbx45.dtd"/>
   <public publicId="-//KDE//ELEMENTS DocBook XML Hierarchy Redeclarations 2 V1.0//EN"
           uri="dtd/rdbhier2.elements"/>
   <public publicId="-//KDE//ELEMENTS DocBook XML Pool Redeclarations V1.1//EN"

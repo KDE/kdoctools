@@ -145,7 +145,7 @@ QString transform(const QString &pat, const QString &tss,
         defaultEntityLoader = xmlGetExternalEntityLoader();
         xmlSetExternalEntityLoader(xsltprocExternalEntityLoader);
 
-        replaceURLList[QLatin1String("http://www.oasis-open.org/docbook/xml/4.2")] = QString("file:///%1").arg(DOCBOOK_XML_CURRDTD);
+        replaceURLList[QLatin1String("http://www.oasis-open.org/docbook/xml/4.5")] = QString("file:///%1").arg(DOCBOOK_XML_CURRDTD);
     }
 #endif
 
