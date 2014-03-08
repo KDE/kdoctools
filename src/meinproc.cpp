@@ -167,16 +167,6 @@ int main(int argc, char **argv)
     xmlLoadExtDtdDefaultValue = 1;
 
     QVector<const char *> params;
-#ifndef Q_OS_WIN
-    // libxslt parses the path given to outputFile as XPath expression which fails
-    // see libxslt/xsltEvalUserParams
-    // this parameter is used only by share/kdoctools5/docbook/xsl/html/math.xsl
-    // and is not supported on windows yet
-    if (parser.isSet(QStringLiteral("output"))) {
-        params.append(qstrdup("outputFile"));
-        params.append(qstrdup(parser.value(QStringLiteral("output")).toLocal8Bit().constData()));
-    }
-#endif
     {
         const QStringList paramList = parser.values(QStringLiteral("param"));
         QStringList::ConstIterator it = paramList.constBegin();
