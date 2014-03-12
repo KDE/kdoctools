@@ -35,6 +35,11 @@ if(KDOCTOOLS_SERIALIZE_TOOL)
     set(KDOCTOOLS_MEINPROC_EXECUTABLE ${KDOCTOOLS_SERIALIZE_TOOL} ${KDOCTOOLS_MEINPROC_EXECUTABLE})
 endif(KDOCTOOLS_SERIALIZE_TOOL)
 
+macro(_SUGGEST_TARGET_NAME _out)
+    string(REPLACE "${CMAKE_SOURCE_DIR}/" "" ${_out} "${CMAKE_CURRENT_SOURCE_DIR}")
+    string(REGEX REPLACE "[^0-9a-zA-Z]" "-" ${_out} "${${_out}}")
+endmacro()
+
 macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
    get_filename_component(_input ${_docbook} ABSOLUTE)
    set(_doc ${CMAKE_CURRENT_BINARY_DIR}/index.cache.bz2)
@@ -60,7 +65,8 @@ macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
       DEPENDS ${_docs} ${_ssheet}
       WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
    )
-   get_filename_component(_targ ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+
+   _suggest_target_name(_targ)
    set(_targ "${_targ}-handbook")
    add_custom_target(${_targ} ALL DEPENDS ${_doc})
 
@@ -135,7 +141,7 @@ macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
       COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --stylesheet ${_ssheet} --check ${_bootstrapOption} ${_input}
       DEPENDS ${_input} ${_ssheet}
    )
-   get_filename_component(_targ ${CMAKE_CURRENT_SOURCE_DIR} NAME)
+   _suggest_target_name(_targ)
    set(_targ "${_targ}-manpage-${_base}")
    add_custom_target(${_targ} ALL DEPENDS "${_outdoc}")
 
