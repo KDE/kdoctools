@@ -397,24 +397,31 @@ QString locateFileInDtdResource(const QString &file, const QStandardPaths::Locat
 
 QStringList getKDocToolsCatalogs()
 {
-    // find all catalogs as catalog*.xml, and add them to the list,
-    // starting from catalog.xml (the main one).
-    const QString customizationDirName = locateFileInDtdResource(QStringLiteral("customization"),
-                                                                 QStandardPaths::LocateDirectory);
-    if (customizationDirName.isEmpty()) {
+    // Find all catalogs as catalog*.xml, and add them to the list, starting
+    // from catalog.xml (the main one).
+    // Using locateAll() is necessary to be able to find all catalogs when
+    // running in environments where every repository is installed in its own
+    // prefix.
+    // This is the case on build.kde.org where kde4support installs its catalog
+    // in a different prefix then kdoctools.
+    QStringList dirNames = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+            QStringLiteral("kdoctools5/customization"), QStandardPaths::LocateDirectory);
+    if (dirNames.isEmpty()) {
         return QStringList();
     }
-    QDir customizationDir = QDir(customizationDirName);
-    const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
-    const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
-                                           QDir::Files | QDir::NoSymLinks, QDir::Name);
     QStringList catalogFiles;
-    foreach (const QFileInfo &fileInfo, catalogInfoFiles) {
-        const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
-        if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {
-           catalogFiles.prepend(fullFileName);
-        } else {
-           catalogFiles.append(fullFileName);
+    foreach (const QString &customizationDirName, dirNames) {
+        QDir customizationDir = QDir(customizationDirName);
+        const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
+        const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
+                                               QDir::Files | QDir::NoSymLinks, QDir::Name);
+        foreach (const QFileInfo &fileInfo, catalogInfoFiles) {
+            const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
+            if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {
+               catalogFiles.prepend(fullFileName);
+            } else {
+               catalogFiles.append(fullFileName);
+            }
         }
     }
 
