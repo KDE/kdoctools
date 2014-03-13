@@ -373,24 +373,35 @@ void setupStandardDirs(const QString &srcdir)
 
 QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
 {
+    const QStringList lst = locateFilesInDtdResource(file, option);
+    return lst.isEmpty() ? QString() : lst.first();
+}
+
+QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
+{
     QFileInfo info(file);
     if (info.exists() && info.isAbsolute()) {
-        return file;
+        return QStringList() << file;
     }
 
     const QString srcdir = s_dtdDirs()->srcdir;
     if (!srcdir.isEmpty()) {
         const QString test = srcdir + QLatin1Char('/') + file;
         if (QFile::exists(test)) {
-            return test;
+            return QStringList() << test;
         }
-        qDebug() << "Could not locate file:" << file;
-        return QString();
+        qDebug() << "Could not locate file" << file << "in" << srcdir;
+        return QStringList();
     }
-    const QString result = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+    // Using locateAll() is necessary to be able to find all catalogs when
+    // running in environments where every repository is installed in its own
+    // prefix.
+    // This is the case on build.kde.org where kde4support installs catalogs
+    // in a different prefix than kdoctools.
+    const QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
             QStringLiteral("kdoctools5/") + file, option);
     if (result.isEmpty()) {
-        qDebug() << "Could not locate file:" << file;
+        qDebug() << "Could not locate file" << file << "in standard dirs";
     }
     return result;
 }
@@ -399,13 +410,8 @@ QStringList getKDocToolsCatalogs()
 {
     // Find all catalogs as catalog*.xml, and add them to the list, starting
     // from catalog.xml (the main one).
-    // Using locateAll() is necessary to be able to find all catalogs when
-    // running in environments where every repository is installed in its own
-    // prefix.
-    // This is the case on build.kde.org where kde4support installs its catalog
-    // in a different prefix then kdoctools.
-    QStringList dirNames = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-            QStringLiteral("kdoctools5/customization"), QStandardPaths::LocateDirectory);
+    QStringList dirNames = locateFilesInDtdResource(QStringLiteral("customization"),
+                                                    QStandardPaths::LocateDirectory);
     if (dirNames.isEmpty()) {
         return QStringList();
     }
