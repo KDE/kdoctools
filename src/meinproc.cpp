@@ -4,6 +4,7 @@
 #include "meinproc_common.h"
 
 #include <QCoreApplication>
+#include <QtCore/QDebug>
 #include <QtCore/QString>
 #include <QtCore/QFile>
 #include <QtCore/QDir>
@@ -43,6 +44,8 @@ public:
 };
 
 typedef QList<MyPair> PairList;
+
+#define DIE(x) do { qCritical() << "Error:" << x; exit(1); } while (0)
 
 void parseEntry(PairList &list, xmlNodePtr cur, int base)
 {
@@ -131,21 +134,23 @@ int main(int argc, char **argv)
 
     const QString checkFilename = parser.positionalArguments().first();
     CheckFileResult ckr = checkFile(checkFilename);
-    if (ckr != CheckFileSuccess) {
-        if (ckr == CheckFileDoesNotExist) {
-            qWarning() << "File '" << checkFilename << "' does not exist.";
-        } else if (ckr == CheckFileIsNotFile) {
-            qWarning() << "'" << checkFilename << "' is not a file.";
-        } else if (ckr == CheckFileIsNotReadable) {
-            qWarning() << "File '" << checkFilename << "' is not readable.";
-        }
-        return (2);
+    switch (ckr) {
+    case CheckFileSuccess:
+        break;
+    case CheckFileDoesNotExist:
+        DIE("File" << checkFilename << "does not exist.");
+    case CheckFileIsNotFile:
+        DIE(checkFilename << "is not a file.");
+    case CheckFileIsNotReadable:
+        DIE("File" << checkFilename << "is not readable.");
     }
 
     if (parser.isSet(QStringLiteral("check"))) {
-
-        QByteArray catalogs;
-        catalogs += getKDocToolsCatalogs().join(" ").toLocal8Bit();
+        QStringList lst = getKDocToolsCatalogs();
+        if (lst.isEmpty()) {
+            DIE("Could not find kdoctools catalogs");
+        }
+        QByteArray catalogs = lst.join(" ").toLocal8Bit();
         QString exe;
 #if defined( XMLLINT )
         exe = QStringLiteral(XMLLINT);
@@ -155,11 +160,13 @@ int main(int argc, char **argv)
         }
 
         CheckResult cr = check(checkFilename, exe, catalogs);
-        if (cr != CheckSuccess) {
-            if (cr == CheckNoXmllint) {
-                qWarning() << "couldn't find xmllint";
-            }
-            return 1;
+        switch (cr) {
+        case CheckSuccess:
+            break;
+        case CheckNoXmllint:
+            DIE("Could not find xmllint");
+        case CheckNoOut:
+            DIE("`xmllint --noout` outputted text");
         }
     }
 
@@ -175,8 +182,7 @@ int main(int argc, char **argv)
             const QString tuple = *it;
             const int ch = tuple.indexOf(QLatin1Char('='));
             if (ch == -1) {
-                qWarning() << "Key-Value tuple '" << tuple << "' lacks a '='!";
-                return (2);
+                DIE("Key-Value tuple" << tuple << "lacks a '='!");
             }
             params.append(qstrdup(tuple.left(ch).toUtf8().constData()));
             params.append(qstrdup(tuple.mid(ch + 1).toUtf8().constData()));
@@ -193,7 +199,10 @@ int main(int argc, char **argv)
         tss = QStringLiteral("customization/htdig_index.xsl");
     }
 
-    tss = locateFileInDtdResource(tss);
+    QString tssPath = locateFileInDtdResource(tss);
+    if (tssPath.isEmpty()) {
+        DIE("Unable to find the stylesheet named" << tss << "in dtd resources");
+    }
 #ifndef MEINPROC_NO_KARCHIVE
     const QString cache = parser.value(QStringLiteral("cache"));
 #else
@@ -207,7 +216,7 @@ int main(int argc, char **argv)
 
     if (index) {
         xsltStylesheetPtr style_sheet =
-            xsltParseStylesheetFile((const xmlChar *)tss.toLatin1().data());
+            xsltParseStylesheetFile((const xmlChar *)tssPath.toLatin1().data());
 
         if (style_sheet != NULL) {
 
@@ -220,9 +229,8 @@ int main(int argc, char **argv)
             if (res != NULL) {
                 xmlNodePtr cur = xmlDocGetRootElement(res);
                 if (!cur || xmlStrcmp(cur->name, (const xmlChar *) "entry")) {
-                    fprintf(stderr, "document of the wrong type, root node != entry");
                     xmlFreeDoc(res);
-                    return (1);
+                    DIE("Document of the wrong type, root node != entry");
                 }
                 PairList list;
                 parseEntry(list, cur, 0);
@@ -234,17 +242,16 @@ int main(int argc, char **argv)
 
                 xmlFreeDoc(res);
             } else {
-                qWarning() << "couldn't parse document " << checkFilename;
+                DIE("Unable to parse document" << checkFilename);
             }
         } else {
-            qWarning() << "couldn't parse style sheet " << tss;
+            DIE("Unable to parse style sheet" << tssPath);
         }
 
     } else {
-        QString output = transform(checkFilename, tss, params);
+        QString output = transform(checkFilename, tssPath, params);
         if (output.isEmpty()) {
-            fprintf(stderr, "unable to parse %s\n", checkFilename.toLocal8Bit().data());
-            return (1);
+            DIE("Unable to parse" << checkFilename);
         }
 
 #ifndef MEINPROC_NO_KARCHIVE
