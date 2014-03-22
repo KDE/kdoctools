@@ -45,7 +45,7 @@ macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
    set(_doc ${CMAKE_CURRENT_BINARY_DIR}/index.cache.bz2)
 
    #Bootstrap
-   if (_kdeBootStrapping)
+   if (_kdoctoolsBootStrapping)
       set(_bootstrapOption "--srcdir=${KDocTools_BINARY_DIR}/src")
    else ()
       set(_bootstrapOption)
@@ -124,7 +124,7 @@ macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
    string(REGEX REPLACE "/man-" "/" _outdoc ${_doc})
 
    #Bootstrap
-   if (_kdeBootStrapping)
+   if (_kdoctoolsBootStrapping)
       set(_bootstrapOption "--srcdir=${KDocTools_BINARY_DIR}/src")
    else ()
       set(_bootstrapOption)

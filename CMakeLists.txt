@@ -57,7 +57,7 @@ set_package_properties(DocBookXSL PROPERTIES
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
 
-set(_kdeBootStrapping TRUE)
+set(_kdoctoolsBootStrapping TRUE)
 set(KDOCTOOLS_CUSTOMIZATION_DIR "${CMAKE_CURRENT_BINARY_DIR}/src/customization/")
 if (WIN32)
     set(KDOCTOOLS_MEINPROC_EXECUTABLE          ${EXECUTABLE_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/meinproc5 )
