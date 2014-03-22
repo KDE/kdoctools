@@ -55,8 +55,8 @@ macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
    file(GLOB _docs *.docbook)
 
 #   if (CMAKE_CROSSCOMPILING)
-#      set(IMPORT_MEINPROC4_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc4Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
-#      include(${IMPORT_MEINPROC4_EXECUTABLE})
+#      set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
+#      include(${IMPORT_MEINPROC5_EXECUTABLE})
 #      set(KDOCTOOLS_MEINPROC_EXECUTABLE meinproc5)
 #   endif (CMAKE_CROSSCOMPILING)
 
@@ -132,8 +132,8 @@ macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
    set(_ssheet "${KDOCTOOLS_CUSTOMIZATION_DIR}/kde-include-man.xsl")
 
 #   if (CMAKE_CROSSCOMPILING)
-#      set(IMPORT_MEINPROC4_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc4Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
-#      include(${IMPORT_MEINPROC4_EXECUTABLE})
+#      set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
+#      include(${IMPORT_MEINPROC5_EXECUTABLE})
 #      set(KDOCTOOLS_MEINPROC_EXECUTABLE meinproc5)
 #   endif (CMAKE_CROSSCOMPILING)
 

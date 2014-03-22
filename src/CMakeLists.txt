@@ -42,8 +42,8 @@ install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${INSTALL_TARGETS_DEFAULT_A
 
 # The cross compiling parts are commented out on purpose. Alex
 if (CMAKE_CROSSCOMPILING)
-#    set(IMPORT_MEINPROC4_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc4Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
-#    include(${IMPORT_MEINPROC4_EXECUTABLE})
+#    set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
+#    include(${IMPORT_MEINPROC5_EXECUTABLE})
 else ()
     set_source_files_properties(xslt.cpp PROPERTIES COMPILE_FLAGS -DSIMPLE_XSLT )
 
