@@ -23,7 +23,12 @@ endif()
 # needed by KIO, need to export it
 add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
-target_link_libraries(KF5XsltKde Qt5::Core KF5::Archive)
+target_link_libraries(KF5XsltKde
+    PUBLIC
+        Qt5::Core
+    PRIVATE
+        KF5::Archive
+)
 set_target_properties(KF5XsltKde PROPERTIES
     POSITION_INDEPENDENT_CODE TRUE
     EXPORT_NAME XsltKde
