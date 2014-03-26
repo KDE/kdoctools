@@ -30,12 +30,5 @@
 <!ENTITY OS	"sistema operativo">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
-<!ENTITY kicon  '<guiicon>
-<inlinemediaobject>
- <objectinfo><title>O ícone K do &kde;</title></objectinfo>
- <imageobject><imagedata fileref="common/kmenu.png" format="PNG"/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-   </guiicon> icon'>
 <!ENTITY kmenu  "menu <guimenu>K</guimenu>">
 <!ENTITY kinfocenter "<application>Centro de Informação do KDE</application>" >

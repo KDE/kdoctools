@@ -37,14 +37,6 @@
 
 <!ENTITY infocenter     "<application>Infokeskus</application>">
 <!ENTITY kcontrolcenter "<application>&kde; juhtimiskeskus</application>">
-<!ENTITY kicon  "<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde; K-ikoon</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K</guimenu> menüü">
 
 <!ENTITY dpi    '<acronym>dpi</acronym>'>

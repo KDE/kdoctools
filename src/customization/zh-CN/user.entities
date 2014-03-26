@@ -19,14 +19,6 @@
 <!ENTITY ie     "<abbrev>i.e.</abbrev>">
 <!ENTITY infocenter	"<application>信息中心</application>">
 <!ENTITY kcontrolcenter	"<application>&kde; 控制中心</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde; 的 K 图标</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K</guimenu> 菜单">
 <!ENTITY LMB    "鼠标<mousebutton>左</mousebutton>键">
 <!ENTITY MMB    "鼠标<mousebutton>中</mousebutton>键">

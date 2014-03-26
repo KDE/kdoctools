@@ -22,13 +22,6 @@
 <!ENTITY kcontrolcenter "<application>&kde;-Kontrollzentrum</application>">
 <!ENTITY kde "K-Arbeitsumgebung" ><!-- kde -->
 <!ENTITY khelpcenter-de "<application>&kde;-Hilfezentrum</application>" >
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>K-Symbol von &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon>-Symbol"><!-- kicon -->
 <!ENTITY kmenu  "<guimenu>K</guimenu>-Men&uuml;"> <!-- kmenu -->
 <!ENTITY kwm    "<application>kwm</application>">
 <!ENTITY LMB    "<mousebutton>linke</mousebutton> Maustaste">

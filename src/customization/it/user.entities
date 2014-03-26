@@ -19,14 +19,6 @@
 <!ENTITY ie	"cio&egrave;">
 <!ENTITY infocenter	"<application>Centro d'informazione</application>">
 <!ENTITY kcontrolcenter	"<application>Centro di controllo di &kde;</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>icona K di &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "menu <guimenu>K</guimenu>">
 <!ENTITY LMB    "tasto <mousebutton>sinistro</mousebutton> del mouse">
 <!ENTITY MMB    "tasto <mousebutton>centrale</mousebutton> del mouse">

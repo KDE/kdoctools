@@ -18,14 +18,6 @@
 <!ENTITY FAQ	'<acronym>FAQ</acronym>'>
 <!ENTITY infocenter	"<application>정보 센터</application>">
 <!ENTITY kcontrolcenter	"<application>&kde; 제어판</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde;의 K 아이콘</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> 아이콘"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K</guimenu> 메뉴">
 <!ENTITY LMB    "<mousebutton>왼쪽</mousebutton> 마우스 단추">
 <!ENTITY MMB    "<mousebutton>가운데</mousebutton> 마우스 단추">

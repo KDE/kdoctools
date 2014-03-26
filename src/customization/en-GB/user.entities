@@ -20,14 +20,6 @@
 <!ENTITY ie			"<abbrev>i.e.</abbrev>">
 <!ENTITY kcontrolcenter		"<application>&kde; Control Centre</application>">
 <!ENTITY khelpcenter		"<application>KHelpCentre</application>">
-<!ENTITY kicon			"
-<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde;'s K-icon</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used instead of fileref -->
 <!ENTITY kmenu			"<guimenu>K</guimenu> menu">
 <!ENTITY LMB			"<mousebutton>left</mousebutton> mouse button">
 <!ENTITY MMB			"<mousebutton>middle</mousebutton> mouse button">

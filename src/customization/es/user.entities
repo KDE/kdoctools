@@ -22,13 +22,6 @@
 <!ENTITY kcc "<application>Centro de control de KDE</application>" ><!-- kcc -->
 <!ENTITY kcontrolcenter "<application>Centro de control de &kde;</application>">
 <!ENTITY khelpcenter "<application>Centro de ayuda</application>" >
-<!ENTITY kicon  '<guiicon>
-<inlinemediaobject>
- <objectinfo><title>El icono K de &kde;</title></objectinfo>
- <imageobject><imagedata fileref="common/kmenu.png" format="PNG"/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-   </guiicon> icon'><!-- if image is localised, then entityref should be used instead of fileref -->
 <!ENTITY kiosktool "<application>Herramienta de administración KIOSK</application>">
 <!ENTITY konversation "<application>Konversation</application>">
 <!ENTITY kubuntu "<application>Kubuntu</application>">

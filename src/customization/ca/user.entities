@@ -18,14 +18,6 @@
 <!ENTITY etc	"<abbrev>etc.</abbrev>">
 <!ENTITY IGU	"<acronym>IGU</acronym>"><!-- English: &GUI; -->
 <!ENTITY Intro	"<keycap>Retorn</keycap>"><!-- English: &Enter; -->
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>Les icones del &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used
-                      instead of fileref -->
 <!ENTITY kmenu	"Menú <guimenu>K</guimenu>">
 <!ENTITY Maj	"<keycap>Majús.</keycap>"><!-- English: &Shift; -->
 <!ENTITY partman "<application>Gestor de particions del KDE</application>"> <!-- English: &partman; (KDE Partition Manager)-->

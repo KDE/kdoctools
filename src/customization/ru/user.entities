@@ -21,14 +21,6 @@
      (you may adapt the entity's name to transliterated Russian as well)
 -->
 <!ENTITY kcontrolcenter	"<application>&kde; Control Center</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>K-нопка</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K</guimenu>-меню">
 <!ENTITY Shift  "<keycap>Shift</keycap>">
 <!ENTITY Alt    "<keycap>Alt</keycap>">

@@ -19,15 +19,6 @@
 <!ENTITY Shift        		"<keycap>Shift</keycap>">				  <!-- English: &Shift; -->
 <!ENTITY Tab        		"<keycap>Tab</keycap>">
 
-<!ENTITY kicon                  "
-<guiicon>
-<inlinemediaobject>
- <objectinfo><title>Ikona K &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon>"><!-- if image is localised, then entityref should be used instead of fileref -->
-
 <!ENTITY akregator-mianownik    '<application>Akregator</application>'>
 <!ENTITY akregator-dopelniacz    '<application>Akregatora</application>'>
 <!ENTITY akregator-celownik    '<application>Akregatorowi</application>'>

@@ -19,14 +19,6 @@
 <!ENTITY ie     "<abbrev>тобто</abbrev>">
 <!ENTITY infocenter	"<application>Центр довідки</application>">
 <!ENTITY kcontrolcenter	"<application>Центр керування &kde;</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>K-піктограма &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K-меню</guimenu>">
 <!ENTITY LMB    "<mousebutton>ліва</mousebutton> кнопка мишки">
 <!ENTITY MMB    "<mousebutton>середня</mousebutton> кнопка мишки">

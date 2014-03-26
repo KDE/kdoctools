@@ -40,14 +40,6 @@
 <!ENTITY ie     "<abbrev>dvs.</abbrev>">
 <!ENTITY infocenter	"<application>Infosenter</application>">
 <!ENTITY kcontrolcenter	"<application>&kde; Kontrollsenter</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>Ikonet til &kde;</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used
-                      instead of fileref -->
 <!ENTITY kmenu  "<guimenu>K</guimenu> meny">
 <!ENTITY LGPL	"Lesser General Public License"><!-- Name of LGPL license -->
 <!ENTITY LMB    "<mousebutton>venstre</mousebutton> museknapp">

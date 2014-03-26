@@ -35,13 +35,6 @@
 <!ENTITY ie     "<abbrev>dvs.</abbrev>">
 <!ENTITY infocenter     "<application>Infocenter</application>">
 <!ENTITY kcontrolcenter	"<application>&kde;'s kontrolcenter</application>">
-<!ENTITY kicon  "<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde;'s K-ikon</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon">
 <!ENTITY kmenu  "<guimenu>K</guimenu>-menu">
 <!ENTITY LMB    "<mousebutton>venstre</mousebutton> museknap">
 <!ENTITY MMB    "<mousebutton>midterste</mousebutton> museknap">

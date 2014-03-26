@@ -19,14 +19,6 @@
 <!ENTITY ie     "<abbrev>คือ</abbrev>">
 <!ENTITY infocenter	"<application>ศูนย์ข้อมูล</application>">
 <!ENTITY kcontrolcenter	"<application>ศูนย์ควบคุม &kde;</application>">
-<!ENTITY kicon	"<guiicon>
-<inlinemediaobject>
- <objectinfo><title>&kde;'s K-icon</title></objectinfo>
- <imageobject><imagedata fileref='common/kmenu.png' format='PNG'/></imageobject>
- <textobject><phrase>K</phrase></textobject>
-</inlinemediaobject>
-</guiicon> icon"><!-- if image is localised, then entityref should be used 
-                      instead of fileref -->
 <!ENTITY kmenu  "เมนู <guimenu>K</guimenu>">
 <!ENTITY LMB    "ปุ่มเมาส์<mousebutton>ซ้าย</mousebutton>">
 <!ENTITY MMB    "ปุ่มเมาส์<mousebutton>กลาง</mousebutton>">
