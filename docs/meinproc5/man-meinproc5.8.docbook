@@ -61,7 +61,6 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 <arg choice="opt">KDE-options</arg>
 <arg choice="opt">--cache<replaceable> file</replaceable></arg>
 <arg choice="opt">--check</arg>
-<arg choice="opt">--htdig</arg>
 <arg choice="opt">--srcdir</arg>
 <arg choice="opt">--param <replaceable>key</replaceable>=<replaceable>value</replaceable></arg>
 
@@ -179,13 +178,6 @@ Create a cache file for the document
 <screen>The output can be a bit daunting, since one small mistake can cause a cascade of errors. 
 The trick is to look at the first error, fix that error, save the file, and run <command>meinproc5</command> again.
 </screen>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term><option>--htdig</option></term>
-<listitem>
-<para>Create a ht://dig compatible index</para>
 </listitem>
 </varlistentry>
 

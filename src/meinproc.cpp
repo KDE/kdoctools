@@ -108,7 +108,6 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("stylesheet"), QCoreApplication::translate("main", "Stylesheet to use"), QStringLiteral("xsl")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("stdout"), QCoreApplication::translate("main", "Output whole document to stdout")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("o") << QStringLiteral("output"), QCoreApplication::translate("main", "Output whole document to file"), QStringLiteral("file")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("htdig"), QCoreApplication::translate("main", "Create a ht://dig compatible index")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("check"), QCoreApplication::translate("main", "Check the document for validity")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("cache"), QCoreApplication::translate("main", "Create a cache file for the document"), QStringLiteral("file")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("srcdir"), QCoreApplication::translate("main", "Set the srcdir, for kdelibs"), QStringLiteral("dir")));
@@ -190,13 +189,9 @@ int main(int argc, char **argv)
     }
     params.append(NULL);
 
-    bool index = parser.isSet(QStringLiteral("htdig"));
     QString tss = parser.value(QStringLiteral("stylesheet"));
     if (tss.isEmpty()) {
         tss = QStringLiteral("customization/kde-chunk.xsl");
-    }
-    if (index) {
-        tss = QStringLiteral("customization/htdig_index.xsl");
     }
 
     QString tssPath = locateFileInDtdResource(tss);
@@ -214,57 +209,21 @@ int main(int argc, char **argv)
     const bool usingOutput = parser.isSet(QStringLiteral("output"));
     const QString outputOption = parser.value(QStringLiteral("output"));
 
-    if (index) {
-        xsltStylesheetPtr style_sheet =
-            xsltParseStylesheetFile((const xmlChar *)tssPath.toLatin1().data());
-
-        if (style_sheet != NULL) {
-
-            xmlDocPtr doc = xmlParseFile(QFile::encodeName(checkFilename).constData());
-
-            xmlDocPtr res = xsltApplyStylesheet(style_sheet, doc, &params[0]);
-
-            xmlFreeDoc(doc);
-            xsltFreeStylesheet(style_sheet);
-            if (res != NULL) {
-                xmlNodePtr cur = xmlDocGetRootElement(res);
-                if (!cur || xmlStrcmp(cur->name, (const xmlChar *) "entry")) {
-                    xmlFreeDoc(res);
-                    DIE("Document of the wrong type, root node != entry");
-                }
-                PairList list;
-                parseEntry(list, cur, 0);
-                int wi = 0;
-                for (PairList::ConstIterator it = list.constBegin(); it != list.constEnd();
-                        ++it, ++wi)
-                    fprintf(stdout, "w\t%s\t%d\t%d\n", (*it).word.toUtf8().data(),
-                            1000 * wi / list.count(), (*it).base);
-
-                xmlFreeDoc(res);
-            } else {
-                DIE("Unable to parse document" << checkFilename);
-            }
-        } else {
-            DIE("Unable to parse style sheet" << tssPath);
-        }
-
-    } else {
-        QString output = transform(checkFilename, tssPath, params);
-        if (output.isEmpty()) {
-            DIE("Unable to parse" << checkFilename);
-        }
+    QString output = transform(checkFilename, tssPath, params);
+    if (output.isEmpty()) {
+        DIE("Unable to parse" << checkFilename);
+    }
 
 #ifndef MEINPROC_NO_KARCHIVE
-        if (!cache.isEmpty()) {
-            if (!saveToCache(output, cache)) {
-                qWarning() << QCoreApplication::translate("main", "Could not write to cache file %1.").arg(cache);
-            }
-            goto end;
+    if (!cache.isEmpty()) {
+        if (!saveToCache(output, cache)) {
+            qWarning() << QCoreApplication::translate("main", "Could not write to cache file %1.").arg(cache);
         }
+        goto end;
+    }
 #endif
 
-        doOutput(output, usingStdOut, usingOutput, outputOption, true /* replaceCharset */);
-    }
+    doOutput(output, usingStdOut, usingOutput, outputOption, true /* replaceCharset */);
 #ifndef MEINPROC_NO_KARCHIVE
 end:
 #endif
