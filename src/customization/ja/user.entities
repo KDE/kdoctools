@@ -12,4 +12,9 @@
 <!ENTITY etc    "<abbrev>等</abbrev>">
 <!ENTITY ie     "<abbrev>例</abbrev>">
 <!ENTITY kcontrolcenter "<application>&kde;コントロールセンター</application>">
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY Shift	"<keycap>Shift</keycap>">

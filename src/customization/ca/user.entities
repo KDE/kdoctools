@@ -18,9 +18,19 @@
 <!ENTITY etc	"<abbrev>etc.</abbrev>">
 <!ENTITY IGU	"<acronym>IGU</acronym>"><!-- English: &GUI; -->
 <!ENTITY Intro	"<keycap>Retorn</keycap>"><!-- English: &Enter; -->
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kmenu	"Menú <guimenu>K</guimenu>">
 <!ENTITY Maj	"<keycap>Majús.</keycap>"><!-- English: &Shift; -->
 <!ENTITY partman "<application>Gestor de particions del KDE</application>"> <!-- English: &partman; (KDE Partition Manager)-->
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY pex	"<abbrev>p. ex.</abbrev>"><!-- English: &eg; -->
 <!ENTITY PMF	"<acronym>PMF</acronym>"><!-- English: &FAQ; -->
 <!ENTITY ppp	"<acronym>ppp</acronym>"><!-- English: &dpi; -->

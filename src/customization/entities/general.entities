@@ -198,7 +198,7 @@
 <!ENTITY kcron	"<application>KCron</application>">
 <!ENTITY kdat	"<application>KDat</application>">
 <!ENTITY kdcop  "<application>kdcop</application>">
-<!ENTITY kde	"<acronym>KDE</acronym>">
+<!ENTITY kde	'<orgname class="nonprofit">KDE</orgname>'>
 <!ENTITY kdebugdialog	"<application>KDebugDialog</application>">
 <!ENTITY kde-http	'<ulink url="http://www.kde.org/">http://www.kde.org/</ulink>'>
 <!ENTITY kde-ftp	'<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>'>

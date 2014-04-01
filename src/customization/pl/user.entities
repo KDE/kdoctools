@@ -104,6 +104,12 @@
 <!ENTITY kcontrol-biernik    '&kcontrolcenter-biernik;'>
 <!ENTITY kcontrolcenter    '&kcontrolcenter-mianownik;'>
 
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+
 <!ENTITY kdm-mianownik    '<application>KDM</application>'>
 <!ENTITY kdm-dopelniacz    '<application>KDM</application>'>
 <!ENTITY kdm-celownik    '<application>KDM</application>'>
@@ -266,6 +272,12 @@
 <!ENTITY plasma-biernik    '<application>Plazmę</application>'>
 <!ENTITY plasma-narzednik    '<application>Plazmą</application>'>
 <!ENTITY plasma-miejscownik    '<application>Plazmie</application>'>
+
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 
 <!ENTITY Sendmail-mianownik    '<application>Sendmail</application>'>
 <!ENTITY Sendmail-dopelniacz    '<application>Sendmaila</application>'>

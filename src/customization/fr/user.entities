@@ -394,6 +394,11 @@
 <!ENTITY mi			"messagerie instantanée">
 <!ENTITY kcontrol       	'<application>Centre de Configuration de &kde;</application>'>
 <!ENTITY kcontrolcenter 	'<application>Centre de Configuration de &kde;</application>'>
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY khelpcenter    	'<application>Aide centralisée de &kde;</application>'>
 <!ENTITY partman 		"<application>gestionnaire de partitions de KDE</application>">
 <!ENTITY pex            	"par exemple">                                            <!-- English: &eg; -->
@@ -403,6 +408,11 @@
 
 <!ENTITY menuk  "menu <guimenu>K</guimenu>">
 <!ENTITY partman "Gestionnaire de partitions de &kde;">  <!-- English: &partman; -->
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY krfb_fr "Partage de bureau"> <!--English:  &krfb; -->
 <!ENTITY systemsettings	"<application>Configuration du système</application>"> <!--English:  &systemsettings; -->
 

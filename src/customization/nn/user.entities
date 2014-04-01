@@ -40,11 +40,21 @@
 <!ENTITY ie     "<abbrev>dvs.</abbrev>">
 <!ENTITY infocenter	"<application>Infosenter</application>">
 <!ENTITY kcontrolcenter	"<application>&kde; Kontrollsenter</application>">
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kmenu  "<guimenu>K</guimenu> meny">
 <!ENTITY LGPL	"Lesser General Public License"><!-- Name of LGPL license -->
 <!ENTITY LMB    "<mousebutton>venstre</mousebutton> museknapp">
 <!ENTITY MMB    "<mousebutton>midtre</mousebutton> museknapp">
 <!ENTITY OS	"operativ system"><!-- <acronym>OS</acronym>-->
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY RMB    "<mousebutton>høgre</mousebutton> museknapp">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
 <!ENTITY systemtray "<application>systemtrau</application>">

@@ -35,6 +35,11 @@
 <!ENTITY kcc "<application>&kde;-Kuntrullzentrum</application>" ><!-- kcc -->
 <!ENTITY kcontrolcenter "<application>&kde;-Kuntrullzentrum</application>">
 <!ENTITY kde "K-Schriefdisch&#252;mgeven" ><!-- kde -->
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY khelpcenter-de "<application>&kde;-H&#252;lpzentrum</application>" >
 <!ENTITY kmenu  "<guimenu>K</guimenu>-Men&#252;"> <!-- kmenu -->
 <!ENTITY kwm    "<application>kwm</application>">
@@ -46,6 +51,11 @@
 <!ENTITY mondphase "<application>Maandphaas</application>"> <!-- kmoon -->
 <!ENTITY OS     "Bedriefsysteem">
 <!ENTITY partman "<application>KDE-Partitschonenpleger</application>">
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY RMB    "<mousebutton>rechte</mousebutton> Muusknoop">
 <!ENTITY RMBn   "<mousebutton>rechten</mousebutton> Muusknoop">
 <!ENTITY RMBs   "Muusknoop <mousebutton>rechts</mousebutton>">

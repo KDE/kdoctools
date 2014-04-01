@@ -19,11 +19,21 @@
 <!ENTITY ie     "<abbrev>тобто</abbrev>">
 <!ENTITY infocenter	"<application>Центр довідки</application>">
 <!ENTITY kcontrolcenter	"<application>Центр керування &kde;</application>">
+<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kmenu  "<guimenu>K-меню</guimenu>">
 <!ENTITY LMB    "<mousebutton>ліва</mousebutton> кнопка мишки">
 <!ENTITY MMB    "<mousebutton>середня</mousebutton> кнопка мишки">
 <!ENTITY OS	"операційна система"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>Інструмент керування розділами KDE</application>">
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY RMB    "<mousebutton>права</mousebutton> кнопка мишки">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
 <!ENTITY systemsettings	"<application>Системні параметри</application>">
