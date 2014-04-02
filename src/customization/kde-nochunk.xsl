@@ -6,7 +6,7 @@
 <xsl:include href="kde-ttlpg.xsl"/>
 <xsl:include href="kde-style.xsl"/>
 
-<xsl:variable name="KDE_VERSION">1.13</xsl:variable> 
+<xsl:variable name="KDOCTOOLS_XSLT_VERSION">1.13</xsl:variable> 
 
 <xsl:param name="using.chunker">0</xsl:param>
 <xsl:param name="chunk.first.sections" select="0"/>

@@ -6,7 +6,7 @@
 <xsl:include href="kde-ttlpg.xsl"/>
 <xsl:include href="kde-style.xsl"/>
 
-<xsl:variable name="KDE_VERSION">1.14</xsl:variable>
+<xsl:variable name="KDOCTOOLS_XSLT_VERSION">1.14</xsl:variable>
 
 <xsl:template name="make-relative-filename">
   <xsl:param name="base.dir" select="'./'"/>
