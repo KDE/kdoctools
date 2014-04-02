@@ -5,18 +5,21 @@
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>&kde; User's Manual</title>
+<!-- replace Foo with the application name-->
+<title>Foo User's Manual</title>
 <author><personname>
 <firstname><!--Your first name--></firstname>
 <surname><!--Your last name--></surname>
 </personname>
 <email><!--Your email address--></email></author>
 <!--Date when this manpage was written, in the ISO 8601 format 'yyyy-mm-dd'-->
-<date>2010-10-27</date>
-<!--version information of the application and kde this documentation is valid for.
-either 'xx.yy.zz (&kde; x.y)' or '&kde; x.y'-->
-<releaseinfo>&kde; 4.5</releaseinfo>
-<productname>K Desktop Environment</productname>
+<date>2014-04-03</date>
+<!--version information of the application this documentation is valid for.
+for example 'xx.yy.zz'-->
+<releaseinfo>5.1</releaseinfo>
+<!-- replace Foo with the application name; &kde; as prefix/namespace could
+be not needed, ask the promo team in case of doubt-->
+<productname>&kde; &kappname;</productname>
 </refentryinfo>
 
 <refmeta>
@@ -34,8 +37,7 @@ either 'xx.yy.zz (&kde; x.y)' or '&kde; x.y'-->
 <command><!--The command this page is about--></command>
 <arg choice="req"><!--Required command specific options--></arg>
 <arg choice="opt"><!--Optional command specific options--></arg>
-<arg choice="opt">&kde; Generic Options</arg>
-<arg choice="opt">Qt Generic Options</arg>
+<arg choice="opt">Generic Options</arg>
 </cmdsynopsis>
 </refsynopsisdiv>
 

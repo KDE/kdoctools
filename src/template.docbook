@@ -16,7 +16,11 @@
   <!-- Do not define any other entities; instead, use the entities
        from entities/general.entities and en/user.entities. -->
 ]>
-<!-- kdoctemplate v0.9.2 2012-10-15 pino
+<!-- kdoctemplate v0.10.0 2014-04-02 ltoscano
+     updated to KF5/kdoctools
+     references to KDE reworded
+
+     kdoctemplate v0.9.2 2012-10-15 pino
      update versions to 4.9
      update years to 2012
      switch from CVS to Git
@@ -87,7 +91,7 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 </authorgroup>
 
 <copyright>
-<year>2012</year>
+<year>2014</year>
 <holder>George N. Ugnacious</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
@@ -96,12 +100,12 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
-<date>2012-01-10</date>
+<date>2014-04-03</date>
 
 <!--version information of the application and kde this documentation is valid for.
-either 'xx.yy.zz (&kde; x.y)' or '&kde; x.y' 
+for example 'xx.yy.zz'
 -->
-<releaseinfo>1.01.00 (&kde; 4.9)</releaseinfo>
+<releaseinfo>1.01.00</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -113,7 +117,7 @@ ever want.
 </abstract>
 
 <!-- This is a set of Keywords for indexing by search engines.
-Please at least include KDE, the KDE package it is in, the name
+Please at least include KDE, the KDE section it is in, the name
  of your application, and a few relevant keywords. -->
 
 <keywordset>
@@ -349,7 +353,7 @@ distribution. -->
 &kmyapplication;
 </para>
 <para>
-Program copyright 2010-2012 John Q. Hacker <email>jqh@kde.org</email>
+Program copyright 2010-2014 John Q. Hacker <email>jqh@kde.org</email>
 </para>
 <para>
 Contributors:
@@ -362,7 +366,7 @@ Contributors:
 </para>
 
 <para>
-Documentation Copyright &copy; 2012 George N. Ugnacious <email>gnu@kde.org</email>
+Documentation Copyright &copy; 2012-2014 George N. Ugnacious <email>gnu@kde.org</email>
 </para>
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
@@ -411,7 +415,8 @@ information here.
 -->
 
 <para>
-In order to successfully use &kmyapplication;, you need &kde; 4.9. Foobar.lib is
+In order to successfully use &kmyapplication;, you need few libraries from
+&kf5; 5.1 (bar, baz). Foobar.lib is
 required in order to support the advanced &kmyapplication; features. &kmyapplication; uses
 about 5 megs of memory to run, but this may vary depending on your
 platform and configuration.
