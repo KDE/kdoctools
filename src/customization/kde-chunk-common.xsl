@@ -40,4 +40,11 @@
    <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
 </xsl:template>
 
+<xsl:template match="ulink[@type='commondoc']">
+   <xsl:variable name="kde.commondoc.url"><xsl:value-of select="concat($kde.common,@url)"/></xsl:variable>
+   <xsl:call-template name="ulink">
+     <xsl:with-param name="url" select="$kde.commondoc.url"/>
+   </xsl:call-template>
+</xsl:template>
+
 </xsl:stylesheet>
