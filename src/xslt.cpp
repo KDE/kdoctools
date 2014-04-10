@@ -396,7 +396,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     // Using locateAll() is necessary to be able to find all catalogs when
     // running in environments where every repository is installed in its own
     // prefix.
-    // This is the case on build.kde.org where kde4support installs catalogs
+    // This is the case on build.kde.org where kdelibs4support installs catalogs
     // in a different prefix than kdoctools.
     const QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
             QStringLiteral("kdoctools5/") + file, option);
