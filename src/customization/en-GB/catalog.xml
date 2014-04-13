@@ -13,12 +13,6 @@
   <public publicId="-//KDE//DOCUMENT GNU Lesser General Public License Notice//ENGB"
           uri="entities/lgpl-notice.docbook"/>
 
-  <public publicId="-//GNU//DOCUMENT GNU General Public License V2//ENGB"
-          uri="common/gpl-translated"/>
-  <public publicId="-//GNU//DOCUMENT GNU Lesser General Public License V2.1//ENGB"
-          uri="common/lgpl-translated"/>
-  <public publicId="-//GNU//DOCUMENT GNU Free Documentation License V1.1//ENGB"
-          uri="common/fdl-translated"/>
   <public publicId="-//KDE//DOCUMENT GPL Licence Declaration//ENGB"
           uri="entities/underGPL.docbook"/> 
   <public publicId="-//KDE//DOCUMENT FDL Licence Declaration//ENGB"

@@ -11,18 +11,6 @@
   <public publicId="-//KDE//DOCUMENT GNU Lesser General Public License Notice//EL"
           uri="entities/lgpl-notice.docbook"/>
 
-  <public publicId="-//GNU//DOCUMENT GNU General Public License V2//EL"
-          uri="common/gpl-translated"/>
-  <public publicId="-//GNU//DOCUMENT GNU General Public License V2 (HTML)//EL"
-          uri="common/gpl-translated.html"/>
-  <public publicId="-//GNU//DOCUMENT GNU Lesser General Public License V2.1//EL"
-          uri="common/lgpl-translated"/>
-  <public publicId="-//GNU//DOCUMENT GNU Lesser General Public License V2.1 (HTML)//EL"
-          uri="common/lgpl-translated.html"/>
-  <public publicId="-//GNU//DOCUMENT GNU Free Documentation License V1.1//EL"
-          uri="common/fdl-translated"/>
-  <public publicId="-//GNU//DOCUMENT GNU Free Documentation License V1.1 (HTML)//EL"
-          uri="common/fdl-translated.html"/>
   <public publicId="-//KDE//DOCUMENT GPL Licence Declaration//EL"
           uri="entities/underGPL.docbook"/> 
   <public publicId="-//KDE//DOCUMENT FDL Licence Declaration//EL"
