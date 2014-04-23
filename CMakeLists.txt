@@ -67,6 +67,7 @@ endif ()
 include(KF5DocToolsMacros.cmake)
 
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DocTools")
+add_definitions(-DTRANSLATION_DOMAIN=\"kio_help5\")
 add_subdirectory(docs)
 add_subdirectory(src)
 
