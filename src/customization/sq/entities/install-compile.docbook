@@ -1,6 +1,6 @@
 <para>Për sqarime të hollësishme se si kompilohen dhe instalohen programet &kde; 
 shiko <ulink url="http://techbase.kde.org/Getting_Started">
-Building KDE4 From Source</ulink></para>
+Building and Running KDE Software From Source</ulink></para>
 
 <para>Meqënëse &kde; përdor <command>cmake</command> normalisht nuk duhet të 
 jetë e vështirë për ta kompiluar. Nëse ju dalin probleme, i raportoni te listat
