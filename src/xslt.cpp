@@ -399,7 +399,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     // This is the case on build.kde.org where kdelibs4support installs catalogs
     // in a different prefix than kdoctools.
     const QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-            QStringLiteral("kdoctools5/") + file, option);
+            QStringLiteral("kf5/kdoctools/") + file, option);
     if (result.isEmpty()) {
         qDebug() << "Could not locate file" << file << "in standard dirs";
     }
