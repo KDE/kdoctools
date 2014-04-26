@@ -34,14 +34,14 @@ set_target_properties(KF5XsltKde PROPERTIES
     EXPORT_NAME XsltKde
 )
 
-target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/XsltKde>")
+target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/XsltKde>")
 
-install(TARGETS KF5XsltKde ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5XsltKde ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES
     xslt.h xslt_kde.h
-    DESTINATION ${INCLUDE_INSTALL_DIR}/XsltKde COMPONENT Devel
+    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/XsltKde COMPONENT Devel
 )
-install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
@@ -64,7 +64,7 @@ else ()
     ecm_mark_nongui_executable(meinproc5)
     target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
 
-    install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+    install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
     add_executable(KF5::meinproc5 ALIAS meinproc5)
 
 #    # export this binary for cross-compilation
