@@ -202,7 +202,7 @@ int main(int argc, char **argv)
     const QString cache = parser.value(QStringLiteral("cache"));
 #else
     if (parser.isSet("cache")) {
-        qWarning() << QCoreApplication::translate("The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
+        qWarning() << QCoreApplication::translate("main", "The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
     }
 #endif
     const bool usingStdOut = parser.isSet(QStringLiteral("stdout"));
