@@ -16,6 +16,39 @@
 #   INSTALL_DESTINATION <installdest>, or to <installdest>/<subdir> if
 #   SUBDIR <subdir> is specified.
 #
+#  KDOCTOOLS_INSTALL(podir)
+#   Search for docbook files in <podir> and install them to the standard
+#   location.
+#   This is a convenience function which relies on all docbooks being kept in
+#   <podir>/<lang>/docs, where <lang> is the language the docbooks are written
+#   in.
+#
+#   Within this directory, files ending with .[0-9].docbook are installed using
+#   KDOCTOOLS_CREATE_MANPAGE, other .docbook files are installed using
+#   KDOCTOOLS_CREATE_HANDBOOK.
+#
+#   For example, given the following directory structure:
+#
+#    po/
+#      fr/
+#        docs/
+#          kioslave5/
+#            fooslave/
+#              index.docbook
+#          footool.1.docbook
+#          footool.conf.5.docbook
+#          index.docbook
+#
+#   KDOCTOOLS_INSTALL(po) does the following:
+#   - Create man pages from footool.1.docbook and footool.conf.5.docbook,
+#     install them in ${MAN_INSTALL_DIR}/fr
+#   - Create handbooks from index.docbook files, install the one from the
+#     fooslave/ directory in ${HTML_INSTALL_DIR}/fr/kioslave5/fooslave
+#     and the one from the docs/ directory in $[HTML_INSTALL_DIR}/fr
+#
+#   If ${HTML_INSTALL_DIR} is not set, share/doc/HTML is used instead.
+#   If ${MAN_INSTALL_DIR} is not set, share/man/<lang> is used instead.
+#
 #  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc5 executable
 #
 #  KDOCTOOLS_SERIALIZE_TOOL - wrapper to serialize potentially resource-intensive commands during
@@ -169,3 +202,36 @@ macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
       install(FILES ${_outdoc} DESTINATION ${_installDest}/man${_section})
    endif(_installDest)
 endmacro (KDOCTOOLS_CREATE_MANPAGE)
+
+
+function(KDOCTOOLS_INSTALL podir)
+    file(GLOB lang_dirs "${podir}/*")
+    if (NOT MAN_INSTALL_DIR)
+        set(MAN_INSTALL_DIR share/man)
+    endif()
+    if (NOT HTML_INSTALL_DIR)
+        set(HTML_INSTALL_DIR share/doc/HTML)
+    endif()
+    foreach(lang_dir ${lang_dirs})
+        get_filename_component(lang ${lang_dir} NAME)
+
+        file(GLOB_RECURSE docbooks "${lang_dir}/docs/*.docbook")
+        foreach(docbook ${docbooks})
+            string(REGEX MATCH "\\.([0-9])\\.docbook" match ${docbook})
+            if (match)
+                kdoctools_create_manpage(${docbook} ${CMAKE_MATCH_1}
+                    INSTALL_DESTINATION ${MAN_INSTALL_DIR}/${lang}
+                )
+            else()
+                string(REGEX MATCH "docs/(.*)/.*.docbook" match ${docbook})
+                if (match)
+                    set(extra_args SUBDIR ${CMAKE_MATCH_1})
+                endif()
+                kdoctools_create_handbook(${docbook}
+                    INSTALL_DESTINATION ${HTML_INSTALL_DIR}/${lang}
+                    ${extra_args}
+                )
+            endif()
+        endforeach()
+    endforeach()
+endfunction()
