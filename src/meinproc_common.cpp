@@ -8,7 +8,7 @@
 
 #include <cstdlib>
 
-#ifdef Q_OS_WIN
+#ifdef Q_CC_MSVC
 static inline FILE *popen(const char *command, const char *mode)
 {
     return _popen(command, mode);
