@@ -12,6 +12,7 @@ include(ECMMarkNonGuiExecutable)
 include(ECMPackageConfigHelpers)
 
 set(KF5_VERSION "4.99.0") # handled by release scripts
+set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfigVersion.cmake"
@@ -25,7 +26,7 @@ include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 
 # KF5 frameworks
-find_package(KF5Archive REQUIRED)
+find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
 
 find_package(LibXslt)
 set_package_properties(LibXslt PROPERTIES
