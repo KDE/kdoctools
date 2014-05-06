@@ -71,6 +71,9 @@ set(KDOCTOOLS_LANGUAGES_LIST af bg ca cs da de el en-GB en eo es et fi fo fr gl 
 
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kio_help5\")
+if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+    ki18n_install(po)
+endif()
 add_subdirectory(common)
 add_subdirectory(docs)
 add_subdirectory(src)
