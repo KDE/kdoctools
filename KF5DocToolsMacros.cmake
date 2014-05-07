@@ -10,10 +10,11 @@
 #   INSTALL_DESTINATION <installdest>, or to <installdest>/<subdir> if
 #   SUBDIR <subdir> is specified.
 #
-#  KDOCTOOLS_CREATE_MANPAGE( docbookfile section [INSTALL_DESTINATION installdest])
+#  KDOCTOOLS_CREATE_MANPAGE( docbookfile section )
 #   Create the manpage for the specified section from the docbookfile (using meinproc5)
 #   The resulting manpage will be installed to <installdest> when using
-#   INSTALL_DESTINATION <installdest>.
+#   INSTALL_DESTINATION <installdest>, or to <installdest>/<subdir> if
+#   SUBDIR <subdir> is specified.
 #
 #  KDOCTOOLS_INSTALL(podir)
 #   Search for docbook files in <podir> and install them to the standard
@@ -67,27 +68,14 @@ if(KDOCTOOLS_SERIALIZE_TOOL)
     set(KDOCTOOLS_MEINPROC_EXECUTABLE ${KDOCTOOLS_SERIALIZE_TOOL} ${KDOCTOOLS_MEINPROC_EXECUTABLE})
 endif(KDOCTOOLS_SERIALIZE_TOOL)
 
-function(create_target_name out in)
-    string(REGEX REPLACE "[^0-9a-zA-Z]" "-" tmp "${in}")
-    set(${out} ${tmp} PARENT_SCOPE)
-endfunction()
+macro(_SUGGEST_TARGET_NAME _out)
+    string(REPLACE "${CMAKE_SOURCE_DIR}/" "" ${_out} "${CMAKE_CURRENT_SOURCE_DIR}")
+    string(REGEX REPLACE "[^0-9a-zA-Z]" "-" ${_out} "${${_out}}")
+endmacro()
 
-function (kdoctools_create_handbook docbook)
-    # Parse arguments
-    set(options)
-    set(oneValueArgs INSTALL_DESTINATION SUBDIR)
-    set(multiValueArgs)
-    cmake_parse_arguments(ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
-
-    # Init vars
-    get_filename_component(docbook ${docbook} ABSOLUTE)
-    file(RELATIVE_PATH src_doc ${CMAKE_CURRENT_SOURCE_DIR} ${docbook})
-    get_filename_component(src_dir ${src_doc} DIRECTORY)
-    set(build_dir ${CMAKE_CURRENT_BINARY_DIR}/${src_dir})
-    set(build_doc ${build_dir}/index.cache.bz2)
-
-    # Create some place to store our files
-    file(MAKE_DIRECTORY ${build_dir})
+macro (KDOCTOOLS_CREATE_HANDBOOK _docbook)
+    get_filename_component(_input ${_docbook} ABSOLUTE)
+    set(_doc ${CMAKE_CURRENT_BINARY_DIR}/index.cache.bz2)
 
     #Bootstrap
     if (_kdoctoolsBootStrapping)
@@ -97,16 +85,23 @@ function (kdoctools_create_handbook docbook)
     endif ()
     set(_ssheet "${KDOCTOOLS_CUSTOMIZATION_DIR}/kde-chunk.xsl")
 
-    file(GLOB src_docs ${src_dir}/*.docbook)
+    file(GLOB _docs *.docbook)
 
-    add_custom_command(OUTPUT ${build_doc}
-        COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --check ${_bootstrapOption} --cache ${build_doc} ${src_doc}
-        DEPENDS ${src_docs} ${_ssheet}
+#    if (CMAKE_CROSSCOMPILING)
+#        set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
+#        include(${IMPORT_MEINPROC5_EXECUTABLE})
+#        set(KDOCTOOLS_MEINPROC_EXECUTABLE meinproc5)
+#    endif (CMAKE_CROSSCOMPILING)
+
+    add_custom_command(OUTPUT ${_doc}
+        COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --check ${_bootstrapOption} --cache ${_doc} ${_input}
+        DEPENDS ${_docs} ${_ssheet}
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
-    create_target_name(_targ ${src_doc}-handbook)
-    add_custom_target(${_targ} ALL DEPENDS ${build_doc})
+    _suggest_target_name(_targ)
+    set(_targ "${_targ}-handbook")
+    add_custom_target(${_targ} ALL DEPENDS ${_doc})
 
     if(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
         set(_htmlDoc ${CMAKE_CURRENT_SOURCE_DIR}/index.html)
@@ -118,40 +113,48 @@ function (kdoctools_create_handbook docbook)
         add_custom_target(htmlhandbook DEPENDS ${_htmlDoc})
     endif(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
 
-    set(installDest "${ARGS_INSTALL_DESTINATION}")
-    if(installDest)
-        set(subdir "${ARGS_SUBDIR}")
-        file(GLOB images ${src_dir}/*.png)
-        install(FILES ${build_doc} ${src_docs} ${images} DESTINATION ${installDest}/${subdir})
+    set(_args ${ARGN})
+
+    set(_installDest)
+    if(_args)
+        list(GET _args 0 _tmp)
+        if("${_tmp}" STREQUAL "INSTALL_DESTINATION")
+            list(GET _args 1 _installDest )
+            list(REMOVE_AT _args 0 1)
+        endif("${_tmp}" STREQUAL "INSTALL_DESTINATION")
+    endif(_args)
+
+    get_filename_component(dirname ${CMAKE_CURRENT_SOURCE_DIR} NAME_WE)
+    if(_args)
+        list(GET _args 0 _tmp)
+        if("${_tmp}" STREQUAL "SUBDIR")
+            list(GET _args 1 dirname )
+            list(REMOVE_AT _args 0 1)
+        endif("${_tmp}" STREQUAL "SUBDIR")
+    endif(_args)
+
+    if(_installDest)
+        file(GLOB _images *.png)
+        install(FILES ${_doc} ${_docs} ${_images} DESTINATION ${_installDest}/${dirname})
         # TODO symlinks on non-unix platforms
         if (UNIX)
             # execute some cmake code on make install which creates the symlink
-            install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink \"${installDest}/common\" \"\$ENV{DESTDIR}${installDest}/${subdir}/common\" )" )
+            install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink \"${_installDest}/common\"  \"\$ENV{DESTDIR}${_installDest}/${dirname}/common\" )" )
         endif (UNIX)
-    endif()
+    endif(_installDest)
 
-endfunction()
+endmacro (KDOCTOOLS_CREATE_HANDBOOK)
 
 
-function (kdoctools_create_manpage docbook section)
-    # Parse arguments
-    set(options)
-    set(oneValueArgs INSTALL_DESTINATION)
-    set(multiValueArgs)
-    cmake_parse_arguments(ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
+macro (KDOCTOOLS_CREATE_MANPAGE _docbook _section)
+    get_filename_component(_input ${_docbook} ABSOLUTE)
+    get_filename_component(_base ${_input} NAME)
 
-    # Init vars
-    get_filename_component(docbook ${docbook} ABSOLUTE)
-    file(RELATIVE_PATH src_doc ${CMAKE_CURRENT_SOURCE_DIR} ${docbook})
-    get_filename_component(src_dir ${src_doc} DIRECTORY)
-    set(build_dir ${CMAKE_CURRENT_BINARY_DIR}/${src_dir})
+    string(REGEX REPLACE "\\.${_section}\\.docbook$" "" _base ${_base})
 
-    get_filename_component(name ${src_doc} NAME)
-    string(REGEX REPLACE "^man-(.*)\\.${section}\\.docbook$" "\\1" name ${name})
-    set(build_doc ${build_dir}/${name}.${section})
-
-    # Create some place to store our files
-    file(MAKE_DIRECTORY ${build_dir})
+    set(_doc ${CMAKE_CURRENT_BINARY_DIR}/${_base}.${_section})
+    # sometimes we have "man-" prepended
+    string(REGEX REPLACE "/man-" "/" _outdoc ${_doc})
 
     #Bootstrap
     if (_kdoctoolsBootStrapping)
@@ -161,22 +164,47 @@ function (kdoctools_create_manpage docbook section)
     endif ()
     set(_ssheet "${KDOCTOOLS_CUSTOMIZATION_DIR}/kde-include-man.xsl")
 
-    add_custom_command(OUTPUT ${build_doc}
-        COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --stylesheet ${_ssheet} --check ${_bootstrapOption} ${CMAKE_CURRENT_SOURCE_DIR}/${src_doc}
-        DEPENDS ${src_doc} ${_ssheet}
-        WORKING_DIRECTORY ${build_dir}
+#    if (CMAKE_CROSSCOMPILING)
+#        set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
+#        include(${IMPORT_MEINPROC5_EXECUTABLE})
+#        set(KDOCTOOLS_MEINPROC_EXECUTABLE meinproc5)
+#    endif (CMAKE_CROSSCOMPILING)
+
+    add_custom_command(OUTPUT ${_outdoc}
+        COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --stylesheet ${_ssheet} --check ${_bootstrapOption} ${_input}
+        DEPENDS ${_input} ${_ssheet}
     )
+    _suggest_target_name(_targ)
+    set(_targ "${_targ}-manpage-${_base}")
+    add_custom_target(${_targ} ALL DEPENDS "${_outdoc}")
 
-    create_target_name(_targ ${src_doc}-manpage)
-    add_custom_target(${_targ} ALL DEPENDS "${build_doc}")
+    set(_args ${ARGN})
 
-    if(ARGS_INSTALL_DESTINATION)
-        install(FILES ${build_doc} DESTINATION ${ARGS_INSTALL_DESTINATION}/man${section})
-    endif()
-endfunction()
+    set(_installDest)
+    if(_args)
+        list(GET _args 0 _tmp)
+        if("${_tmp}" STREQUAL "INSTALL_DESTINATION")
+            list(GET _args 1 _installDest )
+            list(REMOVE_AT _args 0 1)
+        endif("${_tmp}" STREQUAL "INSTALL_DESTINATION")
+    endif(_args)
+
+    get_filename_component(dirname ${CMAKE_CURRENT_SOURCE_DIR} NAME_WE)
+    if(_args)
+        list(GET _args 0 _tmp)
+        if("${_tmp}" STREQUAL "SUBDIR")
+            list(GET _args 1 dirname )
+            list(REMOVE_AT _args 0 1)
+        endif("${_tmp}" STREQUAL "SUBDIR")
+    endif(_args)
+
+    if(_installDest)
+        install(FILES ${_outdoc} DESTINATION ${_installDest}/man${_section})
+    endif(_installDest)
+endmacro (KDOCTOOLS_CREATE_MANPAGE)
 
 
-function(kdoctools_install podir)
+function(KDOCTOOLS_INSTALL podir)
     file(GLOB lang_dirs "${podir}/*")
     if (NOT MAN_INSTALL_DIR)
         set(MAN_INSTALL_DIR share/man)
