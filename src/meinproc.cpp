@@ -110,7 +110,7 @@ int main(int argc, char **argv)
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("o") << QStringLiteral("output"), QCoreApplication::translate("main", "Output whole document to file"), QStringLiteral("file")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("check"), QCoreApplication::translate("main", "Check the document for validity")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("cache"), QCoreApplication::translate("main", "Create a cache file for the document"), QStringLiteral("file")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("srcdir"), QCoreApplication::translate("main", "Set the srcdir, for kdelibs"), QStringLiteral("dir")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("srcdir"), QCoreApplication::translate("main", "Set the srcdir, for kdoctools"), QStringLiteral("dir")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("param"), QCoreApplication::translate("main", "Parameters to pass to the stylesheet"), QStringLiteral("key=value")));
     parser.addPositionalArgument(QStringLiteral("xml"), QCoreApplication::translate("main", "The file to transform"));
     parser.process(app);

@@ -75,7 +75,7 @@ endif ()
 # WARNING: this has severe limitations on the windows platform since the .xsl
 # & docbook files need to be relocatable. We cannot just replace the paths in
 # the .xsl with relative paths because these files are not installed while
-# building kdelibs. Instead, we will reconfigure those files at install time
+# building kdoctools. Instead, we will reconfigure those files at install time
 # with relative paths.
 
 file( GLOB _kdeincludexslt_ALL "customization/kde-include*.xsl.cmake" )
@@ -110,7 +110,7 @@ macro(INSTALL_CUSTOMIZE_L_DIR _expr _directory)
     foreach(_curentfile ${_file_CUST})
         # copy the file also under CMAKE_CURRENT_BINARY_DIR - those
         # files are needed to generate the documentation without installing
-        # kdelibs (i.e. when kdelibs itself compiled).
+        # kdoctools (i.e. when kdoctools itself compiled).
         get_filename_component(_currentfile_name ${_curentfile} NAME)
         set(_currentfile_binary_path ${CMAKE_CURRENT_BINARY_DIR}/${_directory}/${_currentfile_name})
         configure_file(${_curentfile} ${_currentfile_binary_path} COPYONLY)

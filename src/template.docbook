@@ -405,8 +405,7 @@ application -->
 
 <!--
 List any special requirements for your application here. This should include:
-.Libraries or other software that is not included in kdesupport,
-kdelibs, or kdebase.
+.Libraries or other software that is not included in kdesupport or kf5
 .Hardware requirements like amount of RAM, disk space, graphics card
 capabilities, screen resolution, special expansion cards, etc.
 .Operating systems the app will run on. If your app is designed only for a

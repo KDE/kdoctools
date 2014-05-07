@@ -55,7 +55,7 @@ SGMLDECL "xml.dcl"
   <!-- Various external files -->
 
   <!-- only DocBook XML files are in entities, the others are in
-       kdelibs/doc/common or in kdelibs/licenses -->
+       kdoctools/common -->
 
   <public publicId="-//GNU//DOCUMENT GNU General Public License V2//EN"
           uri="entities/gpl-license"/>
