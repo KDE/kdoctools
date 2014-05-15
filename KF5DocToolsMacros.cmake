@@ -79,6 +79,10 @@ function (kdoctools_create_handbook docbook)
     set(multiValueArgs)
     cmake_parse_arguments(ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
+    if(NOT DEFINED ARGS_SUBDIR)
+        message(FATAL_ERROR "SUBDIR needs to be defined when calling kdoctools_create_handbook")
+    endif()
+
     # Init vars
     get_filename_component(docbook ${docbook} ABSOLUTE)
     file(RELATIVE_PATH src_doc ${CMAKE_CURRENT_SOURCE_DIR} ${docbook})
