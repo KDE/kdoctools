@@ -90,6 +90,13 @@ function (kdoctools_create_handbook docbook)
     set(build_dir ${CMAKE_CURRENT_BINARY_DIR}/${src_dir})
     set(build_doc ${build_dir}/index.cache.bz2)
 
+    # current directory is the docbook directory, but if this is empty, the
+    # globs which finds the docbooks and the images will be empty too as
+    # they will expand into "/*.docbook" and "/*.png"
+    if (src_dir STREQUAL "")
+        set(src_dir ".")
+    endif ()
+
     # Create some place to store our files
     file(MAKE_DIRECTORY ${build_dir})
 
