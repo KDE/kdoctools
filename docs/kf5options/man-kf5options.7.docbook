@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
-<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant 
-V1.1//EN" "dtd/kdedbx45.dtd" [<!ENTITY % English "INCLUDE">]>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % English "INCLUDE">
+]>
 
 <refentry lang="&language;">
-
 <refentryinfo>
 <title>KDE User's Manual</title>
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
@@ -18,8 +18,7 @@ V1.1//EN" "dtd/kdedbx45.dtd" [<!ENTITY % English "INCLUDE">]>
 
 <refnamediv>
 <refname>kf5options</refname>
-<refpurpose>Common command line options for all applications based on KDE 
-Frameworks 5</refpurpose>
+<refpurpose>Common commandline options for all applications based on KDE Frameworks 5</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -29,53 +28,49 @@ Frameworks 5</refpurpose>
 </cmdsynopsis>
 </refsynopsisdiv>
 
+
 <refsect1>
 <title>Options</title>
+
 <para>The following options apply to all &kde; applications:</para>
 <variablelist>
 <varlistentry>
-<term><option>--author</option></term>
-<listitem><para>Displays the author(s) of the application.</para></listitem>
-</varlistentry>
-<varlistentry>
 <term><option>--caption</option> <parameter>caption</parameter></term>
-<listitem><para>Displays the specified <parameter>caption</parameter> as the 
-application name in the titlebar.</para></listitem>
-</varlistentry>
-<varlistentry>
-<term><option>--geometry</option> <parameter>geometry</parameter></term>
-<listitem><para>Sets the client geometry of the main widget to the specified 
-<replaceable>widthxheight+xpos+ypos</replaceable> parameters. Some applications 
-will ignore all or part of this option.</para></listitem>
+<listitem><para>Use <parameter>caption</parameter> as name in the
+titlebar.</para></listitem>
 </varlistentry>
 <varlistentry>
 <term><option>--icon</option> <parameter>icon</parameter></term>
-<listitem><para>Uses the specified <parameter>icon</parameter> file as the 
-application icon.</para></listitem>
+<listitem><para>Use <parameter>icon</parameter> as the application icon.</para></listitem>
 </varlistentry>
 <varlistentry>
-<term><option>--license</option></term>
-<listitem><para>Displays the application license.</para></listitem>
+<term><option>--config</option> <parameter>filename</parameter></term>
+<listitem><para>Use the alternative configuration <parameter>filename</parameter></para></listitem>
 </varlistentry>
 <varlistentry>
-<term><option>-v</option> or <option>--version</option></term>
-<listitem><para>Displays version information.</para></listitem>
+<term><option>--nocrashhandler</option></term>
+<listitem><para>Disable the crash handler, to get core dumps.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--waitforwm</option></term>
+<listitem><para>Waits for a WM_NET compatible windowmanager.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--style</option> <parameter>style</parameter></term>
+<listitem><para>Sets the application &GUI; style.</para></listitem>
+</varlistentry>
+<varlistentry>
+<term><option>--geometry</option> <parameter>geometry</parameter></term>
+<listitem><para>Sets the client geometry of the main widget.</para></listitem>
 </varlistentry>
 </variablelist>
-</refsect1>
 
-<refsect1>
-<title id="notes">Notes</title>
-<para>Configuration files can be kept inside the ~/.config directory in a 
-subdirectory with the <replaceable>application</replaceable> name.</para>
-<para>Launch your application with <command><envar>KDE_DEBUG=1</envar> 
-<replaceable>application</replaceable></command> to disable crash 
-handling.</para>
 </refsect1>
 
 <refsect1>
 <title>See Also</title>
 <para><replaceable>qt5options</replaceable>(7)</para>
+
 </refsect1>
 
 <refsect1>
