@@ -134,11 +134,6 @@ function (kdoctools_create_handbook docbook)
         set(subdir "${ARGS_SUBDIR}")
         file(GLOB images ${src_dir}/*.png)
         install(FILES ${build_doc} ${src_docs} ${images} DESTINATION ${installDest}/${subdir})
-        # TODO symlinks on non-unix platforms
-        if (UNIX)
-            # execute some cmake code on make install which creates the symlink
-            install(CODE "execute_process(COMMAND ${CMAKE_COMMAND} -E create_symlink \"${installDest}/common\" \"\$ENV{DESTDIR}${installDest}/${subdir}/common\" )" )
-        endif (UNIX)
     endif()
 
 endfunction()
