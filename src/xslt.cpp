@@ -163,7 +163,9 @@ QString transform(const QString &pat, const QString &tss,
 
     INFO(i18n("Parsing document"));
 
-    xmlDocPtr doc = xmlParseFile(QFile::encodeName(pat).constData());
+    xmlDocPtr doc = xmlReadFile(QFile::encodeName(pat).constData(), NULL,
+                                XML_PARSE_NOENT|XML_PARSE_DTDLOAD|XML_PARSE_NONET);
+
     xsltTransformContextPtr ctxt;
 
     ctxt = xsltNewTransformContext(style_sheet, doc);
