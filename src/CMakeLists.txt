@@ -36,11 +36,13 @@ set_target_properties(KF5XsltKde PROPERTIES
 
 target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/XsltKde>")
 
-install(TARGETS KF5XsltKde ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 install(FILES
-    xslt.h xslt_kde.h
-    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/XsltKde COMPONENT Devel
+    xslt.h
+    xslt_kde.h
+    DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/XsltKde
+    COMPONENT Devel
 )
+
 install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
