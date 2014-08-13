@@ -16,9 +16,3 @@ Provides tools to generate documentation in various format from DocBook files.
 plus a number of people that made suggestions, improved scripts, sent
 bug reports, etc, etc.
 
-## Links
-
-- Home page: <https://projects.kde.org/projects/frameworks/kdoctools>
-- Mailing list: <https://mail.kde.org/mailman/listinfo/kde-docbook>
-- IRC channel: #kde-devel on Freenode
-- Git repository: <https://projects.kde.org/projects/frameworks/kdoctools/repository>
