@@ -68,6 +68,7 @@ if(KDOCTOOLS_SERIALIZE_TOOL)
 endif(KDOCTOOLS_SERIALIZE_TOOL)
 
 function(create_target_name out in)
+    string(REGEX REPLACE "^${CMAKE_BINARY_DIR}/?" "" in "${in}")
     string(REGEX REPLACE "[^0-9a-zA-Z]+" "-" tmp "${in}")
     set(${out} ${tmp} PARENT_SCOPE)
 endfunction()
