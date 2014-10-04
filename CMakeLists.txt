@@ -27,6 +27,9 @@ include(KDECMakeSettings)
 
 # KF5 frameworks
 find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5I18n ${KF5_DEP_VERSION})
+set_package_properties(KF5I18n PROPERTIES TYPE OPTIONAL
+   PURPOSE "Required to build the KDocTools translations")
 
 find_package(LibXslt)
 set_package_properties(LibXslt PROPERTIES
@@ -71,7 +74,7 @@ set(KDOCTOOLS_LANGUAGES_LIST af bg ca cs da de el en-GB en eo es et fi fo fr gl 
 
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kio_help5\")
-if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
+if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po" AND KF5I18n_FOUND)
     ki18n_install(po)
     kdoctools_install(po)
 endif()
