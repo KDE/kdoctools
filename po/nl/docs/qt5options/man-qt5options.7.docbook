@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>KDE gebruikershandleiding</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2004-02-02</date>
+<productname
+>K Desktop Environment</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Gemeenschappelijke commandoregelopties voor alle applicaties gebaseerd op de Qt-hulpmiddelen</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Qt-applicatie</replaceable
+></command
+> <arg choice="opt"
+>Qt-algemene opties</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opties</title>
+
+<para
+>De volgende opties zijn van toepassing op alle &Qt;-applicaties:</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>schermnaam</parameter
+> </term>
+<listitem>
+<para
+>Gebruik de X-serverdisplay <parameter
+>schermnaam</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>sessie-id</parameter
+> </term>
+<listitem>
+<para
+>De toepassing herstellen voor de gegeven <parameter
+>sessionId</parameter
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Zorgt ervoor dat de toepassing een privé-kleurenschema op een 8-bit weergave gebruikt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>aantal</parameter
+> </term>
+<listitem>
+<para
+>Beperkt het aantal toegekende kleuren in de kleurkubus op een 8-bit scherm, als de applicatie de kleurspecificatie <methodname
+>QApplication::ManyColor</methodname
+> gebruikt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Vertelt &Qt; dat deze nooit de muis of toetsenbord mag overnemen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>Onder een debugger draaien kan een impliciete <option
+>-nograb</option
+> veroorzaken, gebruik <option
+>-dograb</option
+> om te overschrijven.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Gaat over naar de synchrone modus voor het debuggen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>, <option
+>--font</option
+> <parameter
+>lettertypenaam</parameter
+> </term>
+<listitem>
+<para
+>Het lettertype van de toepassing instellen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>kleur</parameter
+> </term>
+<listitem>
+<para
+>Stelt de standaard achtergrondkleur in en een toepassingspalet (lichte en donkere tinten worden berekend).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>, <option
+>--foreground</option
+> <parameter
+>kleur</parameter
+> </term>
+<listitem>
+<para
+>De standaard voorgrondkleur instellen</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>, <option
+>--button</option
+> <parameter
+>kleur</parameter
+> </term>
+<listitem>
+<para
+>De standaard kleur van de knop instellen.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>naam</parameter
+> </term>
+<listitem>
+<para
+>De naam van de toepassing instellen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>titel</parameter
+> </term>
+<listitem>
+<para
+>De titel van de toepassing (opschrift) instellen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Dwingt de toepassing om een <parameter
+>TrueColor</parameter
+> uiterlijk op een 8-bits scherm te gebruiken.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>invoerstijl</parameter
+> </term>
+<listitem>
+<para
+>Stelt de XIM (X Input Method)-invoermethode in. Mogelijke waarden zijn <parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> en <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>XIM-server</parameter
+> </term>
+<listitem>
+<para
+>XIM-server instellen.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>XIM uitschakelen</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>spiegelt de hele opmaak van widgets</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>bestand.qss</replaceable
+> </term>
+<listitem>
+<para
+>past de Qt-stijlbladen toe op programmawidgets</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Zie ook</title>
+<para
+><replaceable
+>kf5opties</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>Manpagina geschreven door &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
