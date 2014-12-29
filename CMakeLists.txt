@@ -73,7 +73,7 @@ include(KF5DocToolsMacros.cmake)
 set(KDOCTOOLS_LANGUAGES_LIST af bg ca cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
 
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5DocTools")
-add_definitions(-DTRANSLATION_DOMAIN=\"kio_help5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po" AND KF5I18n_FOUND)
     ki18n_install(po)
     kdoctools_install(po)
