@@ -1,7 +1,7 @@
 # install common files for all languages
 foreach( _kdoctoolscommon_currentlang ${KDOCTOOLS_LANGUAGES_LIST})
     file( GLOB _kdoctoolscommon_lang_allfiles "${_kdoctoolscommon_currentlang}/*" )
-    install(FILES ${_kdoctoolscommon_lang_allfiles} DESTINATION ${HTML_INSTALL_DIR}/${_kdoctoolscommon_currentlang}/kdoctools5-common)
+    install(FILES ${_kdoctoolscommon_lang_allfiles} DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/${_kdoctoolscommon_currentlang}/kdoctools5-common)
 endforeach()
 
 # add English version of the -translated files, so that
@@ -11,7 +11,7 @@ endforeach()
 set (_basetranslatedlicenses fdl gpl lgpl)
 foreach (_licenseprefix ${_basetranslatedlicenses})
     install(FILES en/${_licenseprefix}-license.html DESTINATION
-            ${HTML_INSTALL_DIR}/en/kdoctools5-common/
+            ${KDE_INSTALL_DOCBUNDLEDIR}/en/kdoctools5-common/
             RENAME ${_licenseprefix}-translated.html)
 endforeach()
 
