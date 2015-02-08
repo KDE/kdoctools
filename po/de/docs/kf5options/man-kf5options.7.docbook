@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>KDE-Benutzerhandbuch</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2004-02-02</date>
+<productname
+>KDE-Software</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Allgemeine Befehlszeilenparameter für alle Anwendungen, die auf KDE Frameworks 5 basieren.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>KDE-Anwendung</replaceable
+></command
+> <arg choice="opt"
+>Allgemeine KDE-Optionen</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Optionen</title>
+
+<para
+>Die folgenden Parameter gelten für alle &kde;-Anwendungen:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>Titel</parameter
+></term>
+<listitem
+><para
+>Verwendet <parameter
+>Titel</parameter
+> in der Titelleiste des Anwendungsfensters.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>Symbol</parameter
+></term>
+<listitem
+><para
+>Verwendet <parameter
+>Symbole</parameter
+> als Symbol für die Anwendung.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>dateiname</parameter
+></term>
+<listitem
+><para
+>Alternative Einstellungen aus <parameter
+>dateiname</parameter
+> verwenden</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Abschalten des Crash-Handlers, damit Fehlerprotokolle (core dumps) erstellt werden.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Wartet auf einen WM_NET-kompatiblen Fenstermanager.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>Stil</parameter
+></term>
+<listitem
+><para
+>Legt den &GUI;-Stil der Anwendung fest.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>Position/Größe</parameter
+></term>
+<listitem
+><para
+>Legt die Position/Größe des Hauptbildschirmelements fest.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>Handbuchseite geschrieben von &Lauri.Watts;&Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>KDE användarhandbok</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2004-02-02</date>
+<productname
+>KDE-programvara</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Gemensamma kommandoradsväljare för alla program som är baserade på KDE Ramverk 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>KDE-program</replaceable
+></command
+> <arg choice="opt"
+>Allmänna KDE-väljare</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Väljare</title>
+
+<para
+>Följande väljare gäller alla program som använder &kde;:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>titel</parameter
+></term>
+<listitem
+><para
+>Använd <parameter
+>titel</parameter
+> som titel i namnlisten.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>ikon</parameter
+></term>
+<listitem
+><para
+>Använd <parameter
+>ikon</parameter
+> som programmets ikon.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>filnamn</parameter
+></term>
+<listitem
+><para
+>Använd alternativ inställning <parameter
+>filnamn</parameter
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Inaktivera kraschhantering, för att skapa minnesdumpar.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Väntar på en WM_NET-kompatibel fönsterhanterare.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>stil</parameter
+></term>
+<listitem
+><para
+>Ställer in stilen för programmets grafiska gränssnitt.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>geometri</parameter
+></term>
+<listitem
+><para
+>Ställer in geometrin för klientens grafiska huvudkomponent.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>Manualsidan skriven av &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>

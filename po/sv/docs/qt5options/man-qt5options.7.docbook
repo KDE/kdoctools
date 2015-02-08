@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>KDE användarhandbok</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2004-02-02</date>
+<productname
+>K-skrivbordsmiljön</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Gemensamma kommandoradsväljare för alla program som är baserade på QT-verktygslådan</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>QT-program</replaceable
+></command
+> <arg choice="opt"
+>Allmänna QT-väljare</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Väljare</title>
+
+<para
+>Följande väljare gäller alla program som använder &Qt;:</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>skärmnamn</parameter
+> </term>
+<listitem>
+<para
+>Använd X-serverskärmen <parameter
+>skärmnamn</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>sessions-id</parameter
+> </term>
+<listitem>
+<para
+>Återställ programmet för givet <parameter
+>sessions-id</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Gör att programmet installerar en privat färgkarta på en 8-bitarsskärm.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>antal</parameter
+> </term>
+<listitem>
+<para
+>Begränsar antal färger som tilldelas i färgkuben för en 8-bitars skärm, om programmet använder färgspecifikationen <methodname
+>QApplication::ManyColor</methodname
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Talar om för &Qt; att aldrig låsa musen eller tangentbordet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>Att köra med en avlusare kan orsaka en implicit <option
+>--nograb</option
+>. Använd <option
+>--dograb</option
+> för att överskrida det.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Byter till synkront läge för avlusning.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>,<option
+>--font</option
+> <parameter
+>teckensnitt</parameter
+> </term>
+<listitem>
+<para
+>Definierar programmets teckensnitt.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>färg</parameter
+> </term>
+<listitem>
+<para
+>Ställer in förvald bakgrundsfärg och en programpalett (ljusa och mörka nyanser beräknas).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>,<option
+>--foreground</option
+> <parameter
+>färg</parameter
+> </term>
+<listitem>
+<para
+>Ställer in förvald förgrundsfärg</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>,<option
+>--button</option
+> <parameter
+>färg</parameter
+> </term>
+<listitem>
+<para
+>Ställer in förvald knappfärg.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>namn</parameter
+> </term>
+<listitem>
+<para
+>Ställer in programmets namn.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>titel</parameter
+> </term>
+<listitem>
+<para
+>Ställer in programmets titel (rubrik).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Tvingar programmet att använda <parameter
+>TrueColor</parameter
+> med en 8-bitars skärm.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>inmatningsstil</parameter
+> </term>
+<listitem>
+<para
+>Ställer in XIM (X-inmatningsmetod) inmatningsstil. Möjliga värden är <parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> och <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>XIM-server</parameter
+> </term>
+<listitem>
+<para
+>Ange XIM-server.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>Inaktivera XIM</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>spegelvänder hela utläggningen av grafiska komponenter</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>fil.qss</replaceable
+> </term>
+<listitem>
+<para
+>använder Qt-stilmallen för programmets grafiska komponenter</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Se också</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>Manualsidan skriven av &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
