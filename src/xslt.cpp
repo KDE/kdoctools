@@ -440,7 +440,7 @@ QStringList getKDocToolsCatalogs()
         QDir customizationDir = QDir(customizationDirName);
         const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
         const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
-                                               QDir::Files | QDir::NoSymLinks, QDir::Name);
+                                               QDir::Files, QDir::Name);
         foreach (const QFileInfo &fileInfo, catalogInfoFiles) {
             const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
             if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {

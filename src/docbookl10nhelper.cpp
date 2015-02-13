@@ -206,7 +206,7 @@ int main(int argc, char **argv)
     QStringList dirFileFilters;
     dirFileFilters << QStringLiteral("*.xml");
     QStringList customLangFiles = outDir.entryList(dirFileFilters,
-                                  QDir::Files | QDir::NoSymLinks, QDir::Name);
+                                  QDir::Files, QDir::Name);
     /* the following two calls to removeOne should not be needed, as
      * the customization directory from the sources should not contain
      * those files
