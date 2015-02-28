@@ -1,5 +1,7 @@
 include_directories( ${LIBXML2_INCLUDE_DIR} ${LIBXSLT_INCLUDE_DIR} )
 
+include(uriencode)
+kdoctools_encode_uri(${DocBookXML4_DTD_DIR})
 set (_custom_dtd_kdex "customization/dtd/kdedbx45.dtd")
 configure_file(${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex} )
 # WARNING: this is due to severe limitations on the windows platform to keep the dtd relocateable
@@ -14,6 +16,8 @@ else()
     # removed using get_filename_component(... ABSOLUTE)
     install(CODE
         "file(RELATIVE_PATH DocBookXML4_DTD_DIR \"${NORMALIZED_DTD_INSTALL_PATH}\" \"${DocBookXML4_DTD_DIR}\")
+        include(${CMAKE_SOURCE_DIR}/cmake/uriencode.cmake)
+        kdoctools_encode_uri(DocBookXML4_DTD_DIR)
         configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install)"
     )
     get_filename_component(_custom_dtd_kdex_name ${_custom_dtd_kdex} NAME)
