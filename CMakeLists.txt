@@ -87,6 +87,8 @@ install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE 
 ecm_configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfig.cmake"
+  PATH_VARS
+    KDE_INSTALL_DATADIR_KF5
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 
