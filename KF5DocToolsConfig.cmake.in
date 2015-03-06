@@ -9,4 +9,3 @@ include(${CMAKE_CURRENT_LIST_DIR}/KF5DocToolsMacros.cmake)
 
 # find_dependency must be called *after* including the macros or PACKAGE_PREFIX_DIR will be altered
 find_dependency(Qt5Core @REQUIRED_QT_VERSION@)
-find_dependency(KF5Archive "@KF5_DEP_VERSION@")
