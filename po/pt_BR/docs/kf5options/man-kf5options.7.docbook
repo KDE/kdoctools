@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Brazilian-Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual do Usuário do KDE</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>02/02/2004</date>
+<productname
+>Software KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Opções comuns de linha de comando para todos os aplicativos baseados no KDE Frameworks 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Aplicativo do KDE</replaceable
+></command
+> <arg choice="opt"
+>Opções genéricas do KDE</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opções</title>
+
+<para
+>As opções a seguir se aplicam a todos os aplicativos do &kde;:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>título</parameter
+></term>
+<listitem
+><para
+>Usa o <parameter
+>título</parameter
+> como nome na barra de título.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>ícone</parameter
+></term>
+<listitem
+><para
+>Usa o <parameter
+>ícone</parameter
+> como ícone do aplicativo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>arquivo</parameter
+></term>
+<listitem
+><para
+>Usa a configuração alternativa em <parameter
+>arquivo</parameter
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Desativa o gerenciador de falhas, para obter a geração dos arquivos de depuração.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Aguarda por um gerenciador de janelas compatível com WM_NET.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>estilo</parameter
+></term>
+<listitem
+><para
+>Define o estilo gráfico do aplicativo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>geometria</parameter
+></term>
+<listitem
+><para
+>Define a geometria do cliente da janela principal.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veja também</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>A página de manual foi escrita por &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
