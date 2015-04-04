@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Інструкція користувача KDE</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2 лютого 2004 року</date>
+<productname
+>Програмне забезпечення KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Типові параметри командного рядка для всіх програм, заснованих на бібліотеках KDE Frameworks 5.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Програма KDE</replaceable
+></command
+> <arg choice="opt"
+>Загальні параметри KDE</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Параметри</title>
+
+<para
+>Для всіх програм &kde; можна застосовувати такі параметри:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>заголовок</parameter
+></term>
+<listitem
+><para
+>Використовувати <parameter
+>заголовок</parameter
+> як назву у смужці заголовка вікна програми.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>піктограма</parameter
+></term>
+<listitem
+><para
+>Використовувати <parameter
+>піктограму</parameter
+> як піктограму програми.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>назва_файла</parameter
+></term>
+<listitem
+><para
+>Використовувати альтернативні налаштування <parameter
+>назва_файла</parameter
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Вимкнути засіб обробки критичних помилок, призначений для створення дампів ядра.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Чекає на засіб керування вікнами, сумісний з WM_NET.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>стиль</parameter
+></term>
+<listitem
+><para
+>Встановлює стиль графічного інтерфейсу програми.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>геометрія</parameter
+></term>
+<listitem
+><para
+>Встановлює клієнтську геометрію головного віджета.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Прочитайте також</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором сторінки довідника є &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
