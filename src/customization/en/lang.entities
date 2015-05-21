@@ -31,6 +31,10 @@
   "entities/update-doc.docbook"                     ><!-- level: para -->
 <!ENTITY help.menu.documentation PUBLIC "-//KDE//DOCUMENT Help Menu Documentation//EN"
   "entities/help-menu.docbook"                      ><!-- level: variablelist -->
+
+<!-- Entities install.intro.documentation + install.compile.documentation
+     are deprecated and should be removed in Frameworks 6 -->
+
 <!ENTITY install.intro.documentation PUBLIC "-//KDE//DOCUMENT Installation General Information//EN"
   "entities/install-intro.docbook"                     ><!-- level: para -->
 <!ENTITY install.compile.documentation PUBLIC "-//KDE//DOCUMENT Compilation Instructions//EN"
