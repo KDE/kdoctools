@@ -12,7 +12,7 @@
           uri="entities/lgpl-notice.docbook"/>
 
   <public publicId="-//KDE//DOCUMENT GPL Licence Declaration//RU"
-          uri="entities/underGPL.docbook"/> />
+          uri="entities/underGPL.docbook"/>
   <public publicId="-//KDE//DOCUMENT LGPL Licence Declaration//RU"
           uri="entities/underLGPL.docbook"/> 
   <public publicId="-//KDE//DOCUMENT FDL Licence Declaration//RU"
