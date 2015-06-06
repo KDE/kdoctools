@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual d'usuari del KDE</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>02-02-2004</date>
+<productname
+>Programari &kde;</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Opcions comunes de la línia d'ordres per a totes les aplicacions basades en el KDE Frameworks 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Aplicació KDE</replaceable
+></command
+> <arg choice="opt"
+>Opcions genèriques del KDE</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opcions</title>
+
+<para
+>Les següents opcions s'apliquen a totes les aplicacions &kde;:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>capçalera</parameter
+></term>
+<listitem
+><para
+>Usa <parameter
+>capçalera</parameter
+> com a nom de la barra de títol.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>icona</parameter
+></term>
+<listitem
+><para
+>Usa <parameter
+>icona</parameter
+> com a icona d'aplicació.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>nom_de_fitxer</parameter
+></term>
+<listitem
+><para
+>Usa la configuració alternativa <parameter
+>nom_de_fitxer</parameter
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Desactiva el gestor de fallades, per obtenir bolcats de nucli.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Espera un gestor de finestres compatible amb WM_NET.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>estil</parameter
+></term>
+<listitem
+><para
+>Estableix l'estil de la &IGU; per a l'aplicació.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>geometria</parameter
+></term>
+<listitem
+><para
+>Estableix la geometria del client a l'estri principal.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Veure també</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>Pàgina de manual escrita per en &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
