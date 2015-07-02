@@ -5,9 +5,6 @@
   <!ENTITY kmyapplication "<application>KMyApp</application>">
   <!ENTITY kappname "&kmyapplication;"><!-- replace kmyapplication here
                                             do *not* replace kappname-->
-  <!ENTITY package "kde-module"><!-- kdebase, kdeadmin, etc.  Leave
-                                     this unchanged if your
-                                     application is not maintained in KDE source archiv -->
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"> <!-- ONLY If you are writing non-English
                                      original documentation, change
@@ -91,7 +88,7 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 </authorgroup>
 
 <copyright>
-<year>2014</year>
+<year>2015</year>
 <holder>George N. Ugnacious</holder>
 </copyright>
 <legalnotice>&FDLNotice;</legalnotice>
@@ -100,12 +97,16 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
-<date>2014-04-03</date>
+<date>2015-04-03</date>
 
-<!--version information of the application and kde this documentation is valid for.
-for example 'xx.yy.zz'
+<!--version information of Frameworks/Plasma/Applications this documentation is valid for.
+Example:
+Frameworks xx.yy for docbooks in frameworks
+Plasma xx.yy for docbooks in plasma workspace
+Applications xx.yy for docbooks released as Applications
+$applicationname xx.yy for applications with independent release schedule (extragear/playground)
 -->
-<releaseinfo>1.01.00</releaseinfo>
+<releaseinfo>Frameworks or Plasma or Applications or $applicationname xx.yy</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -139,6 +140,24 @@ system. Any chapter labelled (OPTIONAL) may be left out at the author's
 discretion. Other chapters should not be left out in order to maintain a
 consistent documentation style across all KDE apps. -->
 
+
+<!-- KDE Games have special chapters
+
+Introduction
+
+How to play
+
+Game Rules, Strategies and Tips
+
+Interface Overview
+
+Frequently asked questions
+
+Credits and License
+
+Please use one of index.docbook files from kdegames
+
+-->
 <chapter id="introduction">
 <title>Introduction</title>
 
@@ -385,6 +404,12 @@ Documentation Copyright &copy; 2012-2014 George N. Ugnacious <email>gnu@kde.org<
 &underX11License;        <!-- X11 License  -->
 
 </chapter>
+
+<!-- Appendix Installation is optional, usually not required
+
+Entities &install.intro.documentation; + &install.compile.documentation; will be removed in later kdoctools
+
+-->
 
 <appendix id="installation">
 <title>Installation</title>

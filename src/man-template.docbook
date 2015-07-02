@@ -13,13 +13,13 @@
 </personname>
 <email><!--Your email address--></email></author>
 <!--Date when this manpage was written, in the ISO 8601 format 'yyyy-mm-dd'-->
-<date>2014-04-03</date>
-<!--version information of the application this documentation is valid for.
-for example 'xx.yy.zz'-->
-<releaseinfo>5.1</releaseinfo>
-<!-- replace Foo with the application name; &kde; as prefix/namespace could
+<date>2015-04-03</date>
+<!--version information of application this manpage is valid for.
+-->
+<releaseinfo>$applicationname xx.yy</releaseinfo>
+<!-- replace $applicationname with the application name; &kde; as prefix/namespace could
 be not needed, ask the promo team in case of doubt-->
-<productname>&kde; &kappname;</productname>
+<productname>$applicationname</productname>
 </refentryinfo>
 
 <refmeta>
