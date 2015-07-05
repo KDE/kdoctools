@@ -1,0 +1,340 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>KDE-Benutzerhandbuch</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2004-02-02</date>
+<productname
+>K Desktop Environment</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Allgemeine Befehlszeilenparameter für alle Anwendungen, die auf dem Qt-Toolkit basieren.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Qt-Anwendung</replaceable
+></command
+> <arg choice="opt"
+>Allgemeine Qt-Optionen</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Optionen</title>
+
+<para
+>Die folgenden Parameter gelten für alle &Qt;-Anwendungen:</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>Displayname</parameter
+> </term>
+<listitem>
+<para
+>Verwende den X-Server-Display <parameter
+>Displayname</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>Sitzungs-ID</parameter
+> </term>
+<listitem>
+<para
+>Wiederherstellung der Anwendung für die angegebene <parameter
+>Sitzungs-ID</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Bewirkt, dass die Anwendung auf einem 8-Bit-Display eine eigene Farbtabelle anlegt. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>Anzahl</parameter
+> </term>
+<listitem>
+<para
+>Beschränkt die Anzahl der Farben auf einem 8-Bit-Display, wenn die Anwendung die Farbspezifikation <methodname
+>QApplication::ManyColor</methodname
+> verwendet.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Bewirkt, dass &Qt; weder Maus noch Tastatur für sich allein beansprucht (grab).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>In einem Debugger kann es vorkommen, dass implizit der Parameter <option
+>--nograb</option
+> gesetzt ist. Verwenden Sie <option
+>--dograb</option
+>, um diese Einstellung zu überschreiben.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Wechselt zum Debuggen in den Synchronmodus.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>,<option
+>--font</option
+> <parameter
+>Schriftname</parameter
+> </term>
+<listitem>
+<para
+>Legt die Schriftart für die Anwendung fest.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>Farbe</parameter
+> </term>
+<listitem>
+<para
+>Legt die Standardhintergrundfarbe und eine Farbpalette für die Anwendung fest (helle und dunkle Schattierungen werden berechnet).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>,<option
+>--foreground</option
+> <parameter
+>Farbe</parameter
+> </term>
+<listitem>
+<para
+>Legt die Standardvordergrundfarbe fest.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>,<option
+>--button</option
+> <parameter
+>Farbe</parameter
+> </term>
+<listitem>
+<para
+>Legt die Standardfarbe für Knöpfe fest.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>Name</parameter
+> </term>
+<listitem>
+<para
+>Legt den Namen der Anwendung fest</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>Titel</parameter
+> </term>
+<listitem>
+<para
+>Legt den Titel der Anwendung fest (Fenstertitel)</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Erzwingt für die Anwendung eine <parameter
+>TrueColore</parameter
+>-Darstellung auf einem 8-Bit-Display.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>Eingabestil</parameter
+> </term>
+<listitem>
+<para
+>Legt den XIM (X Input Method) Eingabestil fest. Mögliche Werte sind <parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> und <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>XIM-Server</parameter
+> </term>
+<listitem>
+<para
+>Legt den XIM-Server fest.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>XIM abschalten</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>Ordnet sämtliche Bedienelemente spiegelverkehrt an</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>file.qss</replaceable
+> </term>
+<listitem>
+<para
+>Wendet die Qt-Stilvorlage auf Anwendungs-Dialoge an.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Siehe auch</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>Handbuchseite geschrieben von &Lauri.Watts;&Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
