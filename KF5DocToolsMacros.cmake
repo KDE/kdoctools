@@ -89,7 +89,7 @@ if(KDOCTOOLS_SERIALIZE_TOOL)
     set(KDOCTOOLS_MEINPROC_EXECUTABLE ${KDOCTOOLS_SERIALIZE_TOOL} ${KDOCTOOLS_MEINPROC_EXECUTABLE})
 endif(KDOCTOOLS_SERIALIZE_TOOL)
 
-function(create_target_name out in)
+function(_kdoctools_create_target_name out in)
     string(REGEX REPLACE "^${CMAKE_BINARY_DIR}/?" "" in "${in}")
     string(REGEX REPLACE "[^0-9a-zA-Z]+" "-" tmp "${in}")
     set(${out} ${tmp} PARENT_SCOPE)
@@ -139,7 +139,7 @@ function (kdoctools_create_handbook docbook)
         WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
     )
 
-    create_target_name(_targ ${build_doc})
+    _kdoctools_create_target_name(_targ ${build_doc})
     add_custom_target(${_targ} ALL DEPENDS ${build_doc})
 
     if(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
@@ -196,7 +196,7 @@ function (kdoctools_create_manpage docbook section)
         WORKING_DIRECTORY ${build_dir}
     )
 
-    create_target_name(_targ ${build_doc})
+    _kdoctools_create_target_name(_targ ${build_doc})
     add_custom_target(${_targ} ALL DEPENDS "${build_doc}")
 
     if(ARGS_INSTALL_DESTINATION)
