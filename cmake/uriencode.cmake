@@ -34,7 +34,7 @@ function(kdoctools_encode_uri _original_uri)
     find_package(PerlModules COMPONENTS URI::Escape REQUIRED)
     # properly encode the URI
     string(REPLACE "\"" "\\\"" escaped_uri "${${_original_uri}}")
-    execute_process(COMMAND perl -MURI::Escape -e "print uri_escape_utf8(\"${escaped_uri}\", \"^A-Za-z0-9\\-\\._~\\/\");"
+    execute_process(COMMAND perl -MURI::Escape -e "print uri_escape_utf8(\"${escaped_uri}\", \"^A-Za-z0-9\\-\\._~\\/:\");"
                     OUTPUT_VARIABLE encoded_uri
                     RESULT_VARIABLE res_encoding
                     OUTPUT_STRIP_TRAILING_WHITESPACE)
