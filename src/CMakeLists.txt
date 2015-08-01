@@ -17,6 +17,7 @@ else()
     install(CODE
         "file(RELATIVE_PATH DocBookXML4_DTD_DIR \"${NORMALIZED_DTD_INSTALL_PATH}\" \"${DocBookXML4_DTD_DIR}\")
         include(${CMAKE_SOURCE_DIR}/cmake/uriencode.cmake)
+        set(CMAKE_MODULE_PATH \"${CMAKE_MODULE_PATH}\")
         kdoctools_encode_uri(DocBookXML4_DTD_DIR)
         configure_file(${CMAKE_CURRENT_SOURCE_DIR}/${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install)"
     )
