@@ -23,7 +23,7 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
                         SOVERSION 5)
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.2.0)
+set(REQUIRED_QT_VERSION 5.3.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings)
