@@ -15,11 +15,22 @@
 <!--Date when this manpage was written, in the ISO 8601 format 'yyyy-mm-dd'-->
 <date>2015-04-03</date>
 <!--version information of application this manpage is valid for.
+Change date if
+   docbook is updated and verified to be valid for the current app version
+   docbook is proofreaded and verified to be valid for the current app version
 -->
-<releaseinfo>$applicationname xx.yy</releaseinfo>
+<releaseinfo>Frameworks xx.yy or Plasma xx.yy or Applications xx.yy or $applicationname xx.yy</releaseinfo>
 <!-- replace $applicationname with the application name; &kde; as prefix/namespace could
-be not needed, ask the promo team in case of doubt-->
-<productname>$applicationname</productname>
+be not needed, ask the promo team in case of doubt
+Example:
+Frameworks xx.yy for docbooks in frameworks
+Plasma xx.yy for docbooks in plasma
+Applications xx.yy for docbooks released as Applications
+$applicationname xx.yy (Applications xx.yy) for docbooks with own version released as Applications
+$applicationname xx.yy for applications with independent release schedule (extragear/playground)
+-->
+
+<productname>KDE Frameworks or KDE Plasma or KDE Applications</productname>
 </refentryinfo>
 
 <refmeta>

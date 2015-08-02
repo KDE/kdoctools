@@ -13,7 +13,13 @@
   <!-- Do not define any other entities; instead, use the entities
        from entities/general.entities and en/user.entities. -->
 ]>
-<!-- kdoctemplate v0.10.0 2014-04-02 ltoscano
+<!-- kdoctemplate v0.11.0 2015-04-03 lueck
+     updated instructions for date + releaseinfo
+     remove ENTITY package - not used anymore
+     add info about KDE Games special chapters
+     Appendix Installation is now optional
+
+     kdoctemplate v0.10.0 2014-04-02 ltoscano
      updated to KF5/kdoctools
      references to KDE reworded
 
@@ -94,6 +100,9 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 <legalnotice>&FDLNotice;</legalnotice>
 
 <!-- Date of the documentation
+Change date if
+   docbook is updated and verified to be valid for the current app version
+   docbook is proofreaded and verified to be valid for the current app version
 Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
@@ -104,9 +113,10 @@ Example:
 Frameworks xx.yy for docbooks in frameworks
 Plasma xx.yy for docbooks in plasma workspace
 Applications xx.yy for docbooks released as Applications
+$applicationname xx.yy (Applications xx.yy) for docbooks with own version released as Applications
 $applicationname xx.yy for applications with independent release schedule (extragear/playground)
 -->
-<releaseinfo>Frameworks or Plasma or Applications or $applicationname xx.yy</releaseinfo>
+<releaseinfo>Frameworks xx.yy or Plasma xx.yy or Applications xx.yy or $applicationname xx.yy (Applications xx.yy) or $applicationname xx.yy</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
