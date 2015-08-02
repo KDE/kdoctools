@@ -140,7 +140,7 @@
 <!ENTITY filelight "<application>Filelight</application>">
 <!ENTITY firefox "<application>Firefox</application>">
 <!ENTITY FTP	"<acronym>FTP</acronym>">
-<!ENTITY frameworks "<application>frameworks</application>">
+<!ENTITY frameworks "<productname>Frameworks</productname>">
 <!ENTITY gcc	"<command>gcc</command>">
 <!ENTITY gcompris "<application>GCompris</application>">
 <!ENTITY GIF	"<acronym>GIF</acronym>">
@@ -383,7 +383,7 @@
 <!ENTITY parley	"<application>Parley</application>">
 <!ENTITY phonon "<application>Phonon</application>">
 <!ENTITY picmi "<application>Picmi</application>">
-<!ENTITY plasma "<application>Plasma</application>">
+<!ENTITY plasma "<productname>Plasma</productname>">
 <!ENTITY plasmagik "<application>Plasmagik</application>">
 <!ENTITY plasmoid "<application>Plasmoid</application>">
 <!ENTITY plasmoids "<application>Plasmoids</application>">
