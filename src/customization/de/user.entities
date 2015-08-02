@@ -7,6 +7,7 @@
  -->
 
 <!ENTITY Alt    "<keycap>Alt</keycap>">
+<!ENTITY applications	"<productname>Anwendungen</productname>">
 <!ENTITY Backspace	"<keycap>R&uuml;cktaste</keycap>">
 <!ENTITY cdrom	'<hardware>CD-ROM-Laufwerk</hardware>'>
 <!ENTITY Ctrl   "<keycap>Strg</keycap>">
@@ -18,17 +19,9 @@
 <!ENTITY FAQ	'<acronym>FAQ</acronym>'>
 <!ENTITY ie     "<abbrev>d.&nbsp;h.</abbrev>">
 <!ENTITY infocenter	"<application>Infozentrum</application>">
-<!ENTITY kcc "<application>&kde;-Kontrollzentrum</application>" ><!-- kcc -->
-<!ENTITY kcontrolcenter "<application>&kde;-Kontrollzentrum</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kde "K-Arbeitsumgebung" ><!-- kde -->
 <!ENTITY khelpcenter-de "<application>&kde;-Hilfezentrum</application>" >
-<!ENTITY kmenu  "<guimenu>K</guimenu>-Men&uuml;"> <!-- kmenu -->
-<!ENTITY kwm    "<application>kwm</application>">
 <!ENTITY LMB    "<mousebutton>linke</mousebutton> Maustaste">
 <!ENTITY LMBn   "<mousebutton>linken</mousebutton> Maustaste">
 <!ENTITY LMBr   "<mousebutton>linker</mousebutton> Maustaste">
@@ -50,4 +43,14 @@
 <!ENTITY systemsettings	"<application>Systemeinstellungen</application>">
 <!ENTITY systemtray "<application>Systemabschnitt</application>">
 <!ENTITY Tab 	"<keycap>Tab</keycap>"> <!-- Tab -->
+
+<!-- Deprecated, will be removed at a future time, do not use -->
+<!ENTITY kcc "<application>&kde;-Kontrollzentrum</application>" ><!-- kcc -->
+<!ENTITY kcontrolcenter "<application>&kde;-Kontrollzentrum</application>">
+<!ENTITY kde "K-Arbeitsumgebung" ><!-- kde -->
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kmenu  "<guimenu>K</guimenu>-Men&uuml;"> <!-- kmenu -->
+<!ENTITY kwm    "<application>kwm</application>">
 
