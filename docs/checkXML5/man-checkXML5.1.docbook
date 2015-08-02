@@ -5,9 +5,11 @@
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>&kde; User's Manual</title>
+<title>checkXML5 User's Manual</title>
 <author><personname><firstname>Lauri</firstname><surname>Watts</surname></personname><email>lauri@kde.org</email></author>
-<date>2003-07-03</date>
+<date>2014-03-04</date>
+<releaseinfo>Frameworks 5.0</releaseinfo>
+<productname>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>

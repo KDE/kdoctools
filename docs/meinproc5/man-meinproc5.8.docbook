@@ -3,10 +3,10 @@
   <!ENTITY % English "INCLUDE"><!-- change language only here -->
 ]>
 
-<refentry>
+<refentry lang="&language;">
 
 <refentryinfo>
-<title>&kde; User's Manual</title>
+<title>meinproc5 User's Manual</title>
 <!-- There is no author in the meinproc.cpp file 
 Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
 
@@ -34,8 +34,9 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 </affiliation>
 </author>
 -->
-<date>2008-10-03</date>
-<releaseinfo>0.01.01</releaseinfo>
+<date>2014-05-08</date>
+<releaseinfo>Frameworks 5.0</releaseinfo>
+<productname>KDE Frameworks</productname>
 
 </refentryinfo>
 
