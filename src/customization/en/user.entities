@@ -7,6 +7,7 @@
  -->
 
 <!ENTITY Alt	"<keycap>Alt</keycap>">
+<!ENTITY applications	"<productname>Applications</productname>">
 <!ENTITY Backspace	"<keycap>Backspace</keycap>">
 <!ENTITY cdrom	'<hardware>CD-ROM drive</hardware>'>
 <!ENTITY Ctrl	"<keycap>Ctrl</keycap>">
@@ -18,13 +19,8 @@
 <!ENTITY FAQ	'<acronym>FAQ</acronym>'>
 <!ENTITY ie     "<abbrev>i.e.</abbrev>">
 <!ENTITY infocenter	"<application>Info Center</application>">
-<!ENTITY kcontrolcenter	"<application>&kde; Control Center</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kmenu  "<guimenu>K</guimenu> menu">
 <!ENTITY LMB    "<mousebutton>left</mousebutton> mouse button">
 <!ENTITY MMB    "<mousebutton>middle</mousebutton> mouse button">
 <!ENTITY OS	"operating system"><!-- <acronym>OS</acronym>-->
@@ -39,3 +35,11 @@
 <!ENTITY systemsettings	"<application>System Settings</application>">
 <!ENTITY systemtray "<application>system tray</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
+
+<!-- Deprecated, will be removed at a future time, do not use -->
+<!ENTITY kcontrolcenter	"<application>&kde; Control Center</application>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kmenu  "<guimenu>K</guimenu> menu">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+
