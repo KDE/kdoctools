@@ -271,6 +271,8 @@
 <!ENTITY Michael.Kropfberger '<personname><firstname>Michael</firstname><surname>Kropfberger</surname></personname>'>
 <!ENTITY Michael.Kropfberger.mail '<email>michael.kropfberger@gmx.net</email>'>
 <!ENTITY Ulrich.Kuettler.mail '<email>ulrich.kuettler@gmx.de</email>'>
+<!ENTITY Sebastian.Kuegler '<personname><firstname>Sebastian</firstname><surname>Kügler</surname></personname>'>
+<!ENTITY Sebastian.Kuegler.mail '<email>sebas@kde.org</email>'>
 <!ENTITY Stephan.Kulow '<personname><firstname>Stephan</firstname><surname>Kulow</surname></personname>'>
 <!ENTITY Stephan.Kulow.mail '<email>coolo@kde.org</email>'>
 <!ENTITY Vladimir.Kuznetsov '<personname><firstname>Vladimir</firstname><surname>Kuznetsov</surname></personname>'>
