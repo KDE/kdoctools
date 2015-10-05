@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Catalan  "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual d'usuari del qt5options</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>04-03-2014</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Opcions comuns de la línia d'ordres per a totes les aplicacions basades en el joc d'eines de les Qt</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Aplicació Qt</replaceable
+></command
+> <arg choice="opt"
+>Opcions genèriques de les Qt</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opcions</title>
+
+<para
+>Les següents opcions s'apliquen a totes les aplicacions &Qt;:</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>nom_pantalla</parameter
+> </term>
+<listitem>
+<para
+>Usa la pantalla del servidor X <parameter
+>nom_pantalla</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>ID_de_sessió</parameter
+> </term>
+<listitem>
+<para
+>Restaura l'aplicació per l'<parameter
+>ID_de_sessió</parameter
+> donat.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Fa que l'aplicació instal·li un mapa de color privat a una pantalla de 8 bits</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>compte</parameter
+> </term>
+<listitem>
+<para
+>Limita el nombre de colors assignats al cub de color a una pantalla de 8 bits, si l'aplicació està usant l'especificació de color <methodname
+>QApplication::ManyColor</methodname
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Li indica a les &Qt; que no es capturi mai el ratolí o el teclat.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>L'execució sota un depurador pot causar un <option
+>--nograb</option
+> implícit, useu <option
+>--dograb</option
+> per a no fer cas.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Canvia a mode síncron per a la depuració.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>,<option
+>--font</option
+> <parameter
+>nom_tipus_lletra</parameter
+> </term>
+<listitem>
+<para
+>Defineix el tipus de lletra de l'aplicació.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Estableix el color de fons per omissió i una paleta d'aplicació (es calculen les ombres suaus i fosques).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>,<option
+>--foreground</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Estableix el color de primer pla per omissió.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>,<option
+>--button</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Estableix el color per omissió del botó.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>nom</parameter
+> </term>
+<listitem>
+<para
+>Estableix el nom de l'aplicació.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>títol</parameter
+> </term>
+<listitem>
+<para
+>Estableix el títol de l'aplicació (llegenda).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Força a l'aplicació a usar visió <parameter
+>TrueColor</parameter
+> a una pantalla de 8 bits.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>estil_d'entrada</parameter
+> </term>
+<listitem>
+<para
+>Estableix l'estil d'entrada XIM (X Input Method). Els valors possibles són <parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> i <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>servidor XIM</parameter
+> </term>
+<listitem>
+<para
+>Estableix el servidor XIM.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>Deshabilita XIM.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>Emmiralla tota la disposició dels estris.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>file.qss</replaceable
+> </term>
+<listitem>
+<para
+>Aplica els fulls d'estils de les Qt als estris de les aplicacions.</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Vegeu també</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autors</title>
+<para
+>Pàgina de manual escrita per en &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
