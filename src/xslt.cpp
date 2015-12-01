@@ -38,13 +38,6 @@ int writeToQString(void *context, const char *buffer, int len)
     return len;
 }
 
-int closeQString(void *context)
-{
-    QString *t = (QString *)context;
-    *t += QLatin1Char('\n');
-    return 0;
-}
-
 #if defined (SIMPLE_XSLT) && defined(Q_OS_WIN)
 
 #define MAX_PATHS 64
@@ -200,11 +193,11 @@ QString transform(const QString &pat, const QString &tss,
     xmlDocPtr res = xsltApplyStylesheet(style_sheet, doc, const_cast<const char **>(&p[0]));
     xmlFreeDoc(doc);
     if (res != NULL) {
-        xmlOutputBufferPtr outp = xmlOutputBufferCreateIO(writeToQString, (xmlOutputCloseCallback)closeQString, &parsed, 0);
+        xmlOutputBufferPtr outp = xmlOutputBufferCreateIO(writeToQString, 0, &parsed, 0);
         outp->written = 0;
         INFO(i18n("Writing document"));
         xsltSaveResultTo(outp, res, style_sheet);
-        xmlOutputBufferFlush(outp);
+        xmlOutputBufferClose(outp);
         xmlFreeDoc(res);
     }
     xsltFreeStylesheet(style_sheet);
