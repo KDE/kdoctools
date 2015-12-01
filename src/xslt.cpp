@@ -180,13 +180,6 @@ QString transform(const QString &pat, const QString &tss,
         }
     }
 
-    xsltTransformContextPtr ctxt;
-
-    ctxt = xsltNewTransformContext(style_sheet, doc);
-    if (ctxt == NULL) {
-        return parsed;
-    }
-
     INFO(i18n("Applying stylesheet"));
     QVector<const char *> p = params;
     p.append(NULL);
