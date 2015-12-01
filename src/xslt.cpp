@@ -172,12 +172,16 @@ QString transform(const QString &pat, const QString &tss,
 
     xmlDocPtr doc = xmlCtxtReadFile(pctxt, QFile::encodeName(pat).constData(), NULL,
                                     XML_PARSE_NOENT|XML_PARSE_DTDLOAD|XML_PARSE_NONET);
+    /* Clean the context pointer, now useless */
+    const bool context_valid = (pctxt->valid == 0);
+    xmlFreeParserCtxt(pctxt);
+
     /* Check both the returned doc (for parsing errors) and the context
        (for validation errors) */
     if (doc == NULL) {
         return parsed;
     } else {
-        if (pctxt->valid == 0) {
+        if (context_valid) {
             xmlFreeDoc(doc);
             return parsed;
         }
