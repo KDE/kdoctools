@@ -377,7 +377,7 @@ public:
     QString srcdir;
 };
 
-Q_GLOBAL_STATIC(DtdStandardDirs, s_dtdDirs);
+Q_GLOBAL_STATIC(DtdStandardDirs, s_dtdDirs)
 
 void setupStandardDirs(const QString &srcdir)
 {
