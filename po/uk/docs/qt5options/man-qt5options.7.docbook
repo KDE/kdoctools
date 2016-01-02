@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Ukrainian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Інструкція користувача qt5options</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>4 березня 2014 року</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Загальні параметри командного рядка для всіх програм, заснованих на наборі інструментів Qt</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Програма Qt</replaceable
+></command
+> <arg choice="opt"
+>Загальні параметри Qt</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Параметри</title>
+
+<para
+>Для всіх програм на &Qt; можна застосовувати такі параметри:</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>назва_дисплея</parameter
+> </term>
+<listitem>
+<para
+>Використовувати дисплей сервера X з назвою <parameter
+>назва_дисплея</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>ідентифікатор_сеансу</parameter
+> </term>
+<listitem>
+<para
+>Відновити програму сеансу з вказаним ідентифікатором <parameter
+>ідентифікатор_сеансу</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Встановлює особливу карту кольорів для програми на 8-бітовому дисплеї.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>число</parameter
+> </term>
+<listitem>
+<para
+>Обмежує кількість кольорів, виділених у кубі кольорів на 8-бітовому дисплеї, якщо програма використовує специфікацію кольорів <methodname
+>QApplication::ManyColor</methodname
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Повідомляє &Qt;, що йому ніколи не слід перехоплювати керування мишею або клавіатурою.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>Запуск у засобі для налагоджування може спричинити неявне визначення параметра <option
+>--nograb</option
+>, щоб запобігти цьому, скористайтеся параметром <option
+>--dograb</option
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Перемикає програму у синхронний режим для налагоджування.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>,<option
+>--font</option
+> <parameter
+>назва_шрифту</parameter
+> </term>
+<listitem>
+<para
+>Визначає шрифт програми.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>колір</parameter
+> </term>
+<listitem>
+<para
+>Встановлює типовий колір тла і палітру програми (буде обчислено світлі і темні тони).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>,<option
+>--foreground</option
+> <parameter
+>колір</parameter
+> </term>
+<listitem>
+<para
+>Встановлює типовий колір переднього плану.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>,<option
+>--button</option
+> <parameter
+>колір</parameter
+> </term>
+<listitem>
+<para
+>Встановлює типовий колір кнопок.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>назва</parameter
+> </term>
+<listitem>
+<para
+>Встановлює назву програми.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>заголовок</parameter
+> </term>
+<listitem>
+<para
+>Встановлює заголовок вікна програми.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Вказує програмі, що слід використовувати відображення <parameter
+>TrueColor</parameter
+> на 8-бітовому дисплеї.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>стиль_введення</parameter
+> </term>
+<listitem>
+<para
+>Встановлює стиль введення XIM (X Input Method (методу введення X)). Можливими значеннями є <parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> і <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>сервер XIM</parameter
+> </term>
+<listitem>
+<para
+>Встановлює сервер XIM.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>Вимкнути XIM</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>віддзеркалює все компонування віджетів</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>файл.qss</replaceable
+> </term>
+<listitem>
+<para
+>застосовує таблицю стилів Qt до віджетів програми</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Прочитайте також</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Автори</title>
+<para
+>Автором сторінки довідника є &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>

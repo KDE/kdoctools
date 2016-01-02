@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Italian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manuale utente kf5options</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2014-03-04</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Opzioni dalla riga di comando comuni a tutte le applicazioni basate su KDE Frameworks 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Applicazione KDE</replaceable
+></command
+> <arg choice="opt"
+>Opzioni generiche KDE</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opzioni</title>
+
+<para
+>Le seguenti opzioni si applicano a tutte le applicazioni di &kde;:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>titolo</parameter
+></term>
+<listitem
+><para
+>Usa <parameter
+>titolo</parameter
+> come nome nella barra del titolo.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>icona</parameter
+></term>
+<listitem
+><para
+>Usa <parameter
+>icona</parameter
+> come icona dell'applicazione.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>nomefile</parameter
+></term>
+<listitem
+><para
+>Usa la configurazione alternativa <parameter
+>nomefile</parameter
+></para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Disattiva la gestione dei crash, per ottenere i core dump.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Resta in attesa di un gestore delle finestre (windowmanager) compatibile con WM_NET.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>stile</parameter
+></term>
+<listitem
+><para
+>Imposta lo stile della &GUI; dell'applicazione.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>geometria</parameter
+></term>
+<listitem
+><para
+>Imposta la geometria del client dell'elemento principale.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Vedi anche</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autori</title>
+<para
+>Pagina di manuale scritta da &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
