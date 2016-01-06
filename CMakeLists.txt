@@ -22,6 +22,8 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfigVersion.cmake"
                         SOVERSION 5)
 
+option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only for internal usage on KDE infrastructure." OFF)
+
 # Dependencies
 set(REQUIRED_QT_VERSION 5.3.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
@@ -30,7 +32,12 @@ include(KDEFrameworkCompilerSettings)
 include(KDECMakeSettings)
 
 # KF5 frameworks
-find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
+if (NOT MEINPROC_NO_KARCHIVE)
+   find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
+else()
+   message(WARNING "KArchive dependency has been disabled. This should be done only for internal usage on KDE infrastructure.")
+endif()
+
 find_package(KF5I18n ${KF5_DEP_VERSION})
 set_package_properties(KF5I18n PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the KDocTools translations")

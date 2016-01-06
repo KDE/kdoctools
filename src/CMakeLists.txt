@@ -28,11 +28,16 @@ endif()
 # needed by KIO, need to export it
 add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
+if (NOT MEINPROC_NO_KARCHIVE)
+    set (_private_link_karchive "KF5::Archive")
+else()
+    set (_private_link_karchive "")
+endif()
 target_link_libraries(KF5XsltKde
     PUBLIC
         Qt5::Core
     PRIVATE
-        KF5::Archive
+        ${_private_link_karchive}
 )
 set_target_properties(KF5XsltKde PROPERTIES
     POSITION_INDEPENDENT_CODE TRUE
@@ -59,7 +64,6 @@ if (CMAKE_CROSSCOMPILING)
 else ()
     set_source_files_properties(xslt.cpp PROPERTIES COMPILE_FLAGS -DSIMPLE_XSLT )
 
-    option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency" OFF)
     if(MEINPROC_NO_KARCHIVE)
         add_definitions(-DMEINPROC_NO_KARCHIVE) #we don't have saveToCache when compiling without KArchive, which is used in xslt_kde.cpp
     else ()
