@@ -28,7 +28,7 @@ option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only 
 set(REQUIRED_QT_VERSION 5.3.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 include(KDEInstallDirs)
-include(KDEFrameworkCompilerSettings)
+include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
 
 # KF5 frameworks
