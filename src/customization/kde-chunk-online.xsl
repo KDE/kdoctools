@@ -43,7 +43,6 @@
 <xsl:param name="kde.common">/HEAD/common/</xsl:param>
 <xsl:param name="html.stylesheet" select="concat($kde.common,'kde-default.css',' ',$kde.common,'kde-docs.css')"/>
 <xsl:param name="admon.graphics.path"><xsl:value-of select="kde.common"/></xsl:param>
-<xsl:param name="callout.graphics.path"><xsl:value-of select="kde.common"/></xsl:param>
 
 <!-- try with olinks: it nearly works --><!--
   <xsl:template match="olink">
