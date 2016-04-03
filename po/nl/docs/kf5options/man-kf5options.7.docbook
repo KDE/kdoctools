@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Dutch "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Gebruikershandleiding van kf5options</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2014-03-04</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Gemeenschappelijke commandoregelopties voor alle applicaties gebaseerd op KDE Frameworks 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>KDE-applicatie</replaceable
+></command
+> <arg choice="opt"
+>KDE Generic Options</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opties</title>
+
+<para
+>De volgende opties zijn van toepassing op alle &kde;-applicaties:</para>
+<variablelist>
+<varlistentry>
+<term
+><option
+>--caption</option
+> <parameter
+>opschrift</parameter
+></term>
+<listitem
+><para
+><parameter
+>caption</parameter
+> als naam in de titelbalk gebruiken.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--icon</option
+> <parameter
+>pictogram</parameter
+></term>
+<listitem
+><para
+><parameter
+>icon</parameter
+> als applicatie-pictogram gebruiken.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--config</option
+> <parameter
+>bestandsnaam</parameter
+></term>
+<listitem
+><para
+>Het alternatieve configuratiebestand <parameter
+>bestandsnaam</parameter
+> gebruiken</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--nocrashhandler</option
+></term>
+<listitem
+><para
+>Schakel de crash-behandelaar' uit om 'core dumps' te verkrijgen.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--waitforwm</option
+></term>
+<listitem
+><para
+>Wacht op een WM_NET-compatible vensterbeheerder.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--style</option
+> <parameter
+>stijl</parameter
+></term>
+<listitem
+><para
+>Stelt de stijl van de &GUI; van de toepassing in.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><option
+>--geometry</option
+> <parameter
+>geometrie</parameter
+></term>
+<listitem
+><para
+>Stelt de clientafmeting in van het hoofdwidget.</para
+></listitem>
+</varlistentry>
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Zie ook</title>
+<para
+><replaceable
+>qt5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Auteurs</title>
+<para
+>Manpagina geschreven door &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
