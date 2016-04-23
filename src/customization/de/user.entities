@@ -28,7 +28,6 @@
 <!ENTITY MMB    "<mousebutton>mittlere</mousebutton> Maustaste">
 <!ENTITY MMBn   "<mousebutton>mittleren</mousebutton> Maustaste">
 <!ENTITY MMBr   "<mousebutton>mittlerer</mousebutton> Maustaste">
-<!ENTITY mondphase "<application>Mondphase</application>"> <!-- kmoon -->
 <!ENTITY OS     "Betriebssystem">
 <!ENTITY partman "<application>KDE-Partitionsmanager</application>">
 <!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
@@ -36,6 +35,7 @@
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
 <!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
+<!ENTITY plasmapa	"<productname>&kde; Plasma Pulseaudio</productname>">
 <!ENTITY RMB    "<mousebutton>rechte</mousebutton> Maustaste">
 <!ENTITY RMBn   "<mousebutton>rechten</mousebutton> Maustaste">
 <!ENTITY RMBr   "<mousebutton>rechter</mousebutton> Maustaste">
@@ -45,6 +45,7 @@
 <!ENTITY Tab 	"<keycap>Tab</keycap>"> <!-- Tab -->
 
 <!-- Deprecated, will be removed at a future time, do not use -->
+<!ENTITY mondphase "<application>Mondphase</application>"> <!-- kmoon -->
 <!ENTITY kcc "<application>&kde;-Kontrollzentrum</application>" ><!-- kcc -->
 <!ENTITY kcontrolcenter "<application>&kde;-Kontrollzentrum</application>">
 <!ENTITY kde "K-Arbeitsumgebung" ><!-- kde -->
