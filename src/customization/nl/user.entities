@@ -176,4 +176,4 @@
 <!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
 <!ENTITY systemsettings "<application>Systeeminstellingen</application>">
 <!ENTITY systemtray "<application>Systeemvak</application>">
-
+<!ENTITY applications      "<productname>Toepassingen</productname>">
