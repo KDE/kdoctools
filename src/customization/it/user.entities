@@ -33,6 +33,7 @@
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
 <!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
+<!ENTITY plasmapa	"<productname>&kde; Plasma Pulseaudio</productname>">
 <!ENTITY RMB    "tasto <mousebutton>destro</mousebutton> del mouse">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
 <!ENTITY systemsettings   "<application>Impostazioni di sistema</application>">
