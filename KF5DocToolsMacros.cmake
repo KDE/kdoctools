@@ -41,8 +41,8 @@
 #   Search for docbook files in <podir> and install them to the standard
 #   location.
 #   This is a convenience function which relies on all docbooks being kept in
-#   <podir>/<lang>/docs, where <lang> is the language the docbooks are written
-#   in.
+#   <podir>/<lang>/docs/<project>, where <lang> is the language the docbooks
+#   for <project> are written in.
 #
 #   Within this directory, files ending with .[0-9].docbook are installed using
 #   KDOCTOOLS_CREATE_MANPAGE, other .docbook files are installed using
@@ -53,12 +53,13 @@
 #    po/
 #      fr/
 #        docs/
-#          kioslave5/
-#            fooslave/
-#              index.docbook
-#          footool.1.docbook
-#          footool.conf.5.docbook
-#          index.docbook
+#          foo/
+#            kioslave5/
+#              fooslave/
+#                index.docbook
+#            footool.1.docbook
+#            footool.conf.5.docbook
+#            index.docbook
 #
 #   KDOCTOOLS_INSTALL(po) does the following:
 #   - Create man pages from footool.1.docbook and footool.conf.5.docbook,
