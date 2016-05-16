@@ -46,7 +46,7 @@
 #
 #   Within this directory, files ending with .[0-9].docbook are installed using
 #   KDOCTOOLS_CREATE_MANPAGE, other .docbook files are installed using
-#   KDOCTOOLS_CREATE_HANDBOOK.
+#   KDOCTOOLS_CREATE_HANDBOOK if index.docbook is available.
 #
 #   For example, given the following directory structure:
 #
@@ -225,14 +225,13 @@ function(kdoctools_install podir)
                     INSTALL_DESTINATION ${MAN_INSTALL_DIR}/${lang}
                 )
             else()
-                string(REGEX MATCH "docs/(.*)/.*.docbook" match ${docbook})
+                string(REGEX MATCH "docs/(.*)/index.docbook" match ${docbook})
                 if (match)
-                    set(extra_args SUBDIR ${CMAKE_MATCH_1})
+                    kdoctools_create_handbook(${docbook}
+                        INSTALL_DESTINATION ${HTML_INSTALL_DIR}/${lang}
+                        SUBDIR ${CMAKE_MATCH_1}
+                    )
                 endif()
-                kdoctools_create_handbook(${docbook}
-                    INSTALL_DESTINATION ${HTML_INSTALL_DIR}/${lang}
-                    ${extra_args}
-                )
             endif()
         endforeach()
     endforeach()
