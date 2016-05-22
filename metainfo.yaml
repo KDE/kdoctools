@@ -8,3 +8,7 @@ portingAid: false
 deprecated: false
 release: true
 cmakename: KF5DocTools
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 2
