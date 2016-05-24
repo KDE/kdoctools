@@ -3,6 +3,10 @@
 <!ENTITY % English "INCLUDE">
 ]>
 
+<!--Rename this template to man-$applicationname.x.docbook,
+where x is the manual section, see https://en.wikipedia.org/wiki/Man_page#Manual_sections
+-->
+
 <refentry lang="&language;">
 <refentryinfo>
 <!-- replace Foo with the application name-->
@@ -26,7 +30,7 @@ Example:
 Frameworks xx.yy for docbooks in frameworks
 Plasma xx.yy for docbooks in plasma
 Applications xx.yy for docbooks released as Applications
-$applicationname xx.yy (Applications xx.yy) for docbooks with own version released as Applications
+xx.yy (Applications xx.yy) for docbooks with own version released as Applications
 $applicationname xx.yy for applications with independent release schedule (extragear/playground)
 -->
 

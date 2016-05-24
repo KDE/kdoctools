@@ -5,15 +5,27 @@
   <!ENTITY kmyapplication "<application>KMyApp</application>">
   <!ENTITY kappname "&kmyapplication;"><!-- replace kmyapplication here
                                             do *not* replace kappname-->
+  <!ENTITY i18n-translatable-entity "<application>Translatable Entity</application>">
   <!ENTITY % addindex "IGNORE">
   <!ENTITY % English "INCLUDE"> <!-- ONLY If you are writing non-English
                                      original documentation, change
                                      the language here -->
-
   <!-- Do not define any other entities; instead, use the entities
        from entities/general.entities and en/user.entities. -->
 ]>
-<!-- kdoctemplate v0.11.0 2015-04-03 lueck
+
+<!--
+Use this template for application docbooks
+For kioslave, systemsettings (kcontrol) modules and simple/short application docbooks use article-template.docbook
+Rename this template to index.docbook and place into the directory doc/ or doc/appname if you have several applications in one doc directory
+-->
+
+<!-- kdoctemplate v0.12.0 2016-04-23 lueck
+     add translatable entities
+     remove help.menu.documentation entity
+     and add some examples how to use the common menus Settings and Help
+
+     kdoctemplate v0.11.0 2015-04-03 lueck
      updated instructions for date + releaseinfo
      remove ENTITY package - not used anymore
      add info about KDE Games special chapters
@@ -106,17 +118,17 @@ Change date if
 Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
-<date>2015-04-03</date>
+<date>2016-04-23</date>
 
 <!--version information of Frameworks/Plasma/Applications this documentation is valid for.
 Example:
 Frameworks xx.yy for docbooks in frameworks
 Plasma xx.yy for docbooks in plasma workspace
 Applications xx.yy for docbooks released as Applications
-$applicationname xx.yy (Applications xx.yy) for docbooks with own version released as Applications
+xx.yy (Applications xx.yy) for docbooks with own version released as Applications
 $applicationname xx.yy for applications with independent release schedule (extragear/playground)
 -->
-<releaseinfo>Frameworks xx.yy or Plasma xx.yy or Applications xx.yy or $applicationname xx.yy (Applications xx.yy) or $applicationname xx.yy</releaseinfo>
+<releaseinfo>Frameworks xx.yy or Plasma xx.yy or Applications xx.yy or xx.yy (Applications xx.yy) or $applicationname xx.yy</releaseinfo>
 
 <!-- Abstract about this handbook -->
 
@@ -277,7 +289,8 @@ which will be expanded to:
 </menuchoice></term>
 <listitem><para><action>Creates a new document</action></para></listitem>
 </varlistentry>
-<varlistentry>
+
+<varlistentry  id="file-save">
 <term><menuchoice>
 <shortcut>
 <keycombo action="simul">&Ctrl;<keycap>S</keycap></keycombo>
@@ -287,7 +300,8 @@ which will be expanded to:
 </menuchoice></term>
 <listitem><para><action>Saves the document</action></para></listitem>
 </varlistentry>
-<varlistentry>
+
+<varlistentry  id="file-quit">
 <term><menuchoice>
 <shortcut>
 <keycombo action="simul">&Ctrl;<keycap>Q</keycap></keycombo>
@@ -302,16 +316,40 @@ which will be expanded to:
 
 </sect2>
 
-<sect2>
+<!-- Examples how to use the common menus Settings and Help -->
+
+<sect2 id="settings-help-menu">
+<title>The Settings and Help Menu</title>
+<para>
+&kmyapplication; has the common &kde; <guimenu>Settings</guimenu> and <guimenu>Help</guimenu>
+menu items, for more information read the sections about the <ulink url="help:/fundamentals/ui.html#menus-settings"
+>Settings Menu</ulink> and <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink>
+of the &kde; Fundamentals.
+</para>
+</sect2>
+
+<sect2 id="help-menu1">
 <title>The Help Menu</title>
+<para>
+&kmyapplication; has the common &kde; <guimenu>Help</guimenu> menu item, for more information read the section
+about the <ulink url="help:/fundamentals/ui.html#menus-help">Help Menu</ulink> of the &kde; Fundamentals.
+</para>
+</sect2>
 
-<!-- Assuming you have a standard help menu (help, what's this, about -->
-<!-- &kmyapplication;, about KDE) then the documentation is already written. -->
-<!-- The following entity is valid anywhere that a variablelist is -->
-<!-- valid.  -->
+<sect2 id="menu-commands">
+<title>Menu Items</title>
+<para>Apart from the common &kde; menus described in the <ulink url="help:/fundamentals/ui.html#menus">Menu</ulink>
+chapter of the &kde; Fundamentals documentation &kmyapplication; has these application specific menu entries:
+</para>
+<!-- variablelist -->
+</sect2>
 
-&help.menu.documentation;
-
+<sect2 id="help-menu2">
+<title>The Help Menu</title>
+<para>&kmyapplication; has a default &kde; <guimenu>Help</guimenu> menu as described in the
+<ulink url="help:/fundamentals/ui.html#menus-help">&kde; Fundamentals</ulink>
+with two additional entries:</para>
+<!-- variablelist -->
 </sect2>
 
 </sect1>
