@@ -35,6 +35,7 @@ $applicationname xx.yy for applications with independent release schedule (extra
 -->
 
 <productname>KDE Frameworks or KDE Plasma or KDE Applications</productname>
+<!-- no productname in man pages for extragear applications -->
 </refentryinfo>
 
 <refmeta>
@@ -65,7 +66,15 @@ do.--> </para>
 
 <refsect1>
 <title>Options</title>
-<para>App options, in a variablelist</para>
+<!--App options, in a variablelist-->
+<variablelist>
+<varlistentry>
+<term><option></option></term>
+<listitem><para>
+</para></listitem>
+</varlistentry>
+
+</variablelist>
 
 </refsect1>
 
@@ -88,16 +97,19 @@ to remove them, probably in a variablelist.--></para>
 
 <refsect1>
 <title>See Also</title>
-<para><!--foo(1)-style references, use a simplelist for these--></para>
-
-<para>More detailed user documentation is available from <ulink
+<simplelist>
+<member>More detailed user documentation is available from <ulink
 url="help:/ --commandname-- ">help:/<!--command--></ulink>
 (either enter this &URL; into &konqueror;, or run
 <userinput><command>khelpcenter</command>
-<parameter>help:/<!--command--></parameter></userinput>).</para>
-
-<para>There is also further information available at <!--link to
-website if applicable--></para>
+<parameter>help:/<!--command--></parameter></userinput>).</member>
+<!--for man pages replace "help:/" with "man:/" in this member-->
+<member>kf5options(1)</member> <!-- only for application with a GUI-->
+<!--<member>qt5options(1)</member>  only for application with a GUI FIXME use if we have an updated man page qt5options-->
+<!--<member>foo(1)</member> more man page references if applicable-->
+<member>There is also further information available at <!--link to
+website if applicable--></member>
+</simplelist>
 </refsect1>
 
 <refsect1>
