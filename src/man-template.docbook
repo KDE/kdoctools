@@ -83,7 +83,7 @@ applicable.-->
 
 <refsect1>
 <title>Environment</title>
-<para><!--Environment variablesars that affect this command, how to set
+<para><!--Environment variables that affect this command, how to set
 them, who sets them, how they affect it, probably in a variablelist.  Only for
 man sections 1, 6, 7 and 8--></para>
 </refsect1>
