@@ -164,6 +164,7 @@
 <!ENTITY jovie  "<application>Jovie</application>">
 <!ENTITY juk	"<application>JuK</application>">
 <!ENTITY kaddressbook	"<application>KAddressBook</application>">
+<!ENTITY kaffeine "<application>Kaffeine</application>">
 <!ENTITY kajongg  "<application>Kajongg</application>">
 <!ENTITY kalarm	"<application>KAlarm</application>">
 <!ENTITY kalarmd	"<application>KAlarmd</application>">
@@ -196,7 +197,6 @@
 <!ENTITY kdebugdialog	"<application>KDebugDialog</application>">
 <!ENTITY kdebugdialog5	"<application>KDebugDialog</application>">
 <!ENTITY kde-http	'<ulink url="http://www.kde.org/">http://www.kde.org/</ulink>'>
-<!ENTITY kde-ftp	'<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>'>
 <!ENTITY kdepasswd	"<application>kdepasswd</application>">
 <!ENTITY kdessh	"<application>kdessh</application>">
 <!ENTITY kdesu	"<application>KDE su</application>">
@@ -247,10 +247,6 @@
 <!ENTITY klettres	"<application>KLettres</application>">
 <!ENTITY klickety "<application>Klickety</application>">
 <!ENTITY klipper	"<application>Klipper</application>">
-<!ENTITY kollision "<application>Kollision</application>">
-<!ENTITY kolorlines	"<application>Kolor Lines</application>">
-<!ENTITY konversation	"<application>Konversation</application>">
-<!ENTITY kopete "<application>Kopete</application>">
 <!ENTITY kmagnifier	"<application>KMagnifier</application>">
 <!ENTITY kmahjongg	"<application>KMahjongg</application>">
 <!ENTITY kmail	"<application>KMail</application>">
@@ -266,6 +262,7 @@
 <!ENTITY kmousetool "<application>KMouseTool</application>">
 <!ENTITY kmplot	"<application>KmPlot</application>">
 <!ENTITY kmymoney	"<application>KMyMoney</application>">
+<!ENTITY knavalbattle "<application>Naval Battle</application>">
 <!ENTITY knetattach     "<application>KNetAttach</application>">
 <!ENTITY knetwalk       "<application>KNetWalk</application>">
 <!ENTITY knewsticker	"<application>KNewsTicker</application>">
@@ -274,6 +271,8 @@
 <!ENTITY knode	"<application>KNode</application>">
 <!ENTITY knotes	"<application>KNotes</application>">
 <!ENTITY kolf	"<application>Kolf</application>">
+<!ENTITY kollision "<application>Kollision</application>">
+<!ENTITY kolorlines	"<application>Kolor Lines</application>">
 <!ENTITY kolourpaint	"<application>KolourPaint</application>">
 <!ENTITY kompare	"<application>Kompare</application>">
 <!ENTITY konqueror	"<application>Konqueror</application>">
@@ -281,6 +280,7 @@
 <!ENTITY konsole	"<application>Konsole</application>">
 <!ENTITY konsolekalendar "<application>KonsoleKalendar</application>">
 <!ENTITY kontact	"<application>Kontact</application>">
+<!ENTITY konversation	"<application>Konversation</application>">
 <!ENTITY kooka	"<application>Kooka</application>">
 <!ENTITY kopete	"<application>Kopete</application>">
 <!ENTITY korganizer	"<application>KOrganizer</application>">
@@ -348,9 +348,9 @@
 <!ENTITY kverbos "<application>KVerbos</application>">
 <!ENTITY kvoctrain	"<application>KVocTrain</application>">
 <!ENTITY kwallet5 "<application>KWallet</application>">
+<!ENTITY kwalletmanager5 "<application>KWallet Manager</application>">
 <!ENTITY kwatchgnupg "<application>KWatchGnuPG</application>">
 <!ENTITY kworldclock	"<application>KWorldClock</application>">
-<!ENTITY kword	"<application>KWord</application>">
 <!ENTITY kwin	"<application>KWin</application>">
 <!ENTITY kwordquiz "<application>KWordQuiz</application>">
 <!ENTITY kwrite	"<application>KWrite</application>">
@@ -361,6 +361,7 @@
 <!ENTITY lisa	"<application>Lisa</application>">
 <!ENTITY Linux	'<trademark class="registered">Linux</trademark>'>
 <!ENTITY LinuxPPC	"<trademark>LinuxPPC</trademark>">
+<!ENTITY lokalize	"<application>Lokalize</application>">
 <!ENTITY lskat	"<application>Lieutenant Skat</application>">
 <!ENTITY LZW	"<acronym>LZW</acronym>">
 <!ENTITY Mac	'<trademark class="registered">Mac</trademark>'>
@@ -406,6 +407,7 @@
 <!ENTITY step "<application>Step</application>">
 <!ENTITY superkaramba	"<application>SuperKaramba</application>">
 <!ENTITY SuSE	'<acronym><trademark class="registered">SuSE</trademark></acronym>'>
+<!ENTITY sweeper "<application>Sweeper</application>">
 <!ENTITY tellico '<application>Tellico</application>'>
 <!ENTITY ThreeCom	'<trademark class="registered">3Com</trademark>'>
 <!ENTITY TrueType	'<trademark class="registered">TrueType</trademark>'>
@@ -458,6 +460,7 @@
 <!ENTITY kchat	"<application>KChat</application>">
 <!ENTITY kdat	"<application>KDat</application>">
 <!ENTITY kdcop  "<application>kdcop</application>">
+<!ENTITY kde-ftp	'<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>'>
 <!ENTITY kdm	"<application>kdm</application>">
 <!ENTITY kdmrc  "<filename>kdmrc</filename>">
 <!ENTITY kdict	"<application>KDict</application>">
@@ -486,6 +489,7 @@
 <!ENTITY kpresenter	"<application>KPresenter</application>">
 <!ENTITY kreatecd	"<application>KreateCD</application>">
 <!ENTITY krec	"<application>KRec</application>">
+<!ENTITY kword	"<application>KWord</application>">
 <!ENTITY Linux-Mandrake	"<trademark>Mandrakelinux</trademark>">
 <!ENTITY Mandrake	"<trademark>Mandrake</trademark>">
 <!ENTITY moonphase	"<application>Moon Phase</application>">
