@@ -7,8 +7,8 @@
 <refentryinfo>
 <title>kf5options User's Manual</title>
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
-<date>2014-03-04</date>
-<releaseinfo>Frameworks 5.0</releaseinfo>
+<date>2016-05-13</date>
+<releaseinfo>Frameworks 5.22</releaseinfo>
 <productname>KDE Frameworks</productname>
 </refentryinfo>
 
@@ -25,58 +25,65 @@
 <refsynopsisdiv>
 <cmdsynopsis>
 <command><replaceable>KDE application</replaceable></command>
-<arg choice="opt">KDE Generic Options</arg>
+<group choice="opt"><option>-h, --help</option></group>
+<group choice="opt"><option>-v, --version</option></group>
+<group choice="opt"><option>--author</option></group>
+<group choice="opt"><option>--license</option></group>
+<group choice="opt"><option>--desktopfile</option> <replaceable>file name</replaceable> </group>
 </cmdsynopsis>
 </refsynopsisdiv>
-
 
 <refsect1>
 <title>Options</title>
 
 <para>The following options apply to all &kde; applications:</para>
+
 <variablelist>
 <varlistentry>
-<term><option>--caption</option> <parameter>caption</parameter></term>
-<listitem><para>Use <parameter>caption</parameter> as name in the
-titlebar.</para></listitem>
+<term><option>-h</option> <option>--help</option></term>
+<listitem><para>This lists the options available at the command line</para>
+</listitem>
 </varlistentry>
+
 <varlistentry>
-<term><option>--icon</option> <parameter>icon</parameter></term>
-<listitem><para>Use <parameter>icon</parameter> as the application icon.</para></listitem>
+<term><option>-v</option> <option>--version</option></term>
+<listitem>
+<para>Lists version information for <replaceable>KDE application</replaceable></para></listitem>
 </varlistentry>
+
 <varlistentry>
-<term><option>--config</option> <parameter>filename</parameter></term>
-<listitem><para>Use the alternative configuration <parameter>filename</parameter></para></listitem>
+<term><option>--author</option></term>
+<listitem><para>Lists <replaceable>KDE application</replaceable> authors in the terminal window</para></listitem>
 </varlistentry>
+
 <varlistentry>
-<term><option>--nocrashhandler</option></term>
-<listitem><para>Disable the crash handler, to get core dumps.</para></listitem>
+<term><option>--license</option></term>
+<listitem><para>Shows license information</para></listitem>
 </varlistentry>
+
 <varlistentry>
-<term><option>--waitforwm</option></term>
-<listitem><para>Waits for a WM_NET compatible windowmanager.</para></listitem>
+<term><option>--desktopfile</option> <replaceable>file name</replaceable></term>
+<listitem><para>The base file name of the desktop entry for this application.</para>
+<para>This is in particular useful for wrapper applications and
+applications having in general multiple desktop files. Thus each desktop
+file can put its own name into the exec command.
+</para></listitem>
 </varlistentry>
-<varlistentry>
-<term><option>--style</option> <parameter>style</parameter></term>
-<listitem><para>Sets the application &GUI; style.</para></listitem>
-</varlistentry>
-<varlistentry>
-<term><option>--geometry</option> <parameter>geometry</parameter></term>
-<listitem><para>Sets the client geometry of the main widget.</para></listitem>
-</varlistentry>
+
 </variablelist>
 
 </refsect1>
 
 <refsect1>
 <title>See Also</title>
-<para><replaceable>qt5options</replaceable>(7)</para>
+<para>qt5options(7)</para>
 
 </refsect1>
 
 <refsect1>
 <title>Authors</title>
-<para>Man page written by &Lauri.Watts; &Lauri.Watts.mail;</para>
+<para>Man page originally written by &Lauri.Watts; &Lauri.Watts.mail; for kdelibs4</para>
+<para>Updated to Frameworks 5 by &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
 </refsect1>
 
 </refentry>
