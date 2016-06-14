@@ -105,7 +105,7 @@ url="help:/ --commandname-- ">help:/<!--command--></ulink>
 <parameter>help:/<!--command--></parameter></userinput>).</member>
 <!--for man pages replace "help:/" with "man:/" in this member-->
 <member>kf5options(1)</member> <!-- only for application with a GUI-->
-<!--<member>qt5options(1)</member>  only for application with a GUI FIXME use if we have an updated man page qt5options-->
+<member>qt5options(1)</member> <!-- only for application with a GUI-->
 <!--<member>foo(1)</member> more man page references if applicable-->
 <member>There is also further information available at <!--link to
 website if applicable--></member>
