@@ -230,7 +230,7 @@ Print all options and the application description.
 
 <varlistentry>
 <term>
-><option>-v --version</option>
+<option>-v --version</option>
 </term>
 <listitem><para>
 Display the version string of the application.
