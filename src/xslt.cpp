@@ -3,9 +3,10 @@
 #ifdef Q_OS_WIN
 //one of the xslt/xml headers pulls in windows.h and breaks <limits>
 #define NOMINMAX
-#include "../config-kdoctools.h"
 #include <QtCore/QHash>
 #endif
+
+#include "../config-kdoctools.h"
 
 #include <libxslt/xsltconfig.h>
 #include <libxslt/xsltInternals.h>
@@ -408,8 +409,20 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     // This is the case on build.kde.org where kdelibs4support installs catalogs
     // in a different prefix than kdoctools.
     const QString fileName = QStringLiteral("kf5/kdoctools/") + file;
-    const QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
+    QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
             fileName, option);
+
+    // fallback to stuff installed with KDocTools
+    const QFileInfo fileInInstallDataDir(QStringLiteral(KDOCTOOLS_INSTALL_DATADIR_KF5) + QStringLiteral("/kdoctools/") + file);
+    if (fileInInstallDataDir.exists()) {
+        if ((option == QStandardPaths::LocateFile) && fileInInstallDataDir.isFile()) {
+            result.append(fileInInstallDataDir.absoluteFilePath());
+        }
+        if ((option == QStandardPaths::LocateDirectory) && fileInInstallDataDir.isDir()) {
+            result.append(fileInInstallDataDir.absoluteFilePath());
+        }
+    }
+
     if (result.isEmpty()) {
         qDebug() << "Could not locate file" << fileName << "in" << QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     }
