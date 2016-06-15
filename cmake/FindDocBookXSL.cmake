@@ -37,13 +37,13 @@ set_package_properties(DocBookXSL PROPERTIES DESCRIPTION "DocBook XSL"
                       )
 
 set (STYLESHEET_PATH_LIST
-    share/xml/docbook/stylesheet/docbook-xsl
-    share/xml/docbook/xsl-stylesheets
-    share/sgml/docbook/xsl-stylesheets
-    share/xml/docbook/stylesheet/nwalsh/current
-    share/xml/docbook/stylesheet/nwalsh
-    share/xsl/docbook
-    share/xsl/docbook-xsl
+    ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/stylesheet/docbook-xsl
+    ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/xsl-stylesheets
+    ${CMAKE_INSTALL_DATAROOTDIR}/sgml/docbook/xsl-stylesheets
+    ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/stylesheet/nwalsh/current
+    ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/stylesheet/nwalsh
+    ${CMAKE_INSTALL_DATAROOTDIR}/xsl/docbook
+    ${CMAKE_INSTALL_DATAROOTDIR}/xsl/docbook-xsl
 )
 
 find_path (DocBookXSL_DIR lib/lib.xsl
