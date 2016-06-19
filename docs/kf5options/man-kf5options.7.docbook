@@ -48,17 +48,17 @@
 <varlistentry>
 <term><option>-v</option> <option>--version</option></term>
 <listitem>
-<para>Lists version information for <replaceable>KDE application</replaceable></para></listitem>
+<para>Lists version information for <replaceable>KDE application</replaceable>.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><option>--author</option></term>
-<listitem><para>Lists <replaceable>KDE application</replaceable> authors in the terminal window</para></listitem>
+<listitem><para>Lists <replaceable>KDE application</replaceable> authors in the terminal window.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><option>--license</option></term>
-<listitem><para>Shows license information</para></listitem>
+<listitem><para>Shows license information.</para></listitem>
 </varlistentry>
 
 <varlistentry>
