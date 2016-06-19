@@ -31,7 +31,7 @@
 <!ENTITY MMB    "<mousebutton>middle</mousebutton> mouse button">
 <!ENTITY OS	"operating system"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>KDE Partition Manager</application>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-mobile	"<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
@@ -53,4 +53,5 @@
 <!ENTITY kmenu  "<guimenu>K</guimenu> menu">
 <!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
 <!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 
