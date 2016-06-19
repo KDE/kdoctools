@@ -112,7 +112,7 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 <legalnotice>&FDLNotice;</legalnotice>
 
 <!-- Date of the documentation
-Change date if
+Change date/releaseinfo only if
    docbook is updated and verified to be valid for the current app version
    docbook is proofreaded and verified to be valid for the current app version
 Don't forget to include this last date.
