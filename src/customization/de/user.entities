@@ -36,7 +36,7 @@
 <!ENTITY MMBr   "<mousebutton>mittlerer</mousebutton> Maustaste">
 <!ENTITY OS     "Betriebssystem">
 <!ENTITY partman "<application>KDE-Partitionsmanager</application>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-mobile	"<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
@@ -64,4 +64,4 @@
 <!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kmenu  "<guimenu>K</guimenu>-Men&uuml;"> <!-- kmenu -->
 <!ENTITY kwm    "<application>kwm</application>">
-
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
