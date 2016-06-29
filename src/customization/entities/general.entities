@@ -404,10 +404,12 @@
 <!ENTITY skrooge '<application>Skrooge</application>'>
 <!ENTITY snake	"<application>SnaKe</application>">
 <!ENTITY Solaris	"<trademark>Solaris</trademark>">
+<!ENTITY spectacle "Spectacle">
 <!ENTITY step "<application>Step</application>">
 <!ENTITY superkaramba	"<application>SuperKaramba</application>">
 <!ENTITY SuSE	'<acronym><trademark class="registered">SuSE</trademark></acronym>'>
 <!ENTITY sweeper "<application>Sweeper</application>">
+<!ENTITY symboleditor '<application>SymbolEditor</application>'>
 <!ENTITY tellico '<application>Tellico</application>'>
 <!ENTITY ThreeCom	'<trademark class="registered">3Com</trademark>'>
 <!ENTITY TrueType	'<trademark class="registered">TrueType</trademark>'>
