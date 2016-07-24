@@ -7,6 +7,7 @@
  -->
 
 <!ENTITY Alt	"<keycap>Alt</keycap>">
+<!ENTITY applications	"<productname>Applications</productname>">
 <!ENTITY Backspace	"<keycap>Backspace</keycap>">
 <!ENTITY cdrom	"<hardware>unit&agrave; CD-ROM</hardware>">
 <!ENTITY Ctrl	"<keycap>Ctrl</keycap>">
@@ -18,7 +19,7 @@
 <!ENTITY FAQ	"<acronym>FAQ</acronym>">
 <!ENTITY ie	"cio&egrave;">
 <!ENTITY infocenter	"<application>Centro d'informazione</application>">
-<!ENTITY kcontrolcenter	"<application>Centro di controllo di &kde;</application>">
+<!ENTITY kcontrolcenter	"<application>Centro di controllo</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
 <!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
