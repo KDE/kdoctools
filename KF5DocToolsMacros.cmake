@@ -132,7 +132,16 @@ function (kdoctools_create_handbook docbook)
     endif ()
     set(_ssheet "${KDOCTOOLS_CUSTOMIZATION_DIR}/kde-chunk.xsl")
 
-    file(GLOB src_docs ${src_dir}/*.docbook)
+    file(GLOB candidate_src_docs ${src_dir}/*.docbook)
+
+    set(src_docs)
+    foreach (src_single_doc ${candidate_src_docs})
+        # Exclude manpages
+        get_filename_component(src_single_doc_name ${src_single_doc} NAME)
+        if (NOT src_single_doc_name MATCHES "^man-.+\\.docbook$")
+            list(APPEND src_docs ${src_single_doc})
+        endif()
+    endforeach()
 
     add_custom_command(OUTPUT ${build_doc}
         COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --check ${_bootstrapOption} --cache ${build_doc} ${src_doc}
