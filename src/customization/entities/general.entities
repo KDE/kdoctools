@@ -108,6 +108,7 @@
 <!ENTITY amarok	"<application>Amarok</application>">
 <!ENTITY amor	"<application>AMOR</application>">
 <!ENTITY ark	"<application>Ark</application>">
+<!ENTITY artikulate	"<application>Artikulate</application>">
 <!ENTITY ATAPI	"<acronym>ATAPI</acronym>">
 <!ENTITY blinken	"<application>Blinken</application>">
 <!ENTITY blogilo "<application>Blogilo</application>">
@@ -115,6 +116,8 @@
 <!ENTITY bovo	"<application>Bovo</application>">
 <!ENTITY BSD "<trademark>BSD</trademark>">
 <!ENTITY calligra "Calligra">
+<!ENTITY calligraflow "<application>Calligra Flow</application>">
+<!ENTITY calligraplan "<application>Calligra Plan</application>">
 <!ENTITY calligrasheets "<application>Calligra Sheets</application>">
 <!ENTITY calligrastage "<application>Calligra Stage</application>">
 <!ENTITY calligrawords "<application>Calligra Words</application>">
@@ -157,9 +160,11 @@
 <!ENTITY HP-UX	'<trademark class="registered">HP-UX</trademark>'>
 <!ENTITY HTML 	'<acronym>HTML</acronym>'>
 <!ENTITY HTTP	"<acronym>HTTP</acronym>">
+<!ENTITY IMAP "<acronym>IMAP</acronym>">
 <!ENTITY infocenter     "<application>KInfoCenter</application>">
 <!ENTITY IRIX	'<trademark class="registered">IRIX</trademark>'>
 <!ENTITY Java	"<trademark>Java</trademark>">
+<!ENTITY javascript "<application>JavaScript</application>">
 <!ENTITY Jini	"<trademark>Jini</trademark>">
 <!ENTITY jovie  "<application>Jovie</application>">
 <!ENTITY juk	"<application>JuK</application>">
@@ -172,6 +177,7 @@
 <!ENTITY kalzium	"<application>Kalzium</application>">
 <!ENTITY kamera	"<application>Kamera</application>">
 <!ENTITY kanagram	"<application>Kanagram</application>">
+<!ENTITY kamoso     "<application>Kamoso</application>">
 <!ENTITY kapman     "<application>Kapman</application>">
 <!ENTITY kappfinder	"<application>Kappfinder</application>">
 <!ENTITY kapptemplate	"<application>KAppTemplate</application>">
@@ -302,6 +308,7 @@
 <!ENTITY kreversi	"<application>KReversi</application>">
 <!ENTITY krfb	"<application>Desktop Sharing</application>">
 <!ENTITY krita	"<application>Krita</application>">
+<!ENTITY kronometer	"<application>Kronometer</application>">
 <!ENTITY kruler	"<application>KDE Screen Ruler</application>">
 <!ENTITY krunner "<application>KRunner</application>">
 <!ENTITY krusader '<application>Krusader</application>'>
@@ -350,6 +357,7 @@
 <!ENTITY kwallet5 "<application>KWallet</application>">
 <!ENTITY kwalletmanager5 "<application>KWallet Manager</application>">
 <!ENTITY kwatchgnupg "<application>KWatchGnuPG</application>">
+<!ENTITY kwave "<application>KWave</application>">
 <!ENTITY kworldclock	"<application>KWorldClock</application>">
 <!ENTITY kwin	"<application>KWin</application>">
 <!ENTITY kwordquiz "<application>KWordQuiz</application>">
@@ -370,6 +378,7 @@
 <!ENTITY megami	"<application>Megami</application>">
 <!ENTITY Microsoft	'<trademark class="registered">Microsoft</trademark>'>
 <!ENTITY MIDI	"<acronym>MIDI</acronym>">
+<!ENTITY minuet	"<application>Minuet</application>">
 <!ENTITY MIME	"<acronym>MIME</acronym>">
 <!ENTITY Motif	'<trademark class="registered">Motif</trademark>'>
 <!ENTITY MRU	"<acronym>MRU</acronym>">
@@ -382,6 +391,7 @@
 <!ENTITY PalmOS	'<trademark class="registered">Palm OS</trademark>'>
 <!ENTITY PalmPilot	"<productname><trademark>PalmPilot</trademark></productname>">
 <!ENTITY parley	"<application>Parley</application>">
+<!ENTITY PDF "<acronym>PDF</acronym>">
 <!ENTITY phonon "<application>Phonon</application>">
 <!ENTITY picmi "<application>Picmi</application>">
 <!ENTITY plasma "<productname>Plasma</productname>">
@@ -389,6 +399,7 @@
 <!ENTITY plasmoid "<application>Plasmoid</application>">
 <!ENTITY plasmoids "<application>Plasmoids</application>">
 <!ENTITY PMX	"<application>PMX</application>"><!-- acronym too? -->
+<!ENTITY POP3 "<acronym>POP3</acronym>">
 <!ENTITY PostScript	'<trademark class="registered">PostScript</trademark>'>
 <!ENTITY PPP	"<acronym>PPP</acronym>">
 <!ENTITY Qt	"<trademark>Qt</trademark>">
@@ -396,6 +407,7 @@
 <!ENTITY RealVideo '<trademark class="registered">RealVideo</trademark>'>
 <!ENTITY RedHat	'<trademark class="registered">Red Hat</trademark>'>
 <!ENTITY rocs "<application>Rocs</application>">
+<!ENTITY rsibreak "<application>RSIBreak</application>">
 <!ENTITY skanlite "<application>Skanlite</application>">
 <!ENTITY Sendmail	'<application><trademark class="registered">sendmail</trademark></application>'>
 <!ENTITY smb4k "<application>Smb4K</application>">
@@ -404,7 +416,7 @@
 <!ENTITY skrooge '<application>Skrooge</application>'>
 <!ENTITY snake	"<application>SnaKe</application>">
 <!ENTITY Solaris	"<trademark>Solaris</trademark>">
-<!ENTITY spectacle "Spectacle">
+<!ENTITY spectacle "<application>Spectacle</application>">
 <!ENTITY step "<application>Step</application>">
 <!ENTITY superkaramba	"<application>SuperKaramba</application>">
 <!ENTITY SuSE	'<acronym><trademark class="registered">SuSE</trademark></acronym>'>
@@ -415,6 +427,7 @@
 <!ENTITY TrueType	'<trademark class="registered">TrueType</trademark>'>
 <!ENTITY trojita "<application>Trojitá</application>">
 <!ENTITY ubuntu	"<trademark>Ubuntu</trademark>">
+<!ENTITY umbrello	"<application>Umbrello</application>">
 <!ENTITY UNIX	'<trademark class="registered">UNIX</trademark>'>
 <!ENTITY URL	"<acronym>URL</acronym>">
 <!ENTITY URI	"<acronym>URI</acronym>">
@@ -463,6 +476,7 @@
 <!ENTITY kdat	"<application>KDat</application>">
 <!ENTITY kdcop  "<application>kdcop</application>">
 <!ENTITY kde-ftp	'<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>'>
+<!ENTITY kdenlive	"<application>Kdenlive</application>">
 <!ENTITY kdm	"<application>kdm</application>">
 <!ENTITY kdmrc  "<filename>kdmrc</filename>">
 <!ENTITY kdict	"<application>KDict</application>">
@@ -479,6 +493,7 @@
 <!ENTITY kontour	"<application>Kontour</application>">
 <!ENTITY kdeprint       "<application>KDEPrint</application>">
 <!ENTITY kdesktop	"<application>KDesktop</application>">
+<!ENTITY kdesvn	"<application>Kdesvn</application>">
 <!ENTITY kugar	"<application>Kugar</application>">
 <!ENTITY kuickshow	"<application>KuickShow</application>">
 <!ENTITY kodometer	"<application>KOdometer</application>">
