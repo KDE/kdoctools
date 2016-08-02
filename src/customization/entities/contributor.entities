@@ -45,12 +45,16 @@
 
 <!ENTITY Paul.E.Ahlquist.Jr '<personname><firstname>Paul</firstname><othername>E.</othername><surname>Ahlquist</surname><lineage>Jr.</lineage></personname>'>
 <!ENTITY Paul.E.Ahlquist.Jr.mail '<email>pea@ahlquist.org</email>'>
+<!ENTITY Danny.Allen '<personname><firstname>Danny</firstname><surname>Allen</surname></personname>'>
+<!ENTITY Danny.Allen.mail '<email>danny@dannyallen.co.uk</email>'>
 <!ENTITY Primoz.Anzur '<personname><firstname>Primoz</firstname><surname>Anzur</surname></personname>'>
 <!ENTITY Primoz.Anzur.mail '<email>zerokode@gmx.net</email>'>
 <!ENTITY Ewald.Arnold '<personname><firstname>Ewald</firstname><surname>Arnold</surname></personname>'>
 <!ENTITY Ewald.Arnold.mail '<email>ewald@ewald-arnold.de</email>'>
 <!ENTITY Yves.Arrouye '<personname><firstname>Yves</firstname><surname>Arrouye</surname></personname>'>
 <!ENTITY Yves.Arrouye.mail '<email>yves@realnames.ca</email>'>
+<!ENTITY Albert.Astals.Cid '<personname><firstname>Albert</firstname><surname>Astals</surname></personname>'>
+<!ENTITY Albert.Astals.Cid.mail '<email>aacid@kde.org</email>'>
 
 <!ENTITY Marc.Bartsch '<personname><firstname>Marc</firstname><surname>Bartsch</surname></personname>'>
 <!ENTITY Marc.Bartsch.mail '<email>marc.bartsch@web.de</email>'>
@@ -231,10 +235,9 @@
 <!ENTITY Richard.Johnson.mail '<email>rjohnson@kde.org</email>'>
 <!ENTITY Matt.Johnston '<personname><firstname>Matt</firstname><surname>Johnston</surname></personname>'>
 <!ENTITY Matt.Johnston.mail '<email>mattj@flashmail.com</email>'>
-<!ENTITY Thomas.Baumgart '<personname><firstname>Thomas</firstname><surname>Baumgart</surname></personname>'>
-<!ENTITY Thomas.Baumgart.mail '<email>ipwizard@users.sourceforge.net</email>'>
 <!ENTITY Martin.R.Jones '<personname><firstname>Martin</firstname><othername>R.</othername><surname>Jones</surname></personname>'>
 <!ENTITY Martin.R.Jones.mail '<email>mjones@kde.org</email>'>
+
 <!ENTITY Thomas.Kabelmann '<personname><firstname>Thomas</firstname><surname>Kabelmann</surname></personname>'>
 <!ENTITY Thomas.Kabelmann.mail '<email>tk78@gmx.de</email>'>
 <!ENTITY Sirtaj.Singh.Kang '<personname><firstname>Sirtaj</firstname><othername>Singh</othername><surname>Kang</surname></personname>'>
@@ -263,6 +266,8 @@
 <!ENTITY Michael.Korman '<personname><firstname>Michael</firstname><surname>Korman</surname></personname>'>
 <!ENTITY Antti.Koivisto '<personname><firstname>Antti</firstname><surname>Koivisto</surname></personname>'>
 <!ENTITY Antti.Koivisto.mail '<email>koivisto@iki.fi</email>'>
+<!ENTITY Friedrich.Kossebau '<personname><firstname>Friedrich</firstname><othername>W. H.</othername><surname>Kossebau</surname></personname>'>
+<!ENTITY Friedrich.Kossebau.email '<email>kossebau@kde.org</email>'>
 <!ENTITY Matt.Koss '<personname><firstname>Matt</firstname><surname>Koss</surname></personname>'>
 <!ENTITY Matt.Koss.mail '<email>koss@napri.sk</email>'>
 <!ENTITY Michael.Korman.mail '<email>michael.korman@uconn.edu</email>'>
@@ -385,9 +390,11 @@
 <!ENTITY Artur.Rataj.mail '<email>art@zeus.polsl.gliwice.pl</email>'>
 <!ENTITY Roman.Razilov '<personname><firstname>Roman</firstname><surname>Razilov</surname></personname>'>
 <!ENTITY Roman.Razilov.mail '<email>Roman.Razilov@gmx.de</email>'>
-<!ENTITY Nicholas.Robbins '<personname><firstname>Nicolas</firstname><surname>Robbins</surname></personname>'>
 <!ENTITY Michael.Reiher '<personname><firstname>Michael</firstname><surname>Reiher</surname></personname>'>
 <!ENTITY Michael.Reiher.mail '<email>michael.reiher@gmx.de</email>'>
+<!ENTITY Alex.Richardson '<personname><firstname>Alex</firstname><surname>Richardson</surname></personname>'>
+<!ENTITY Alex.Richardson.email '<email>arichardson.kde@gmail.com</email>'>
+<!ENTITY Nicholas.Robbins '<personname><firstname>Nicolas</firstname><surname>Robbins</surname></personname>'>
 <!ENTITY Nicholas.Robbins.mail '<email>logik9000@chartermi.net</email>'>
 <!ENTITY Pamela.Roberts '<personname><firstname>Pamela</firstname><surname>Roberts</surname></personname>'>
 <!ENTITY Pamela.Roberts.mail '<email>pamroberts@blueyonder.co.uk</email>'>
@@ -527,7 +534,3 @@
 <!ENTITY Alex.Zepeda.mail '<email>zipzippy@sonic.net</email>'>
 <!ENTITY Nikolas.Zimmermann '<personname><firstname>Nikolas</firstname><surname>Zimmermann</surname></personname>'>
 <!ENTITY Nikolas.Zimmermann.mail '<email>wildfox@kde.org</email>'>
-<!ENTITY Danny.Allen '<personname><firstname>Danny</firstname><surname>Allen</surname></personname>'>
-<!ENTITY Danny.Allen.mail '<email>danny@dannyallen.co.uk</email>'>
-<!ENTITY Albert.Astals.Cid '<personname><firstname>Albert</firstname><surname>Astals</surname></personname>'>
-<!ENTITY Albert.Astals.Cid.mail '<email>aacid@kde.org</email>'>
