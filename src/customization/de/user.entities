@@ -31,6 +31,7 @@
 <!ENTITY LMB    "<mousebutton>linke</mousebutton> Maustaste">
 <!ENTITY LMBn   "<mousebutton>linken</mousebutton> Maustaste">
 <!ENTITY LMBr   "<mousebutton>linker</mousebutton> Maustaste">
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB    "<mousebutton>mittlere</mousebutton> Maustaste">
 <!ENTITY MMBn   "<mousebutton>mittleren</mousebutton> Maustaste">
 <!ENTITY MMBr   "<mousebutton>mittlerer</mousebutton> Maustaste">
@@ -49,6 +50,7 @@
 <!ENTITY RMBn   "<mousebutton>rechten</mousebutton> Maustaste">
 <!ENTITY RMBr   "<mousebutton>rechter</mousebutton> Maustaste">
 <!ENTITY Shift  "<keycap>Umschalt</keycap>">
+<!ENTITY Space	"<keysym>Leertaste</keysym>">
 <!ENTITY systemsettings	"<application>Systemeinstellungen</application>">
 <!ENTITY systemtray "<application>Systemabschnitt</application>">
 <!ENTITY Tab 	"<keycap>Tab</keycap>"> <!-- Tab -->
