@@ -28,6 +28,7 @@
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY Left	"<keysym>Left</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "<mousebutton>left</mousebutton> mouse button">
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB    "<mousebutton>middle</mousebutton> mouse button">
 <!ENTITY OS	"operating system"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>KDE Partition Manager</application>">
@@ -42,6 +43,7 @@
 <!ENTITY Right	"<keysym>Right</keysym>"> <!-- Cursor key-->
 <!ENTITY RMB    "<mousebutton>right</mousebutton> mouse button">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
+<!ENTITY Space	"<keysym>Space</keysym>">
 <!ENTITY systemsettings	"<application>System Settings</application>">
 <!ENTITY systemtray "<application>system tray</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
