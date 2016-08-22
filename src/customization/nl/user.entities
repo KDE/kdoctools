@@ -190,6 +190,7 @@
 <!ENTITY kcc     "<application>KDE Configuratiecentrum</application>">
 <!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
 <!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY khc     "<application>KDE Helpcentrum</application>">
 <!ENTITY kic     "<application>KDE Informatiecentrum</application>">
 <!ENTITY palm     "PalmOS(tm)-apparaat">
