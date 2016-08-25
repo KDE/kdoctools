@@ -142,6 +142,9 @@
 <!ENTITY Flash  "<trademark>Flash</trademark>">
 <!ENTITY filelight "<application>Filelight</application>">
 <!ENTITY firefox "<application>Firefox</application>">
+<!ENTITY folder-config-location '<filename class="directory">$(qtpaths --paths GenericConfigLocation)</filename>'>
+<!ENTITY folder-cache-location '<filename class="directory">$(qtpaths --paths GenericCacheLocation)</filename>'>
+<!ENTITY folder-data-location '<filename class="directory">$(qtpaths --paths GenericDataLocation)</filename>'>
 <!ENTITY FTP	"<acronym>FTP</acronym>">
 <!ENTITY frameworks "<productname>Frameworks</productname>">
 <!ENTITY gcc	"<command>gcc</command>">
