@@ -113,6 +113,7 @@ function (kdoctools_create_handbook docbook)
     get_filename_component(src_dir ${src_doc} DIRECTORY)
     set(build_dir ${CMAKE_CURRENT_BINARY_DIR}/${src_dir})
     set(build_doc ${build_dir}/index.cache.bz2)
+    set(build_html ${build_dir}/index.html)
 
     # current directory is the docbook directory, but if this is empty, the
     # globs which finds the docbooks and the images will be empty too as
@@ -153,13 +154,14 @@ function (kdoctools_create_handbook docbook)
     add_custom_target(${_targ} ALL DEPENDS ${build_doc})
 
     if(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
-        set(_htmlDoc ${CMAKE_CURRENT_SOURCE_DIR}/index.html)
-        add_custom_command(OUTPUT ${_htmlDoc}
-            COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --check ${_bootstrapOption} -o ${_htmlDoc} ${_input}
-            DEPENDS ${_input} ${_ssheet}
+        add_custom_command(OUTPUT ${build_html}
+            COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --check ${_bootstrapOption} -o ${build_html} ${src_doc}
+            DEPENDS ${src_doc} ${_ssheet}
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )
-        add_custom_target(htmlhandbook DEPENDS ${_htmlDoc})
+
+        _kdoctools_create_target_name(_targ_html ${build_html})
+        add_custom_target(${_targ_html} ALL DEPENDS ${build_html})
     endif(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
 
     set(installDest "${ARGS_INSTALL_DESTINATION}")
@@ -167,6 +169,9 @@ function (kdoctools_create_handbook docbook)
         set(subdir "${ARGS_SUBDIR}")
         file(GLOB images ${src_dir}/*.png)
         install(FILES ${build_doc} ${src_docs} ${images} DESTINATION ${installDest}/${subdir})
+        if(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
+            install(FILES ${build_html} DESTINATION ${installDest}/${subdir})
+        endif(KDOCTOOLS_ENABLE_HTMLHANDBOOK)
     endif()
 
 endfunction()
