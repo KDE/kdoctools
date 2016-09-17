@@ -175,6 +175,8 @@
 <!ENTITY Wilco.Greven.mail '<email>greven@kde.org</email>'>
 <!ENTITY Andreas.Gungl '<personname><firstname>Andreas</firstname><surname>Gungl</surname></personname>'>
 <!ENTITY Andreas.Gungl.mail '<email>a.gungl@gmx.de</email>'>
+<!ENTITY Boudhayan.Gupta '<personname><firstname>Boudhayan</firstname><surname>Gupta</surname></personname>'>
+<!ENTITY Boudhayan.Gupta.mail '<email>bgupta@kde.org</email>'>
 
 <!ENTITY Nicolas.Hadacek '<personname><firstname>Nicolas</firstname><surname>Hadacek</surname></personname>'>
 <!ENTITY Nicolas.Hadacek.mail '<email>hadacek@kde.org</email>'>
