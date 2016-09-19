@@ -47,6 +47,8 @@
 <!ENTITY Paul.E.Ahlquist.Jr.mail '<email>pea@ahlquist.org</email>'>
 <!ENTITY Danny.Allen '<personname><firstname>Danny</firstname><surname>Allen</surname></personname>'>
 <!ENTITY Danny.Allen.mail '<email>danny@dannyallen.co.uk</email>'>
+<!ENTITY Elvis.Angelaccio '<personname><firstname>Elvis</firstname><surname>Angelaccio</surname></personname>'>
+<!ENTITY Elvis.Angelaccio.mail '<email>elvis.angelaccio@kde.org</email>'>
 <!ENTITY Primoz.Anzur '<personname><firstname>Primoz</firstname><surname>Anzur</surname></personname>'>
 <!ENTITY Primoz.Anzur.mail '<email>zerokode@gmx.net</email>'>
 <!ENTITY Ewald.Arnold '<personname><firstname>Ewald</firstname><surname>Arnold</surname></personname>'>
@@ -477,6 +479,8 @@
 <!ENTITY Evan.Teran.mail '<email>eteran@alum.rit.edu</email>'>
 <!ENTITY Phil.Thompson '<personname><firstname>Phil</firstname><surname>Thompson</surname></personname>'>
 <!ENTITY Phil.Thompson.mail '<email>phil@river-bank.demon.co.uk</email>'>
+<!ENTITY Ragnar.Thompson '<personname><firstname>Ragnar</firstname><surname>Thompson</surname></personname>'>
+<!ENTITY Ragnar.Thompson.mail '<email>rthomsen6@gmail.com</email>'>
 <!ENTITY Bo.Thorsen '<personname><firstname>Bo</firstname><surname>Thorsen</surname></personname>'>
 <!ENTITY Bo.Thorsen.mail '<email>gobo@imada.sdu.dk</email>'>
 <!ENTITY Christian.Thurner '<personname><firstname>Christian</firstname><surname>Thurner</surname></personname>'>
