@@ -110,11 +110,7 @@ install(FILES
   COMPONENT Devel
 )
 
-
-configure_file(checkXML5.in.cmake ${CMAKE_CURRENT_BINARY_DIR}/checkXML5 )
 configure_file(config-kdoctools.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdoctools.h )
-
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/checkXML5 DESTINATION ${KDE_INSTALL_BINDIR} )
 
 install( FILES
     KF5DocToolsMacros.cmake

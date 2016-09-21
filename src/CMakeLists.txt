@@ -181,3 +181,17 @@ add_custom_command( TARGET docbookl10nhelper POST_BUILD
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/customization/xsl/all-l10n.xml
     DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/xsl/ )
 
+########### checkxml5 helper ###############
+
+set( checkXML5_SRCS checkXML5.cpp )
+add_executable( checkXML5 ${checkXML5_SRCS} )
+ecm_mark_nongui_executable( checkXML5 )
+target_link_libraries( checkXML5 Qt5::Core )
+install(TARGETS checkXML5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+
+if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)
+    add_executable(KF5::checkXML5 IMPORTED GLOBAL)
+    set_target_properties(KF5::checkXML5 PROPERTIES IMPORTED_LOCATION ${CHECKXML5_EXECUTABLE})
+else()
+    add_executable(KF5::checkXML5 ALIAS checkXML5)
+endif()
