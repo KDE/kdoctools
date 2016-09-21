@@ -57,30 +57,26 @@ install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAU
 
 ########### next target ###############
 
-# The cross compiling parts are commented out on purpose. Alex
-if (CMAKE_CROSSCOMPILING)
-#    set(IMPORT_MEINPROC5_EXECUTABLE "${KDE_HOST_TOOLS_PATH}/ImportMeinProc5Executable.cmake" CACHE FILEPATH "Point it to the export file of meinproc5 from a native build")
-#    include(${IMPORT_MEINPROC5_EXECUTABLE})
+set_source_files_properties(xslt.cpp PROPERTIES COMPILE_FLAGS -DSIMPLE_XSLT )
+
+if(MEINPROC_NO_KARCHIVE)
+    add_definitions(-DMEINPROC_NO_KARCHIVE) #we don't have saveToCache when compiling without KArchive, which is used in xslt_kde.cpp
 else ()
-    set_source_files_properties(xslt.cpp PROPERTIES COMPILE_FLAGS -DSIMPLE_XSLT )
+    set(meinproc_additional_SRCS xslt_kde.cpp)
+    set(meinproc_additional_LIBS KF5::Archive)
+endif()
 
-    if(MEINPROC_NO_KARCHIVE)
-        add_definitions(-DMEINPROC_NO_KARCHIVE) #we don't have saveToCache when compiling without KArchive, which is used in xslt_kde.cpp
-    else ()
-        set(meinproc_additional_SRCS xslt_kde.cpp)
-        set(meinproc_additional_LIBS KF5::Archive)
-    endif()
+add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS})
+ecm_mark_nongui_executable(meinproc5)
+target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
+install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
-    add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS})
-    ecm_mark_nongui_executable(meinproc5)
-    target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
-
-    install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)
+    add_executable(KF5::meinproc5 IMPORTED GLOBAL)
+    set_target_properties(KF5::meinproc5 PROPERTIES IMPORTED_LOCATION ${MEINPROC5_EXECUTABLE})
+else()
     add_executable(KF5::meinproc5 ALIAS meinproc5)
-
-#    # export this binary for cross-compilation
-#    export(TARGETS meinproc5 FILE ${CMAKE_BINARY_DIR}/ImportMeinProc4Executable.cmake)
-endif ()
+endif()
 
 ########### customize includes for xslt ###############
 # WARNING: this has severe limitations on the windows platform since the .xsl
