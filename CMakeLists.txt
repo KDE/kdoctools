@@ -23,6 +23,7 @@ ecm_setup_version(${KF5_VERSION} VARIABLE_PREFIX KDOCTOOLS
                         SOVERSION 5)
 
 option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only for internal usage on KDE infrastructure." OFF)
+option(INSTALL_INTERNAL_TOOLS "Install internal tools too." OFF)
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.5.0)

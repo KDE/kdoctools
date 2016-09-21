@@ -166,9 +166,19 @@ set( docbookl10nhelper_SRCS docbookl10nhelper.cpp )
 add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
 target_link_libraries( docbookl10nhelper Qt5::Core )
+if(INSTALL_INTERNAL_TOOLS)
+    install(TARGETS docbookl10nhelper EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+endif()
+
+if(CMAKE_CROSSCOMPILING AND DOCBOOKL10NHELPER_EXECUTABLE)
+    add_executable(KF5::docbookl10nhelper IMPORTED GLOBAL)
+    set_target_properties(KF5::docbookl10nhelper PROPERTIES IMPORTED_LOCATION ${DOCBOOKL10NHELPER_EXECUTABLE})
+else()
+    add_executable(KF5::docbookl10nhelper ALIAS docbookl10nhelper)
+endif()
 
 add_custom_command( TARGET docbookl10nhelper POST_BUILD
-    COMMAND $<TARGET_FILE:docbookl10nhelper>
+    COMMAND $<TARGET_FILE:KF5::docbookl10nhelper>
     "${DOCBOOKXSL_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/customization/xsl"
     "${CMAKE_CURRENT_BINARY_DIR}/customization/xsl"
 )
