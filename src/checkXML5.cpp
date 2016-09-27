@@ -31,5 +31,5 @@ int main(int argc, char **argv)
         qCritical() << "wrong argument count";
         return (1);
     }
-    return QProcess::execute("meinproc5", QStringList() << "--check" << "--stdout" << arguments[1]);
+    return QProcess::execute("meinproc5", QStringList() << "--check" << arguments[1]);
 }
