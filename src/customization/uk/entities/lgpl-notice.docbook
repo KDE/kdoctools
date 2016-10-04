@@ -26,8 +26,7 @@
 <para>Вам надається право копіювати, поширювати і/або модифікувати цей
 документ за умов дотримання GNU Free Documentation License,
 версії 1.2 або будь-якої пізнішої версії, у тому вигляді, який було
-оприлюднено Free Software Foundation; з &FDLInvariantSections;, з
-&FDLFrontCoverText;, і з &FDLBackCoverText;.  Копію цієї ліцензії включено 
+оприлюднено Free Software Foundation; &FDLInvariantSections;, &FDLFrontCoverText;, і &FDLBackCoverText;.  Копію цієї ліцензії включено 
 до <xref linkend="gnu-fdl"/>.</para>
 
 <!-- If you have no Invariant Sections, don't add any FDLIS entities.

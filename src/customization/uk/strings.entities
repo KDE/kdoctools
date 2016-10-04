@@ -8,16 +8,16 @@
      The default values of the parameter entities is IGNORE. -->
 <![%FDLIS;[
 <!ENTITY FDLISTitles "ПЕРЕЛІЧИТИ ЇХНІ НАЗВИ"><!-- keep capitals -->
-<!ENTITY FDLInvariantSections "незмінні розділи &FDLISTitles;">
+<!ENTITY FDLInvariantSections "із незмінними розділами &FDLISTitles;">
  ]]>
 <!ENTITY FDLInvariantSections "без незмінних розділів">
 <![%FDLFCT;[
 <!ENTITY FDLFCTTitles "СПИСОК"><!-- keep capitals -->
-<!ENTITY FDLFrontCoverText "текст на першій сторінці &FDLFCTTitles;">
+<!ENTITY FDLFrontCoverText "із текстом на першій сторінці &FDLFCTTitles;">
  ]]>
 <!ENTITY FDLFrontCoverText "без тексту на першій сторінці">
 <![%FDLBCT;[
 <!ENTITY FDLBCTTitles "ПЕРЕЛІЧИТИ ЇХНІ НАЗВИ"><!-- keep capitals -->
-<!ENTITY FDLBackCoverText "текст на останній сторінці &FDLBCTTitles;">
+<!ENTITY FDLBackCoverText "із текстом на останній сторінці &FDLBCTTitles;">
  ]]>
 <!ENTITY FDLBackCoverText "без тексту на останній сторінці">
