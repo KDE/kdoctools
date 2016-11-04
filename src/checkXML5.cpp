@@ -1,5 +1,5 @@
 /*  This file is part of the KDE project
-    Copyright (C) 2015 Ralf Habacker <ralf.habacker@freenet.de>
+    Copyright (C) 2015-2016 Ralf Habacker <ralf.habacker@freenet.de>
 
     This library is free software; you can redistribute it and/or
     modify it under the terms of the GNU Lesser General Public
@@ -22,6 +22,8 @@
 #include <QProcess>
 #include <QDebug>
 
+#include <stdio.h>
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
@@ -31,5 +33,13 @@ int main(int argc, char **argv)
         qCritical() << "wrong argument count";
         return (1);
     }
-    return QProcess::execute("meinproc5", QStringList() << "--check" << arguments[1]);
+
+    QProcess meinproc;
+    meinproc.start("meinproc5", QStringList() << "--check" << "--stdout" << arguments[1]);
+    if (!meinproc.waitForStarted())
+        return -2;
+    if (!meinproc.waitForFinished())
+        return -1;
+    fprintf(stderr, "%s", meinproc.readAllStandardError().constData());
+    return meinproc.exitCode();
 }
