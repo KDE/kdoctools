@@ -1,0 +1,112 @@
+# translation of kio_help4.po to Asturian
+# Copyright (C) 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Iñigo Varela <ivarela@softastur.org>, 2007.
+# enolp <enolp@softastur.org>, 2015, 2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-06-16 07:52+0000\n"
+"PO-Revision-Date: 2016-01-30 13:37+0100\n"
+"Last-Translator: enolp <enolp@sofastur.org>\n"
+"Language-Team: Asturian <>\n"
+"Language: ast\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: xslt.cpp:134
+msgid "Parsing stylesheet"
+msgstr "Analizando la fueya d'estilu"
+
+#: xslt.cpp:158
+msgid "Parsing document"
+msgstr "Analizando'l documentu"
+
+#: xslt.cpp:184
+msgid "Applying stylesheet"
+msgstr "Aplicando la fueya d'estilu"
+
+#: xslt.cpp:192
+msgid "Writing document"
+msgstr "Escribiendo'l documentu"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Iñigo Varela"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ivarela@softastur.org"
+
+#~ msgid "Output file"
+#~ msgstr "Ficheru de salida"
+
+#~ msgid "genshortcutents"
+#~ msgstr "genshortcutents"
+
+#~ msgid "Generates DocBook entities for key shortcuts of standard actions"
+#~ msgstr ""
+#~ "Xenera entidaes DocBook p'accesos rápidos por tecláu a aiciones estándar"
+
+#~ msgid "There is no documentation available for %1."
+#~ msgstr "Nun hai documentación disponible sobre %1."
+
+#~ msgid "Looking up correct file"
+#~ msgstr "Restolando pel ficheru correutu"
+
+#~ msgid "Preparing document"
+#~ msgstr "Tresnando'l documentu"
+
+#~ msgid "The requested help file could not be parsed:<br />%1"
+#~ msgstr "Nun se pudo analizar el ficheru d'ayuda solicitáu:<br />%1"
+
+#~ msgid "Saving to cache"
+#~ msgstr "Atroxando en caché"
+
+#~ msgid "Using cached version"
+#~ msgstr "Usando la versión de la caché"
+
+#~ msgid "Looking up section"
+#~ msgstr "Guetando la seición"
+
+#~ msgid "Could not find filename %1 in %2."
+#~ msgstr "Nun s'alcontró el ficheru %1 en %2."
+
+#~ msgid "Stylesheet to use"
+#~ msgstr "Fueya d'estilu a usar"
+
+#~ msgid "Output whole document to stdout"
+#~ msgstr "Unviar el documentu completu a stdout"
+
+#~ msgid "Output whole document to file"
+#~ msgstr "Unviar el documentu completu a un ficheru"
+
+#~ msgid "Create a ht://dig compatible index"
+#~ msgstr "Crear un índiz compatible con ht://dig"
+
+#~ msgid "Check the document for validity"
+#~ msgstr "Comprobar la validez del documentu"
+
+#~ msgid "Create a cache file for the document"
+#~ msgstr "Crear un ficheru de caché pal documentu"
+
+#~ msgid "Set the srcdir, for kdelibs"
+#~ msgstr "Afitar el srcdir, pa kdelibs"
+
+#~ msgid "Parameters to pass to the stylesheet"
+#~ msgstr "Parámetros a pasar a la fueya d'estilos"
+
+#~ msgid "The file to transform"
+#~ msgstr "El ficheru a tresformar"
+
+#~ msgid "XML-Translator"
+#~ msgstr "Traductor de XML"
+
+#~ msgid "KDE Translator for XML"
+#~ msgstr "Traductor KDE pa XML"
+
+#~ msgid "Could not write to cache file %1."
+#~ msgstr "Nun se pudo escribir nel ficheru de caché %1."
