@@ -118,7 +118,7 @@ function (kdoctools_create_handbook docbook)
     # current directory is the docbook directory, but if this is empty, the
     # globs which finds the docbooks and the images will be empty too as
     # they will expand into "/*.docbook" and "/*.png"
-    if (src_dir STREQUAL "")
+    if (NOT src_dir)
         set(src_dir ".")
     endif ()
 
