@@ -197,6 +197,7 @@
 <!ENTITY kbounce	"<application>KBounce</application>">
 <!ENTITY kbreakout	"<application>KBreakOut</application>">
 <!ENTITY kbruch	"<application>KBruch</application>">
+<!ENTITY kcachegrind	"<application>KCachegrind</application>">
 <!ENTITY kcalc	"<application>KCalc</application>">
 <!ENTITY kcharselect	"<application>KCharSelect</application>">
 <!ENTITY kchart	"<application>KChart</application>">
