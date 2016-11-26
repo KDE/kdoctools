@@ -104,6 +104,7 @@
  -->
 
 <!ENTITY AIX	"<trademark class='registered'>AIX</trademark>">
+<!ENTITY akonadi	"<acronym>Akonadi</acronym>">
 <!ENTITY akregator        "<application>Akregator</application>">
 <!ENTITY amarok	"<application>Amarok</application>">
 <!ENTITY amor	"<application>AMOR</application>">
@@ -165,6 +166,7 @@
 <!ENTITY HTTP	"<acronym>HTTP</acronym>">
 <!ENTITY IMAP "<acronym>IMAP</acronym>">
 <!ENTITY infocenter     "<application>KInfoCenter</application>">
+<!ENTITY ical	"<acronym>iCal</acronym>">
 <!ENTITY IRIX	'<trademark class="registered">IRIX</trademark>'>
 <!ENTITY Java	"<trademark>Java</trademark>">
 <!ENTITY javascript "<application>JavaScript</application>">
@@ -398,6 +400,7 @@
 <!ENTITY PDF "<acronym>PDF</acronym>">
 <!ENTITY phonon "<application>Phonon</application>">
 <!ENTITY picmi "<application>Picmi</application>">
+<!ENTITY PIM	"<acronym>PIM</acronym>">
 <!ENTITY plasma "<productname>Plasma</productname>">
 <!ENTITY plasmagik "<application>Plasmagik</application>">
 <!ENTITY plasmoid "<application>Plasmoid</application>">
