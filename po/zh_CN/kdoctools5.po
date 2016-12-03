@@ -1,0 +1,115 @@
+# translation of kio_help4.po to 简体中文
+# Copyright (C) 2007 Free Software Foundation, Inc.
+#
+# Dick Zhang <netwind2003@263.net>, 2004.
+# Liang Qi <cavendish.qi@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:11+0100\n"
+"PO-Revision-Date: 2007-09-26 22:40+0200\n"
+"Last-Translator: Liang Qi <cavendish.qi@gmail.com>\n"
+"Language-Team: 简体中文 <kde-china@kde.org>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: xslt.cpp:134
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "正在分析样式表"
+
+#: xslt.cpp:158
+#, kde-format
+msgid "Parsing document"
+msgstr "正在分析文档"
+
+#: xslt.cpp:184
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "正在应用样式表"
+
+#: xslt.cpp:192
+#, kde-format
+msgid "Writing document"
+msgstr "正在写入文档"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE 中国"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-china@kde.org"
+
+#~ msgid "Output file"
+#~ msgstr "输出文件"
+
+#~ msgid "genshortcutents"
+#~ msgstr "genshortcutents"
+
+#~ msgid "Generates DocBook entities for key shortcuts of standard actions"
+#~ msgstr "为标准动作的快捷键生成 DocBook 条目"
+
+#~ msgid "There is no documentation available for %1."
+#~ msgstr "%1 没有可用的文档。"
+
+#~ msgid "Looking up correct file"
+#~ msgstr "正在查找正确的文件"
+
+#~ msgid "Preparing document"
+#~ msgstr "正在准备文档"
+
+#~ msgid "The requested help file could not be parsed:<br />%1"
+#~ msgstr "不能解析请求的帮助文件：<br />%1"
+
+#~ msgid "Saving to cache"
+#~ msgstr "保存到缓存"
+
+#~ msgid "Using cached version"
+#~ msgstr "使用缓存版本"
+
+#~ msgid "Looking up section"
+#~ msgstr "查找章节"
+
+#~ msgid "Could not find filename %1 in %2."
+#~ msgstr "在 %2 中找不到文件名 %1。"
+
+#~ msgid "Stylesheet to use"
+#~ msgstr "使用的样式表"
+
+#~ msgid "Output whole document to stdout"
+#~ msgstr "全部文档输出到标准输出设备"
+
+#~ msgid "Output whole document to file"
+#~ msgstr "全部文档输出到文件"
+
+#~ msgid "Create a ht://dig compatible index"
+#~ msgstr "建立与 ht://dig 兼容的索引"
+
+#~ msgid "Check the document for validity"
+#~ msgstr "检查文档是否正确"
+
+#~ msgid "Create a cache file for the document"
+#~ msgstr "建立文档的缓存文件"
+
+#~ msgid "Set the srcdir, for kdelibs"
+#~ msgstr "设置 kdelibs 的源文件目录"
+
+#~ msgid "Parameters to pass to the stylesheet"
+#~ msgstr "要传递给样式表的参数"
+
+#~ msgid "The file to transform"
+#~ msgstr "要转换的文件"
+
+#~ msgid "XML-Translator"
+#~ msgstr "XML 翻译器"
+
+#~ msgid "KDE Translator for XML"
+#~ msgstr "KDE 的 XML 翻译器"
+
+#~ msgid "Could not write to cache file %1."
+#~ msgstr "无法写入缓存文件 %1。"
