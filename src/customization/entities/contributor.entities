@@ -47,6 +47,8 @@
 <!ENTITY Paul.E.Ahlquist.Jr.mail '<email>pea@ahlquist.org</email>'>
 <!ENTITY Danny.Allen '<personname><firstname>Danny</firstname><surname>Allen</surname></personname>'>
 <!ENTITY Danny.Allen.mail '<email>danny@dannyallen.co.uk</email>'>
+<!ENTITY Sandro.Andrade '<personname><firstname>Sandro</firstname><surname>Andrade</surname></personname>'>
+<!ENTITY Sandro.Andrade.mail '<email>sandroandrade@kde.org</email>'>
 <!ENTITY Elvis.Angelaccio '<personname><firstname>Elvis</firstname><surname>Angelaccio</surname></personname>'>
 <!ENTITY Elvis.Angelaccio.mail '<email>elvis.angelaccio@kde.org</email>'>
 <!ENTITY Primoz.Anzur '<personname><firstname>Primoz</firstname><surname>Anzur</surname></personname>'>

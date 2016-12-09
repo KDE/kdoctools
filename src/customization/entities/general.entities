@@ -167,6 +167,7 @@
 <!ENTITY IMAP "<acronym>IMAP</acronym>">
 <!ENTITY infocenter     "<application>KInfoCenter</application>">
 <!ENTITY ical	"<acronym>iCal</acronym>">
+<!ENTITY irc "<acronym>IRC</acronym>">
 <!ENTITY IRIX	'<trademark class="registered">IRIX</trademark>'>
 <!ENTITY Java	"<trademark>Java</trademark>">
 <!ENTITY javascript "<application>JavaScript</application>">
