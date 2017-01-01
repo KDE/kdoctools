@@ -243,7 +243,7 @@ function(kdoctools_install podir)
                     INSTALL_DESTINATION ${MAN_INSTALL_DIR}/${lang}
                 )
             else()
-                string(REGEX MATCH "docs/(.*)/index.docbook" match ${docbook})
+                string(REGEX MATCH "${lang_dir}/docs/(.*)/index.docbook" match ${docbook})
                 if (match)
                     kdoctools_create_handbook(${docbook}
                         INSTALL_DESTINATION ${HTML_INSTALL_DIR}/${lang}
