@@ -15,7 +15,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH} ${ECM
 
 include(ECMSetupVersion)
 include(ECMMarkNonGuiExecutable)
-include(ECMPackageConfigHelpers)
+include(CMakePackageConfigHelpers)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
@@ -96,7 +96,7 @@ add_subdirectory(src)
 add_subdirectory(autotests)
 
 install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
-ecm_configure_package_config_file(
+configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
   "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfig.cmake"
   PATH_VARS
