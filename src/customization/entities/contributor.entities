@@ -398,6 +398,8 @@
 <!ENTITY Roman.Razilov.mail '<email>Roman.Razilov@gmx.de</email>'>
 <!ENTITY Michael.Reiher '<personname><firstname>Michael</firstname><surname>Reiher</surname></personname>'>
 <!ENTITY Michael.Reiher.mail '<email>michael.reiher@gmx.de</email>'>
+<!ENTITY Alexander.Reinholdt '<firstname>Alexander</firstname><surname>Reinholdt</surname></personname>'>
+<!ENTITY Alexander.Reinholdt.mail '<email>alexander.reinholdt@kdemail.net</email>'>
 <!ENTITY Alex.Richardson '<personname><firstname>Alex</firstname><surname>Richardson</surname></personname>'>
 <!ENTITY Alex.Richardson.email '<email>arichardson.kde@gmail.com</email>'>
 <!ENTITY Nicholas.Robbins '<personname><firstname>Nicolas</firstname><surname>Robbins</surname></personname>'>
