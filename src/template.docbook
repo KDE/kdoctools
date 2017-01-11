@@ -3,13 +3,10 @@
   <!-- Define an entity for your application if it is not part of KDE
        Git -->
   <!ENTITY kmyapplication "<application>KMyApp</application>">
-  <!ENTITY kappname "&kmyapplication;"><!-- replace kmyapplication here
-                                            do *not* replace kappname-->
   <!ENTITY i18n-translatable-entity "<application>Translatable Entity</application>">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"> <!-- ONLY If you are writing non-English
-                                     original documentation, change
-                                     the language here -->
+  <!ENTITY % English "INCLUDE">
+
   <!-- Do not define any other entities; instead, use the entities
        from entities/general.entities and en/user.entities. -->
 ]>
@@ -114,7 +111,8 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 <!-- Date of the documentation
 Change date/releaseinfo only if
    docbook is updated and verified to be valid for the current app version
-   docbook is proofreaded and verified to be valid for the current app version
+   or
+   docbook is proofread and verified to be valid for the current app version
 Don't forget to include this last date.
 Please respect the format of the date (YYYY-MM-DD),it is used by scripts.
 -->
@@ -381,9 +379,6 @@ cross-reference questions to the parts of your documentation that answer them.
 This is also a great place to provide pointers to other FAQ's if your users
 must do some complicated configuration on other programs in order for your
 application work. -->
-
-&reporting.bugs;
-&updating.documentation;
 
 <qandaset id="faqlist">
 <qandaentry>
