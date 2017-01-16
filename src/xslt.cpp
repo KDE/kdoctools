@@ -160,11 +160,11 @@ QString transform(const QString &pat, const QString &tss,
     xmlParserCtxtPtr pctxt;
 
     pctxt = xmlNewParserCtxt();
-    if ( pctxt == NULL ) {
+    if ( pctxt == nullptr ) {
         return parsed;
     }
 
-    xmlDocPtr doc = xmlCtxtReadFile(pctxt, QFile::encodeName(pat).constData(), NULL,
+    xmlDocPtr doc = xmlCtxtReadFile(pctxt, QFile::encodeName(pat).constData(), nullptr,
                                     XML_PARSE_NOENT|XML_PARSE_DTDLOAD|XML_PARSE_NONET);
     /* Clean the context pointer, now useless */
     const bool context_valid = (pctxt->valid == 0);
@@ -172,7 +172,7 @@ QString transform(const QString &pat, const QString &tss,
 
     /* Check both the returned doc (for parsing errors) and the context
        (for validation errors) */
-    if (doc == NULL) {
+    if (doc == nullptr) {
         return parsed;
     } else {
         if (context_valid) {
@@ -183,11 +183,11 @@ QString transform(const QString &pat, const QString &tss,
 
     INFO(i18n("Applying stylesheet"));
     QVector<const char *> p = params;
-    p.append(NULL);
+    p.append(nullptr);
     xmlDocPtr res = xsltApplyStylesheet(style_sheet, doc, const_cast<const char **>(&p[0]));
     xmlFreeDoc(doc);
-    if (res != NULL) {
-        xmlOutputBufferPtr outp = xmlOutputBufferCreateIO(writeToQString, 0, &parsed, 0);
+    if (res != nullptr) {
+        xmlOutputBufferPtr outp = xmlOutputBufferCreateIO(writeToQString, nullptr, &parsed, nullptr);
         outp->written = 0;
         INFO(i18n("Writing document"));
         xsltSaveResultTo(outp, res, style_sheet);

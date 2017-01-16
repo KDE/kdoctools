@@ -60,7 +60,7 @@ void parseEntry(PairList &list, xmlNodePtr cur, int base)
 
     /* We don't care what the top level element name is */
     cur = cur->xmlChildrenNode;
-    while (cur != NULL) {
+    while (cur != nullptr) {
 
         if (cur->type == XML_TEXT_NODE) {
             QString words = QString::fromUtf8((char *)cur->content);
@@ -184,7 +184,7 @@ int main(int argc, char **argv)
             params.append(qstrdup(tuple.mid(ch + 1).toUtf8().constData()));
         }
     }
-    params.append(NULL);
+    params.append(nullptr);
 
     QString tss = parser.value(QStringLiteral("stylesheet"));
     if (tss.isEmpty()) {
