@@ -57,6 +57,9 @@ set_package_properties(LibXml2 PROPERTIES
                        PURPOSE "Required by the KDE help system to process DocBook XML"
                       )
 
+if (NOT LIBXML2_XMLLINT_EXECUTABLE)
+   message(FATAL_ERROR "xmllint is required to process DocBook XML")
+endif()
 
 find_package(DocBookXML4 "4.5")
 
