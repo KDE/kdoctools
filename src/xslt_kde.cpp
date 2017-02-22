@@ -2,6 +2,7 @@
 #ifndef MEINPROC_NO_KARCHIVE
 #include <kfilterdev.h>
 #else
+#include "loggingcategory.h"
 #include <QDebug>
 #endif
 
@@ -17,7 +18,7 @@ bool saveToCache(const QString &contents, const QString &filename)
     fd.write(contents.toUtf8());
     fd.close();
 #else
-    qWarning() << "This function is dummy because KArchive support has been disabled. "
+    qCWarning(KDocToolsLog) << "This function is dummy because KArchive support has been disabled. "
                "This mode should be enabled only for specific usage on KDE infrastructure.";
     Q_UNUSED(contents)
     Q_UNUSED(filename)
