@@ -2,7 +2,6 @@
 #ifndef MEINPROC_COMMON_H
 #define MEINPROC_COMMON_H
 
-#include <QDebug>
 #include <QString>
 
 enum CheckFileResult {

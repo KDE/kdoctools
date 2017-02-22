@@ -8,6 +8,7 @@
 #endif
 
 #include "../config-kdoctools.h"
+#include "loggingcategory.h"
 
 #include <libxslt/xsltconfig.h>
 #include <libxslt/xsltInternals.h>
@@ -67,7 +68,7 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
     for (i = replaceURLList.constBegin(); i != replaceURLList.constEnd(); i++) {
         if (url.startsWith(i.key())) {
             url.replace(i.key(), i.value());
-            qDebug() << "converted" << _URL << "to" << url;
+            qCDebug(KDocToolsLog) << "converted" << _URL << "to" << url;
         }
     }
     char URL[1024];
@@ -96,7 +97,7 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
             if (warning != NULL) {
                 ctxt->sax->warning = warning;
             }
-            qDebug() << "Loaded URL=\"" << URL << "\" ID=\"" << ID << "\"";
+            qCDebug(KDocToolsLog) << "Loaded URL=\"" << URL << "\" ID=\"" << ID << "\"";
             return (ret);
         }
     }
@@ -112,7 +113,7 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
                 if (warning != NULL) {
                     ctxt->sax->warning = warning;
                 }
-                qDebug() << "Loaded URL=\"" << newURL << "\" ID=\"" << ID << "\"";
+                qCDebug(KDocToolsLog) << "Loaded URL=\"" << newURL << "\" ID=\"" << ID << "\"";
                 xmlFree(newURL);
                 return (ret);
             }
@@ -257,11 +258,11 @@ QString splitOut(const QString &parsed, int index)
         int endindex = parsed.indexOf(QStringLiteral("</FILENAME>"), index);
         int startindex = parsed.indexOf(QStringLiteral("<FILENAME "), index) + 1;
 
-//        //qDebug() << "FILENAME " << startindex << " " << endindex << " " << inside << " " << parsed.mid(startindex + 18, 15)<< " " << parsed.length();
+        //qCDebug(KDocToolsLog) << "FILENAME " << startindex << " " << endindex << " " << inside << " " << parsed.mid(startindex + 18, 15)<< " " << parsed.length();
 
         if (startindex > 0) {
             if (startindex < endindex) {
-                //              //qDebug() << "finding another";
+                //qCDebug(KDocToolsLog) << "finding another";
                 index = startindex + 8;
                 inside++;
             } else {
@@ -396,7 +397,7 @@ void KDocTools::setupStandardDirs(const QString &srcdir)
         catalogs += QUrl::fromLocalFile(srcdir + QStringLiteral("/customization/catalog.xml")).toEncoded();
         s_dtdDirs()->srcdir = srcdir;
     }
-    //qDebug() << "XML_CATALOG_FILES: " << catalogs;
+    //qCDebug(KDocToolsLog) << "XML_CATALOG_FILES: " << catalogs;
     qputenv("XML_CATALOG_FILES", catalogs);
     xmlInitializeCatalog();
 }
@@ -420,7 +421,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
         if (QFile::exists(test)) {
             return QStringList() << test;
         }
-        qDebug() << "Could not locate file" << file << "in" << srcdir;
+        qCDebug(KDocToolsLog) << "Could not locate file" << file << "in" << srcdir;
         return QStringList();
     }
     // Using locateAll() is necessary to be able to find all catalogs when
@@ -444,7 +445,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     }
 
     if (result.isEmpty()) {
-        qDebug() << "Could not locate file" << fileName << "in" << QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+        qCDebug(KDocToolsLog) << "Could not locate file" << fileName << "in" << QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
     }
     return result;
 }
@@ -478,6 +479,6 @@ QStringList getKDocToolsCatalogs()
     foreach (const QString &aCatalog, catalogFiles) {
         catalogs << aCatalog;
     }
-    //qDebug() << "Found catalogs: " << catalogs;
+    //qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
     return catalogs;
 }

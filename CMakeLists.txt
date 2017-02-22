@@ -15,6 +15,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH} ${ECM
 
 include(ECMSetupVersion)
 include(ECMMarkNonGuiExecutable)
+include(ECMQtDeclareLoggingCategory)
 include(CMakePackageConfigHelpers)
 include(GenerateExportHeader)
 

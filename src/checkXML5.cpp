@@ -18,6 +18,8 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "loggingcategory.h"
+
 #include <QCoreApplication>
 #include <QProcess>
 #include <QDebug>
@@ -30,7 +32,7 @@ int main(int argc, char **argv)
 
     const QStringList arguments = app.arguments();
     if (arguments.count() != 2) {
-        qCritical() << "wrong argument count";
+        qCCritical(KDocToolsLog) << "wrong argument count";
         return (1);
     }
 
