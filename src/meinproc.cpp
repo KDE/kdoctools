@@ -2,7 +2,6 @@
 #include "../config-kdoctools.h"
 #include "xslt.h"
 #include "meinproc_common.h"
-#include "loggingcategory.h"
 
 #include <QCoreApplication>
 #include <QtCore/QDebug>
@@ -46,7 +45,7 @@ public:
 
 typedef QList<MyPair> PairList;
 
-#define DIE(x) do { qCCritical(KDocToolsLog) << "Error:" << x; exit(1); } while (0)
+#define DIE(x) do { qCritical() << "Error:" << x; exit(1); } while (0)
 
 void parseEntry(PairList &list, xmlNodePtr cur, int base)
 {
@@ -200,7 +199,7 @@ int main(int argc, char **argv)
     const QString cache = parser.value(QStringLiteral("cache"));
 #else
     if (parser.isSet("cache")) {
-        qCWarning(KDocToolsLog) << QCoreApplication::translate("main", "The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
+        qWarning() << QCoreApplication::translate("main", "The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
     }
 #endif
     const bool usingStdOut = parser.isSet(QStringLiteral("stdout"));
@@ -215,7 +214,7 @@ int main(int argc, char **argv)
 #ifndef MEINPROC_NO_KARCHIVE
     if (!cache.isEmpty()) {
         if (!saveToCache(output, cache)) {
-            qCWarning(KDocToolsLog) << QCoreApplication::translate("main", "Could not write to cache file %1.").arg(cache);
+            qWarning() << QCoreApplication::translate("main", "Could not write to cache file %1.").arg(cache);
         }
         goto end;
     }

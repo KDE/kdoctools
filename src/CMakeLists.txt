@@ -25,13 +25,6 @@ else()
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/dtd RENAME ${_custom_dtd_kdex_name})
 endif()
 
-ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
-    HEADER loggingcategory.h
-    IDENTIFIER KDocToolsLog
-    CATEGORY_NAME kf5.kdoctools
-    DEFAULT_SEVERITY Warning
-)
-
 # needed by KIO, need to export it
 add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
@@ -73,7 +66,7 @@ else ()
     set(meinproc_additional_LIBS KF5::Archive)
 endif()
 
-add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
+add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS})
 ecm_mark_nongui_executable(meinproc5)
 target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
 install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -169,7 +162,7 @@ endforeach(_currentcustomizedir ${customizedir})
 
 ########### l10n xml helper ###############
 
-set( docbookl10nhelper_SRCS docbookl10nhelper.cpp ${kdoctoolslog_core_SRCS})
+set( docbookl10nhelper_SRCS docbookl10nhelper.cpp )
 add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
 target_link_libraries( docbookl10nhelper Qt5::Core )
@@ -196,7 +189,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/customization/xsl/all-l10n.xml
 
 ########### checkxml5 helper ###############
 
-set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
+set( checkXML5_SRCS checkXML5.cpp )
 add_executable( checkXML5 ${checkXML5_SRCS} )
 ecm_mark_nongui_executable( checkXML5 )
 target_link_libraries( checkXML5 Qt5::Core )

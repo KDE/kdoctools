@@ -18,8 +18,6 @@
     License along with this library.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#include "loggingcategory.h"
-
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
@@ -52,8 +50,8 @@ int writeLangFile(const QString &fname, const QString &dtdPath,
 
     QFile outFile(fname);
     if (! outFile.open(QIODevice::WriteOnly)) {
-        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1")
-                                 .arg(outFile.fileName());
+        qCritical() << QStringLiteral("Could not write %1")
+                    .arg(outFile.fileName());
         return (1);
     }
 
@@ -64,7 +62,7 @@ int writeLangFile(const QString &fname, const QString &dtdPath,
 
     LangListType::const_iterator i = langMap.constBegin();
     while (i != langMap.constEnd()) {
-        //qCDebug(KDocToolsLog) << (*i).first << ": " << (*i).second;
+        //qDebug() << (*i).first << ": " << (*i).second;
         outStream << QStringLiteral("<!ENTITY %1 SYSTEM \"%2\">")
                   .arg((*i).first).arg((*i).second) << endl;
         ++i;
@@ -95,8 +93,8 @@ int writeLangFileNew(const QString &fname, const QString &dtdPath,
 
     QFile outFile(fname);
     if (! outFile.open(QIODevice::WriteOnly)) {
-        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1")
-                                 .arg(outFile.fileName());
+        qCritical() << QStringLiteral("Could not write %1")
+                    .arg(outFile.fileName());
         return (1);
     }
 
@@ -134,7 +132,7 @@ int main(int argc, char **argv)
 
     const QStringList arguments = app.arguments();
     if (arguments.count() != 4) {
-        qCCritical(KDocToolsLog) << "wrong argument count";
+        qCritical() << "wrong argument count";
         return (1);
     }
 
@@ -145,7 +143,7 @@ int main(int argc, char **argv)
     QFile i18nFile(l10nDir + QStringLiteral("common/l10n.xml"));
 
     if (! i18nFile.open(QIODevice::ReadOnly)) {
-        qCCritical(KDocToolsLog) << i18nFile.fileName() << " not found";
+        qCritical() << i18nFile.fileName() << " not found";
         return (1);
     }
 
@@ -175,10 +173,10 @@ int main(int argc, char **argv)
         case 0:
             if (rxDocType.indexIn(line) != -1) {
                 parsingState = 1;
-                //qCDebug(KDocToolsLog) << "DTD found";
+                //qDebug() << "DTD found";
             } else if (rxDocType2.indexIn(line) != -1) {
                 parsingState = 1;
-                //qCDebug(KDocToolsLog) << "DTD found";
+                //qDebug() << "DTD found";
             }
             break;
         case 1:
@@ -188,13 +186,13 @@ int main(int argc, char **argv)
                 langCode = rxEntity.cap(1);
                 langFile = l10nDir + QStringLiteral("common/") + rxEntity.cap(2);
                 allLangs += qMakePair(langCode, langFile);
-                //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+                //qDebug() << langCode << " - " << langFile;
             } else if (rxEntity2.indexIn(line) != -1  && !foundRxEntity) {
                 foundRxEntity2 = true;
                 langCode = rxEntity2.cap(1);
                 langFile = l10nDir + QStringLiteral("common/") + rxEntity2.cap(2);
                 allLangs += qMakePair(langCode, langFile);
-                //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+                //qDebug() << langCode << " - " << langFile;
             }
             break;
         }
@@ -215,7 +213,7 @@ int main(int argc, char **argv)
      */
     customLangFiles.removeOne(QStringLiteral("all-l10n.xml"));
     customLangFiles.removeOne(QStringLiteral("kde-custom-l10n.xml"));
-    //qCDebug(KDocToolsLog) << "customLangFiles:" << customLangFiles;
+    //qDebug() << "customLangFiles:" << customLangFiles;
 
     /*
      * for each custom language (from directory listing), if it is not
