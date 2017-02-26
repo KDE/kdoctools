@@ -358,6 +358,21 @@ void replaceCharsetHeader(QString &output)
 #endif
 }
 
+QByteArray extractFileToBuffer(const QString &content, const QString &filename)
+{
+    int index = content.indexOf(QStringLiteral("<FILENAME filename=\"%1\"").arg(filename));
+    if (index == -1) {
+        if (filename == QLatin1String("index.html")) {
+            return fromUnicode(content);
+        } else {
+            return QByteArray(); // null value, not just empty
+        }
+    }
+    QString data_file = splitOut(content, index);
+    replaceCharsetHeader(data_file);
+    return fromUnicode(data_file);
+}
+
 class DtdStandardDirs
 {
 public:
