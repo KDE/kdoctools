@@ -66,37 +66,7 @@ set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION_STRIN
                                              EXPORT_NAME DocTools
 )
 
-# -------------------------------------
-add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
-add_library(KF5::XsltKde ALIAS KF5XsltKde)
-if (NOT MEINPROC_NO_KARCHIVE)
-    set (_private_link_karchive "KF5::Archive")
-else()
-    set (_private_link_karchive "")
-endif()
-target_link_libraries(KF5XsltKde
-    PUBLIC
-        Qt5::Core
-    PRIVATE
-        ${_private_link_karchive}
-)
-set_target_properties(KF5XsltKde PROPERTIES
-    POSITION_INDEPENDENT_CODE TRUE
-    EXPORT_NAME XsltKde
-)
-
-target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/XsltKde>")
-
-install(FILES
-    xslt.h
-    xslt_kde.h
-    docbookxslt.h docbookxslt_p.h
-    ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/XsltKde
-    COMPONENT Devel
-)
-
-install(TARGETS KF5XsltKde KF5DocTools EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5DocTools EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
