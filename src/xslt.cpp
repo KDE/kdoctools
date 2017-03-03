@@ -1,4 +1,5 @@
-#include "xslt.h"
+#include "docbookxslt.h"
+#include "docbookxslt_p.h"
 
 #ifdef Q_OS_WIN
 //one of the xslt/xml headers pulls in windows.h and breaks <limits>
@@ -12,6 +13,7 @@
 #include <libxslt/xsltInternals.h>
 #include <libxslt/transform.h>
 #include <libxslt/xsltutils.h>
+#include <libxml/parser.h>
 #include <libxml/xmlIO.h>
 #include <libxml/parserInternals.h>
 #include <libxml/catalog.h>
@@ -24,6 +26,9 @@
 #include <QtCore/QTextCodec>
 #include <QtCore/QUrl>
 #include <QtCore/QDebug>
+#include <QByteArray>
+#include <QString>
+#include <QVector>
 
 #if !defined( SIMPLE_XSLT )
 extern HelpProtocol *slave;
@@ -126,7 +131,7 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
 }
 #endif
 
-QString transform(const QString &pat, const QString &tss,
+QString KDocTools::transform(const QString &pat, const QString &tss,
                   const QVector<const char *> &params)
 {
     QString parsed;
@@ -358,7 +363,7 @@ void replaceCharsetHeader(QString &output)
 #endif
 }
 
-QByteArray extractFileToBuffer(const QString &content, const QString &filename)
+QByteArray KDocTools::extractFileToBuffer(const QString &content, const QString &filename)
 {
     int index = content.indexOf(QStringLiteral("<FILENAME filename=\"%1\"").arg(filename));
     if (index == -1) {
@@ -381,7 +386,7 @@ public:
 
 Q_GLOBAL_STATIC(DtdStandardDirs, s_dtdDirs)
 
-void setupStandardDirs(const QString &srcdir)
+void KDocTools::setupStandardDirs(const QString &srcdir)
 {
     QByteArray catalogs;
 
@@ -396,7 +401,7 @@ void setupStandardDirs(const QString &srcdir)
     xmlInitializeCatalog();
 }
 
-QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
+QString KDocTools::locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
 {
     const QStringList lst = locateFilesInDtdResource(file, option);
     return lst.isEmpty() ? QString() : lst.first();

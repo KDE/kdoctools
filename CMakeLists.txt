@@ -16,6 +16,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake ${ECM_MODULE_PATH} ${ECM
 include(ECMSetupVersion)
 include(ECMMarkNonGuiExecutable)
 include(CMakePackageConfigHelpers)
+include(GenerateExportHeader)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"

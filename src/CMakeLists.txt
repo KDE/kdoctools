@@ -26,6 +26,40 @@ else()
 endif()
 
 # needed by KIO, need to export it
+add_library(KF5DocTools SHARED xslt.cpp xslt_kde.cpp)
+generate_export_header(KF5DocTools BASE_NAME KDocTools EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h")
+add_library(KF5::DocTools ALIAS KF5DocTools)
+if (NOT MEINPROC_NO_KARCHIVE)
+    set (_private_link_karchive "KF5::Archive")
+else()
+    set (_private_link_karchive "")
+endif()
+target_link_libraries(KF5DocTools
+    PUBLIC
+        Qt5::Core
+    PRIVATE
+        ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${_private_link_karchive}
+)
+set_target_properties(KF5DocTools PROPERTIES
+    POSITION_INDEPENDENT_CODE TRUE
+    EXPORT_NAME KDocTools
+)
+
+target_include_directories(KF5DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools>")
+
+install(FILES
+    docbookxslt.h
+    ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools
+    COMPONENT Devel
+)
+
+set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION_STRING}
+                                             SOVERSION ${KDOCTOOLS_SOVERSION}
+                                             EXPORT_NAME DocTools
+)
+
+# -------------------------------------
 add_library(KF5XsltKde STATIC xslt.cpp xslt_kde.cpp)
 add_library(KF5::XsltKde ALIAS KF5XsltKde)
 if (NOT MEINPROC_NO_KARCHIVE)
@@ -49,11 +83,13 @@ target_include_directories(KF5XsltKde INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTA
 install(FILES
     xslt.h
     xslt_kde.h
+    docbookxslt.h docbookxslt_p.h
+    ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/XsltKde
     COMPONENT Devel
 )
 
-install(TARGETS KF5XsltKde EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5XsltKde KF5DocTools EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### next target ###############
 
@@ -68,7 +104,7 @@ endif()
 
 add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS})
 ecm_mark_nongui_executable(meinproc5)
-target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
+target_link_libraries(meinproc5 Qt5::Core KF5::DocTools ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
 install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)

@@ -1,6 +1,7 @@
 
 #include "../config-kdoctools.h"
-#include "xslt.h"
+#include "docbookxslt.h"
+#include "docbookxslt_p.h"
 #include "meinproc_common.h"
 
 #include <QCoreApplication>
@@ -31,6 +32,8 @@
 #include <qplatformdefs.h>
 #include <qcommandlineparser.h>
 #include <qcommandlineoption.h>
+
+using namespace KDocTools;
 
 #ifndef _WIN32
 extern "C" int xmlLoadExtDtdDefaultValue;

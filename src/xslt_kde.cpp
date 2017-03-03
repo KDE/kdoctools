@@ -1,11 +1,11 @@
-#include "xslt_kde.h"
+#include "docbookxslt.h"
 #ifndef MEINPROC_NO_KARCHIVE
 #include <kfilterdev.h>
 #else
 #include <QDebug>
 #endif
 
-bool saveToCache(const QString &contents, const QString &filename)
+bool KDocTools::saveToCache(const QString &contents, const QString &filename)
 {
 #ifndef MEINPROC_NO_KARCHIVE
     KFilterDev fd(filename);

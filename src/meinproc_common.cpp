@@ -1,7 +1,8 @@
 
 #include "meinproc_common.h"
 
-#include "xslt.h"
+#include "docbookxslt.h"
+#include "docbookxslt_p.h"
 
 #include <QDir>
 #include <QFileInfo>
