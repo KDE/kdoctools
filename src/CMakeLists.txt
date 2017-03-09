@@ -81,7 +81,7 @@ endif()
 
 add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
 ecm_mark_nongui_executable(meinproc5)
-target_link_libraries(meinproc5 Qt5::Core KF5::DocTools ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
+target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
 install(TARGETS meinproc5 EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)
