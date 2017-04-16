@@ -55,6 +55,8 @@ function (locate_version version found_dir)
         ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/xml-dtd-${version}
         ${CMAKE_INSTALL_DATAROOTDIR}/sgml/docbook/xml-dtd-${version}
         ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/${version}
+        #for building on Mac with docbook installed by homebrew
+        opt/docbook/docbook/xml/${version}
     )
 
     find_path (searched_dir docbookx.dtd

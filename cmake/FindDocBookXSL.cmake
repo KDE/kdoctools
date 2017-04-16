@@ -44,6 +44,8 @@ set (STYLESHEET_PATH_LIST
     ${CMAKE_INSTALL_DATAROOTDIR}/xml/docbook/stylesheet/nwalsh
     ${CMAKE_INSTALL_DATAROOTDIR}/xsl/docbook
     ${CMAKE_INSTALL_DATAROOTDIR}/xsl/docbook-xsl
+    #for building on Mac with docbook-xsl installed by homebrew
+    opt/docbook-xsl/docbook-xsl
 )
 
 find_path (DocBookXSL_DIR lib/lib.xsl
