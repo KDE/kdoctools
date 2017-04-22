@@ -96,7 +96,12 @@ if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po" AND KF5I18n_FOUND)
     kdoctools_install(po)
 endif()
 add_subdirectory(common)
-add_subdirectory(docs)
+if (NOT WIN32)
+# Temporarily disable the man pages; the bootstrap case (== launch mainproc5
+# from inside this same build) seems to be broken on Windows, as spotted by
+# the testing instance of the new build.kde.org.
+   add_subdirectory(docs)
+endif()
 add_subdirectory(src)
 add_subdirectory(autotests)
 
