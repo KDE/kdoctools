@@ -110,8 +110,8 @@ foreach( _kdeincludexslt ${_kdeincludexslt_ALL} )
     else()
         install(CODE
             "FILE(RELATIVE_PATH DOCBOOKXSL_DIR \${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization ${DOCBOOKXSL_DIR})
-            CONFIGURE_FILE( ${_kdeincludexslt} ${_kdeincludexslt_binarypath}.install )")
-            install(FILES ${_kdeincludexslt_binarypath}.install DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization RENAME ${_kdeincludexslt_out})
+            CONFIGURE_FILE( \"${_kdeincludexslt}\" \"${_kdeincludexslt_binarypath}.install\" )")
+            install(FILES "${_kdeincludexslt_binarypath}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization RENAME ${_kdeincludexslt_out})
     endif()
 endforeach( _kdeincludexslt ${_kdeincludexslt_ALL} )
 
