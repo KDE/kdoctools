@@ -400,6 +400,14 @@ void KDocTools::setupStandardDirs(const QString &srcdir)
     //qCDebug(KDocToolsLog) << "XML_CATALOG_FILES: " << catalogs;
     qputenv("XML_CATALOG_FILES", catalogs);
     xmlInitializeCatalog();
+#if defined(_MSC_VER)
+    /* Workaround: apparently setting XML_CATALOG_FILES set here
+       has no effect on the libxml2 functions.
+       This code path could be used in all cases instead of setting the
+       variable, but this requires more investigation on the reason of
+       the issue. */
+    xmlLoadCatalogs(catalogs.constData());
+#endif
 }
 
 QString KDocTools::locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option)
