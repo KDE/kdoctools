@@ -273,6 +273,7 @@
 <!ENTITY kmoon	"<application>KMoon</application>">
 <!ENTITY kmouth "<application>KMouth</application>">
 <!ENTITY kmousetool "<application>KMouseTool</application>">
+<!ENTITY kmplayer "<application>KMPlayer</application>">
 <!ENTITY kmplot	"<application>KmPlot</application>">
 <!ENTITY kmymoney	"<application>KMyMoney</application>">
 <!ENTITY knavalbattle "<application>Naval Battle</application>">
