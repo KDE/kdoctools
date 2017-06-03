@@ -1,0 +1,117 @@
+# translation of kio_help4.po to Chinese Traditional
+# Copyright (C) 2004, 2006, 2007 Free Software Foundation, Inc.
+#
+# Hydonsingore Sie <hydonsingore@mail.educities.edu.tw>, 2004.
+# Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2006, 2007.
+# Franklin Weng <franklin at goodhorse dot idv dot tw>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2017-03-04 03:56+0100\n"
+"PO-Revision-Date: 2007-08-20 09:18+0800\n"
+"Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
+"Language-Team: Chinese Traditional <zh-l10n@linux.org.tw>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: xslt.cpp:140
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "處理樣式表"
+
+#: xslt.cpp:164
+#, kde-format
+msgid "Parsing document"
+msgstr "處理文件"
+
+#: xslt.cpp:190
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "套用樣式表"
+
+#: xslt.cpp:198
+#, kde-format
+msgid "Writing document"
+msgstr "正在寫入文件"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Yuhder Aegis Lin,Hydonsingore Sie"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ydlin@hpc.ee.ntu.edu.tw,hydonsingore@mail.educities.edu.tw"
+
+#~ msgid "Output file"
+#~ msgstr "輸出檔案"
+
+#~ msgid "genshortcutents"
+#~ msgstr "genshortcutents"
+
+#~ msgid "Generates DocBook entities for key shortcuts of standard actions"
+#~ msgstr "為標準動作的快捷鍵產生 DocBook 項目"
+
+#~ msgid "There is no documentation available for %1."
+#~ msgstr "沒有 %1 的說明文件"
+
+#~ msgid "Looking up correct file"
+#~ msgstr "尋找正確檔案"
+
+#~ msgid "Preparing document"
+#~ msgstr "正在準備文件"
+
+#~ msgid "The requested help file could not be parsed:<br />%1"
+#~ msgstr "要求的說明檔案無法解讀：<br />%1"
+
+#~ msgid "Saving to cache"
+#~ msgstr "存到快取中"
+
+#~ msgid "Using cached version"
+#~ msgstr "使用快取版本的檔案"
+
+#~ msgid "Looking up section"
+#~ msgstr "正在找尋段落"
+
+#~ msgid "Could not find filename %1 in %2."
+#~ msgstr "在%2當中找不到名稱為 %1 的檔案。"
+
+#~ msgid "Stylesheet to use"
+#~ msgstr "使用的樣式表"
+
+#~ msgid "Output whole document to stdout"
+#~ msgstr "將整分文件輸出到 stdout"
+
+#~ msgid "Output whole document to file"
+#~ msgstr "將整分文件輸出到檔案"
+
+#~ msgid "Create a ht://dig compatible index"
+#~ msgstr "產生和ht://dig相容的索引"
+
+#~ msgid "Check the document for validity"
+#~ msgstr "檢查文件的有效性"
+
+#~ msgid "Create a cache file for the document"
+#~ msgstr "產生文件的快取檔"
+
+#~ msgid "Set the srcdir, for kdelibs"
+#~ msgstr "設定 kdelibs 的來源資料夾"
+
+#~ msgid "Parameters to pass to the stylesheet"
+#~ msgstr "要傳給樣式表的參數"
+
+#~ msgid "The file to transform"
+#~ msgstr "要轉換的檔案"
+
+#~ msgid "XML-Translator"
+#~ msgstr "XML轉換器"
+
+#~ msgid "KDE Translator for XML"
+#~ msgstr "KDE XML轉換器"
+
+#~ msgid "Could not write to cache file %1."
+#~ msgstr "無法寫入快取檔案 %1"
