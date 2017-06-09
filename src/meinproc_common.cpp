@@ -51,7 +51,7 @@ CheckResult check(const QString &checkFilename, const QString &exe, const QByteA
         FILE *xmllint = popen(QFile::encodeName(cmd).constData(), "r");
         char buf[ 512 ];
         bool noout = true;
-        unsigned int n;
+        size_t n;
         while ((n = fread(buf, 1, sizeof(buf) - 1, xmllint))) {
             noout = false;
             buf[ n ] = '\0';
@@ -99,7 +99,7 @@ void doOutput(QString output, bool usingStdOut, bool usingOutput, const QString 
             if (index == -1) {
                 break;
             }
-            int filename_index = index + strlen("<FILENAME filename=\"");
+            int filename_index = index + qstrlen("<FILENAME filename=\"");
 
             const QString filename = output.mid(filename_index,
                                                 output.indexOf(QLatin1Char('\"'), filename_index) -
