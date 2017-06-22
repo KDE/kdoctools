@@ -490,3 +490,9 @@ QStringList getKDocToolsCatalogs()
     //qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
     return catalogs;
 }
+
+QStringList KDocTools::documentationDirs()
+{
+    /* List of paths containing documentation */
+    return QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("doc/HTML"), QStandardPaths::LocateDirectory);
+}

@@ -65,6 +65,12 @@ KDOCTOOLS_EXPORT void setupStandardDirs(const QString &srcdir = QString());
  */
 KDOCTOOLS_EXPORT QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option=QStandardPaths::LocateFile);
 
+/**
+ * Returns the directories which can contain documentation.
+ * @since 5.36
+ */
+KDOCTOOLS_EXPORT QStringList documentationDirs();
+
 }
 
 #endif
