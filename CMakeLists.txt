@@ -28,7 +28,7 @@ option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only 
 option(INSTALL_INTERNAL_TOOLS "Install internal tools too." OFF)
 
 # Dependencies
-set(REQUIRED_QT_VERSION 5.6.0)
+set(REQUIRED_QT_VERSION 5.7.0)
 find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
