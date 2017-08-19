@@ -59,6 +59,7 @@
   "http://www.gnu.org/copyleft/fdl.html"
   NDATA linespecific                                                 >
 <!-- FDLNotice is defined in lang.entities (why?) -->
+<!-- CCBYSA4Notice is defined in lang.entities (translatable) -->
 
 <!-- add docbook versions of licenses -->
 

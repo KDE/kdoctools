@@ -17,7 +17,10 @@ For kioslave, systemsettings (kcontrol) modules and simple/short application doc
 Rename this template to index.docbook and place into the directory doc/ or doc/appname if you have several applications in one doc directory
 -->
 
-<!-- kdoctemplate v0.12.0 2016-04-23 lueck
+<!-- kdoctemplate v0.13.0 2017-07-31 ltoscano
+     add CC BY-SA 4.0 International and set as default
+
+     kdoctemplate v0.12.0 2016-04-23 lueck
      add translatable entities
      remove help.menu.documentation entity
      and add some examples how to use the common menus Settings and Help
@@ -106,7 +109,7 @@ and use `&George.N.Ugnacious; &George.N.Ugnacious.mail;' in the author element.
 <year>2015</year>
 <holder>George N. Ugnacious</holder>
 </copyright>
-<legalnotice>&FDLNotice;</legalnotice>
+<legalnotice>&CCBYSA4Notice;</legalnotice>
 
 <!-- Date of the documentation
 Change date/releaseinfo only if
@@ -433,12 +436,19 @@ Documentation Copyright &copy; 2012-2014 George N. Ugnacious <email>gnu@kde.org<
 
 <!-- TRANS:CREDIT_FOR_TRANSLATORS -->
 
-&underFDL;               <!-- FDL: do not remove -->
+<!-- License for new documents after 2017-07-27 (or relicensed) -->
+
+&underCCBYSA4;           <!-- CC BY-SA 4.0: do not remove -->
+
+<!-- FDL: old license; only for reference (and old documents) -->
+<!--
+&underFDL;
+-->
 
 <!-- Determine which license your application is licensed under,
      and delete all the remaining licenses below:
 
-     (NOTE:  All documentation are licensed under the FDL,
+     (NOTE:  All documentation are licensed under the CC BY-SA 4.0,
      regardless of what license the application uses) -->
 
 &underGPL;        	 <!-- GPL License -->
