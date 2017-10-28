@@ -15,7 +15,7 @@
 <!ENTITY underLGPL          PUBLIC "-//KDE//DOCUMENT LGPL Licence Declaration//CA"
   "entities/underLGPL.docbook"                       ><!-- level: para -->
 <!ENTITY underCCBYSA4       PUBLIC "-//KDE//DOCUMENT CC BY-SA 4.0 Licence Declaration//CA"
-  "../en/entities/underCCBYSA4.docbook"                   ><!-- level: para -->
+  "entities/underCCBYSA4.docbook"                   ><!-- level: para -->
 <!ENTITY underFDL           PUBLIC "-//KDE//DOCUMENT FDL Licence Declaration//CA"
   "entities/underFDL.docbook"                       ><!-- level: para -->
 <!ENTITY underBSDLicense    PUBLIC "-//KDE//DOCUMENT BSD Licence Declaration//CA"
@@ -38,11 +38,8 @@
 
 
 <!-- CC BY-SA 4 notice -->
-<!-- In order to translate it, copy it into <lang>/entities/ccbysa4-notice.docbook
-and change the reference from English version to the translated document
-and remove this comment. -->
 <!ENTITY CCBYSA4Notice PUBLIC "-//KDE//DOCUMENT CC BY-SA 4 Documentation Notice//CA"
-         "../en/entities/ccbysa4-notice.docbook">
+         "entities/ccbysa4-notice.docbook">
 <!-- FDL notice -->
 <!ENTITY FDLNotice PUBLIC "-//KDE//DOCUMENT GNU Free Documentation Notice//CA"
          "entities/fdl-notice.docbook">
