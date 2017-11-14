@@ -1,3 +1,4 @@
+<!-- Entity is deprecated and should be removed in Frameworks 6-->
 <variablelist>
 <varlistentry>
 <term>
@@ -9,8 +10,8 @@
 <guimenuitem>Руководство пользователя &kappname;</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Запускает Центр помощи KDE</action> и открывает
-справочное руководство по &kappname;. (Этот документ вы и читаете).</para></listitem>
+<listitem><para><action>Запускает Центр справки KDE</action> и открывает
+справочное руководство по &kappname; (этот документ вы и читаете).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -22,7 +23,7 @@
 <guimenuitem>Что это?</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Вид курсора меняется на стрелочку со знаком
+<listitem><para><action>Вид курсора меняется на стрелку со знаком
 вопроса.</action>  Нажимая на различные элементы внутри &kappname;,
 вы увидите подсказку с объяснениями назначения и действия
 данного элемента (если она для него существует).</para></listitem>
@@ -36,7 +37,7 @@
 </menuchoice></term>
 <listitem><para><action>Открывается диалог отправки сообщения об ошибке</action>.
 Он служит для того, чтобы вы могли отправить сведения об обнаруженной
-вами ошибке в программе или свое <quote>пожелание</quote>, чтобы какая-либо
+вами ошибке в программе или своё <quote>пожелание</quote>, чтобы какая-либо
 пока что отсутствующая возможность была реализована
 в будущих версиях программы.</para></listitem>
 </varlistentry>
