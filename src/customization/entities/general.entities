@@ -375,6 +375,7 @@
 <!ENTITY kwuftpd	"<application>kwuftpd</application>">
 <!ENTITY kxkb	"<application>Kxkb</application>">
 <!ENTITY kxstitch '<application>KXStitch</application>'>
+<!ENTITY latex "L<superscript>A</superscript>T<subscript>E</subscript>X">
 <!ENTITY LaserJet	'<trademark class="registered">LaserJet</trademark>'>
 <!ENTITY lisa	"<application>Lisa</application>">
 <!ENTITY Linux	'<trademark class="registered">Linux</trademark>'>
