@@ -194,6 +194,7 @@
 <!ENTITY katomic	"<application>KAtomic</application>">
 <!ENTITY kaudiocreator "<application>KAudioCreator</application>">
 <!ENTITY kbackgammon 	"<application>KBackgammon</application>">
+<!ENTITY kbackup 	"<application>KBackup</application>">
 <!ENTITY kbattleship 	"<application>KBattleship</application>">
 <!ENTITY kbibtex "<application>KBibTeX</application>">
 <!ENTITY kblackbox	"<application>KBlackBox</application>">
