@@ -133,7 +133,7 @@
 <!ENTITY CSS	"<acronym>CSS</acronym>">
 <!ENTITY CUPS	"<acronym>CUPS</acronym>">
 <!ENTITY DBus	"<acronym>D-Bus</acronym>">
-<!ENTITY Debian	"<acronym><trademark class="registered">Debian</trademark></acronym>">
+<!ENTITY Debian	'<acronym><trademark class="registered">Debian</trademark></acronym>'>
 <!ENTITY DVD	"<acronym>DVD</acronym>">
 <!ENTITY digikam	"<application>digiKam</application>">
 <!ENTITY dolphin "<application>Dolphin</application>">
