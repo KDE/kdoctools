@@ -272,6 +272,8 @@
 <!ENTITY Michael.Korman '<personname><firstname>Michael</firstname><surname>Korman</surname></personname>'>
 <!ENTITY Antti.Koivisto '<personname><firstname>Antti</firstname><surname>Koivisto</surname></personname>'>
 <!ENTITY Antti.Koivisto.mail '<email>koivisto@iki.fi</email>'>
+<!ENTITY Martin.Koller '<personname><firstname>Martin</firstname><surname>Koller</surname></personname>'>
+<!ENTITY Martin.Koller.mail '<email>kollix@aon.at</email>'>
 <!ENTITY Friedrich.Kossebau '<personname><firstname>Friedrich</firstname><othername>W. H.</othername><surname>Kossebau</surname></personname>'>
 <!ENTITY Friedrich.Kossebau.email '<email>kossebau@kde.org</email>'>
 <!ENTITY Matt.Koss '<personname><firstname>Matt</firstname><surname>Koss</surname></personname>'>
