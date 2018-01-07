@@ -36,7 +36,7 @@
 <!ENTITY MMBn   "<mousebutton>mittleren</mousebutton> Maustaste">
 <!ENTITY MMBr   "<mousebutton>mittlerer</mousebutton> Maustaste">
 <!ENTITY OS     "Betriebssystem">
-<!ENTITY partman "<application>KDE-Partitionsmanager</application>">
+<!ENTITY partman "<application>Partitionsverwaltung</application>">
 <!ENTITY plasma-mobile	"<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
