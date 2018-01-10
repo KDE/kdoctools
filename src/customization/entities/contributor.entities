@@ -388,7 +388,7 @@
 <!ENTITY Milos.Prudek '<personname><firstname>Milos</firstname><surname>Prudek</surname></personname>'>
 <!ENTITY Milos.Prudek.mail '<email>milos.prudek@worldonline.cz</email>'>
 <!ENTITY Michael.Pyne '<personname><firstname>Michael</firstname><surname>Pyne</surname></personname>'>
-<!ENTITY Michael.Pyne.mail '<emailmpyne@kde.org</email>'>
+<!ENTITY Michael.Pyne.mail '<email>mpyne@kde.org</email>'>
 
 <!ENTITY Frerich.Raabe '<personname><firstname>Frerich</firstname><surname>Raabe</surname></personname>'>
 <!ENTITY Frerich.Raabe.mail '<email>raabe@kde.org</email>'>
