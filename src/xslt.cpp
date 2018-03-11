@@ -4,7 +4,7 @@
 #ifdef Q_OS_WIN
 //one of the xslt/xml headers pulls in windows.h and breaks <limits>
 #define NOMINMAX
-#include <QtCore/QHash>
+#include <QHash>
 #endif
 
 #include "../config-kdoctools.h"
@@ -19,14 +19,14 @@
 #include <libxml/parserInternals.h>
 #include <libxml/catalog.h>
 
-#include <QtCore/QDate>
-#include <QtCore/QDir>
-#include <QtCore/QFile>
-#include <QtCore/QRegExp>
-#include <QtCore/QStandardPaths>
-#include <QtCore/QTextCodec>
-#include <QtCore/QUrl>
-#include <QtCore/QDebug>
+#include <QDate>
+#include <QDir>
+#include <QFile>
+#include <QRegExp>
+#include <QStandardPaths>
+#include <QTextCodec>
+#include <QUrl>
+#include <QDebug>
 #include <QByteArray>
 #include <QString>
 #include <QVector>
