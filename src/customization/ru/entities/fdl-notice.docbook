@@ -23,11 +23,13 @@
 
     Include a copy of the license in the documentation distribution.
  -->
-<para>Permission is granted to copy, distribute and/or modify this
-document under the terms of the GNU Free Documentation License,
-Version 1.2 or any later version published by the Free Software
-Foundation; with &FDLInvariantSections;, with &FDLFrontCoverText;, and
-with &FDLBackCoverText;.  A copy of the license is included in <xref linkend="gnu-fdl"/>.</para>
+<para>
+Вам даётся право копировать, распространять и/или модифицировать этот документ
+на условиях Лицензии свободной документации GNU версии 1.2 или любой более
+поздней версии этой лицензии, опубликованной Фондом свободного программного
+обеспечения; &FDLInvariantSections;, &FDLFrontCoverText; и &FDLBackCoverText;.
+Копия лицензии находится по ссылке <xref linkend="gnu-fdl"/>.
+</para>
 
 <!-- If you have no Invariant Sections, don't add any FDLIS entities.
      If you have no Front-Cover Texts, don't add any FDLFCT; likewise

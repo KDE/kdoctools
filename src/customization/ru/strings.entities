@@ -8,19 +8,19 @@
      The default values of the parameter entities is IGNORE. -->
 <![%FDLIS;[
 <!ENTITY FDLISTitles "ПЕРЕЧИСЛИТЬ ИХ НАЗВАНИЯ"><!-- keep capitals -->
-<!ENTITY FDLInvariantSections "неизменяемые разделы: &FDLISTitles;">
+<!ENTITY FDLInvariantSections "с неизменяемыми разделами: &FDLISTitles;">
  ]]>
-<!ENTITY FDLInvariantSections " неизменямых разделов">
+<!ENTITY FDLInvariantSections "без неизменяемых разделов">
 <![%FDLFCT;[
 <!ENTITY FDLFCTTitles "LIST"><!-- keep capitals -->
-<!ENTITY FDLFrontCoverText "текст на первой странице: &FDLFCTTitles;">
+<!ENTITY FDLFrontCoverText "с текстом для передней стороны обложки: &FDLFCTTitles;">
  ]]>
-<!ENTITY FDLFrontCoverText " текста на первой странице">
+<!ENTITY FDLFrontCoverText "без текста для передней стороны обложки">
 <![%FDLBCT;[
 <!ENTITY FDLBCTTitles "ПЕРЕЧИСЛИТЬ ИХ НАЗВАНИЯ"><!-- keep capitals -->
-<!ENTITY FDLBackCoverText "текст на последней странице: &FDLBCTTitles;">
+<!ENTITY FDLBackCoverText "с текстом для задней стороны обложки: &FDLBCTTitles;">
  ]]>
-<!ENTITY FDLBackCoverText " текста на последней странице">
+<!ENTITY FDLBackCoverText "без текста для задней стороны обложки">
 
 <!-- modespec entity: must be adapted in accordance with the normal usage
      for documents in a language; the most likely candidates are the value
