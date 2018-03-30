@@ -134,6 +134,7 @@
 <!ENTITY CUPS	"<acronym>CUPS</acronym>">
 <!ENTITY DBus	"<acronym>D-Bus</acronym>">
 <!ENTITY Debian	'<acronym><trademark class="registered">Debian</trademark></acronym>'>
+<!ENTITY DOT	"<acronym>DOT</acronym>">
 <!ENTITY DVD	"<acronym>DVD</acronym>">
 <!ENTITY digikam	"<application>digiKam</application>">
 <!ENTITY dolphin "<application>Dolphin</application>">
@@ -141,6 +142,7 @@
 <!ENTITY drkonqi	"<application>DrKonqi</application>">
 <!ENTITY DVI	"<acronym>DVI</acronym>">
 <!ENTITY ELF	"<acronym>ELF</acronym>">
+<!ENTITY elisa	"<application>Elisa</application>">
 <!ENTITY Emacs	"<application>Emacs</application>">
 <!ENTITY Flash  "<trademark>Flash</trademark>">
 <!ENTITY filelight "<application>Filelight</application>">
@@ -304,6 +306,7 @@
 <!ENTITY kpackage	"<application>KPackage</application>">
 <!ENTITY kpager	"<application>KPager</application>">
 <!ENTITY kpaint	"<application>KPaint</application>">
+<!ENTITY kparts	"<acronym>KParts<acronym>">
 <!ENTITY kpatience	"<application>KPatience</application>">
 <!ENTITY kpercentage	"<application>KPercentage</application>">
 <!ENTITY kpilot	"<application>KPilot</application>">
@@ -388,6 +391,7 @@
 <!ENTITY Mac	'<trademark class="registered">Mac</trademark>'>
 <!ENTITY MacOS	'<trademark class="registered">Mac</trademark> <acronym>OS</acronym>'>
 <!ENTITY marble "<application>Marble</application>">
+<!ENTITY Markdown    "<acronym>Markdown</acronym>">
 <!ENTITY megami	"<application>Megami</application>">
 <!ENTITY Microsoft	'<trademark class="registered">Microsoft</trademark>'>
 <!ENTITY MIDI	"<acronym>MIDI</acronym>">
@@ -434,6 +438,7 @@
 <!ENTITY step "<application>Step</application>">
 <!ENTITY superkaramba	"<application>SuperKaramba</application>">
 <!ENTITY SuSE	'<acronym><trademark class="registered">SuSE</trademark></acronym>'>
+<!ENTITY SVG   "<acronym>SVG</acronym>">
 <!ENTITY sweeper "<application>Sweeper</application>">
 <!ENTITY symboleditor '<application>SymbolEditor</application>'>
 <!ENTITY tellico '<application>Tellico</application>'>
