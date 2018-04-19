@@ -34,7 +34,7 @@
 class LangListType: public QList<QPair<QString, QString> >
 {
 public:
-    int searchLang(QString el)
+    int searchLang(const QString &el)
     {
 
         for (int i = 0; i < size(); ++i) {
