@@ -144,6 +144,7 @@
 <!ENTITY ELF	"<acronym>ELF</acronym>">
 <!ENTITY elisa	"<application>Elisa</application>">
 <!ENTITY Emacs	"<application>Emacs</application>">
+<!ENTITY falkon	"<application>Falkon</application>">
 <!ENTITY Flash  "<trademark>Flash</trademark>">
 <!ENTITY filelight "<application>Filelight</application>">
 <!ENTITY firefox "<application>Firefox</application>">
@@ -253,6 +254,7 @@
 <!ENTITY killbots "<application>Killbots</application>">
 <!ENTITY kinfocenter    "<application>KInfoCenter</application>">
 <!ENTITY kiriki	"<application>Kiriki</application>">
+<!ENTITY Kirigami	"<application>Kirigami</application>">
 <!ENTITY kit	"<application>Kit</application>">
 <!ENTITY kitchensync        "<application>KitchenSync</application>">
 <!ENTITY kiten	"<application>Kiten</application>">
@@ -390,6 +392,7 @@
 <!ENTITY LZW	"<acronym>LZW</acronym>">
 <!ENTITY Mac	'<trademark class="registered">Mac</trademark>'>
 <!ENTITY MacOS	'<trademark class="registered">Mac</trademark> <acronym>OS</acronym>'>
+<!ENTITY macOS	'<trademark class="registered">macOS</trademark>'>
 <!ENTITY marble "<application>Marble</application>">
 <!ENTITY Markdown    "<acronym>Markdown</acronym>">
 <!ENTITY megami	"<application>Megami</application>">
@@ -427,6 +430,7 @@
 <!ENTITY rocs "<application>Rocs</application>">
 <!ENTITY rsibreak "<application>RSIBreak</application>">
 <!ENTITY skanlite "<application>Skanlite</application>">
+<!ENTITY SDDM "<application>SDDM</application>">
 <!ENTITY Sendmail	'<application><trademark class="registered">sendmail</trademark></application>'>
 <!ENTITY smb4k "<application>Smb4K</application>">
 <!ENTITY SMTP	"<acronym>SMTP</acronym>">
@@ -434,6 +438,7 @@
 <!ENTITY skrooge '<application>Skrooge</application>'>
 <!ENTITY snake	"<application>SnaKe</application>">
 <!ENTITY Solaris	"<trademark>Solaris</trademark>">
+<!ENTITY solid	"<application>Solid</application>">
 <!ENTITY spectacle "<application>Spectacle</application>">
 <!ENTITY step "<application>Step</application>">
 <!ENTITY superkaramba	"<application>SuperKaramba</application>">
@@ -450,11 +455,14 @@
 <!ENTITY UNIX	'<trademark class="registered">UNIX</trademark>'>
 <!ENTITY URL	"<acronym>URL</acronym>">
 <!ENTITY URI	"<acronym>URI</acronym>">
+<!ENTITY USB	"<acronym>USB</acronym>">
 <!ENTITY Visor	"<trademark>Visor</trademark>">
+<!ENTITY Wayland	"<acronym>Wayland</acronym>">
 <!ENTITY windowmaker	"<application>Window Maker</application>">
 <!ENTITY Windows	'<trademark class="registered">Windows</trademark>'>
 <!ENTITY WordNet   '<trademark class="registered">WordNet</trademark>'>
 <!ENTITY Wordperfect '<application><trademark class="registered">WordPerfect</trademark></application>'>
+<!ENTITY X11	"<application>X11</application>">
 <!ENTITY X-Server	"<application>X-Server</application>">
 <!ENTITY XEmacs	"<application>XEmacs</application>">
 <!ENTITY X-Window '<trademark class="registered">X Window System</trademark>'>
