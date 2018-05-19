@@ -129,6 +129,7 @@
 <!ENTITY CD-ROM	"<acronym>CD-ROM</acronym>">
 <!ENTITY cervisia	"<application>Cervisia</application>">
 <!ENTITY choqok	"<application>Choqok</application>">
+<!ENTITY CIFS "<acronym>CIFS</acronym>">
 <!ENTITY cmake '<application>CMake</application>'>
 <!ENTITY CSS	"<acronym>CSS</acronym>">
 <!ENTITY CUPS	"<acronym>CUPS</acronym>">
@@ -405,6 +406,7 @@
 <!ENTITY MTU	"<acronym>MTU</acronym>">
 <!ENTITY multisynk  "<application>MultiSynk</application>">
 <!ENTITY MusiXTeX	"<application>MusiXTeX</application>">
+<!ENTITY NFS   "<acronym>NFS</acronym>">
 <!ENTITY okteta "<application>Okteta</application>">
 <!ENTITY okular	"<application>Okular</application>">
 <!ENTITY palapeli "<application>Palapeli</application>">
@@ -429,6 +431,8 @@
 <!ENTITY RedHat	'<trademark class="registered">Red Hat</trademark>'>
 <!ENTITY rocs "<application>Rocs</application>">
 <!ENTITY rsibreak "<application>RSIBreak</application>">
+<!ENTITY Samba "<application>Samba</application>">
+<!ENTITY SMB   "<acronym>SMB</acronym>">
 <!ENTITY skanlite "<application>Skanlite</application>">
 <!ENTITY SDDM "<application>SDDM</application>">
 <!ENTITY Sendmail	'<application><trademark class="registered">sendmail</trademark></application>'>
