@@ -409,6 +409,7 @@
 <!ENTITY NFS   "<acronym>NFS</acronym>">
 <!ENTITY okteta "<application>Okteta</application>">
 <!ENTITY okular	"<application>Okular</application>">
+<!ENTITY OSD	"<acronym>OSD</acronym>">
 <!ENTITY palapeli "<application>Palapeli</application>">
 <!ENTITY PalmOS	'<trademark class="registered">Palm OS</trademark>'>
 <!ENTITY PalmPilot	"<productname><trademark>PalmPilot</trademark></productname>">
