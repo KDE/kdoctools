@@ -98,7 +98,9 @@ endif()
 add_subdirectory(common)
 add_subdirectory(docs)
 add_subdirectory(src)
-add_subdirectory(autotests)
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
 
 install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
 configure_package_config_file(
