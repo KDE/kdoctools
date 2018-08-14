@@ -1,6 +1,6 @@
 # check presence of installed files
-set(MANPATH destdir/share/man)
-set(HTMLPATH destdir/share/doc/HTML)
+set(MANPATH ${CMAKE_INSTALL_PREFIX}/share/man)
+set(HTMLPATH ${CMAKE_INSTALL_PREFIX}/share/doc/HTML)
 set(FILES
 # from kdoctools_install
     ${MANPATH}/man1/checkXML5.1
