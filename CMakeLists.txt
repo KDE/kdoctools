@@ -21,7 +21,7 @@ include(GenerateExportHeader)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfigVersion.cmake"
+                        PACKAGE_VERSION_FILE "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfigVersion.cmake"
                         SOVERSION 5)
 
 option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only for internal usage on KDE infrastructure." OFF)
@@ -102,18 +102,21 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
+export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
+install(FILES ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake DESTINATION "${CMAKECONFIG_INSTALL_DIR}")
+
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfig.cmake"
+  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
   PATH_VARS
     KDE_INSTALL_DATADIR_KF5
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)
 
 install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5DocToolsConfigVersion.cmake"
+  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
+  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )

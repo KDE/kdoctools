@@ -4,3 +4,17 @@ add_test(
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
+    --build-and-test
+    "${CMAKE_CURRENT_SOURCE_DIR}/kdoctools-install"
+    "${CMAKE_CURRENT_BINARY_DIR}/kdoctools-install"
+    --build-generator ${CMAKE_GENERATOR}
+    --build-makeprogram ${CMAKE_MAKE_PROGRAM}
+    --build-target install
+    --build-options
+        "-DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}"
+        "-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_CURRENT_BINARY_DIR}/kdoctools-install/destdir"
+        "-DKF5DocTools_DIR=${CMAKE_BINARY_DIR}/cmake"
+        "-DKDOCTOOLS_CUSTOMIZATION_DIR=${KDOCTOOLS_CUSTOMIZATION_DIR}"
+        "-DKDOCTOOLS_ENABLE_HTMLHANDBOOK=1"
+    --test-command ${CMAKE_COMMAND} -P "${CMAKE_CURRENT_SOURCE_DIR}/kdoctools-install/test.cmake")
