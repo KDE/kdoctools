@@ -4,6 +4,8 @@ add_test(
   WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
 )
 
+set(CTEST_ENVIRONMENT "QT_LOGGING_RULES=kf5.kdoctools=true")
+
 add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
     --build-and-test
     "${CMAKE_CURRENT_SOURCE_DIR}/kdoctools-install"
