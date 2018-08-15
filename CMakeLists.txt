@@ -102,8 +102,7 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
-install(FILES ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake DESTINATION "${CMAKECONFIG_INSTALL_DIR}")
+install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
 
 configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
@@ -113,6 +112,8 @@ configure_package_config_file(
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)
+# we need a separate copy with local pathes for install autotests
+export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
 
 install(FILES
   "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
