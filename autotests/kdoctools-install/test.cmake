@@ -1,6 +1,6 @@
 # check presence of installed files
-set(MANPATH ${CMAKE_INSTALL_PREFIX}/share/man)
-set(HTMLPATH ${CMAKE_INSTALL_PREFIX}/share/doc/HTML)
+set(MANPATH ${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_MANDIR})
+set(HTMLPATH ${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DOCBUNDLEDIR})
 set(FILES
 # from kdoctools_install
     ${MANPATH}/man1/checkXML5.1

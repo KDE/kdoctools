@@ -21,5 +21,7 @@ add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
         "-DKDOCTOOLS_ENABLE_HTMLHANDBOOK=1"
         "-DCMAKE_VERBOSE_MAKEFILE=ON"
     --test-command ${CMAKE_COMMAND}
+        "-DKDE_INSTALL_MANDIR=${KDE_INSTALL_MANDIR}"
+        "-DKDE_INSTALL_DOCBUNDLEDIR=${KDE_INSTALL_DOCBUNDLEDIR}"
         "-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_CURRENT_BINARY_DIR}/kdoctools-install/destdir"
         -P "${CMAKE_CURRENT_SOURCE_DIR}/kdoctools-install/test.cmake")
