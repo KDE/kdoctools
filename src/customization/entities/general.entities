@@ -111,6 +111,7 @@
 <!ENTITY amor	"<application>AMOR</application>">
 <!ENTITY ark	"<application>Ark</application>">
 <!ENTITY artikulate	"<application>Artikulate</application>">
+<!ENTITY ASCII	"<acronym>ASCII</acronym>">
 <!ENTITY ATAPI	"<acronym>ATAPI</acronym>">
 <!ENTITY blinken	"<application>Blinken</application>">
 <!ENTITY blogilo "<application>Blogilo</application>">
