@@ -16,6 +16,7 @@ else()
     # removed using get_filename_component(... ABSOLUTE)
     install(CODE
         "file(RELATIVE_PATH DocBookXML4_DTD_DIR \"${NORMALIZED_DTD_INSTALL_PATH}\" \"${DocBookXML4_DTD_DIR}\")
+        set(PERL_EXECUTABLE \"${PERL_EXECUTABLE}\")
         include(\"${CMAKE_SOURCE_DIR}/cmake/uriencode.cmake\")
         set(CMAKE_MODULE_PATH \"${CMAKE_MODULE_PATH}\")
         kdoctools_encode_uri(DocBookXML4_DTD_DIR)
