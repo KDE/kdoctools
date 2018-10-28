@@ -202,16 +202,19 @@ function (kdoctools_create_manpage docbook section)
     #Bootstrap
     if (_kdoctoolsBootStrapping)
         set(_bootstrapOption "--srcdir=${KDocTools_BINARY_DIR}/src")
+        set(_extraDependency "docbookl10nhelper")
     elseif (CMAKE_CROSSCOMPILING AND CMAKE_SYSTEM_NAME STREQUAL "Windows")
         set(_bootstrapOption "--srcdir=${KDOCTOOLS_DATA_INSTALL_DIR}/kdoctools")
+        set(_extraDependency)
     else ()
         set(_bootstrapOption)
+        set(_extraDependency)
     endif ()
     set(_ssheet "${KDOCTOOLS_CUSTOMIZATION_DIR}/kde-include-man.xsl")
 
     add_custom_command(OUTPUT ${build_doc}
         COMMAND ${KDOCTOOLS_MEINPROC_EXECUTABLE} --stylesheet ${_ssheet} --check ${_bootstrapOption} ${CMAKE_CURRENT_SOURCE_DIR}/${src_doc}
-        DEPENDS ${src_doc} ${_ssheet}
+        DEPENDS ${src_doc} ${_ssheet} ${_extraDependency}
         WORKING_DIRECTORY ${build_dir}
     )
 
