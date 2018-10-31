@@ -110,7 +110,7 @@ install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE 
 if (BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KF5DocTools_QCH
-        FILE KF5DocToolsQchTargets.cmake
+        FILE "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsQchTargets.cmake"
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
