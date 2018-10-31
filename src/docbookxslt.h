@@ -39,7 +39,7 @@ class QString;
 namespace KDocTools {
 
 /**
- * Tranform and return the content of file with the specified XSLT stylesheet
+ * Transform and return the content of file with the specified XSLT stylesheet
  * (both already in memory) using the optional parameters.
  */
 KDOCTOOLS_EXPORT QString transform(const QString &file, const QString &stylesheet,
