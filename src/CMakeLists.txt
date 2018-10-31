@@ -55,8 +55,12 @@ set_target_properties(KF5DocTools PROPERTIES
 
 target_include_directories(KF5DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools>")
 
-install(FILES
+set(KDocTools_HEADERS
     docbookxslt.h
+)
+
+install(FILES
+    ${KDocTools_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools
     COMPONENT Devel
@@ -68,6 +72,26 @@ set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION_STRIN
 )
 
 install(TARGETS KF5DocTools EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+
+if(BUILD_QCH)
+    ecm_add_qch(
+        KF5DocTools_QCH
+        NAME KDocTools
+        BASE_NAME KF5DocTools
+        VERSION ${KF5_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+            ${KDocTools_HEADERS}
+        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        LINK_QCHS
+            Qt5Core_QCH
+        BLANK_MACROS
+            KDOCTOOLS_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
 
 ########### next target ###############
 
