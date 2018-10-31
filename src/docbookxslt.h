@@ -32,6 +32,10 @@
 class QByteArray;
 class QString;
 
+/**
+ * @namespace KDocTools
+ * Utility methods to generate documentation in various format from DocBook files
+ */
 namespace KDocTools {
 
 /**
