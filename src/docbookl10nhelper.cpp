@@ -71,7 +71,7 @@ int writeLangFile(const QString &fname, const QString &dtdPath,
     }
     outStream << "]>" << endl;
 
-    if (langMap.size() > 0) {
+    if (!langMap.isEmpty()) {
         outStream
                 << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">"
                 << endl;
@@ -105,7 +105,7 @@ int writeLangFileNew(const QString &fname, const QString &dtdPath,
     outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\">")
               .arg(dtdPath) << endl;
 
-    if (langMap.size() > 0) {
+    if (!langMap.isEmpty()) {
         outStream
                 << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">"
                 << endl;
