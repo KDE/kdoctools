@@ -107,6 +107,7 @@ if (BUILD_TESTING)
 endif()
 
 install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
+install(EXPORT KF5DocToolsToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsToolsTargets.cmake NAMESPACE KF5:: )
 
 if (BUILD_QCH)
     ecm_install_qch_export(
@@ -128,6 +129,7 @@ configure_package_config_file(
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)
 # we need a separate copy with local pathes for install autotests
 export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
+export(EXPORT KF5DocToolsToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsToolsTargets.cmake NAMESPACE KF5::)
 
 install(FILES
   "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
