@@ -6,43 +6,53 @@
      names (which if they occur will cost you a _lot_ of time)
  -->
 
-<!ENTITY Alt "<keycap>Alt</keycap>">
-<!ENTITY amarok "<application>amaroK</application>">
-<!ENTITY Backspace "<keycap>Retroceso</keycap>">
-<!ENTITY cdrom  "<hardware>CD-ROM</hardware>">
-<!ENTITY Ctrl "<keycap>Ctrl</keycap>">
-<!ENTITY digikam "<application>digiKam</application>">
-<!ENTITY dpi    "<acronym>ppp</acronym>">
-<!ENTITY eg     "<abbrev>p. ej.</abbrev>" ><!-- eg -->
-<!ENTITY Enter "<keycap>Intro</keycap>">
-<!ENTITY Esc "<keycap>Esc</keycap>">
+<!ENTITY Alt	"<keycap>Alt</keycap>">
+<!ENTITY applications	"<productname>Aplicaciones</productname>">
+<!ENTITY Backspace	"<keysym>Retroceso</keysym>">
+<!ENTITY cdrom	'<hardware>unidad de CD-ROM</hardware>'>
+<!ENTITY Ctrl	"<keycap>Ctrl</keycap>">
+<!ENTITY Del	"<keycap>Supr</keycap>">
+<!ENTITY Down	"<keysym>Flecha abajo</keysym>"> <!-- Cursor key-->
+<!ENTITY dpi	'<acronym>ppp</acronym>'>
+<!ENTITY eg     "<abbrev>por ejemplo</abbrev>">
+<!ENTITY End	"<keycap>Fin</keycap>">
+<!ENTITY Enter	"<keysym>Intro</keysym>">
+<!ENTITY Esc	"<keycap>Esc</keycap>">
 <!ENTITY etc    "<abbrev>etc.</abbrev>">
-<!ENTITY FAQ    "<acronym>PFs</acronym>">
-<!ENTITY ie     "es decir" ><!-- ie -->
-<!ENTITY kcc "<application>Centro de control de KDE</application>" ><!-- kcc -->
-<!ENTITY kcontrolcenter "<application>Centro de control de &kde;</application>">
+<!ENTITY FAQ	'<acronym>PF</acronym>'>
+<!ENTITY Home	"<keycap>Inicio</keycap>">
+<!ENTITY ie     "<abbrev>es decir</abbrev>">
+<!ENTITY infocenter	"<application>Centro de información</application>">
+<!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY khelpcenter "<application>Centro de ayuda</application>" >
-<!ENTITY kiosktool "<application>Herramienta de administración KIOSK</application>">
-<!ENTITY konversation "<application>Konversation</application>">
-<!ENTITY kubuntu "<application>Kubuntu</application>">
-<!ENTITY kmenu  "menú <guimenu>K</guimenu>">
-<!ENTITY liloconfig "Configuración de LILO">
-<!ENTITY LMB    "<mousebutton>botón izquierdo</mousebutton>">
-<!ENTITY MMB    "<mousebutton>botón central</mousebutton>">
-<!ENTITY OS "Sistema operativo">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
-<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
-<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
-<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
-<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
-<!ENTITY RMB    "<mousebutton>botón derecho</mousebutton>">
-<!ENTITY Shift "<keycap>Mayúsculas</keycap>">
-<!ENTITY systemsettings "<application>Preferencias del sistema</application>">
-<!ENTITY Tab  "<keycap>Tab</keycap>">
-<!ENTITY TODO "Pendiente">
-<!ENTITY X-Windows      "Sistema de ventanas X">
+<!ENTITY Left	"<keysym>Flecha izquierda</keysym>"> <!-- Cursor key-->
+<!ENTITY LMB    "botón <mousebutton>izquierdo</mousebutton> del ratón">
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
+<!ENTITY MMB    "botón <mousebutton>central</mousebutton> del ratón">
+<!ENTITY OS	"sistema operativo"><!-- <acronym>OS</acronym>-->
+<!ENTITY partman "<application>Gestor de particiones de KDE</application>">
+<!ENTITY plasma-mobile	"<productname>Plasma Mobile de &kde;</productname>">
+<!ENTITY plasma-media-center	"<productname>Centro multimedia de &kde;</productname>">
+<!ENTITY plasma-netbook	"<productname>Plasma Netbook de &kde;</productname>">
+<!ENTITY plasma-desktop	"<productname>Escritorio Plasma de &kde;</productname>">
+<!ENTITY plasma-workspaces	"<productname>Espacios de trabajo Plasma de &kde;</productname>">
+<!ENTITY plasmapa       "<productname>Pulseaudio de Plasma para &kde;</productname>">
+<!ENTITY PgUp	"<keysym>RePág</keysym>">
+<!ENTITY PgDn	"<keysym>AvPág</keysym>">
+<!ENTITY Right	"<keysym>Flecha derecha</keysym>"> <!-- Cursor key-->
+<!ENTITY RMB    "botón <mousebutton>derecho</mousebutton> del ratón">
+<!ENTITY Shift	"<keycap>Mayúsculas</keycap>">
+<!ENTITY Space	"<keysym>Espacio</keysym>">
+<!ENTITY systemsettings	"<application>Preferencias del sistema</application>">
+<!ENTITY systemtray "<application>bandeja del sistema</application>">
+<!ENTITY Tab	"<keycap>Tab</keycap>">
+<!ENTITY Up	"<keysym>Flecha arriba</keysym>"> <!-- Cursor key-->
+
+<!-- Deprecated, will be removed at a future time, do not use -->
+<!ENTITY kcontrolcenter	"<application>Centro de control de &kde;</application>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kmenu  "Menú <guimenu>K</guimenu>">
+<!ENTITY kde-sc	"<acronym>SC</acronym> de &kde;">
+<!ENTITY kde-sc-full	"<productname>Compilación de software de &kde;</productname>">
+<!ENTITY plasma-active	"<productname>Plasma Active de &kde;</productname>">

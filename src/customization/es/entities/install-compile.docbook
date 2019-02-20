@@ -1,7 +1,6 @@
-<para>Consulte <ulink url="http://techbase.kde.org/Getting_Started">
-Construyendo y ejecutando software KDE desde el código fuente</ulink> para
-obtener información detallada sobre cómo compilar e instalar aplicaciones de
-&kde;</para>
+<para>Consulte <ulink url="http://techbase.kde.org/">&kde; Techbase</ulink>
+para obtener información sobre cómo compilar e instalar aplicaciones de
+&kde;.</para>
 
 <para>Como &kde; usa <command>cmake</command>, no debería tener ningún
 problema para compilarlo. Si encuentra alguna dificultad le rogamos que
