@@ -82,7 +82,11 @@ function (locate_version version found_dir)
             PATH_SUFFIXES ${DTD_PATH_LIST}
         )
     endif ()
-    set (${found_dir} ${searched_dir} PARENT_SCOPE)
+    if (searched_dir)
+        set (${found_dir} ${searched_dir} PARENT_SCOPE)
+    else()
+        message(WARNING "${found_dir}: Could not find docbookx.dtd in ${CMAKE_SYSTEM_PREFIX_PATH} with suffixes ${DTD_PATH_LIST}")
+    endif()
 endfunction()
 
 
