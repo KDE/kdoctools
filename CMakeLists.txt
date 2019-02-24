@@ -80,7 +80,7 @@ set_package_properties(DocBookXSL PROPERTIES
                       )
 
 remove_definitions(-DQT_NO_CAST_FROM_ASCII)
-
+add_definitions(-DQT_NO_FOREACH)
 set(_kdoctoolsBootStrapping TRUE)
 set(KDOCTOOLS_CUSTOMIZATION_DIR "${CMAKE_CURRENT_BINARY_DIR}/src/customization/")
 if (WIN32)

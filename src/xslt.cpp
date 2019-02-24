@@ -462,18 +462,18 @@ QStringList getKDocToolsCatalogs()
 {
     // Find all catalogs as catalog*.xml, and add them to the list, starting
     // from catalog.xml (the main one).
-    QStringList dirNames = locateFilesInDtdResource(QStringLiteral("customization"),
+    const QStringList dirNames = locateFilesInDtdResource(QStringLiteral("customization"),
                                                     QStandardPaths::LocateDirectory);
     if (dirNames.isEmpty()) {
         return QStringList();
     }
     QStringList catalogFiles;
-    foreach (const QString &customizationDirName, dirNames) {
+    for (const QString &customizationDirName : dirNames) {
         QDir customizationDir = QDir(customizationDirName);
         const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
         const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
                                                QDir::Files, QDir::Name);
-        foreach (const QFileInfo &fileInfo, catalogInfoFiles) {
+        for (const QFileInfo &fileInfo : catalogInfoFiles) {
             const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
             if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {
                catalogFiles.prepend(fullFileName);
@@ -484,7 +484,7 @@ QStringList getKDocToolsCatalogs()
     }
 
     QStringList catalogs;
-    foreach (const QString &aCatalog, catalogFiles) {
+    for (const QString &aCatalog : qAsConst(catalogFiles)) {
         catalogs << aCatalog;
     }
     //qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
