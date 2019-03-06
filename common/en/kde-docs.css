@@ -8,6 +8,11 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
 }
 
 /* These two divs force the content to fill up at least the viewport, which
@@ -88,61 +93,31 @@ div.table td {
 div.tip, div.note, div.warning, div.important {
     padding: 6pt;
     padding-top: 3pt;
+    border-radius: 3px;
 }
 
 div.tip > .title, div.warning > .title, div.note > .title, div.important > .title {
-    padding: 4pt 1cm;
-    margin: 0;
-    margin-top: 4pt;
+    font-weight: 550;
 }
 
 div.tip {
-    border: 1px solid #EEF;
-    border-left: 1px solid #88F;
-    background: #EFEFFF;
-}
-
-div.tip > .title {
-    border: 1px solid #88F;
-    background: #CFCFFF;
-    color: #222;
+    border: 2px solid #3daee9;
+    background: #cbe3ef;
 }
 
 div.important {
-    border: 1px solid #FF2;
-    border-left: 1px solid #888;
-    background: #FF7;
-}
-
-div.important > .title {
-    border: 1px solid #836900;
-    background: #FC0;
-    color: #222;
+    border: 2px solid #f67400;
+    background: #f0d7c1;
 }
 
 div.note {
-    border: 1px solid #EEE;
-    border-left: 1px solid #888;
-    background: #EFEFEF;
-}
-
-div.note > .title {
-    border: 1px solid #888;
-    background: #CFCFCF;
-    color: #222;
+    border: 2px solid #27ae60;
+    background: #c7e2d4;
 }
 
 div.warning {
-    border: 1px solid #FEE;
-    border-left: 1px solid #F88;
-    background: #FFEFEF;
-    margin-bottom: 6pt;
-}
-
-div.warning > .title {
-    border: 1px solid #F88;
-    background: #FFAFAF;
-    color: #222;
+    border: 2px solid #da4453;
+    background: #ebced1;
 }
 
 /* Make the content wrapping div have a nice margin. */
@@ -273,42 +248,26 @@ h3.title {
 #header {
     width: 100%;
     height: 51px;
-    color: #535353;
-    background: #eeeeee;
-    border-bottom: #bcbcbc 1px solid;
+    color: white;
+    font-height: 3em;
+    background: #54a3d8;
 }
 
 #header_content {
-    margin: 0 auto;
-    width: 80%;
-    height: 51px;
-    background: url("top.jpg") top left repeat-x;
+    margin-left: 1em;
+    background: white;
+    height: 47px;
+}
+#header_left {
+    background: #54a3d8;
+    display: inline-block;
+    height: 47px;
+    padding-right: 1em;
 }
 
 #header_right img {
     position: relative;
     top: 8px; /* Vertically center */
-}
-
-#header_left {
-    background: url("top-left.jpg") top left no-repeat;
-    padding-left: 20px;
-    height: 51px;
-}
-
-#header_right {
-    background: url("top-right.jpg") top right no-repeat;
-    color: white;
-    padding-right: 20px;
-    height: 51px;
-    text-align: left;
-    font-size: 18pt;
-    font-weight: bold;
-    vertical-align: middle;
-    text-shadow: #112 2px 2px 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    line-height: 51px;
 }
 
 /* Used for the text and footer area at the bottom. */
@@ -359,4 +318,12 @@ a.footer_email {
     #footer {
         border-top: 1px solid #DDD;
     }
+}
+
+img {
+    max-width: 100%;
+}
+
+.productname {
+    margin-left: 5px;
 }
