@@ -84,6 +84,6 @@ find_package_handle_standard_args(PerlModules
 
 include(FeatureSummary)
 set_package_properties(PerlModules PROPERTIES
-    URL "http://www.cpan.org"
+    URL "https://www.cpan.org"
 )
 
