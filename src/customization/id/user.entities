@@ -12,25 +12,25 @@
 <!ENTITY cdrom	'<hardware>CD-ROM drive</hardware>'>
 <!ENTITY Ctrl	"<keycap>Ctrl</keycap>">
 <!ENTITY Del	"<keycap>Del</keycap>">
-<!ENTITY Down	"<keysym>Down</keysym>"> <!-- Cursor key-->
+<!ENTITY Down	"<keysym>Turun</keysym>"> <!-- Cursor key-->
 <!ENTITY dpi	'<acronym>dpi</acronym>'>
-<!ENTITY eg     "<abbrev>e.g.</abbrev>">
+<!ENTITY eg     "<abbrev>misal</abbrev>">
 <!ENTITY End	"<keycap>End</keycap>">
 <!ENTITY Enter	"<keysym>Enter</keysym>">
 <!ENTITY Esc	"<keycap>Esc</keycap>">
-<!ENTITY etc    "<abbrev>etc.</abbrev>">
+<!ENTITY etc    "<abbrev>dll.</abbrev>">
 <!ENTITY FAQ	'<acronym>FAQ</acronym>'>
 <!ENTITY Home	"<keycap>Home</keycap>">
-<!ENTITY ie     "<abbrev>i.e.</abbrev>">
+<!ENTITY ie     "<abbrev>yaitu</abbrev>">
 <!ENTITY infocenter	"<application>Info Center</application>">
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY Left	"<keysym>Left</keysym>"> <!-- Cursor key-->
-<!ENTITY LMB    "<mousebutton>left</mousebutton> mouse button">
+<!ENTITY Left	"<keysym>Kiri</keysym>"> <!-- Cursor key-->
+<!ENTITY LMB    "tombol mouse <mousebutton>kiri</mousebutton>">
 <!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
-<!ENTITY MMB    "<mousebutton>middle</mousebutton> mouse button">
-<!ENTITY OS	"operating system"><!-- <acronym>OS</acronym>-->
+<!ENTITY MMB    "tombol mouse <mousebutton>tengah</mousebutton>">
+<!ENTITY OS	"sistem operasi"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>KDE Partition Manager</application>">
 <!ENTITY plasma-mobile	"<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
@@ -40,19 +40,19 @@
 <!ENTITY plasmapa       "<productname>&kde; Plasma Pulseaudio</productname>">
 <!ENTITY PgUp	"<keysym>PgUp</keysym>">
 <!ENTITY PgDn	"<keysym>PgDn</keysym>">
-<!ENTITY Right	"<keysym>Right</keysym>"> <!-- Cursor key-->
-<!ENTITY RMB    "<mousebutton>right</mousebutton> mouse button">
+<!ENTITY Right	"<keysym>Kanan</keysym>"> <!-- Cursor key-->
+<!ENTITY RMB    "tombol mouse <mousebutton>kanan</mousebutton>">
 <!ENTITY Shift	"<keycap>Shift</keycap>">
-<!ENTITY Space	"<keysym>Space</keysym>">
+<!ENTITY Space	"<keysym>Spasi</keysym>">
 <!ENTITY systemsettings	"<application>System Settings</application>">
 <!ENTITY systemtray "<application>system tray</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
-<!ENTITY Up	"<keysym>Up</keysym>"> <!-- Cursor key-->
+<!ENTITY Up	"<keysym>Naik</keysym>"> <!-- Cursor key-->
 
 <!-- Deprecated, will be removed at a future time, do not use -->
 <!ENTITY kcontrolcenter	"<application>&kde; Control Center</application>">
 <!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "<guimenu>K</guimenu> menu">
+<!ENTITY kmenu  "menu <guimenu>K</guimenu>">
 <!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
 <!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
 <!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">

@@ -5,12 +5,11 @@
 <shortcut>
 <keycombo action="simul"><keycap>F1</keycap></keycombo>
 </shortcut>
-<guimenu>Help</guimenu>
-<guimenuitem>Contents...</guimenuitem>
+<guimenu>Bantuan</guimenu>
+<guimenuitem>Daftar Isi...</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Invokes the KDE Help system</action> starting at the
-&kcron; help pages. (this document).</para></listitem>
+<listitem><para><action>Meminta sistem Bantuan KDE</action> memulai di halaman bantuan &kcron;. (dokumen ini).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -18,41 +17,35 @@
 <shortcut>
 <keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo>
 </shortcut>
-<guimenu>Help</guimenu>
-<guimenuitem>What's This?</guimenuitem>
+<guimenu>Bantuan</guimenu>
+<guimenuitem>Apakah Ini?</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Changes the mouse cursor to a combination arrow and
-question mark.</action>  Clicking on items within &kappname; will open a help
-window (if one exists for the particular item) explaining the item's
-function.</para></listitem>
+<listitem><para><action>Mengubah kursor mouse menjadi sebuah kombinasi panah dan tanda tanya.</action>  Mengeklik pada item di dalam &kappname; akan membuka sebuah window bantuan (jika ada untuk item tertentu) misalnya fungsi.</aining the item'spara></listitem>
 </varlistentry>
 
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>Report Bug...</guimenuitem>
+<guimenu>Bantuan</guimenu>
+<guimenuitem>Laporkan Bug...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Opens the Bug report dialog</action> where you can
-report a bug or request a <quote>wishlist</quote> feature.</para></listitem>
+<listitem><para><action>Membukakan dialog pelaporan Bug</action> di mana kamu bisa melaporkan sebuah bug atau meminta sebuah <quote>wishlist</quote> fitur.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>About &kappname;</guimenuitem>
+<guimenu>Bantuan</guimenu>
+<guimenuitem>Tentang &kappname;</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>This will display version and author
-information.</action></para></listitem>
+<listitem><para><action>Ini akan mendisplaikan informasi versi dan penulis.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>About KDE</guimenuitem>
+<guimenu>Bantuan</guimenu>
+<guimenuitem>Tentang KDE</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>This displays the KDE version and other basic
-information.</action></para></listitem>
+<listitem><para><action>Ini mendisplaikan informasi versi KDE dan informasi lain yang mendasari.</action></para></listitem>
 </varlistentry>
 </variablelist>
