@@ -11,6 +11,8 @@
 <!ENTITY Backspace	"<keycap>Backspace</keycap>">
 <!ENTITY cdrom	'<hardware>leitor de CD-ROM</hardware>'>
 <!ENTITY Ctrl	"<keycap>Ctrl</keycap>">
+<!ENTITY Del	"<keycap>Del</keycap>">
+<!ENTITY Down	"<keysym>Abaixo</keysym>"> <!-- Cursor key-->
 <!ENTITY dpi	'<acronym>ppp</acronym>'>
 <!ENTITY eg     "por exemplo">
 <!ENTITY Enter	"<keycap>Enter</keycap>">
@@ -19,6 +21,7 @@
 <!ENTITY FAQ	"Perguntas frequentes (do inglês <acronym>FAQ</acronym>)">
 <!ENTITY ie 	"isto é">
 <!ENTITY infocenter	"<application>Centro de informação</application>">
+<!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY BEM 	"botão <mousebutton>esquerdo</mousebutton> do mouse">  <!-- English: &LMB; -->
@@ -44,6 +47,7 @@
 <!ENTITY systemsettings	"<application>Configurações do Sistema</application>">
 <!ENTITY systemtray "<application>área de notificação</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
+<!ENTITY Up	"<keysym>Acima</keysym>"> <!-- Cursor key-->
 
 <!-- Deprecated, will be removed at a future time, do not use -->
 <!ENTITY kcontrolcenter	"<application>Centro de Controle do &kde;</application>">
