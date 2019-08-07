@@ -3,7 +3,6 @@
 #include <kfilterdev.h>
 #else
 #include "loggingcategory.h"
-#include <QDebug>
 #endif
 
 bool KDocTools::saveToCache(const QString &contents, const QString &filename)

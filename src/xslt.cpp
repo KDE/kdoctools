@@ -19,14 +19,12 @@
 #include <libxml/parserInternals.h>
 #include <libxml/catalog.h>
 
-#include <QDate>
 #include <QDir>
 #include <QFile>
 #include <QRegExp>
 #include <QStandardPaths>
 #include <QTextCodec>
 #include <QUrl>
-#include <QDebug>
 #include <QByteArray>
 #include <QString>
 #include <QVector>

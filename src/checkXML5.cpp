@@ -22,7 +22,6 @@
 
 #include <QCoreApplication>
 #include <QProcess>
-#include <QDebug>
 
 #include <stdio.h>
 

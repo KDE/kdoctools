@@ -6,11 +6,9 @@
 #include "loggingcategory.h"
 
 #include <QCoreApplication>
-#include <QDebug>
 #include <QString>
 #include <QFile>
 #include <QDir>
-#include <QTextCodec>
 #include <QFileInfo>
 #include <QList>
 #include <qstandardpaths.h>
