@@ -328,8 +328,7 @@ QByteArray fromUnicode(const QString &data)
                 strcpy(buffer + buffer_len, test.data());
                 buffer_len += test.length();
             } else {
-                QString res;
-                res.sprintf("&#%d;", part.at(i).unicode());
+                QString res = QStringLiteral("&#%1;").arg(part.at(i).unicode());
                 test = locale->fromUnicode(res);
                 if (buffer_len + test.length() + 1 > sizeof(buffer)) {
                     break;
