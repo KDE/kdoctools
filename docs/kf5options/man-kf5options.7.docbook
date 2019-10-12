@@ -25,11 +25,11 @@
 <refsynopsisdiv>
 <cmdsynopsis>
 <command><replaceable>KDE application</replaceable></command>
-<group choice="opt"><option>-h, --help</option></group>
-<group choice="opt"><option>-v, --version</option></group>
-<group choice="opt"><option>--author</option></group>
-<group choice="opt"><option>--license</option></group>
-<group choice="opt"><option>--desktopfile</option> <replaceable>file name</replaceable> </group>
+<arg choice="opt"><option>-h, --help</option></arg>
+<arg choice="opt"><option>-v, --version</option></arg>
+<arg choice="opt"><option>--author</option></arg>
+<arg choice="opt"><option>--license</option></arg>
+<arg choice="opt"><option>--desktopfile</option> <replaceable>file name</replaceable></arg>
 </cmdsynopsis>
 </refsynopsisdiv>
 
