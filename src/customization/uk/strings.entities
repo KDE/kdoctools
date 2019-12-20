@@ -21,3 +21,9 @@
 <!ENTITY FDLBackCoverText "із текстом на останній сторінці &FDLBCTTitles;">
  ]]>
 <!ENTITY FDLBackCoverText "без тексту на останній сторінці">
+
+<!ENTITY kde.modespec '
+ <modespec id="kdems-help">help:</modespec>
+ <modespec id="kdems-man">man:</modespec>'>
+
+<!ENTITY olinktype "kde-installation">

@@ -34,6 +34,7 @@
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY Left	"<keysym>←</keysym>">
 <!ENTITY LMB    "<mousebutton>ліва</mousebutton> кнопка мишки">
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB    "<mousebutton>середня</mousebutton> кнопка мишки">
 <!ENTITY OS	"операційна система"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>Інструмент керування розділами KDE</application>">
