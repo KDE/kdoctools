@@ -26,7 +26,7 @@
 #include <QIODevice>
 #include <QList>
 #include <QPair>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QStringList>
 #include <QTextStream>
 
@@ -155,11 +155,10 @@ int main(int argc, char **argv)
      * for each language defined in the original l10n.xml, copy
      * it into all-l10n.xml and store it in a list;
      **/
-    QRegExp rxEntity, rxEntity2, rxDocType, rxDocType2;
-    rxDocType.setPattern(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s+\\[\\s*$"));
-    rxDocType2.setPattern(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s*>$"));
-    rxEntity.setPattern(QStringLiteral("^\\s*<!ENTITY\\s+([^\\s]+)\\s+SYSTEM\\s+\"([^\\s]+)\">\\s*$"));
-    rxEntity2.setPattern(QStringLiteral("^\\s*<l:l10n language=\"([^\\s]+)\"\\s+href=\"([^\\s]+)\"/>\\s*$"));
+    const QRegularExpression rxDocType(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s+\\[\\s*$"));
+    const QRegularExpression rxDocType2(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s*>$"));
+    const QRegularExpression rxEntity(QStringLiteral("^\\s*<!ENTITY\\s+([^\\s]+)\\s+SYSTEM\\s+\"([^\\s]+)\">\\s*$"));
+    const QRegularExpression rxEntity2(QStringLiteral("^\\s*<l:l10n language=\"([^\\s]+)\"\\s+href=\"([^\\s]+)\"/>\\s*$"));
     QTextStream inStream(&i18nFile);
     int parsingState = 0;
 
@@ -172,28 +171,32 @@ int main(int argc, char **argv)
 
         switch (parsingState) {
         case 0:
-            if (rxDocType.indexIn(line) != -1) {
+            if (rxDocType.match(line).hasMatch()) {
                 parsingState = 1;
                 //qCDebug(KDocToolsLog) << "DTD found";
-            } else if (rxDocType2.indexIn(line) != -1) {
+            } else if (rxDocType2.match(line).hasMatch()) {
                 parsingState = 1;
                 //qCDebug(KDocToolsLog) << "DTD found";
             }
             break;
         case 1:
             QString langCode, langFile;
-            if (rxEntity.indexIn(line) != -1 && !foundRxEntity2) {
+            QRegularExpressionMatch match = rxEntity.match(line);
+            if (match.hasMatch() && !foundRxEntity2) {
                 foundRxEntity = true;
-                langCode = rxEntity.cap(1);
-                langFile = l10nDir + QStringLiteral("common/") + rxEntity.cap(2);
+                langCode = match.captured(1);
+                langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
                 allLangs += qMakePair(langCode, langFile);
                 //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
-            } else if (rxEntity2.indexIn(line) != -1  && !foundRxEntity) {
-                foundRxEntity2 = true;
-                langCode = rxEntity2.cap(1);
-                langFile = l10nDir + QStringLiteral("common/") + rxEntity2.cap(2);
-                allLangs += qMakePair(langCode, langFile);
-                //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+            } else if (!foundRxEntity) {
+                match = rxEntity2.match(line);
+                if (match.hasMatch()) {
+                    foundRxEntity2 = true;
+                    langCode = match.captured(1);
+                    langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
+                    allLangs += qMakePair(langCode, langFile);
+                    //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+                }
             }
             break;
         }
