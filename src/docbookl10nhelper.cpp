@@ -57,30 +57,29 @@ int writeLangFile(const QString &fname, const QString &dtdPath,
     }
 
     QTextStream outStream(&outFile);
-    outStream << "<?xml version='1.0'?>" << endl;
+    outStream << "<?xml version='1.0'?>\n";
     outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\" [")
-              .arg(dtdPath) << endl;
+              .arg(dtdPath) << QLatin1Char('\n');
 
     LangListType::const_iterator i = langMap.constBegin();
     while (i != langMap.constEnd()) {
         //qCDebug(KDocToolsLog) << (*i).first << ": " << (*i).second;
         outStream << QStringLiteral("<!ENTITY %1 SYSTEM \"%2\">")
-                  .arg((*i).first).arg((*i).second) << endl;
+                  .arg((*i).first).arg((*i).second) << QLatin1Char('\n');
         ++i;
     }
-    outStream << "]>" << endl;
+    outStream << "]>\n";
 
     if (!langMap.isEmpty()) {
         outStream
-                << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">"
-                << endl;
+                << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">\n";
         i = langMap.constBegin();
         while (i != langMap.constEnd()) {
             outStream << QStringLiteral("&%1;")
-                      .arg((*i).first) << endl;
+                      .arg((*i).first) << QLatin1Char('\n');
             ++i;
         }
-        outStream << "</l:i18n>" << endl;
+        outStream << "</l:i18n>\n";
     }
 
     outFile.close();
@@ -100,21 +99,21 @@ int writeLangFileNew(const QString &fname, const QString &dtdPath,
     }
 
     QTextStream outStream(&outFile);
-    outStream << "<?xml version='1.0'?>" << endl;
+    outStream << "<?xml version='1.0'?>\n";
     outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\">")
-              .arg(dtdPath) << endl;
+              .arg(dtdPath) << QLatin1Char('\n');
 
     if (!langMap.isEmpty()) {
         outStream
                 << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">"
-                << endl;
+                << QLatin1Char('\n');
         LangListType::const_iterator i = langMap.constBegin();
         while (i != langMap.constEnd()) {
             outStream << QStringLiteral("<l:l10n language=\"%1\" href=\"%2\"/>")
-                      .arg((*i).first).arg((*i).second) << endl;
+                      .arg((*i).first).arg((*i).second) << QLatin1Char('\n');
             ++i;
         }
-        outStream << "</l:i18n>" << endl;
+        outStream << "</l:i18n>\n";
     }
 
     outFile.close();
