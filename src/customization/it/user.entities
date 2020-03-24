@@ -24,18 +24,15 @@
 <!ENTITY ie	"cio&egrave;">
 <!ENTITY infocenter	"<application>Centro d'informazione</application>">
 <!ENTITY Ins	"<keycap>Ins</keycap>">
-<!ENTITY kcontrolcenter	"<application>Centro di controllo</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kmenu  "menu <guimenu>K</guimenu>">
 <!ENTITY Left	"<keysym>←</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "tasto <mousebutton>sinistro</mousebutton> del mouse">
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB    "tasto <mousebutton>centrale</mousebutton> del mouse">
 <!ENTITY OS     "sistema operativo"><!-- <acronym>OS</acronym>-->
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
+<!ENTITY partman "<application>KDE Partition Manager</application>">
+<!ENTITY plasma-mobile	"<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
@@ -51,6 +48,14 @@
 <!ENTITY systemtray "<application>vassoio di sistema</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>↑</keysym>"> <!-- Cursor key-->
+
+<!-- Deprecated, will be removed at a future time, do not use -->
+<!ENTITY kcontrolcenter	"<application>Centro di controllo</application>">
+<!ENTITY kf5	"<acronym>KF5</acronym>">
+<!ENTITY kmenu  "menu <guimenu>K</guimenu>">
+<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
+<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!--                                                     -->
 <!-- Note (EB): you can translate the entity names as well:
      &cioe;
