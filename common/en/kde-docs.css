@@ -62,6 +62,21 @@ div.navCenter td.upCell {
 }
 
 /* Actual documentation styling */
+div.sect3 h4 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+div.sect4 h5 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+div.sect5 h6 {
+    font-size: 90%;
+    font-style: italic;
+}
+
 div.informaltable table {
     text-align: left; /* Disable justification */
     border: 1px solid black;
