@@ -1,0 +1,338 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Руководство пользователя KDE</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2 февраля 2004 г.</date>
+<productname
+>KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Общие ключи командной строки для всех приложений, основанных на Qt</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Qt приложение</replaceable
+></command
+> <arg choice="opt"
+>Qt Generic Options</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Параметры</title>
+
+<para
+>Эти ключи применяются ко всем приложениям &Qt; :</para>
+
+<variablelist
+> <!-- all this could be entitiesan entity -->
+<varlistentry>
+<term
+><option
+>--display</option
+> <parameter
+>displayname</parameter
+> </term>
+<listitem>
+<para
+>Использовать дисплей X-сервера <parameter
+>displayname</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--session</option
+> <parameter
+>sessionId</parameter
+> </term>
+<listitem>
+<para
+>Восстановить сеанс приложения по ключу <parameter
+>sessionId</parameter
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--cmap</option>
+</term>
+<listitem>
+<para
+>Ограничить количество используемых цветов на 8-битном дисплее.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--ncols</option
+> <parameter
+>count</parameter
+> </term>
+<listitem>
+<para
+>Ограничить количество используемых цветов на 8-битном дисплее.Этот параметр работает только для приложений, использующих режим<methodname
+>QApplication::ManyColor.</methodname
+></para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--nograb</option>
+</term>
+<listitem>
+<para
+>Запрещает &Qt; перехватывать мышь или клавиатуру</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--dograb</option>
+</term>
+<listitem>
+<para
+>При запуске в отладчике применять<option
+>--nograb</option
+>.Используйте <option
+>--dograb</option
+>,чтобы явно включить этот режим</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--sync</option>
+</term>
+<listitem>
+<para
+>Включает синхронный режим для отладки.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fn</option
+>,<option
+>--font</option
+> <parameter
+>fontname</parameter
+> </term>
+<listitem>
+<para
+>Определяет шрифт приложения.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--bg</option
+>,<option
+>--background</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Задаёт цвет фона по умолчанию и палитру приложения (светлые и тёмные тени вычисляются автоматически).</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--fg</option
+>,<option
+>--foreground</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Определяет цвет текста по умолчанию.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--btn</option
+>,<option
+>--button</option
+> <parameter
+>color</parameter
+> </term>
+<listitem>
+<para
+>Определяет цвет кнопок по умолчанию.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--name</option
+> <parameter
+>name</parameter
+> </term>
+<listitem>
+<para
+>Определяет имя приложения.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--title</option
+> <parameter
+>title</parameter
+> </term>
+<listitem>
+<para
+>Устанавливает заголовок приложения.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--visual</option
+> <parameter
+>TrueColor</parameter
+> </term>
+<listitem>
+<para
+>Приложение будет работать с 8-битным дисплеем как с полноцветным устройством.</para>
+</listitem>
+</varlistentry>
+
+
+<varlistentry>
+<term
+><option
+>--inputstyle</option
+> <parameter
+>inputstyle</parameter
+> </term>
+<listitem>
+<para
+>Устанавливает тип ввода XIM (X Input Method).Возможные значения:<parameter
+>onthespot</parameter
+>, <parameter
+>overthespot</parameter
+>, <parameter
+>offthespot</parameter
+> and <parameter
+>root</parameter
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--im</option
+> <parameter
+>XIM server</parameter
+> </term>
+<listitem>
+<para
+>Устанавливает сервер XIM.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--noxim</option>
+</term>
+<listitem>
+<para
+>Запретить XIM</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>--reverse</option>
+</term>
+<listitem>
+<para
+>Отразить расположение виджетов</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <replaceable
+>file.qss</replaceable
+> </term>
+<listitem>
+<para
+>Применяет стиль Qt к графическим элементам приложения</para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Смотрите также</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Авторы</title>
+<para
+>Страница руководства была написана &Lauri.Watts; &Lauri.Watts.mail;</para>
+</refsect1>
+
+</refentry>
