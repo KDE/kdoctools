@@ -11,9 +11,9 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QList>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 
-#include <qurl.h>
+#include <QUrl>
 
 #include <libxml/xmlversion.h>
 #include <libxml/xmlmemory.h>
@@ -29,8 +29,8 @@
 
 #include <string.h>
 #include <qplatformdefs.h>
-#include <qcommandlineparser.h>
-#include <qcommandlineoption.h>
+#include <QCommandLineParser>
+#include <QCommandLineOption>
 
 using namespace KDocTools;
 

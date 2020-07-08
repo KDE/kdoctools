@@ -1,6 +1,6 @@
 #include "docbookxslt.h"
 #ifndef MEINPROC_NO_KARCHIVE
-#include <kfilterdev.h>
+#include <KFilterDev>
 #else
 #include "loggingcategory.h"
 #endif
