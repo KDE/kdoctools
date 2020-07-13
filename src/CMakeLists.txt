@@ -29,7 +29,7 @@ endif()
 ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
     HEADER loggingcategory.h
     IDENTIFIER KDocToolsLog
-    CATEGORY_NAME kf5.kdoctools
+    CATEGORY_NAME kf.doctools.core
     DEFAULT_SEVERITY Warning
 )
 
