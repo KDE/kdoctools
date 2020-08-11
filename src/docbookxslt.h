@@ -1,26 +1,15 @@
 /*
- * This file is part of KDE Frameworks - KDocTools
- * The following contributors changed the signatures of the functions
- * exported here:
- * Copyright (C) 2001 Stephan Kulow <coolo@kde.org>
- * Copyright (C) 2005 Frerich Raabe <raabe@kde.org>
- * Copyright (C) 2010 Albert Astals Cid <aacid@kde.org>
- * Copyright (C) 2010, 2016, 2017 Luigi Toscano <luigi.toscano@tiscali.it>
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library.  If not, see <http://www.gnu.org/licenses/>.
- *
- */
+    This file is part of KDE Frameworks - KDocTools
+    The following contributors changed the signatures of the functions
+    exported here:
+
+    SPDX-FileCopyrightText: 2001 Stephan Kulow <coolo@kde.org>
+    SPDX-FileCopyrightText: 2005 Frerich Raabe <raabe@kde.org>
+    SPDX-FileCopyrightText: 2010 Albert Astals Cid <aacid@kde.org>
+    SPDX-FileCopyrightText: 2010, 2016, 2017 Luigi Toscano <luigi.toscano@tiscali.it>
+
+    SPDX-License-Identifier: LGPL-2.1-or-later
+*/
 
 #ifndef _KDOCTOOLS_XSLT_H_
 #define _KDOCTOOLS_XSLT_H_
