@@ -72,6 +72,8 @@
 <!ENTITY Michael.Brade.mail '<email>brade@kde.org</email>'>
 <!ENTITY Preston.Brown '<personname><firstname>Preston</firstname><surname>Brown</surname></personname>'>
 <!ENTITY Preston.Brown.mail '<email>pbrown@kde.org</email>'>
+<!ENTITY David.Bryant '<personname><firstname>David</firstname><surname>Bryant</surname></personname>'>
+<!ENTITY David.Bryant.mail '<email>davidbryant@gvtc.com</email>'>
 <!ENTITY Oswald.Buddenhagen '<personname><firstname>Oswald</firstname><surname>Buddenhagen</surname></personname>'>
 <!ENTITY Oswald.Buddenhagen.mail '<email>ossi@kde.org</email>'>
 
