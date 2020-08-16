@@ -92,6 +92,7 @@
      remain valid, while new ones can only use the new declarations.
  -->
 
+<!ENTITY acl     "<acronym>ACL</acronym>">
 <!ENTITY AIX	"<trademark class='registered'>AIX</trademark>">
 <!ENTITY akonadi	"<acronym>Akonadi</acronym>">
 <!ENTITY akregator        "<application>Akregator</application>">
@@ -149,6 +150,8 @@
 <!ENTITY git '<application>Git</application>'>
 <!ENTITY GMT	"<acronym>GMT</acronym>">
 <!ENTITY GNU	"<acronym>GNU</acronym>">
+<!ENTITY gpg       "<application>GPG</application>">
+<!ENTITY gpgsm     "<application>GpgSM</application>">
 <!ENTITY granatier "<application>Granatier</application>">
 <!ENTITY GUI	"<acronym>GUI</acronym>">
 <!ENTITY gwenview '<application>Gwenview</application>'>
@@ -282,6 +285,7 @@
 <!ENTITY knights "<application>Knights</application>">
 <!ENTITY knode	"<application>KNode</application>">
 <!ENTITY knotes	"<application>KNotes</application>">
+<!ENTITY kolab  "<acronym>Kolab</acronym>">
 <!ENTITY kolf	"<application>Kolf</application>">
 <!ENTITY kollision "<application>Kollision</application>">
 <!ENTITY kolorlines	"<application>Kolor Lines</application>">
@@ -386,6 +390,7 @@
 <!ENTITY macOS	'<trademark class="registered">macOS</trademark>'>
 <!ENTITY marble "<application>Marble</application>">
 <!ENTITY Markdown    "<acronym>Markdown</acronym>">
+<!ENTITY mdn         "<acronym>MDN</acronym>">
 <!ENTITY megami	"<application>Megami</application>">
 <!ENTITY Microsoft	'<trademark class="registered">Microsoft</trademark>'>
 <!ENTITY MIDI	"<acronym>MIDI</acronym>">
@@ -397,8 +402,10 @@
 <!ENTITY multisynk  "<application>MultiSynk</application>">
 <!ENTITY MusiXTeX	"<application>MusiXTeX</application>">
 <!ENTITY NFS   "<acronym>NFS</acronym>">
+<!ENTITY nntp  "<acronym>NNTP</acronym>">
 <!ENTITY okteta "<application>Okteta</application>">
 <!ENTITY okular	"<application>Okular</application>">
+<!ENTITY openpgp  "<acronym>OpenPGP</acronym>">
 <!ENTITY OSD	"<acronym>OSD</acronym>">
 <!ENTITY palapeli "<application>Palapeli</application>">
 <!ENTITY PalmOS	'<trademark class="registered">Palm OS</trademark>'>
@@ -431,6 +438,7 @@
 <!ENTITY SMTP	"<acronym>SMTP</acronym>">
 <!ENTITY SGI	"<trademark>SGI</trademark>">
 <!ENTITY skrooge '<application>Skrooge</application>'>
+<!ENTITY smime  "<acronym>S/MIME</acronym>">
 <!ENTITY snake	"<application>SnaKe</application>">
 <!ENTITY Solaris	"<trademark>Solaris</trademark>">
 <!ENTITY solid	"<application>Solid</application>">
