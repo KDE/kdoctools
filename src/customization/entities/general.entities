@@ -303,7 +303,7 @@
 <!ENTITY kpackage	"<application>KPackage</application>">
 <!ENTITY kpager	"<application>KPager</application>">
 <!ENTITY kpaint	"<application>KPaint</application>">
-<!ENTITY kparts	"<acronym>KParts<acronym>">
+<!ENTITY kparts	"<acronym>KParts</acronym>">
 <!ENTITY kpatience	"<application>KPatience</application>">
 <!ENTITY kpercentage	"<application>KPercentage</application>">
 <!ENTITY kpilot	"<application>KPilot</application>">
