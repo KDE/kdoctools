@@ -12,8 +12,10 @@
 <!-- Licence links -->
 <!ENTITY underGPL           PUBLIC "-//KDE//DOCUMENT GPL Licence Declaration//KO"
   "entities/underGPL.docbook"                       ><!-- level: para -->
+<!ENTITY underLGPL          PUBLIC "-//KDE//DOCUMENT LGPL Licence Declaration//KO"
+  "entities/underLGPL.docbook"                       ><!-- level: para -->
 <!ENTITY underCCBYSA4       PUBLIC "-//KDE//DOCUMENT CC BY-SA 4.0 Licence Declaration//KO"
-  "../en/entities/underCCBYSA4.docbook"                   ><!-- level: para -->
+  "entities/underCCBYSA4.docbook"                   ><!-- level: para -->
 <!ENTITY underFDL           PUBLIC "-//KDE//DOCUMENT FDL Licence Declaration//KO"
   "entities/underFDL.docbook"                       ><!-- level: para -->
 <!ENTITY underBSDLicense    PUBLIC "-//KDE//DOCUMENT BSD Licence Declaration//KO"
@@ -29,6 +31,10 @@
   "entities/update-doc.docbook"                     ><!-- level: para -->
 <!ENTITY help.menu.documentation PUBLIC "-//KDE//DOCUMENT Help Menu Documentation//KO"
   "entities/help-menu.docbook"                      ><!-- level: variablelist -->
+
+<!-- Entities install.intro.documentation + install.compile.documentation
+     are deprecated and should be removed in Frameworks 6 -->
+
 <!ENTITY install.intro.documentation PUBLIC "-//KDE//DOCUMENT Installation General Information//KO"
   "entities/install-intro.docbook"                     ><!-- level: para -->
 <!ENTITY install.compile.documentation PUBLIC "-//KDE//DOCUMENT Compilation Instructions//KO"
@@ -36,11 +42,8 @@
 
 
 <!-- CC BY-SA 4 notice -->
-<!-- In order to translate it, copy it into <lang>/entities/ccbysa4-notice.docbook
-and change the reference from English version to the translated document
-and remove this comment. -->
 <!ENTITY CCBYSA4Notice PUBLIC "-//KDE//DOCUMENT CC BY-SA 4 Documentation Notice//KO"
-         "../en/entities/ccbysa4-notice.docbook">
+         "entities/ccbysa4-notice.docbook">
 <!-- FDL notice -->
 <!ENTITY FDLNotice PUBLIC "-//KDE//DOCUMENT GNU Free Documentation Notice//KO"
          "entities/fdl-notice.docbook">

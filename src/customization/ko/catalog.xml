@@ -13,6 +13,10 @@
 
   <public publicId="-//KDE//DOCUMENT GPL Licence Declaration//KO"
           uri="entities/underGPL.docbook"/> 
+  <public publicId="-//KDE//DOCUMENT LGPL Licence Declaration//KO"
+          uri="entities/underLGPL.docbook"/>
+  <public publicId="-//KDE//DOCUMENT CC BY-SA 4.0 Licence Declaration//KO"
+          uri="entities/underCCBYSA4.docbook"/>
   <public publicId="-//KDE//DOCUMENT FDL Licence Declaration//KO"
           uri="entities/underFDL.docbook"/>
   <public publicId="-//KDE//DOCUMENT BSD Licence Declaration//KO"

@@ -1,53 +1,33 @@
 <!-- This file can be used to include the notice in documentation 
-     <!DOCTYPE book ... [
-      <!ENTITY % FDLIS "INCLUDE">
-      <!ENTITY FDLISTitles "title 1, title 2, title 3">
-      <!ENTITY % FDLFCT "INCLUDE">
-      <!ENTITY FDLFCTTitles "title 4, title 5, title 6">
-      <!ENTITY % FDLBCT "INCLUDE">
-      <!ENTITY FDLBCTTitles "title 7, title 7b">
-      <!ENTITY % ents "-//KDE//ENTITIES Application-Variable Entities V1.0//EN">
-      %ents;
-      ...
-     ]>
+     <!DOCTYPE book ... >
     ...
      <bookinfo>
        <legalnotice>
          <para>Copyright (C) 20yy  [name of author]</para>
-         &FDLnotice;
+         &LGPLnotice;
        </legalnotice>
      </bookinfo>
     ...
 
     Alternatively, you can include the text literally.
-
-    Include a copy of the license in the documentation distribution.
  -->
-<para>Permission is granted to copy, distribute and/or modify this
-document under the terms of the GNU Free Documentation License,
-Version 1.2 or any later version published by the Free Software
-Foundation; with &FDLInvariantSections;, with &FDLFrontCoverText;, and
-with &FDLBackCoverText;.  A copy of the license is included in <xref linkend="gnu-fdl"/>.</para>
+<para>이 라이브러리는 자유 소프트웨어입니다. 소프트웨어의 피양도자는 자유
+소프트웨어 재단이 공표한 GNU 약소 일반 공중 사용 허가서 2판 또는 그 이후 판을
+임의로 선택해서, 그 규정에 따라 프로그램을 개작하거나 재배포할 수
+있습니다.</para>
 
-<!-- If you have no Invariant Sections, don't add any FDLIS entities.
-     If you have no Front-Cover Texts, don't add any FDLFCT; likewise
-     for Back-Cover Texts (the SGML setup takes care of complying with
-     the GNU requirements).  Adding the entities: if you use any, then
-     add FDL* with value "INCLUDE" and FDL*Titles with a list of
-     titles.  You will get the default GNU template text if you don't
-     specify the FDL*Titles entity after specifying the FDL* entity.
-     This will only have effect when you specify %FDLSlots; _after_
-     the entity definitions.
+<para>이 라이브러리는 유용하게 사용되리라는 희망으로 배포되지만, 특정한 목적에
+맞는 적합성 여부나 판매용으로 사용할 수 있다는 묵시적인 보증을 포함한 어떠한
+형태의 보증도 제공하지 않습니다. 보다 자세한 사항은 GNU 약소 일반 공중 사용
+허가서를 참고하시기 바랍니다.</para>
 
-     If your document contains nontrivial examples of program code, we
-     recommend releasing these examples in parallel under your choice
-     of free software license, such as the GNU General Public License,
-     to permit their use in free software.
- -->
+<para>GNU 약소 일반 공중 사용 허가서는 이 라이브러리와 함께 제공됩니다. 만약 이
+문서가 누락되어 있다면 자유 소프트웨어 재단으로 문의하시기 바랍니다. Free
+Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301, USA.</para>
 <!--
 Local variables:
 mode: sgml
 sgml-general-insert-case: lower
-sgml-parent-document: ("index.docbook" "book" "bookinfo" "legalnotice" "para")
 End:
 -->

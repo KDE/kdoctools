@@ -1,3 +1,4 @@
+<!-- Entity is deprecated and should be removed in Frameworks 6-->
 <variablelist>
 <varlistentry>
 <term>
@@ -10,7 +11,7 @@
 </menuchoice>
 </term>
 <listitem><para><action>KDE 도움말 시스템을 열어서</action> &kappname;의
- 도움말 페이지를 엽니다.</listitem>
+ 도움말 페이지를 엽니다(현재 문서).</listitem>
 </varlistentry>
 
 <varlistentry>
@@ -34,6 +35,16 @@
 </menuchoice></term>
 <listitem><para><action>버그 보고 대화 상자를 열어서</action> 버그를 보고하거나 
 기능 추가 요청을 할 수 있습니다.</para></listitem>
+</varlistentry>
+
+<varlistentry>
+<term><menuchoice>
+<guimenu>Help</guimenu>
+<guimenuitem>프로그램 언어 변경...</guimenuitem>
+</menuchoice></term>
+<listitem><para> 이 프로그램의 <guilabel>주 언어</guilabel>와 <guilabel>대체
+언어</guilabel>를 변경할 수 있는 <action>대화 상자를 엽니다</action>.
+</para></listitem>
 </varlistentry>
 
 <varlistentry>
