@@ -47,7 +47,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 
 <refnamediv>
 <refname><command>meinproc5</command></refname>
-<refpurpose>&kde; translator for XML</refpurpose>
+<refpurpose>&kde; translator for &XML;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -79,7 +79,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 <refsect1>
 <title>Description</title>
 
-<para><command>meinproc5</command> converts DocBook files to HTML.
+<para><command>meinproc5</command> converts DocBook files to &HTML;.
 </para>
 </refsect1>
 
@@ -101,7 +101,7 @@ Show help about options.
 <term><option>-v</option><option>--version</option></term>
 <listitem>
 <para>
-Show version information
+Show version information.
 </para>
 </listitem>
 </varlistentry>
@@ -118,7 +118,7 @@ Show version information
 <term><option>--cache</option> <parameter>file</parameter></term>
 <listitem>
 <para>
-Create a cache file for the document
+Create a cache file for the document.
 </para>
 </listitem>
 </varlistentry>
@@ -126,7 +126,7 @@ Create a cache file for the document
 <varlistentry>
 <term><option>--check</option></term>
 <listitem>
-<para>Check the document for validity</para>
+<para>Check the document for validity.</para>
 <screen>The output can be a bit daunting, since one small mistake can cause a cascade of errors. 
 The trick is to look at the first error, fix that error, save the file, and run <command>meinproc5</command> again.
 </screen>
@@ -155,7 +155,7 @@ Output whole document to stdout.
 <term><option>--stylesheet</option> <parameter>xsl</parameter></term>
 <listitem>
 <para>
-Stylesheet to use
+Stylesheet to use.
 </para>
 </listitem>
 </varlistentry>
@@ -164,7 +164,7 @@ Stylesheet to use
 <term><option>--srcdir</option> <parameter>dir</parameter></term>
 <listitem>
 <para>
-  Set the root directory to look for kdoctools
+  Set the root directory to look for kdoctools.
 </para>
 </listitem>
 </varlistentry>
@@ -191,16 +191,16 @@ The most common way to run <command>meinproc5</command> is simply as
 </userinput>
 </literallayout>
 where <replaceable>docbook-file</replaceable> is usually index.docbook. 
-This command creates HTML pages from the DocBook file. 
-Note that these pages are only viewable in KDE-based browsers (like Konqueror). 
+This command creates &HTML; pages from the DocBook file.
+Note that these pages are only viewable in &kde;-based browsers (like &konqueror;).
 </para>
 <para>
-If you need to view the HTML output in another browser (for example, if you're placing it on line), use
+If you need to view the &HTML; output in another browser (for example, if you're placing it on line), use
 <literallayout>
 <userinput><command>meinproc5</command> --stylesheet <replaceable>stylesheet-name</replaceable> <replaceable>docbook-file</replaceable>
 </userinput>
 </literallayout>
-where <replaceable>stylesheet-name</replaceable> is the full path to one of the XSL 
+where <replaceable>stylesheet-name</replaceable> is the full path to one of the &XSL;
 stylesheets in &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. 
 To produce output suitable for the web, you can use <command>kde-web.xsl</command> or 
 <command>kde-chunk-online.xsl</command>. See the README 
@@ -216,7 +216,7 @@ file in that directory for more details.
 
 <refsect1>
 <title>Bugs</title>
-<para>Please use <ulink url="https://bugs.kde.org">KDE's bugtracker</ulink> to report bugs.</para>
+<para>Please use <ulink url="https://bugs.kde.org">&kde;'s bugtracker</ulink> to report bugs.</para>
 </refsect1>
 
 </refentry>

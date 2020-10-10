@@ -5,7 +5,7 @@
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>Frameworks Command Line Documentation</title>
+<title>&frameworks; Command Line Documentation</title>
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
 <date>2016-05-13</date>
 <releaseinfo>Frameworks 5.22</releaseinfo>
@@ -19,7 +19,7 @@
 
 <refnamediv>
 <refname>kf5options</refname>
-<refpurpose>Common commandline options for all applications based on KDE Frameworks 5</refpurpose>
+<refpurpose>Common commandline options for all applications based on &kf5-full;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -41,7 +41,7 @@
 <variablelist>
 <varlistentry>
 <term><option>-h</option> <option>--help</option></term>
-<listitem><para>This lists the options available at the command line</para>
+<listitem><para>This lists the options available at the command line.</para>
 </listitem>
 </varlistentry>
 
@@ -83,7 +83,7 @@ file can put its own name into the exec command.
 <refsect1>
 <title>Authors</title>
 <para>Man page originally written by &Lauri.Watts; &Lauri.Watts.mail; for kdelibs4</para>
-<para>Updated to Frameworks 5 by &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+<para>Updated to &frameworks; 5 by &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
 </refsect1>
 
 </refentry>

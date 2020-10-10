@@ -19,7 +19,7 @@
 
 <refnamediv>
 <refname><command>checkXML5</command></refname>
-<refpurpose>An &XML; lint tool for &kde; DocBook &XML; documents.</refpurpose>
+<refpurpose>An &XML; lint tool for &kde; DocBook &XML; documents</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -32,7 +32,7 @@
 <title>Description</title>
 
 <para><command>checkXML5</command> is a tool to check for syntax errors in &kde;
-DocBook &XML; files.  It can also be used for other DocBook based
+DocBook &XML; files. It can also be used for other DocBook based
 &XML; files, but you should use the less specific xmllint(1) tool if
 you are not writing or otherwise working on &kde;
 documentation.</para>
@@ -43,3 +43,4 @@ documentation.</para>
 <para>meinproc5(1) xmllint(1)</para>
 </refsect1>
 </refentry>
+
