@@ -66,7 +66,7 @@
 </term>
 <listitem><para>
 Set the application &GUI; style. Possible values depend on the system configuration.
-If &Qt; is compiled with additional styles or has additional styles as plugins these will be available to the -style command line option.</para>
+If &Qt; is compiled with additional styles or has additional styles as plugins these will be available to the <option>-style</option> command line option.</para>
 </listitem>
 </varlistentry>
 
@@ -187,7 +187,7 @@ Restore the application from an earlier session.
 <option>-display</option> <replaceable>hostname:screen_number</replaceable>
 </term>
 <listitem><para>
-Switch displays on &X11;. Overrides the DISPLAY environment variable.
+Switch displays on &X11;. Overrides the <envar>DISPLAY</envar> environment variable.
 </para></listitem>
 </varlistentry>
 
@@ -205,8 +205,8 @@ Specify the window geometry for the main window on &X11;. For example: -geometry
 <option>-dialogs=</option> <replaceable>[xp|none]</replaceable>
 </term>
 <listitem><para>
-Only available for -platform windows.
-xp uses XP-style native dialogs and none disables them.</para></listitem>
+Only available for the &Windows; platform.
+XP uses native style dialogs and none disables them.</para></listitem>
 </varlistentry>
 
 <varlistentry>

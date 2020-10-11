@@ -203,7 +203,7 @@ If you need to view the &HTML; output in another browser (for example, if you're
 where <replaceable>stylesheet-name</replaceable> is the full path to one of the &XSL;
 stylesheets in &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. 
 To produce output suitable for the web, you can use <command>kde-web.xsl</command> or 
-<command>kde-chunk-online.xsl</command>. See the README 
+<command>kde-chunk-online.xsl</command>. See the <filename>README</filename>
 file in that directory for more details. 
 </para>
 
