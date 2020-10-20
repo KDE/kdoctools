@@ -21,7 +21,7 @@
 <!ENTITY etc    "<abbrev>등</abbrev>">
 <!ENTITY FAQ	'<acronym>자주 묻는 질문</acronym>'>
 <!ENTITY Home	"<keycap>Home</keycap>">
-<!ENTITY ie     "<abbrev>예:.</abbrev>">
+<!ENTITY ie     "<abbrev>예:</abbrev>">
 <!ENTITY infocenter	"<application>정보 센터</application>">
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; 프레임워크</productname>">
