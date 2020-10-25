@@ -69,7 +69,7 @@
 <!ENTITY Aron.Bostrom '<personname><firstname>Aron</firstname><surname>Boström</surname></personname>'>
 <!ENTITY Aron.Bostrom.mail '<email>aron.bostrom@gmail.com</email>'>
 <!ENTITY Michel.Boyer '<personname><firstname>Michel</firstname><surname>Boyer de la Giroday</surname></personname>'>
-<!ENTITY Michel.Boyer.mail '<email>michel@kdab.net'<personname</email>'>
+<!ENTITY Michel.Boyer.mail '<email>michel@kdab.net</email>'>
 <!ENTITY Michael.Brade '<personname><firstname>Michael</firstname><surname>Brade</surname></personname>'>
 <!ENTITY Michael.Brade.mail '<email>brade@kde.org</email>'>
 <!ENTITY Preston.Brown '<personname><firstname>Preston</firstname><surname>Brown</surname></personname>'>
