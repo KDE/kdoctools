@@ -1,0 +1,461 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Kommandoradsdokumentation för &Qt;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<date
+>2016-06-04</date>
+<releaseinfo
+>Qt 5.4</releaseinfo>
+<productname
+>KDE Ramverk</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>Gemensamma kommandoradsväljare för alla program som är baserade på &Qt;-verktygslådan</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Qt-program</replaceable
+></command
+> <arg choice="opt"
+><option
+>-style=</option
+> <replaceable
+>stil</replaceable
+> / <option
+>-style</option
+> <replaceable
+>stil</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-stylesheet=</option
+> <replaceable
+>stilmall</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>stilmall</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-widgetcount</option
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>port</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platform</option
+> <replaceable
+>plattformsnamn[:alternativ]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformpluginpath</option
+> <replaceable
+>sökväg</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformtheme</option
+> <replaceable
+>plattformstema</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-plugin</option
+> <replaceable
+>insticksmodul</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowgeometry</option
+> <replaceable
+>geometri</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowicon</option
+> <replaceable
+>ikon</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowtitle</option
+> <replaceable
+>namn</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-session</option
+> <replaceable
+>session</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-display</option
+> <replaceable
+>värddatornamn:skärmnummer</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-geometry</option
+> <replaceable
+>geometri</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-h, --help och -? på &Windows;</option
+></arg
+> <arg choice="opt"
+><option
+>-v --version</option
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Väljare</title>
+
+<para
+>Följande väljare gäller alla program som använder &Qt;:</para>
+
+<variablelist>
+<!--https://doc.qt.io/qt-5/qapplication.html#QApplication-->
+<varlistentry>
+<term
+><option
+>-style=</option
+> <replaceable
+>stil</replaceable
+> / <option
+>-style</option
+> <replaceable
+>stil</replaceable
+> </term>
+<listitem
+><para
+>Ställ in stilen för programmets grafiska användargränssnitt. Möjliga värden beror på systeminställningen. Om &Qt; kompileras med ytterligare stilar eller har ytterligare stilar som insticksmoduler är de tillgängliga för kommandoradsväljaren <option
+>-style</option
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-stylesheet=</option
+> <replaceable
+>stilmall</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>stilmall</replaceable
+> </term>
+<listitem
+><para
+>Ställ in programmets stilmall. Värdet måste vara en sökväg till en fil som innehåller stilmallen. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-widgetcount</option>
+</term>
+<listitem
+><para
+>Skriv ut felsökningsmeddelanden i slutet om antal oförstörda grafiska komponenter som är kvar och maximalt antal grafiska komponenter som existerade samtidigt. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-reverse</option>
+</term>
+<listitem
+><para
+>Ställ in programmets layoutriktning till <methodname
+>Qt::RightToLeft</methodname
+>. Alternativet är avsett att hjälpa till vid felsökning och ska inte användas i produktion. Standardvärdet detekteras automatiskt från användarens landsinställningar (se också <methodname
+>QLocale::textDirection()</methodname
+>). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>port</replaceable
+> </term>
+<listitem
+><para
+>Aktive QML/JS-avlusare med en angiven port. Värdet måste ha formatet port:1234[,block], där block är valfritt och gör att programmet väntar till avlusaren ansluter till den. </para
+></listitem>
+</varlistentry>
+<!--https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication-->
+<varlistentry>
+<term
+><option
+>-platform</option
+> <replaceable
+>plattformsnamn[:alternativ]</replaceable
+> </term>
+<listitem
+><para
+>Ange insticksmodulen &Qt; Platform Abstraction (QPA). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformpluginpath</option
+> <replaceable
+>sökväg</replaceable
+> </term>
+<listitem
+><para
+>Ange sökvägen till plattformens insticksmoduler. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformtheme</option
+> <replaceable
+>plattformstema</replaceable
+> </term>
+<listitem
+><para
+>Ange plattformens tema. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-plugin</option
+> <replaceable
+>insticksmodul</replaceable
+> </term>
+<listitem
+><para
+>Ange ytterligare insticksmoduler att ladda. Argumentet kan användas flera gånger. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowgeometry</option
+> <replaceable
+>geometri</replaceable
+> </term>
+<listitem
+><para
+>Ange fönstergeometri för huvudfönstret med &X11;-syntax. Exempelvis: -qwindowgeometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowicon</option
+> <replaceable
+>ikon</replaceable
+> </term>
+<listitem
+><para
+>Ställ in förvald fönsterikon. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowtitle</option
+> <replaceable
+>namn</replaceable
+> </term>
+<listitem
+><para
+>Ställ in det första fönstrets namn. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-session</option
+> <replaceable
+>session</replaceable
+> </term>
+<listitem
+><para
+>Återställ programmet från en tidigare session. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-display</option
+> <replaceable
+>värddatornamn:skärmnummer</replaceable
+> </term>
+<listitem
+><para
+>Byt skärm på &X11;. Överskrider miljövariabeln <envar
+>DISPLAY</envar
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-geometry</option
+> <replaceable
+>geometri</replaceable
+> </term>
+<listitem
+><para
+>Ange fönstergeometri för huvudfönstret på &X11;. Exempelvis: -geometry 100x100+50+50. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+> </term>
+<listitem
+><para
+>Bara tillgänglig för plattformen &Windows;. XP använder inbyggda dialogrutor och none inaktiverar dem.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+> </term>
+<listitem
+><para
+>Använd teckensnittsverktyget FreeType. </para
+></listitem>
+</varlistentry>
+
+<!--https://doc.qt.io/qt-5/qcommandlineparser.html -->
+<varlistentry>
+<term>
+<option
+>-h, --help och -? på &Windows;</option>
+</term>
+<listitem
+><para
+>Skriv ut alla alternativ och programmets beskrivning. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-v --version</option>
+</term>
+<listitem
+><para
+>Visa programmets versionssträng. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Se också</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>Manualsidan ursprungligen skriven av &Lauri.Watts; &Lauri.Watts.mail;</para>
+<para
+>Uppdaterad till Ramverk 5 av &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+<para
+>Informationen för den här manualsidan är från <ulink url="https://doc.qt.io/qt-5/qapplication.html#QApplication"
+>dokumentationen för QApplication</ulink
+>, <ulink url="https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication"
+>dokumentationen för QGuiApplication</ulink
+> och <ulink url="https://doc.qt.io/qt-5/qcommandlineparser.html"
+>dokumentationen för QCommandLineParser</ulink
+>.</para>
+</refsect1>
+
+</refentry>
