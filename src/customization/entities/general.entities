@@ -277,7 +277,7 @@
 <!ENTITY kmplayer "<application>KMPlayer</application>">
 <!ENTITY kmplot	"<application>KmPlot</application>">
 <!ENTITY kmymoney	"<application>KMyMoney</application>">
-<!ENTITY knavalbattle "<application>KNavalBattel</application>">
+<!ENTITY knavalbattle "<application>KNavalBattle</application>">
 <!ENTITY knetattach     "<application>KNetAttach</application>">
 <!ENTITY knetwalk       "<application>KNetWalk</application>">
 <!ENTITY knewsticker	"<application>KNewsTicker</application>">
