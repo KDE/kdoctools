@@ -390,6 +390,7 @@
 <!ENTITY macOS	'<trademark class="registered">macOS</trademark>'>
 <!ENTITY marble "<application>Marble</application>">
 <!ENTITY Markdown    "<acronym>Markdown</acronym>">
+<!ENTITY MathML      "<acronym>MathML</acronym>">
 <!ENTITY mdn         "<acronym>MDN</acronym>">
 <!ENTITY megami	"<application>Megami</application>">
 <!ENTITY Microsoft	'<trademark class="registered">Microsoft</trademark>'>
