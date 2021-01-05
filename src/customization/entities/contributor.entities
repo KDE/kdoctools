@@ -319,7 +319,7 @@
 <!ENTITY Matthias.Messmer.mail '<email>bmlmessmer@web.de</email>'>
 <!ENTITY Gary.Meyer '<personname><firstname>Gary</firstname><surname>Meyer</surname></personname>'>
 <!ENTITY Gary.Meyer.mail '<email>gary@meyer.net</email>'>
-<!ENTITY Klaus-Dieter.Moeller '<personname><firstname>Kaus-Dieter</firtname><surname>M&ouml;ller</surname></personname>'>
+<!ENTITY Klaus-Dieter.Moeller '<personname><firstname>Kaus-Dieter</firstname><surname>M&ouml;ller</surname></personname>'>
 <!ENTITY Klaus-Dieter.Moeller.mail '<email>kd.moeller@t-online.de</email>'>
 <!ENTITY Daniel.Molkentin '<personname><firstname>Daniel</firstname><surname>Molkentin</surname></personname>'>
 <!ENTITY Daniel.Molkentin.mail '<email>molkentin@kde.org</email>'>
