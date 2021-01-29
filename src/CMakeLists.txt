@@ -78,7 +78,7 @@ if(BUILD_QCH)
         KF5DocTools_QCH
         NAME KDocTools
         BASE_NAME KF5DocTools
-        VERSION ${KF5_VERSION}
+        VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
             ${KDocTools_HEADERS}

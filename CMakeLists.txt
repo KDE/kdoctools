@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(KF5_VERSION "5.79.0") # handled by release scripts
-set(KF5_DEP_VERSION "5.79.0") # handled by release scripts
-project(KDocTools VERSION ${KF5_VERSION})
+set(KF_VERSION "5.79.0") # handled by release scripts
+set(KF_DEP_VERSION "5.79.0") # handled by release scripts
+project(KDocTools VERSION ${KF_VERSION})
 
 # ECM setup
 include(FeatureSummary)
@@ -39,12 +39,12 @@ include(KDECMakeSettings)
 
 # KF5 frameworks
 if (NOT MEINPROC_NO_KARCHIVE)
-   find_package(KF5Archive ${KF5_DEP_VERSION} REQUIRED)
+   find_package(KF5Archive ${KF_DEP_VERSION} REQUIRED)
 else()
    message(WARNING "KArchive dependency has been disabled. This should be done only for internal usage on KDE infrastructure.")
 endif()
 
-find_package(KF5I18n ${KF5_DEP_VERSION})
+find_package(KF5I18n ${KF_DEP_VERSION})
 set_package_properties(KF5I18n PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the KDocTools translations")
 
