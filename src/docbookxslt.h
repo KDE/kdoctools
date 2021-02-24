@@ -14,9 +14,9 @@
 #ifndef _KDOCTOOLS_XSLT_H_
 #define _KDOCTOOLS_XSLT_H_
 
-#include <kdoctools_export.h>
 #include <QStandardPaths>
 #include <QVector>
+#include <kdoctools_export.h>
 
 class QByteArray;
 class QString;
@@ -25,14 +25,13 @@ class QString;
  * @namespace KDocTools
  * Utility methods to generate documentation in various format from DocBook files
  */
-namespace KDocTools {
-
+namespace KDocTools
+{
 /**
  * Transform and return the content of file with the specified XSLT stylesheet
  * (both already in memory) using the optional parameters.
  */
-KDOCTOOLS_EXPORT QString transform(const QString &file, const QString &stylesheet,
-                                   const QVector<const char *> &params = QVector<const char *>());
+KDOCTOOLS_EXPORT QString transform(const QString &file, const QString &stylesheet, const QVector<const char *> &params = QVector<const char *>());
 
 /**
  * Extract the content of a single file from the content string
@@ -52,11 +51,10 @@ KDOCTOOLS_EXPORT bool saveToCache(const QString &contents, const QString &filena
  */
 KDOCTOOLS_EXPORT void setupStandardDirs(const QString &srcdir = QString());
 
-
 /**
  * Find a specified file amongst the resource shipped with KDocTools.
  */
-KDOCTOOLS_EXPORT QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option=QStandardPaths::LocateFile);
+KDOCTOOLS_EXPORT QString locateFileInDtdResource(const QString &file, const QStandardPaths::LocateOptions option = QStandardPaths::LocateFile);
 
 /**
  * Returns the directories which can contain documentation.

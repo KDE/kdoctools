@@ -17,12 +17,11 @@
 #include <QStringList>
 #include <QTextStream>
 
-class LangListType: public QList<QPair<QString, QString> >
+class LangListType : public QList<QPair<QString, QString>>
 {
 public:
     int searchLang(const QString &el)
     {
-
         for (int i = 0; i < size(); ++i) {
             if (at(i).first == el) {
                 return i;
@@ -32,38 +31,31 @@ public:
     }
 };
 
-int writeLangFile(const QString &fname, const QString &dtdPath,
-                  const LangListType &langMap)
+int writeLangFile(const QString &fname, const QString &dtdPath, const LangListType &langMap)
 {
-
     QFile outFile(fname);
-    if (! outFile.open(QIODevice::WriteOnly)) {
-        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1")
-                                 .arg(outFile.fileName());
+    if (!outFile.open(QIODevice::WriteOnly)) {
+        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1").arg(outFile.fileName());
         return (1);
     }
 
     QTextStream outStream(&outFile);
     outStream << "<?xml version='1.0'?>\n";
-    outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\" [")
-              .arg(dtdPath) << QLatin1Char('\n');
+    outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\" [").arg(dtdPath) << QLatin1Char('\n');
 
     LangListType::const_iterator i = langMap.constBegin();
     while (i != langMap.constEnd()) {
-        //qCDebug(KDocToolsLog) << (*i).first << ": " << (*i).second;
-        outStream << QStringLiteral("<!ENTITY %1 SYSTEM \"%2\">")
-                  .arg((*i).first).arg((*i).second) << QLatin1Char('\n');
+        // qCDebug(KDocToolsLog) << (*i).first << ": " << (*i).second;
+        outStream << QStringLiteral("<!ENTITY %1 SYSTEM \"%2\">").arg((*i).first).arg((*i).second) << QLatin1Char('\n');
         ++i;
     }
     outStream << "]>\n";
 
     if (!langMap.isEmpty()) {
-        outStream
-                << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">\n";
+        outStream << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">\n";
         i = langMap.constBegin();
         while (i != langMap.constEnd()) {
-            outStream << QStringLiteral("&%1;")
-                      .arg((*i).first) << QLatin1Char('\n');
+            outStream << QStringLiteral("&%1;").arg((*i).first) << QLatin1Char('\n');
             ++i;
         }
         outStream << "</l:i18n>\n";
@@ -74,30 +66,23 @@ int writeLangFile(const QString &fname, const QString &dtdPath,
     return (0);
 }
 
-int writeLangFileNew(const QString &fname, const QString &dtdPath,
-                     const LangListType &langMap)
+int writeLangFileNew(const QString &fname, const QString &dtdPath, const LangListType &langMap)
 {
-
     QFile outFile(fname);
-    if (! outFile.open(QIODevice::WriteOnly)) {
-        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1")
-                                 .arg(outFile.fileName());
+    if (!outFile.open(QIODevice::WriteOnly)) {
+        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1").arg(outFile.fileName());
         return (1);
     }
 
     QTextStream outStream(&outFile);
     outStream << "<?xml version='1.0'?>\n";
-    outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\">")
-              .arg(dtdPath) << QLatin1Char('\n');
+    outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\">").arg(dtdPath) << QLatin1Char('\n');
 
     if (!langMap.isEmpty()) {
-        outStream
-                << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">"
-                << QLatin1Char('\n');
+        outStream << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">" << QLatin1Char('\n');
         LangListType::const_iterator i = langMap.constBegin();
         while (i != langMap.constEnd()) {
-            outStream << QStringLiteral("<l:l10n language=\"%1\" href=\"%2\"/>")
-                      .arg((*i).first).arg((*i).second) << QLatin1Char('\n');
+            outStream << QStringLiteral("<l:l10n language=\"%1\" href=\"%2\"/>").arg((*i).first).arg((*i).second) << QLatin1Char('\n');
             ++i;
         }
         outStream << "</l:i18n>\n";
@@ -129,7 +114,7 @@ int main(int argc, char **argv)
 
     QFile i18nFile(l10nDir + QStringLiteral("common/l10n.xml"));
 
-    if (! i18nFile.open(QIODevice::ReadOnly)) {
+    if (!i18nFile.open(QIODevice::ReadOnly)) {
         qCCritical(KDocToolsLog) << i18nFile.fileName() << " not found";
         return (1);
     }
@@ -152,17 +137,17 @@ int main(int argc, char **argv)
 
     bool foundRxEntity = false;
     bool foundRxEntity2 = false;
-    while (! inStream.atEnd()) {
+    while (!inStream.atEnd()) {
         QString line = inStream.readLine();
 
         switch (parsingState) {
         case 0:
             if (rxDocType.match(line).hasMatch()) {
                 parsingState = 1;
-                //qCDebug(KDocToolsLog) << "DTD found";
+                // qCDebug(KDocToolsLog) << "DTD found";
             } else if (rxDocType2.match(line).hasMatch()) {
                 parsingState = 1;
-                //qCDebug(KDocToolsLog) << "DTD found";
+                // qCDebug(KDocToolsLog) << "DTD found";
             }
             break;
         case 1:
@@ -173,7 +158,7 @@ int main(int argc, char **argv)
                 langCode = match.captured(1);
                 langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
                 allLangs += qMakePair(langCode, langFile);
-                //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+                // qCDebug(KDocToolsLog) << langCode << " - " << langFile;
             } else if (!foundRxEntity) {
                 match = rxEntity2.match(line);
                 if (match.hasMatch()) {
@@ -181,12 +166,11 @@ int main(int argc, char **argv)
                     langCode = match.captured(1);
                     langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
                     allLangs += qMakePair(langCode, langFile);
-                    //qCDebug(KDocToolsLog) << langCode << " - " << langFile;
+                    // qCDebug(KDocToolsLog) << langCode << " - " << langFile;
                 }
             }
             break;
         }
-
     }
     i18nFile.close();
 
@@ -195,15 +179,14 @@ int main(int argc, char **argv)
 
     QStringList dirFileFilters;
     dirFileFilters << QStringLiteral("*.xml");
-    QStringList customLangFiles = outDir.entryList(dirFileFilters,
-                                  QDir::Files, QDir::Name);
+    QStringList customLangFiles = outDir.entryList(dirFileFilters, QDir::Files, QDir::Name);
     /* the following two calls to removeOne should not be needed, as
      * the customization directory from the sources should not contain
      * those files
      */
     customLangFiles.removeOne(QStringLiteral("all-l10n.xml"));
     customLangFiles.removeOne(QStringLiteral("kde-custom-l10n.xml"));
-    //qCDebug(KDocToolsLog) << "customLangFiles:" << customLangFiles;
+    // qCDebug(KDocToolsLog) << "customLangFiles:" << customLangFiles;
 
     /*
      * for each custom language (from directory listing), if it is not
@@ -231,11 +214,9 @@ int main(int argc, char **argv)
 
     if (foundRxEntity) {
         /* old style (docbook-xsl<=1.75) */
-        res = writeLangFile(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"),
-                            allLangs);
+        res = writeLangFile(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
     } else {
-        res = writeLangFileNew(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"),
-                               allLangs);
+        res = writeLangFileNew(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
     }
 
     return (res);

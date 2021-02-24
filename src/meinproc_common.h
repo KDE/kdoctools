@@ -26,7 +26,7 @@ void doOutput(QString output, bool usingStdOut, bool usingOutput, const QString 
 // FIXME: To remove ?
 #ifdef _WIN32
 #include <windows.h>
-#define setenv(x,y,z) SetEnvironmentVariable((LPCTSTR)x,(LPCTSTR)y)
+#define setenv(x, y, z) SetEnvironmentVariable((LPCTSTR)x, (LPCTSTR)y)
 #endif // _WIN32
 
 #endif

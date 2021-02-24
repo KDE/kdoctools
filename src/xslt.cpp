@@ -2,7 +2,7 @@
 #include "docbookxslt_p.h"
 
 #ifdef Q_OS_WIN
-//one of the xslt/xml headers pulls in windows.h and breaks <limits>
+// one of the xslt/xml headers pulls in windows.h and breaks <limits>
 #define NOMINMAX
 #include <QHash>
 #endif
@@ -10,29 +10,31 @@
 #include "../config-kdoctools.h"
 #include "loggingcategory.h"
 
-#include <libxslt/xsltconfig.h>
-#include <libxslt/xsltInternals.h>
-#include <libxslt/transform.h>
-#include <libxslt/xsltutils.h>
-#include <libxml/parser.h>
-#include <libxml/xmlIO.h>
-#include <libxml/parserInternals.h>
 #include <libxml/catalog.h>
+#include <libxml/parser.h>
+#include <libxml/parserInternals.h>
+#include <libxml/xmlIO.h>
+#include <libxslt/transform.h>
+#include <libxslt/xsltInternals.h>
+#include <libxslt/xsltconfig.h>
+#include <libxslt/xsltutils.h>
 
+#include <QByteArray>
 #include <QDir>
 #include <QFile>
 #include <QStandardPaths>
+#include <QString>
 #include <QTextCodec>
 #include <QUrl>
-#include <QByteArray>
-#include <QString>
 #include <QVector>
 
-#if !defined( SIMPLE_XSLT )
+#if !defined(SIMPLE_XSLT)
 extern HelpProtocol *slave;
-#define INFO( x ) if (slave) slave->infoMessage(x);
+#define INFO(x)                                                                                                                                                \
+    if (slave)                                                                                                                                                 \
+        slave->infoMessage(x);
 #else
-#define INFO( x )
+#define INFO(x)
 #endif
 
 int writeToQString(void *context, const char *buffer, int len)
@@ -42,7 +44,7 @@ int writeToQString(void *context, const char *buffer, int len)
     return len;
 }
 
-#if defined (SIMPLE_XSLT) && defined(Q_OS_WIN)
+#if defined(SIMPLE_XSLT) && defined(Q_OS_WIN)
 
 #define MAX_PATHS 64
 xmlExternalEntityLoader defaultEntityLoader = NULL;
@@ -51,9 +53,9 @@ static int nbpaths = 0;
 static QHash<QString, QString> replaceURLList;
 
 /*
-* Entity loading control and customization.
-* taken from xsltproc.c
-*/
+ * Entity loading control and customization.
+ * taken from xsltproc.c
+ */
 static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const char *ID, xmlParserCtxtPtr ctxt)
 {
     xmlParserInputPtr ret;
@@ -101,9 +103,9 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
     for (int i = 0; i < nbpaths; i++) {
         xmlChar *newURL;
 
-        newURL = xmlStrdup((const xmlChar *) paths[i]);
-        newURL = xmlStrcat(newURL, (const xmlChar *) "/");
-        newURL = xmlStrcat(newURL, (const xmlChar *) lastsegment);
+        newURL = xmlStrdup((const xmlChar *)paths[i]);
+        newURL = xmlStrcat(newURL, (const xmlChar *)"/");
+        newURL = xmlStrcat(newURL, (const xmlChar *)lastsegment);
         if (newURL != NULL) {
             ret = defaultEntityLoader((const char *)newURL, ID, ctxt);
             if (ret != NULL) {
@@ -129,13 +131,12 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
 }
 #endif
 
-QString KDocTools::transform(const QString &pat, const QString &tss,
-                  const QVector<const char *> &params)
+QString KDocTools::transform(const QString &pat, const QString &tss, const QVector<const char *> &params)
 {
     QString parsed;
 
     INFO(i18n("Parsing stylesheet"));
-#if defined (SIMPLE_XSLT) && defined(Q_OS_WIN)
+#if defined(SIMPLE_XSLT) && defined(Q_OS_WIN)
     // prepare use of local available dtd versions instead of fetching every time from the internet
     // this approach is url based
     if (!defaultEntityLoader) {
@@ -146,8 +147,7 @@ QString KDocTools::transform(const QString &pat, const QString &tss,
     }
 #endif
 
-    xsltStylesheetPtr style_sheet =
-        xsltParseStylesheetFile((const xmlChar *)QFile::encodeName(tss).constData());
+    xsltStylesheetPtr style_sheet = xsltParseStylesheetFile((const xmlChar *)QFile::encodeName(tss).constData());
 
     if (!style_sheet) {
         return parsed;
@@ -163,12 +163,11 @@ QString KDocTools::transform(const QString &pat, const QString &tss,
     xmlParserCtxtPtr pctxt;
 
     pctxt = xmlNewParserCtxt();
-    if ( pctxt == nullptr ) {
+    if (pctxt == nullptr) {
         return parsed;
     }
 
-    xmlDocPtr doc = xmlCtxtReadFile(pctxt, QFile::encodeName(pat).constData(), nullptr,
-                                    XML_PARSE_NOENT|XML_PARSE_DTDLOAD|XML_PARSE_NONET);
+    xmlDocPtr doc = xmlCtxtReadFile(pctxt, QFile::encodeName(pat).constData(), nullptr, XML_PARSE_NOENT | XML_PARSE_DTDLOAD | XML_PARSE_NONET);
     /* Clean the context pointer, now useless */
     const bool context_valid = (pctxt->valid == 0);
     xmlFreeParserCtxt(pctxt);
@@ -200,7 +199,7 @@ QString KDocTools::transform(const QString &pat, const QString &tss,
     xsltFreeStylesheet(style_sheet);
 
     if (parsed.isEmpty()) {
-        parsed = QLatin1Char(' ');    // avoid error message
+        parsed = QLatin1Char(' '); // avoid error message
     }
     return parsed;
 }
@@ -255,11 +254,12 @@ QString splitOut(const QString &parsed, int index)
         int endindex = parsed.indexOf(QStringLiteral("</FILENAME>"), index);
         int startindex = parsed.indexOf(QStringLiteral("<FILENAME "), index) + 1;
 
-        //qCDebug(KDocToolsLog) << "FILENAME " << startindex << " " << endindex << " " << inside << " " << parsed.mid(startindex + 18, 15)<< " " << parsed.length();
+        // qCDebug(KDocToolsLog) << "FILENAME " << startindex << " " << endindex << " " << inside << " " << parsed.mid(startindex + 18, 15)<< " " <<
+        // parsed.length();
 
         if (startindex > 0) {
             if (startindex < endindex) {
-                //qCDebug(KDocToolsLog) << "finding another";
+                // qCDebug(KDocToolsLog) << "finding another";
                 index = startindex + 8;
                 inside++;
             } else {
@@ -275,7 +275,6 @@ QString splitOut(const QString &parsed, int index)
             filedata = parsed.mid(start_index, endindex - start_index);
             break;
         }
-
     }
 
     index = filedata.indexOf(QStringLiteral("<FILENAME "));
@@ -349,8 +348,7 @@ void replaceCharsetHeader(QString &output)
     name = "utf-8";
     // may be required for all xml output
     if (output.contains("<table-of-contents>"))
-        output.replace(QString("<?xml version=\"1.0\"?>"),
-                       QString("<?xml version=\"1.0\" encoding=\"%1\"?>").arg(name));
+        output.replace(QString("<?xml version=\"1.0\"?>"), QString("<?xml version=\"1.0\" encoding=\"%1\"?>").arg(name));
 #else
     name = QLatin1String(QTextCodec::codecForLocale()->name());
     name.replace(QStringLiteral("ISO "), QStringLiteral("iso-"));
@@ -392,7 +390,7 @@ void KDocTools::setupStandardDirs(const QString &srcdir)
         catalogs += QUrl::fromLocalFile(srcdir + QStringLiteral("/customization/catalog.xml")).toEncoded();
         s_dtdDirs()->srcdir = srcdir;
     }
-    //qCDebug(KDocToolsLog) << "XML_CATALOG_FILES: " << catalogs;
+    // qCDebug(KDocToolsLog) << "XML_CATALOG_FILES: " << catalogs;
     qputenv("XML_CATALOG_FILES", catalogs);
     xmlInitializeCatalog();
 #if defined(_MSC_VER)
@@ -433,8 +431,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     // This is the case on build.kde.org where kdelibs4support installs catalogs
     // in a different prefix than kdoctools.
     const QString fileName = QStringLiteral("kf5/kdoctools/") + file;
-    QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-            fileName, option);
+    QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, fileName, option);
 
     // fallback to stuff installed with KDocTools
     const QFileInfo fileInInstallDataDir(QStringLiteral(KDOCTOOLS_INSTALL_DATADIR_KF5) + QStringLiteral("/kdoctools/") + file);
@@ -457,8 +454,7 @@ QStringList getKDocToolsCatalogs()
 {
     // Find all catalogs as catalog*.xml, and add them to the list, starting
     // from catalog.xml (the main one).
-    const QStringList dirNames = locateFilesInDtdResource(QStringLiteral("customization"),
-                                                    QStandardPaths::LocateDirectory);
+    const QStringList dirNames = locateFilesInDtdResource(QStringLiteral("customization"), QStandardPaths::LocateDirectory);
     if (dirNames.isEmpty()) {
         return QStringList();
     }
@@ -466,14 +462,13 @@ QStringList getKDocToolsCatalogs()
     for (const QString &customizationDirName : dirNames) {
         QDir customizationDir = QDir(customizationDirName);
         const QStringList catalogFileFilters(QStringLiteral("catalog*.xml"));
-        const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters,
-                                               QDir::Files, QDir::Name);
+        const QFileInfoList catalogInfoFiles = customizationDir.entryInfoList(catalogFileFilters, QDir::Files, QDir::Name);
         for (const QFileInfo &fileInfo : catalogInfoFiles) {
             const QString fullFileName = QUrl::fromLocalFile(fileInfo.absoluteFilePath()).toEncoded();
             if (fileInfo.fileName() == QStringLiteral("catalog.xml")) {
-               catalogFiles.prepend(fullFileName);
+                catalogFiles.prepend(fullFileName);
             } else {
-               catalogFiles.append(fullFileName);
+                catalogFiles.append(fullFileName);
             }
         }
     }
@@ -482,7 +477,7 @@ QStringList getKDocToolsCatalogs()
     for (const QString &aCatalog : qAsConst(catalogFiles)) {
         catalogs << aCatalog;
     }
-    //qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
+    // qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
     return catalogs;
 }
 

@@ -15,7 +15,7 @@ static inline FILE *popen(const char *command, const char *mode)
     return _popen(command, mode);
 }
 
-static inline int pclose(FILE* file)
+static inline int pclose(FILE *file)
 {
     return _pclose(file);
 }
@@ -49,12 +49,12 @@ CheckResult check(const QString &checkFilename, const QString &exe, const QByteA
         cmd += file.fileName();
         cmd += QStringLiteral(" 2>&1");
         FILE *xmllint = popen(QFile::encodeName(cmd).constData(), "r");
-        char buf[ 512 ];
+        char buf[512];
         bool noout = true;
         size_t n;
         while ((n = fread(buf, 1, sizeof(buf) - 1, xmllint))) {
             noout = false;
-            buf[ n ] = '\0';
+            buf[n] = '\0';
             fputs(buf, stderr);
         }
         pclose(xmllint);
@@ -101,9 +101,7 @@ void doOutput(QString output, bool usingStdOut, bool usingOutput, const QString 
             }
             int filename_index = index + qstrlen("<FILENAME filename=\"");
 
-            const QString filename = output.mid(filename_index,
-                                                output.indexOf(QLatin1Char('\"'), filename_index) -
-                                                filename_index);
+            const QString filename = output.mid(filename_index, output.indexOf(QLatin1Char('\"'), filename_index) - filename_index);
 
             QString filedata = splitOut(output, index);
             QFile file(filename);

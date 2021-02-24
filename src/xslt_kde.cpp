@@ -18,7 +18,7 @@ bool KDocTools::saveToCache(const QString &contents, const QString &filename)
     fd.close();
 #else
     qCWarning(KDocToolsLog) << "This function is dummy because KArchive support has been disabled. "
-               "This mode should be enabled only for specific usage on KDE infrastructure.";
+                               "This mode should be enabled only for specific usage on KDE infrastructure.";
     Q_UNUSED(contents)
     Q_UNUSED(filename)
 #endif

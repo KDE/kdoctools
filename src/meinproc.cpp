@@ -2,35 +2,35 @@
 #include "../config-kdoctools.h"
 #include "docbookxslt.h"
 #include "docbookxslt_p.h"
-#include "meinproc_common.h"
 #include "loggingcategory.h"
+#include "meinproc_common.h"
 
 #include <QCoreApplication>
-#include <QString>
-#include <QFile>
 #include <QDir>
+#include <QFile>
 #include <QFileInfo>
 #include <QList>
 #include <QStandardPaths>
+#include <QString>
 
 #include <QUrl>
 
-#include <libxml/xmlversion.h>
-#include <libxml/xmlmemory.h>
-#include <libxml/debugXML.h>
-#include <libxml/HTMLtree.h>
-#include <libxml/xmlIO.h>
-#include <libxml/parserInternals.h>
-#include <libxslt/xsltconfig.h>
-#include <libxslt/xsltInternals.h>
-#include <libxslt/transform.h>
-#include <libxslt/xsltutils.h>
 #include <libexslt/exslt.h>
+#include <libxml/HTMLtree.h>
+#include <libxml/debugXML.h>
+#include <libxml/parserInternals.h>
+#include <libxml/xmlIO.h>
+#include <libxml/xmlmemory.h>
+#include <libxml/xmlversion.h>
+#include <libxslt/transform.h>
+#include <libxslt/xsltInternals.h>
+#include <libxslt/xsltconfig.h>
+#include <libxslt/xsltutils.h>
 
-#include <string.h>
-#include <qplatformdefs.h>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
+#include <qplatformdefs.h>
+#include <string.h>
 
 using namespace KDocTools;
 
@@ -47,7 +47,11 @@ public:
 
 typedef QList<MyPair> PairList;
 
-#define DIE(x) do { qCCritical(KDocToolsLog) << "Error:" << x; exit(1); } while (0)
+#define DIE(x)                                                                                                                                                 \
+    do {                                                                                                                                                       \
+        qCCritical(KDocToolsLog) << "Error:" << x;                                                                                                             \
+        exit(1);                                                                                                                                               \
+    } while (0)
 
 void parseEntry(PairList &list, xmlNodePtr cur, int base)
 {
@@ -63,29 +67,25 @@ void parseEntry(PairList &list, xmlNodePtr cur, int base)
     /* We don't care what the top level element name is */
     cur = cur->xmlChildrenNode;
     while (cur != nullptr) {
-
         if (cur->type == XML_TEXT_NODE) {
             QString words = QString::fromUtf8((char *)cur->content);
             const QStringList wlist = words.simplified().split(QLatin1Char(' '), Qt::SkipEmptyParts);
-            for (QStringList::ConstIterator it = wlist.begin();
-                    it != wlist.end(); ++it) {
+            for (QStringList::ConstIterator it = wlist.begin(); it != wlist.end(); ++it) {
                 MyPair m;
                 m.word = *it;
                 m.base = base;
                 list.append(m);
             }
-        } else if (!xmlStrcmp(cur->name, (const xmlChar *) "entry")) {
+        } else if (!xmlStrcmp(cur->name, (const xmlChar *)"entry")) {
             parseEntry(list, cur, base);
         }
 
         cur = cur->next;
     }
-
 }
 
 int main(int argc, char **argv)
 {
-
     // xsltSetGenericDebugFunc(stderr, NULL);
 
     /*options.add("stylesheet <xsl>", ki18n("Stylesheet to use"));
@@ -107,13 +107,22 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(QCoreApplication::translate("main", "KDE Translator for XML"));
     parser.addHelpOption();
     parser.addVersionOption();
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("stylesheet"), QCoreApplication::translate("main", "Stylesheet to use"), QStringLiteral("xsl")));
+    parser.addOption(
+        QCommandLineOption(QStringList() << QStringLiteral("stylesheet"), QCoreApplication::translate("main", "Stylesheet to use"), QStringLiteral("xsl")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("stdout"), QCoreApplication::translate("main", "Output whole document to stdout")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("o") << QStringLiteral("output"), QCoreApplication::translate("main", "Output whole document to file"), QStringLiteral("file")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("o") << QStringLiteral("output"),
+                                        QCoreApplication::translate("main", "Output whole document to file"),
+                                        QStringLiteral("file")));
     parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("check"), QCoreApplication::translate("main", "Check the document for validity")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("cache"), QCoreApplication::translate("main", "Create a cache file for the document"), QStringLiteral("file")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("srcdir"), QCoreApplication::translate("main", "Set the srcdir, for kdoctools"), QStringLiteral("dir")));
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("param"), QCoreApplication::translate("main", "Parameters to pass to the stylesheet"), QStringLiteral("key=value")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("cache"),
+                                        QCoreApplication::translate("main", "Create a cache file for the document"),
+                                        QStringLiteral("file")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("srcdir"),
+                                        QCoreApplication::translate("main", "Set the srcdir, for kdoctools"),
+                                        QStringLiteral("dir")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("param"),
+                                        QCoreApplication::translate("main", "Parameters to pass to the stylesheet"),
+                                        QStringLiteral("key=value")));
     parser.addPositionalArgument(QStringLiteral("xml"), QCoreApplication::translate("main", "The file to transform"));
     parser.process(app);
 
@@ -153,7 +162,7 @@ int main(int argc, char **argv)
         }
         QByteArray catalogs = lst.join(" ").toLocal8Bit();
         QString exe;
-#if defined( XMLLINT )
+#if defined(XMLLINT)
         exe = QStringLiteral(XMLLINT);
 #endif
         if (!QFileInfo(exe).isExecutable()) {
@@ -201,7 +210,9 @@ int main(int argc, char **argv)
     const QString cache = parser.value(QStringLiteral("cache"));
 #else
     if (parser.isSet("cache")) {
-        qCWarning(KDocToolsLog) << QCoreApplication::translate("main", "The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
+        qCWarning(KDocToolsLog) << QCoreApplication::translate(
+            "main",
+            "The cache option is not available, please re-compile with KArchive support. See MEINPROC_NO_KARCHIVE in KDocTools");
     }
 #endif
     const bool usingStdOut = parser.isSet(QStringLiteral("stdout"));
@@ -230,4 +241,3 @@ end:
     xmlMemoryDump();
     return (0);
 }
-
