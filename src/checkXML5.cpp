@@ -23,9 +23,7 @@ int main(int argc, char **argv)
     }
 
     QProcess meinproc;
-    meinproc.start("meinproc5",
-                   QStringList() << "--check"
-                                 << "--stdout" << arguments[1]);
+    meinproc.start(QStringLiteral("meinproc5"), QStringList{QStringLiteral("--check"), QStringLiteral("--stdout"), arguments[1]});
     if (!meinproc.waitForStarted())
         return -2;
     if (!meinproc.waitForFinished())

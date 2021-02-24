@@ -348,18 +348,18 @@ void replaceCharsetHeader(QString &output)
     name = "utf-8";
     // may be required for all xml output
     if (output.contains("<table-of-contents>"))
-        output.replace(QString("<?xml version=\"1.0\"?>"), QString("<?xml version=\"1.0\" encoding=\"%1\"?>").arg(name));
+        output.replace(QLatin1String("<?xml version=\"1.0\"?>"), QLatin1String("<?xml version=\"1.0\" encoding=\"%1\"?>").arg(name));
 #else
     name = QLatin1String(QTextCodec::codecForLocale()->name());
-    name.replace(QStringLiteral("ISO "), QStringLiteral("iso-"));
-    output.replace(QStringLiteral("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"),
-                   QStringLiteral("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=%1\">").arg(name));
+    name.replace(QLatin1String("ISO "), QLatin1String("iso-"));
+    output.replace(QLatin1String("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"),
+                   QLatin1String("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=%1\">").arg(name));
 #endif
 }
 
 QByteArray KDocTools::extractFileToBuffer(const QString &content, const QString &filename)
 {
-    int index = content.indexOf(QStringLiteral("<FILENAME filename=\"%1\"").arg(filename));
+    const int index = content.indexOf(QLatin1String("<FILENAME filename=\"%1\"").arg(filename));
     if (index == -1) {
         if (filename == QLatin1String("index.html")) {
             return fromUnicode(content);
