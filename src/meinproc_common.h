@@ -8,7 +8,7 @@ enum CheckFileResult {
     CheckFileSuccess,
     CheckFileDoesNotExist,
     CheckFileIsNotFile,
-    CheckFileIsNotReadable
+    CheckFileIsNotReadable,
 };
 
 CheckFileResult checkFile(const QString &checkFilename);
@@ -16,7 +16,7 @@ CheckFileResult checkFile(const QString &checkFilename);
 enum CheckResult {
     CheckSuccess,
     CheckNoOut,
-    CheckNoXmllint
+    CheckNoXmllint,
 };
 
 CheckResult check(const QString &checkFilename, const QString &exe, const QByteArray &catalogs);
