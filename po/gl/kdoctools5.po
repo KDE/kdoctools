@@ -1,0 +1,41 @@
+# translation of kio_help4.po to galician
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# mvillarino <mvillarino@users.sourceforge.net>, 2007, 2009.
+# marce villarino <mvillarino@users.sourceforge.net>, 2009.
+# Marce Villarino <mvillarino@gmail.com>, 2009.
+# Marce Villarino <mvillarino@kde-espana.es>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-25 02:22+0100\n"
+"PO-Revision-Date: 2011-12-27 11:07+0100\n"
+"Last-Translator: Marce Villarino <mvillarino@kde-espana.es>\n"
+"Language-Team: Galician <proxecto@trasno.net>\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: xslt.cpp:138
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "Estase a procesar a folla de estilos"
+
+#: xslt.cpp:161
+#, kde-format
+msgid "Parsing document"
+msgstr "Estase a procesar o documento"
+
+#: xslt.cpp:186
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "Estase a aplicar a folla de estilos"
+
+#: xslt.cpp:194
+#, kde-format
+msgid "Writing document"
+msgstr "Estase a escribir o documento"

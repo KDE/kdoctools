@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Swedish "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>meinproc5 användarhandbok</title>
+<!-- There is no author in the meinproc.cpp file 
+Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
+
+<author>
+<firstname
+>Matthias </firstname>
+<surname
+>Hoelzer-Kluepfel</surname>
+<affiliation>
+<address
+><email
+>hoelzer@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Stephan</firstname>
+<surname
+>Kulow</surname>
+<affiliation>
+<address
+><email
+>coolo@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Cornelius</firstname>
+<surname
+>Schumacher</surname>
+<affiliation>
+<address
+><email
+>schumacher@kde.org</email
+></address>
+</affiliation>
+</author>
+-->
+<date
+>2014-05-08</date>
+<releaseinfo
+>Ramverk 5.0</releaseinfo>
+<productname
+>KDE Ramverk</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>meinproc5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>meinproc5</command
+></refname>
+<refpurpose
+>&kde;:s översättare av &XML;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>Översikt</title>
+
+<cmdsynopsis
+><command
+>meinproc5</command
+> <arg choice="opt"
+>-h, --help</arg
+> <arg choice="opt"
+>-v, --version</arg
+> <arg choice="opt"
+>--cache<replaceable
+> fil</replaceable
+></arg
+> <arg choice="opt"
+>--check</arg
+> <arg choice="opt"
+>--srcdir<replaceable
+> katalog</replaceable
+></arg
+> <arg choice="opt"
+>--param <replaceable
+>nyckel</replaceable
+>=<replaceable
+>värde</replaceable
+></arg
+> <group
+> <group
+> <arg
+>-o</arg
+> <arg
+>--output</arg
+> </group
+> <replaceable
+> fil</replaceable
+> </group
+> <arg choice="opt"
+>--stdout</arg
+> <arg choice="opt"
+>--stylesheet<replaceable
+> xsl</replaceable
+></arg
+> <arg choice="plain"
+>docbook-fil</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivning</title>
+
+<para
+><command
+>meinproc5</command
+> konverterar DocBook-filer till &HTML;. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Allmänna väljare</title>
+<para>
+<variablelist>
+
+<varlistentry>
+  <term
+><option
+>-h</option
+><option
+>--help</option
+></term>
+<listitem>
+<para
+>Visa hjälp om väljare. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+><option
+>--version</option
+></term>
+<listitem>
+<para
+>Visa versionsinformation. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1>
+<title
+>Programväljare</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>--cache</option
+> <parameter
+>fil</parameter
+></term>
+<listitem>
+<para
+>Skapa en cachefil för dokumentet. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--check</option
+></term>
+<listitem>
+<para
+>Kontrollera att dokumentet är giltigt.</para>
+<screen
+>Utmatningen kan vara något skrämmande, eftersom ett litet misstag kan orsaka en kaskad av fel.
+Knepet är att titta på det första felet, rätta det, spara filen och köra <command
+>meinproc5</command
+> igen.
+</screen>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-o</option
+>, <option
+>--output</option
+><parameter
+> fil</parameter
+></term>
+<listitem>
+<para
+>Skriv ut hela dokumentet i <parameter
+>fil</parameter
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stdout</option
+></term>
+<listitem>
+<para
+>Skriv ut hela dokumentet på standardutmatningen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <parameter
+>xsl</parameter
+></term>
+<listitem>
+<para
+>Stilmall att använda. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--srcdir</option
+> <parameter
+>kat</parameter
+></term>
+<listitem>
+<para
+>Ställ in rotkatalogen för att leta efter kdoctools. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--param</option
+> nyckel=värde</term>
+<listitem>
+<para
+>Ställ in parametrar att skicka till stilmallen. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Användning</title>
+<para
+>Det vanligaste sättet att köra <command
+>meinproc5</command
+> är helt enkelt som <literallayout>
+<userinput
+><command
+>meinproc5</command
+> <replaceable
+>docbook-fil</replaceable>
+</userinput>
+</literallayout
+> där <replaceable
+>docbook-fil</replaceable
+> oftast är index.docbook. Kommandot skapar &HTML;-sidor från DocBook-filen. Observera att sidorna bara går att titta på i &kde;-baserade webbläsare (som &konqueror;). </para>
+<para
+>Om du behöver visa &HTML;-utmatningen i en annan webbläsare (om du till exempel gör den direkt tillgänglig på nätet), använd <literallayout>
+<userinput
+><command
+>meinproc5</command
+> --stylesheet <replaceable
+>stilmallsnamn</replaceable
+> <replaceable
+>docbook-fil</replaceable>
+</userinput>
+</literallayout
+> där <replaceable
+>stilmallsnamn</replaceable
+> är den fullständiga sökvägen till en av &XSL;-stilmallarna i  &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. För att skapa utmatning lämplig för webben, kan du använda <command
+>kde-web.xsl</command
+> eller <command
+>kde-chunk-online.xsl</command
+>. Se filen <filename
+>README</filename
+> i den katalogen för mer detaljerad information. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7), <replaceable
+>qt5options</replaceable
+>(7)</para>
+</refsect1>
+
+<refsect1>
+<title
+>Fel</title>
+<para
+>Använd <ulink url="https://bugs.kde.org"
+>&kde;:s felspårningssystem</ulink
+> för att rapportera fel.</para>
+</refsect1>
+
+</refentry>
+
+
+
