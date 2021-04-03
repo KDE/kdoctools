@@ -1,0 +1,38 @@
+# translation of kio_help4.po to Swedish
+# Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-25 02:22+0100\n"
+"PO-Revision-Date: 2007-08-15 22:35+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: xslt.cpp:138
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "Tolkar stilmall"
+
+#: xslt.cpp:161
+#, kde-format
+msgid "Parsing document"
+msgstr "Tolkar dokument"
+
+#: xslt.cpp:186
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "Tillämpar stilmall"
+
+#: xslt.cpp:194
+#, kde-format
+msgid "Writing document"
+msgstr "Skriver dokument"
