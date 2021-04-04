@@ -1,0 +1,40 @@
+# translation of kio_help4.po to Latvian
+# Copyright (C) 2007 Free Software Foundation, Inc.
+#
+# Maris Nartiss <maris.kde@gmail.com>, 2007.
+# Viesturs Zarins <viesturs.zarins@mii.lu.lv>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-25 02:22+0100\n"
+"PO-Revision-Date: 2007-12-08 22:06+0200\n"
+"Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
+"Language-Team: Latvian <locale@laka.lv>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
+"2);\n"
+
+#: xslt.cpp:138
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "Pārsē stilu lapu"
+
+#: xslt.cpp:161
+#, kde-format
+msgid "Parsing document"
+msgstr "Parsē dokumentu"
+
+#: xslt.cpp:186
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "Piemēro stilu lapu"
+
+#: xslt.cpp:194
+#, kde-format
+msgid "Writing document"
+msgstr "Raksta dokumentu"
