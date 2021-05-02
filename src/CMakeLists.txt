@@ -66,7 +66,7 @@ install(FILES
     COMPONENT Devel
 )
 
-set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION_STRING}
+set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION}
                                              SOVERSION ${KDOCTOOLS_SOVERSION}
                                              EXPORT_NAME DocTools
 )
