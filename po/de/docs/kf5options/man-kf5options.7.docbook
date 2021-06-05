@@ -1,0 +1,163 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % German "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>&frameworks;-Befehlszeilendokumentation</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2016-05-13</date>
+<releaseinfo
+>Frameworks 5.22</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Allgemeine Befehlszeilenparameter für alle Anwendungen, die auf &kf5-full; basieren.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>KDE application</replaceable
+></command
+> <arg choice="opt"
+><option
+>-h, --help</option
+></arg
+> <arg choice="opt"
+><option
+>-v, --version</option
+></arg
+> <arg choice="opt"
+><option
+>--author</option
+></arg
+> <arg choice="opt"
+><option
+>--license</option
+></arg
+> <arg choice="opt"
+><option
+>--desktopfile</option
+> <replaceable
+>file name</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Optionen</title>
+
+<para
+>Die folgenden Parameter gelten für alle &kde;-Anwendungen:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>-h</option
+> <option
+>--help</option
+></term>
+<listitem
+><para
+>Zeigt die Optionen für die Befehlszeile an.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+> <option
+>--version</option
+></term>
+<listitem>
+<para
+>Zeigt Versionsinformationen für das <replaceable
+>KDE-Programm</replaceable
+> an</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--author</option
+></term>
+<listitem
+><para
+>Zeigt die Autoren des <replaceable
+>KDE-Programms</replaceable
+> im Terminalfenster an</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--license</option
+></term>
+<listitem
+><para
+>Zeigt Informationen zu den Lizenzbestimmungen.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--desktopfile</option
+> <replaceable
+>file name</replaceable
+></term>
+<listitem
+><para
+>Der Basis-Dateiname des Desktop-Eintrags dieser Anwendung.</para>
+<para
+>Dies ist besonders nützlich für Wrapper-Anwendungen und Anwendungen. die mehrere Desktop-Dateien haben. So kann jede Desktop-Datei ihre eigene Befehlszeile für den Eintrag <option
+>Exec</option
+> verwenden. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+<para
+>qt5options(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autoren</title>
+<para
+>Die Handbuchseite wurde ursprünglich für kdelibs4 von &Lauri.Watts;&Lauri.Watts.mail; geschrieben</para>
+<para
+>Aktualisierung für &frameworks; 5 durch &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+</refsect1>
+
+</refentry>
