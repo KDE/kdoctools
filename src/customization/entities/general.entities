@@ -316,6 +316,7 @@
 <!ENTITY krdc	"<application>Remote Desktop Connection</application>">
 <!ENTITY krecipes "<application>Krecipes</application>">
 <!ENTITY kregexpeditor	"<application>KRegExpEditor</application>">
+<!ENTITY krename "<application>KRename</application>">
 <!ENTITY kreversi	"<application>KReversi</application>">
 <!ENTITY krfb	"<application>Desktop Sharing</application>">
 <!ENTITY krita	"<application>Krita</application>">
