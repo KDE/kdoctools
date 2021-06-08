@@ -90,7 +90,7 @@ else ()
 endif ()
 include(KF5DocToolsMacros.cmake)
 
-set(KDOCTOOLS_LANGUAGES_LIST af bg ca cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
+set(KDOCTOOLS_LANGUAGES_LIST af bg ca cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sq sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
