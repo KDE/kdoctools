@@ -179,7 +179,6 @@ install_customize_l_dir( ${expr} customization/)
 set(expr "customization/catalog.xml")
 install_customize_l_dir( ${expr} customization/)
 
-set(${KDOCTOOLS_LANGUAGES_LIST} af bg ca cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
 set(customizedir ${KDOCTOOLS_LANGUAGES_LIST} dtd entities xsl)
 
 foreach (_currentcustomizedir ${customizedir})
