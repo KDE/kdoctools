@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>checkXML5 användarhandbok</title>
+<author
+><personname
+><firstname
+>Lauri</firstname
+><surname
+>Watts</surname
+></personname
+><email
+>lauri@kde.org</email
+></author>
+<date
+>2014-03-04</date>
+<releaseinfo
+>Ramverk 5.0</releaseinfo>
+<productname
+>KDE Ramverk</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>checkXML5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>checkXML5</command
+></refname>
+<refpurpose
+>Ett &XML;-kontrollverktyg för &kde; DocBook &XML;-dokument</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>checkXML5</command
+> <arg
+><replaceable
+>filnamn</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beskrivning</title>
+
+<para
+><command
+>checkXML5</command
+> är ett verktyg för att kontrollera syntaxfel i &kde; DocBook &XML;-filer. Det kan också användas för andra DocBook-baserade &XML;-filer, men du ska använda det mindre specifika verktyget xmllint(1) om du inte skriver eller på annat sätt arbetar med &kde;-dokumentation.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+<para
+>meinproc5(1) xmllint(1)</para>
+</refsect1>
+</refentry>
+
