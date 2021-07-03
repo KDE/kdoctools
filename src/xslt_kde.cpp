@@ -1,6 +1,6 @@
 #include "docbookxslt.h"
 #ifndef MEINPROC_NO_KARCHIVE
-#include <KFilterDev>
+#include <KCompressionDevice>
 #else
 #include "loggingcategory.h"
 #endif
@@ -8,7 +8,7 @@
 bool KDocTools::saveToCache(const QString &contents, const QString &filename)
 {
 #ifndef MEINPROC_NO_KARCHIVE
-    KFilterDev fd(filename);
+    KCompressionDevice fd(filename);
 
     if (!fd.open(QIODevice::WriteOnly)) {
         return false;
