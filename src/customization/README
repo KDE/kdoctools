@@ -14,7 +14,7 @@ kde-nochunk.xsl
 
 This is very similar to the standard KDE stylesheet, but it creates
 one single html file for the entire document.  This is one way to get
-print output, using html2pdf or html2ps.  It's also useable to create
+print output, using html2pdf or html2ps.  It's also usable to create
 a "printable version" of a document to link to on a website.
 
 kde-style.xsl

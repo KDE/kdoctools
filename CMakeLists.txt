@@ -128,7 +128,7 @@ configure_package_config_file(
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)
-# we need a separate copy with local pathes for install autotests
+# we need a separate copy with local paths for install autotests
 export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
 export(EXPORT KF5DocToolsToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsToolsTargets.cmake NAMESPACE KF5::)
 

@@ -47,7 +47,7 @@
   translations should only be told off when there is a difference with
   the English source of the same version.
 - mediaobject should always be accompanied by a text alternative
-- fixe role list for othercredit
+- fix role list for othercredit
 
 * Other
 - make clear: indexterm use (so that index can be activated)

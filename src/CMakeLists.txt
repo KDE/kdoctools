@@ -4,7 +4,7 @@ include(uriencode)
 kdoctools_encode_uri(DocBookXML4_DTD_DIR)
 set (_custom_dtd_kdex "customization/dtd/kdedbx45.dtd")
 configure_file(${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex} )
-# WARNING: this is due to severe limitations on the windows platform to keep the dtd relocateable
+# WARNING: this is due to severe limitations on the windows platform to keep the dtd relocatable
 # see the .xsl.cmake files for a more verbose explanation below
 if(NOT WIN32)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}

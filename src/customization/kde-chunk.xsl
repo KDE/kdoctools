@@ -71,7 +71,7 @@ set       toc,title
   <xsl:variable name="title">
     <xsl:apply-templates select="." mode="title.markup"/>
   </xsl:variable>
-  <!-- Hard-coding the GNU FDL is not appropriate, but for backward compatability,
+  <!-- Hard-coding the GNU FDL is not appropriate, but for backward compatibility,
        if the text in the legalnotice is the FDL notice, then just show the
        "Legal Notice" text, as KDE4 has done from very early.
        Otherwise, continue to process the contents of the legalnotice element -->
