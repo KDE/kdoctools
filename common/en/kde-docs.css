@@ -26,8 +26,10 @@ html, body {
 #contentBody {
     padding: 0;
     padding-bottom: 1em;
-    margin: 0;
     width: 100%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* This is for the header's navigation bar */
