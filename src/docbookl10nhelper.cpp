@@ -133,7 +133,8 @@ int main(int argc, char **argv)
     QTextStream inStream(&i18nFile);
     int parsingState = 0;
 
-    LangListType allLangs, customLangs;
+    LangListType allLangs;
+    LangListType customLangs;
 
     bool foundRxEntity = false;
     bool foundRxEntity2 = false;

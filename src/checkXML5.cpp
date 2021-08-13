@@ -24,10 +24,12 @@ int main(int argc, char **argv)
 
     QProcess meinproc;
     meinproc.start(QStringLiteral("meinproc5"), QStringList{QStringLiteral("--check"), QStringLiteral("--stdout"), arguments[1]});
-    if (!meinproc.waitForStarted())
+    if (!meinproc.waitForStarted()) {
         return -2;
-    if (!meinproc.waitForFinished())
+    }
+    if (!meinproc.waitForFinished()) {
         return -1;
+    }
     fprintf(stderr, "%s", meinproc.readAllStandardError().constData());
     return meinproc.exitCode();
 }
