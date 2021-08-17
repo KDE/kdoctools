@@ -243,6 +243,7 @@
 <!ENTITY kickoff "<application>Kickoff</application>">
 <!ENTITY kiconedit	"<application>KIconEdit</application>">
 <!ENTITY kig	"<application>Kig</application>">
+<!ENTITY kigo  "<application>Kigo</application>">
 <!ENTITY kikbd	"<application>kikbd</application>">
 <!ENTITY kile "<application>Kile</application>">
 <!ENTITY killbots "<application>Killbots</application>">
