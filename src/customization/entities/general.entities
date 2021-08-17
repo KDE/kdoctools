@@ -336,7 +336,7 @@
 <!ENTITY ksirtet	"<application>KSirtet</application>">
 <!ENTITY ksmiletris	"<application>KSmiletris</application>">
 <!ENTITY ksmserver      "<application>ksmserver</application>">
-<!ENTITY ksnake	"<application>KSnake</application>">
+<!ENTITY ksnakeduel	"<application>KSnakeDuel</application>">
 <!ENTITY ksnapshot	"<application>KSnapshot</application>">
 <!ENTITY ksokoban	"<application>KSokoban</application>">
 <!ENTITY kspaceduel	"<application>KSpaceDuel</application>">
