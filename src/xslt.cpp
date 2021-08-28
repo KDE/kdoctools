@@ -474,7 +474,7 @@ QStringList getKDocToolsCatalogs()
     }
 
     QStringList catalogs;
-    for (const QString &aCatalog : qAsConst(catalogFiles)) {
+    for (const QString &aCatalog : std::as_const(catalogFiles)) {
         catalogs << aCatalog;
     }
     // qCDebug(KDocToolsLog) << "Found catalogs: " << catalogs;
