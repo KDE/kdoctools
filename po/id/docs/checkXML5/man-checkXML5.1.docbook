@@ -1,0 +1,73 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Indonesian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Manual Penggunaan checkXML5</title>
+<author
+><personname
+><firstname
+>Lauri</firstname
+><surname
+>Watts</surname
+></personname
+><email
+>lauri@kde.org</email
+></author>
+<date
+>04-03-2014</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>checkXML5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>checkXML5</command
+></refname>
+<refpurpose
+>Sebuah alat lint &XML; untuk dokumen &XML; DocBook &kde;.</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>checkXML5</command
+> <arg
+><replaceable
+>nama file</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Deskripsi</title>
+
+<para
+><command
+>checkXML5</command
+> adalah sebuah alat untuk memeriksa sintaks-sintaks yang error dalam file-file &XML; DocBook &kde;. Ini juga bisa digunakan untuk DocBook lain yang berbasiskan file-file &XML;, tetapi kamu harus menggunakan alat xmllint(1) yang kurang spesifik jika kamu tidak menulis atau mengerjakan dokumen &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>Lihat Juga</title>
+<para
+>meinproc5(1) xmllint(1)</para>
+</refsect1>
+</refentry>
