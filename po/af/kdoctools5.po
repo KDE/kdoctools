@@ -1,0 +1,37 @@
+# UTF-8 test:äëïöü
+# Copyright (C) 2001 Free Software Foundation, Inc.
+# Frikkie Thirion <frix@expertron.co.za>, 2001,2002.
+# Juanita Franz <juanita.franz@vr-web.de>, 2005.
+msgid ""
+msgstr ""
+"Project-Id-Version: kio_help4 stable\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-25 02:22+0100\n"
+"PO-Revision-Date: 2005-11-25 11:29+0200\n"
+"Last-Translator: J Franz <juanita.franz@vr-web.de>\n"
+"Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: xslt.cpp:138
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "Verwerking stylblad"
+
+#: xslt.cpp:161
+#, kde-format
+msgid "Parsing document"
+msgstr "Verwerking dokument"
+
+#: xslt.cpp:186
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "Wend aan stylblad"
+
+#: xslt.cpp:194
+#, kde-format
+msgid "Writing document"
+msgstr "Om te skryf dokument"
