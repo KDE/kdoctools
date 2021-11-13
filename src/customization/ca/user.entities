@@ -73,13 +73,13 @@
 <!ENTITY revisor.Rafael.Carreras	'<othercredit role="reviewer"><firstname>Rafael</firstname><surname>Carreras</surname><affiliation><address><email>rcarreras@caliu.cat</email></address></affiliation><contrib>Revisor</contrib></othercredit>'>
 <!ENTITY traductor.Manuel.Tortosa	'<othercredit role="translator"><firstname>Manuel</firstname><surname>Tortosa</surname><affiliation><address><email>manutortosa@gmail.com</email></address></affiliation><contrib>Traductor</contrib></othercredit>'>
 <!ENTITY revisor.Manuel.Tortosa		'<othercredit role="reviewer"><firstname>Manuel</firstname><surname>Tortosa</surname><affiliation><address><email>manutortosa@gmail.com</email></address></affiliation><contrib>Revisor</contrib></othercredit>'>
-<!ENTITY traductor.JosepMa.Ferrer	'<othercredit role="translator"><firstname>Josep Ma.</firstname><surname>Ferrer</surname><affiliation><address><email>txemaq@gmail.com</email></address></affiliation><contrib>Traductor</contrib></othercredit>'>
-<!ENTITY revisor.JosepMa.Ferrer		'<othercredit role="reviewer"><firstname>Josep Ma.</firstname><surname>Ferrer</surname><affiliation><address><email>txemaq@gmail.com</email></address></affiliation><contrib>Revisor</contrib></othercredit>'>
+<!ENTITY traductor.JosepMa.Ferrer	'<othercredit role="translator"><firstname>Josep M.</firstname><surname>Ferrer</surname><affiliation><address><email>txemaq@gmail.com</email></address></affiliation><contrib>Traductor</contrib></othercredit>'>
+<!ENTITY revisor.JosepMa.Ferrer		'<othercredit role="reviewer"><firstname>Josep M.</firstname><surname>Ferrer</surname><affiliation><address><email>txemaq@gmail.com</email></address></affiliation><contrib>Revisor</contrib></othercredit>'>
 
 <!-- CREDITS FOR TRANSLATORS -->
-<!-- Seguir el següent format '<para>Traductor/Revisor de la documentació: &credits.Nom.Cognom;</para>' -->
+<!-- Seguir el format següent: '<para>Traductor/Revisor de la documentació: &credits.Nom.Cognom;</para>' -->
 <!ENTITY credits.Antoni.Bella		'Antoni Bella <email>antonibella5@yahoo.com</email>'>
 <!ENTITY credits.Pep.Roca		    'Pep Roca <email>pep.roca@gmail.com</email>'>
 <!ENTITY credits.Rafael.Carreras	'Rafael Carreras <email>rcarreras@caliu.cat</email>'>
 <!ENTITY credits.Manuel.Tortosa		'Manuel Tortosa <email>manutortosa@gmail.com</email>'>
-<!ENTITY credits.JosepMa.Ferrer		'Josep Ma. Ferrer <email>txemaq@gmail.com</email>'>
+<!ENTITY credits.JosepMa.Ferrer		'Josep M. Ferrer <email>txemaq@gmail.com</email>'>

@@ -10,7 +10,7 @@
 </menuchoice>
 </term>
 <listitem><para><action>Inicia el sistema d'ajuda del KDE</action>
-mostrant les pàgines d'ajuda pel &kappname; (aquest document).</para>
+mostrant les pàgines d'ajuda per al &kappname; (aquest document).</para>
 </listitem>
 </varlistentry>
 
@@ -44,7 +44,7 @@ podreu informar d'un error o requerir una característica
 <guimenu>Ajuda</guimenu>
 <guimenuitem>Canvia l'idioma de l'aplicació...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Obre un diàleg</action> des d'on podreu editar les 
+<listitem><para><action>Obre un diàleg</action> des d'on podreu editar les
 opcions <guilabel>Idioma principal</guilabel> i <guilabel>Idioma de reserva
 </guilabel> per a aquesta aplicació.</para></listitem>
 </varlistentry>
