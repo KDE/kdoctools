@@ -32,7 +32,11 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.15.2)
-find_package(Qt5Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt${QT_MAJOR_VERSION}Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+if (${QT_MAJOR_VERSION} STREQUAL "6")
+    find_package(Qt6Core5Compat REQUIRED CONFIG) # QTextCodec
+endif()
+
 include(KDEInstallDirs)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(KDECMakeSettings)
@@ -124,7 +128,7 @@ configure_package_config_file(
   "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
   "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
   PATH_VARS
-    KDE_INSTALL_DATADIR_KF5
+    KDE_INSTALL_DATADIR_KF
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
 configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)

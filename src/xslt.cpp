@@ -434,7 +434,7 @@ QStringList locateFilesInDtdResource(const QString &file, const QStandardPaths::
     QStringList result = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, fileName, option);
 
     // fallback to stuff installed with KDocTools
-    const QFileInfo fileInInstallDataDir(QStringLiteral(KDOCTOOLS_INSTALL_DATADIR_KF5) + QStringLiteral("/kdoctools/") + file);
+    const QFileInfo fileInInstallDataDir(QStringLiteral(KDOCTOOLS_INSTALL_DATADIR_KF) + QStringLiteral("/kdoctools/") + file);
     if (fileInInstallDataDir.exists()) {
         if ((option == QStandardPaths::LocateFile) && fileInInstallDataDir.isFile()) {
             result.append(fileInInstallDataDir.absoluteFilePath());

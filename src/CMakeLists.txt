@@ -8,9 +8,9 @@ configure_file(${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_d
 # see the .xsl.cmake files for a more verbose explanation below
 if(NOT WIN32)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}
-        DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/dtd )
+        DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd )
 else()
-    get_filename_component(NORMALIZED_DTD_INSTALL_PATH "${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/dtd" ABSOLUTE)
+    get_filename_component(NORMALIZED_DTD_INSTALL_PATH "${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd" ABSOLUTE)
     # file(RELATIVE_PATH ...) returns wrong values for paths containing /../ (it doesn't normalize the path)
     # To work around this we make sure the variable passed has all /../ elements
     # removed using get_filename_component(... ABSOLUTE)
@@ -23,7 +23,7 @@ else()
         configure_file(\"${CMAKE_CURRENT_SOURCE_DIR}/${_custom_dtd_kdex}.cmake\" \"${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install\")"
     )
     get_filename_component(_custom_dtd_kdex_name ${_custom_dtd_kdex} NAME)
-    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/dtd RENAME ${_custom_dtd_kdex_name})
+    install(FILES "${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd RENAME ${_custom_dtd_kdex_name})
 endif()
 
 ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
@@ -42,18 +42,28 @@ if (NOT MEINPROC_NO_KARCHIVE)
 else()
     set (_private_link_karchive "")
 endif()
+
+if (TARGET Qt6::Core5Compat)
+    set(_qt5_compat_lib Qt6::Core5Compat) # QTextCodec
+endif()
+
 target_link_libraries(KF5DocTools
     PUBLIC
-        Qt5::Core
+        Qt${QT_MAJOR_VERSION}::Core
     PRIVATE
-        ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${_private_link_karchive}
+        ${LIBXML2_LIBRARIES}
+        ${LIBXSLT_LIBRARIES}
+        ${LIBXSLT_EXSLT_LIBRARIES}
+        ${_private_link_karchive}
+        ${_qt5_compat_lib}
 )
+
 set_target_properties(KF5DocTools PROPERTIES
     POSITION_INDEPENDENT_CODE TRUE
     EXPORT_NAME KDocTools
 )
 
-target_include_directories(KF5DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools>")
+target_include_directories(KF5DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools>")
 
 set(KDocTools_HEADERS
     docbookxslt.h
@@ -62,7 +72,7 @@ set(KDocTools_HEADERS
 install(FILES
     ${KDocTools_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KDocTools
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools
     COMPONENT Devel
 )
 
@@ -108,7 +118,16 @@ endif()
 
 add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
 ecm_mark_nongui_executable(meinproc5)
-target_link_libraries(meinproc5 Qt5::Core ${LIBXML2_LIBRARIES} ${LIBXSLT_LIBRARIES} ${LIBXSLT_EXSLT_LIBRARIES} ${meinproc_additional_LIBS})
+target_link_libraries(meinproc5
+    PRIVATE
+        Qt${QT_MAJOR_VERSION}::Core
+        ${LIBXML2_LIBRARIES}
+        ${LIBXSLT_LIBRARIES}
+        ${LIBXSLT_EXSLT_LIBRARIES}
+        ${meinproc_additional_LIBS}
+        ${_qt5_compat_lib}
+)
+
 target_compile_definitions(meinproc5 PRIVATE -DKDOCTOOLS_EXPORT=)
 install(TARGETS meinproc5 EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
@@ -134,12 +153,12 @@ foreach( _kdeincludexslt ${_kdeincludexslt_ALL} )
     configure_file( ${_kdeincludexslt} ${_kdeincludexslt_binarypath} )
     if(NOT WIN32)
         install(FILES ${_kdeincludexslt_binarypath}
-            DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization )
+            DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization )
     else()
         install(CODE
-            "FILE(RELATIVE_PATH DOCBOOKXSL_DIR \${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization ${DOCBOOKXSL_DIR})
+            "FILE(RELATIVE_PATH DOCBOOKXSL_DIR \${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization ${DOCBOOKXSL_DIR})
             CONFIGURE_FILE( \"${_kdeincludexslt}\" \"${_kdeincludexslt_binarypath}.install\" )")
-            install(FILES "${_kdeincludexslt_binarypath}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization RENAME ${_kdeincludexslt_out})
+            install(FILES "${_kdeincludexslt_binarypath}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization RENAME ${_kdeincludexslt_out})
     endif()
 endforeach( _kdeincludexslt ${_kdeincludexslt_ALL} )
 
@@ -149,7 +168,7 @@ endforeach( _kdeincludexslt ${_kdeincludexslt_ALL} )
 macro(INSTALL_CUSTOMIZE_DIR _expr _directory)
     FILE(GLOB _file_CUST "${_expr}" )
     foreach(_curentfile ${_file_CUST})
-        install(FILES ${_curentfile} DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/${_directory} )
+        install(FILES ${_curentfile} DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/${_directory} )
     endforeach(_curentfile ${_file_CUST})
 endmacro(INSTALL_CUSTOMIZE_DIR _expr _directory)
 
@@ -164,7 +183,7 @@ macro(INSTALL_CUSTOMIZE_L_DIR _expr _directory)
         configure_file(${_curentfile} ${_currentfile_binary_path} COPYONLY)
 
         install(FILES ${_currentfile_binary_path}
-            DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/${_directory} )
+            DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/${_directory} )
     endforeach(_curentfile ${_file_CUST})
 endmacro(INSTALL_CUSTOMIZE_L_DIR _expr _directory)
 
@@ -205,7 +224,7 @@ endforeach(_currentcustomizedir ${customizedir})
 set( docbookl10nhelper_SRCS docbookl10nhelper.cpp ${kdoctoolslog_core_SRCS})
 add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
-target_link_libraries( docbookl10nhelper Qt5::Core )
+target_link_libraries( docbookl10nhelper Qt${QT_MAJOR_VERSION}::Core )
 if(INSTALL_INTERNAL_TOOLS)
     install(TARGETS docbookl10nhelper EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
@@ -225,14 +244,14 @@ add_custom_command( TARGET docbookl10nhelper POST_BUILD
 
 # all-l10n.xml is generated by docbookl10nhelper
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/customization/xsl/all-l10n.xml
-    DESTINATION ${KDE_INSTALL_DATADIR_KF5}/kdoctools/customization/xsl/ )
+    DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/xsl/ )
 
 ########### checkxml5 helper ###############
 
 set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
 add_executable( checkXML5 ${checkXML5_SRCS} )
 ecm_mark_nongui_executable( checkXML5 )
-target_link_libraries( checkXML5 Qt5::Core )
+target_link_libraries( checkXML5 Qt${QT_MAJOR_VERSION}::Core )
 install(TARGETS checkXML5 EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)
