@@ -298,7 +298,8 @@ QByteArray fromUnicode(const QString &data)
 #else
     QTextCodec *locale = QTextCodec::codecForLocale();
     QByteArray result;
-    char buffer[30000];
+    constexpr int bufferSize = 30000;
+    char buffer[bufferSize];
     uint buffer_len = 0;
     uint len = 0;
     int offset = 0;
@@ -319,7 +320,7 @@ QByteArray fromUnicode(const QString &data)
         for (uint i = 0; i < len; i++) {
             QByteArray test = locale->fromUnicode(part.mid(i, 1));
             if (locale->toUnicode(test) == part.mid(i, 1)) {
-                if (buffer_len + test.length() + 1 > sizeof(buffer)) {
+                if (buffer_len + test.length() + 1 > bufferSize) {
                     break;
                 }
                 strcpy(buffer + buffer_len, test.data());
@@ -327,7 +328,7 @@ QByteArray fromUnicode(const QString &data)
             } else {
                 QString res = QStringLiteral("&#%1;").arg(part.at(i).unicode());
                 test = locale->fromUnicode(res);
-                if (buffer_len + test.length() + 1 > sizeof(buffer)) {
+                if (buffer_len + test.length() + 1 > bufferSize) {
                     break;
                 }
                 strcpy(buffer + buffer_len, test.data());
