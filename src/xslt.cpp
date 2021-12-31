@@ -24,7 +24,9 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QString>
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QTextCodec>
+#endif
 #include <QUrl>
 #include <QVector>
 
@@ -293,7 +295,7 @@ QString splitOut(const QString &parsed, int index)
 
 QByteArray fromUnicode(const QString &data)
 {
-#ifdef Q_OS_WIN
+#if defined(Q_OS_WIN) || QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     return data.toUtf8();
 #else
     QTextCodec *locale = QTextCodec::codecForLocale();
@@ -345,7 +347,7 @@ QByteArray fromUnicode(const QString &data)
 void replaceCharsetHeader(QString &output)
 {
     QString name;
-#ifdef Q_OS_WIN
+#if defined(Q_OS_WIN) || QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     name = "utf-8";
     // may be required for all xml output
     if (output.contains("<table-of-contents>"))

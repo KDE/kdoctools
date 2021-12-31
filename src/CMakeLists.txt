@@ -43,10 +43,6 @@ else()
     set (_private_link_karchive "")
 endif()
 
-if (TARGET Qt6::Core5Compat)
-    set(_qt5_compat_lib Qt6::Core5Compat) # QTextCodec
-endif()
-
 target_link_libraries(KF5DocTools
     PUBLIC
         Qt${QT_MAJOR_VERSION}::Core
@@ -55,7 +51,6 @@ target_link_libraries(KF5DocTools
         ${LIBXSLT_LIBRARIES}
         ${LIBXSLT_EXSLT_LIBRARIES}
         ${_private_link_karchive}
-        ${_qt5_compat_lib}
 )
 
 set_target_properties(KF5DocTools PROPERTIES
