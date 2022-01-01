@@ -1,0 +1,38 @@
+#
+#
+# Tamas Szanto <tszanto@interware.hu>, 2003.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.0\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-25 02:22+0100\n"
+"PO-Revision-Date: 2012-05-28 17:25+0200\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: xslt.cpp:138
+#, kde-format
+msgid "Parsing stylesheet"
+msgstr "A stíluslap feldolgozása"
+
+#: xslt.cpp:161
+#, kde-format
+msgid "Parsing document"
+msgstr "Dokumentum feldolgozása"
+
+#: xslt.cpp:186
+#, kde-format
+msgid "Applying stylesheet"
+msgstr "A stíluslap alkalmazása"
+
+#: xslt.cpp:194
+#, kde-format
+msgid "Writing document"
+msgstr "A dokumentum kiírása"

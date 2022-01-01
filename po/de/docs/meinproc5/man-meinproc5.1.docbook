@@ -1,0 +1,341 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % German "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>meinproc5-Benutzerhandbuch</title>
+<!-- There is no author in the meinproc.cpp file 
+Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
+
+<author>
+<firstname
+>Matthias </firstname>
+<surname
+>Hoelzer-Kluepfel</surname>
+<affiliation>
+<address
+><email
+>hoelzer@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Stephan</firstname>
+<surname
+>Kulow</surname>
+<affiliation>
+<address
+><email
+>coolo@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Cornelius</firstname>
+<surname
+>Schumacher</surname>
+<affiliation>
+<address
+><email
+>schumacher@kde.org</email
+></address>
+</affiliation>
+</author>
+-->
+<date
+>2014-05-08</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>meinproc5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>meinproc5</command
+></refname>
+<refpurpose
+>&kde;-Umsetzung für &XML;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>Übersicht</title>
+
+<cmdsynopsis
+><command
+>meinproc5</command
+> <arg choice="opt"
+>-h, --help</arg
+> <arg choice="opt"
+>-v, --version</arg
+> <arg choice="opt"
+>--cache<replaceable
+> datei</replaceable
+></arg
+> <arg choice="opt"
+>--check</arg
+> <arg choice="opt"
+>--srcdir<replaceable
+> ordner</replaceable
+></arg
+> <arg choice="opt"
+>--param <replaceable
+>schlüssel</replaceable
+>=<replaceable
+>wert</replaceable
+></arg
+> <group
+> <group
+> <arg
+>-o</arg
+> <arg
+>--output</arg
+> </group
+> <replaceable
+> datei</replaceable
+> </group
+> <arg choice="opt"
+>--stdout</arg
+> <arg choice="opt"
+>--stylesheet<replaceable
+> xsl</replaceable
+></arg
+> <arg choice="plain"
+>docbook-datei</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Beschreibung</title>
+
+<para
+><command
+>meinproc5</command
+> wandelt DocBook-Dateien in &HTML; um. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Allgemeine Optionen</title>
+<para>
+<variablelist>
+
+<varlistentry>
+  <term
+><option
+>-h</option
+><option
+>--help</option
+></term>
+<listitem>
+<para
+>Hilfe zu verfügbaren Optionen anzeigen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+><option
+>--version</option
+></term>
+<listitem>
+<para
+>Versionsinformation anzeigen. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1>
+<title
+>Anwendungsoptionen</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>--cache</option
+> <parameter
+>datei</parameter
+></term>
+<listitem>
+<para
+>Zwischenspeicher-Datei für das Dokument erstellen. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--check</option
+></term>
+<listitem>
+<para
+>Formale Korrektheit des Dokuments überprüfen.</para>
+<screen
+>Die Ausgaben können auf den ersten Blick abschreckend wirken, da ein einziger kleiner Fehler eine ganze Welle an Fehlermeldungen auslösen kann. Der Trick ist ganz einfach: Sehen Sie sich zunächst den ersten Fehler an, beheben Sie ihn, speichern die Datei und führen anschließend <command
+>meinproc5</command
+> erneut aus.
+</screen>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-o</option
+>, <option
+>--output</option
+><parameter
+> datei</parameter
+></term>
+<listitem>
+<para
+>Gesamtes Dokument in <parameter
+>datei</parameter
+> ausgeben. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stdout</option
+></term>
+<listitem>
+<para
+>Gesamtes Dokument auf stdout ausgeben. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <parameter
+>xsl</parameter
+></term>
+<listitem>
+<para
+>Zu benutzende Stilvorlage. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--srcdir</option
+> <parameter
+>ordner</parameter
+></term>
+<listitem>
+<para
+>Setzt den Basisordner für die Suche nach kdoctools. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--param</option
+> schlüssel=wert</term>
+<listitem>
+<para
+>Setzt Parameter, die an die Stilvorlage übergeben werden. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Benutzung</title>
+<para
+>Der meist genutzte Aufruf von <command
+>meinproc5</command
+> sieht ganz einfach so aus: <literallayout
+><userinput
+><command
+>meinproc5</command
+> <replaceable
+>Docbook-Datei</replaceable
+></userinput
+></literallayout
+>, wobei es sich bei der <replaceable
+>Docbook-Datei</replaceable
+> zumeist um die Datei index.docbook handelt. Mit diesem Aufruf werden &HTML;-Dateien erzeugt. Beachten Sie bitte, dass Sie die so erzeugten Dateien nur mit &kde;-basierten Browsern wie z. B. &konqueror; betrachten können. </para>
+<para
+>Wenn die erzeugten &HTML;-Dateien auch mit anderen Browsern betrachtet werden sollen (z. B. weil die Dateien im Internet veröffentlicht werden sollen), so verwenden Sie den Aufruf <literallayout
+><userinput
+><command
+>meinproc5</command
+> --stylesheet <replaceable
+>stylesheet-Name</replaceable
+> <replaceable
+>Docbook-Datei</replaceable
+></userinput
+></literallayout
+>, wobei es sich bei <replaceable
+>stylesheet-Name</replaceable
+> um den vollständigen Pfad zu einem der &XSL;-Stilvorlagen im Ordner &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization handelt. Um brauchbare Ausgaben für die Internet-Veröffentlichung zu erhalten, können Sie beispielsweise die Stilvorlage <command
+>kde-web.xsl</command
+> oder <command
+>kde-chunk-online.xsl</command
+> verwenden. In der <filename
+>README</filename
+>-Datei im gleichen Ordner finden Sie weitere Details. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Siehe auch</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7), <replaceable
+>qt5options</replaceable
+>(7)</para>
+</refsect1>
+
+<refsect1>
+<title
+>Fehler</title>
+<para
+>Bitte berichten Sie Fehler im <ulink url="https://bugs.kde.org"
+>Fehlerverfolgungssystem von &kde;</ulink
+>.</para>
+</refsect1>
+
+</refentry>
+
+
+
