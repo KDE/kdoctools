@@ -6,6 +6,12 @@ add_test(
 
 set(CTEST_ENVIRONMENT "QT_LOGGING_RULES=kf.doctools.core=true")
 
+if (TARGET Qt6::Core)
+    set(QT_VERSION_OPT "-DBUILD_WITH_QT6=ON")
+else()
+    set(QT_VERSION_OPT "-DBUILD_WITH_QT6=OFF")
+endif()
+
 add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
     --build-and-test
     "${CMAKE_CURRENT_SOURCE_DIR}/kdoctools-install"
@@ -22,6 +28,7 @@ add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
         "-DKDOCTOOLS_ENABLE_HTMLHANDBOOK=1"
         "-DCMAKE_VERBOSE_MAKEFILE=ON"
         "-D_kdoctoolsTestsRunning=1"
+        ${QT_VERSION_OPT}
     --test-command ${CMAKE_COMMAND}
         "-DKDE_INSTALL_MANDIR=${KDE_INSTALL_MANDIR}"
         "-DKDE_INSTALL_DOCBUNDLEDIR=${KDE_INSTALL_DOCBUNDLEDIR}"

@@ -1,3 +1,4 @@
+cmake_minimum_required(VERSION 3.16)
 project(kdoctools_install)
 
 find_package(ECM NO_MODULE)
