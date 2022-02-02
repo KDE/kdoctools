@@ -9,6 +9,7 @@
 
 #include <QCoreApplication>
 #include <QProcess>
+#include <QStandardPaths>
 
 #include <stdio.h>
 
@@ -22,8 +23,14 @@ int main(int argc, char **argv)
         return (1);
     }
 
+    const QString exec = QStandardPaths::findExecutable(QStringLiteral("meinproc5"));
+    if (exec.isEmpty()) {
+        qCCritical(KDocToolsLog) << "Could not find meinproc5 executable in PATH";
+        return 1;
+    }
+
     QProcess meinproc;
-    meinproc.start(QStringLiteral("meinproc5"), QStringList{QStringLiteral("--check"), QStringLiteral("--stdout"), arguments[1]});
+    meinproc.start(exec, QStringList{QStringLiteral("--check"), QStringLiteral("--stdout"), arguments[1]});
     if (!meinproc.waitForStarted()) {
         return -2;
     }
