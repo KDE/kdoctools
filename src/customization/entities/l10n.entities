@@ -114,6 +114,14 @@
 <!ENTITY % kde.i-default "IGNORE">
 ]]>
 
+<!ENTITY % Catalan-Valencian "IGNORE">
+<![%Catalan-Valencian;[
+<!ENTITY % kde.l10n.ents PUBLIC "-//KDE//ENTITIES Catalan (Valencian) Documentation V1.0//CAVALENCIA"
+           "../ca@valencia/lang.entities">
+%kde.l10n.ents;
+<!ENTITY % kde.i-default "IGNORE">
+]]>
+
 <!ENTITY % Czech "IGNORE">
 <![%Czech;[
 <!ENTITY % kde.l10n.ents PUBLIC "-//KDE//ENTITIES Czech Documentation V1.0//CS"
