@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Swedish "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Kommandoradsdokumentation för Ramverk</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2016-05-13</date>
+<releaseinfo
+>Ramverk 5.22</releaseinfo>
+<productname
+>KDE Ramverk</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>Gemensamma kommandoradsväljare för alla program som är baserade på &kde; Ramverk 5</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>KDE-program</replaceable
+></command
+> <arg choice="opt"
+><option
+>-h, --help</option
+></arg
+> <arg choice="opt"
+><option
+>-v, --version</option
+></arg
+> <arg choice="opt"
+><option
+>--author</option
+></arg
+> <arg choice="opt"
+><option
+>--license</option
+></arg
+> <arg choice="opt"
+><option
+>--desktopfile</option
+> <replaceable
+>filnamn</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Väljare</title>
+
+<para
+>Följande väljare gäller alla program som använder &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>-h</option
+> <option
+>--help</option
+></term>
+<listitem
+><para
+>Listar tillgängliga väljare på kommandoraden.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+> <option
+>--version</option
+></term>
+<listitem>
+<para
+>Listar versionsinformation för <replaceable
+>KDE-program</replaceable
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--author</option
+></term>
+<listitem
+><para
+>Listar upphovsmän till <replaceable
+>KDE-program</replaceable
+> i terminalfönstret.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--license</option
+></term>
+<listitem
+><para
+>Visar licensinformation.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--desktopfile</option
+> <replaceable
+>filnamn</replaceable
+></term>
+<listitem
+><para
+>Basfilnamnet på skrivbordsposten för programmet.</para>
+<para
+>Det är särskilt användbart för omgivande program och program som i allmänhet har flera skrivbordsfiler. På så sätt kan varje skrivbordsfil lägga till sitt eget namn i exec-kommandot. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Se också</title>
+<para
+>qt5options(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Upphovsmän</title>
+<para
+>Manualsidan ursprungligen skriven av &Lauri.Watts; &Lauri.Watts.mail; för kdelibs4</para>
+<para
+>Uppdaterad till Ramverk 5 av &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+</refsect1>
+
+</refentry>

@@ -1,0 +1,457 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Portuguese "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Documentação da Linha de Comandos do Qt</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<date
+>2016-06-04</date>
+<releaseinfo
+>&Qt; 5.4</releaseinfo>
+<productname
+>Plataformas do KDE</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>As opções comuns da linha de comandos que se baseiem nas bibliotecas do Qt</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>Aplicação do Qt</replaceable
+></command
+> <arg choice="opt"
+><option
+>-style=</option
+> <replaceable
+>estilo</replaceable
+> / <option
+>-style</option
+> <replaceable
+>estilo</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-stylesheet=</option
+> <replaceable
+>folha de estilo</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>folha de estilo</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-widgetcount</option
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>porto</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platform</option
+> <replaceable
+>nomePlataforma[:opções]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformpluginpath</option
+> <replaceable
+>localização</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformtheme</option
+> <replaceable
+>temaPlataforma</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-plugin</option
+> <replaceable
+>plugin</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowgeometry</option
+> <replaceable
+>geometria</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowicon</option
+> <replaceable
+>ícone</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowtitle</option
+> <replaceable
+>título</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-session</option
+> <replaceable
+>sessão</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-display</option
+> <replaceable
+>máquina:número_ecrã</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-geometry</option
+> <replaceable
+>geometria</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-h, --help e -? no Windows</option
+></arg
+> <arg choice="opt"
+><option
+>-v --version</option
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>Opções</title>
+
+<para
+>As seguintes opções aplicam-se a todas as aplicações do &Qt;:</para>
+
+<variablelist>
+<!--http://doc.qt.io/qt-5/qapplication.html#QApplication-->
+<varlistentry>
+<term
+><option
+>-style=</option
+> <replaceable
+>estilo</replaceable
+> / <option
+>-style</option
+> <replaceable
+>estilo</replaceable
+> </term>
+<listitem
+><para
+>Define o estilo gráfico da aplicação. Os valores possíveis dependem da configuração do sistema. Se o Qt for compilado com os estilos adicionais ou se tiver estilos adicionais como 'plugins', estes ficarão disponíveis na opção '-style' da linha de comandos.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-stylesheet=</option
+> <replaceable
+>folha de estilo</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>folha de estilo</replaceable
+> </term>
+<listitem
+><para
+>Define a folha de estilo da aplicação. O valor deverá ser a localização de um ficheiro que contém a dita folha de estilo. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-widgetcount</option>
+</term>
+<listitem
+><para
+>Imprime uma mensagem de depuração no fim sobre o número de elementos gráficos não destruídos e o número máximo de elementos que existiram ao mesmo tempo. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-reverse</option>
+</term>
+<listitem
+><para
+>Configura a direcção da formatação da aplicação como <methodname
+>Qt::RightToLeft</methodname
+>. Esta opção pretende ajudar na depuração e não deve ser usada em produção. O valor por omissão é detectado automaticamente a partir da região do utilizador (ver também o <methodname
+>QLocale::textDirection()</methodname
+>). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>porto</replaceable
+> </term>
+<listitem
+><para
+>Activa o depurador de QML/JS com um dado porto em particular. O valor deverá ser no formato porto:1234[,bloqueio], onde o bloqueio é opcional e fará com que a aplicação espere até que um depurador se ligue a ela. </para
+></listitem>
+</varlistentry>
+<!--http://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication-->
+<varlistentry>
+<term
+><option
+>-platform</option
+> <replaceable
+>nomePlataforma[:opções]</replaceable
+> </term>
+<listitem
+><para
+>Define o 'plugin' do QPA (Qt Platform Abstraction). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformpluginpath</option
+> <replaceable
+>localização</replaceable
+> </term>
+<listitem
+><para
+>Define a localização dos 'plugins' da plataforma. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformtheme</option
+> <replaceable
+>temaPlataforma</replaceable
+> </term>
+<listitem
+><para
+>Define o tema da plataforma. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-plugin</option
+> <replaceable
+>plugin</replaceable
+> </term>
+<listitem
+><para
+>Define os 'plugins' adicionais a carregar. O argumento poderá ocorrer várias vezes. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowgeometry</option
+> <replaceable
+>geometria</replaceable
+> </term>
+<listitem
+><para
+>Define a geometria da janela principal, usando a sintaxe do X11. Por exemplo: -qwindowgeometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowicon</option
+> <replaceable
+>ícone</replaceable
+> </term>
+<listitem
+><para
+>Define o ícone por omissão da janela. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowtitle</option
+> <replaceable
+>título</replaceable
+> </term>
+<listitem
+><para
+>Define o título da primeira janela. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-session</option
+> <replaceable
+>sessão</replaceable
+> </term>
+<listitem
+><para
+>Repõe a aplicação a partir de uma sessão anterior. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-display</option
+> <replaceable
+>máquina:número_ecrã</replaceable
+> </term>
+<listitem
+><para
+>Muda de ecrã no X11. Substitui a variável de ambiente DISPLAY. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-geometry</option
+> <replaceable
+>geometria</replaceable
+> </term>
+<listitem
+><para
+>Define a geometria da janela principal no X11. Por exemplo: -geometry 100x100+50+50. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+> </term>
+<listitem
+><para
+>Só disponível na '-platform windows'. O 'xp' usa as janelas nativas com o estilo do XP e o 'none' desactiva-as.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+> </term>
+<listitem
+><para
+>Usa o motor de tipos de letra FreeType. </para
+></listitem>
+</varlistentry>
+
+<!--http://doc.qt.io/qt-5/qcommandlineparser.html -->
+<varlistentry>
+<term>
+<option
+>-h, --help e -? no Windows</option>
+</term>
+<listitem
+><para
+>Imprime todas as opções e a descrição da aplicação. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-v --version</option>
+</term>
+<listitem
+><para
+>Mostra o texto da versão da aplicação. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>Veja Também</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Autores</title>
+<para
+>A página de manual foi escrita originalmente por &Lauri.Watts; &Lauri.Watts.mail;</para>
+<para
+>Actualizado para as Plataformas 5 por &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+<para
+>As informações desta página de manual são da <ulink url="http://doc.qt.io/qt-5/qapplication.html#QApplication"
+>documentação do QApplication</ulink
+>, da <ulink url="http://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication"
+>documentação do QGuiApplication</ulink
+> e da <ulink url="http://doc.qt.io/qt-5/qcommandlineparser.html"
+>documentação do QCommandLineParser</ulink
+>.</para>
+</refsect1>
+
+</refentry>
