@@ -280,141 +280,164 @@
 
 <!-- CREDITS FOR TRANSLATORS -->
 
-<!ENTITY DavidAmmouial     'David Ammouial <email></email>'>
-<!ENTITY FrederickAngelique 'Frederick Angelique <email>ti_orion@hotmail.fr</email>'>
-<!ENTITY PierreAuckenthaler 'Pierre Auckenthaler <email>pierre.auckenthaler@polytechnique.org</email>'>
-<!ENTITY KeziahAzad        'Keziah Azad <email>kydeza@yahoo.fr</email>'>
-<!ENTITY XavierBesnard      'Xavier Besnard <email>ktranslator31@yahoo.fr</email>'>
-<!ENTITY EricBischoff      'Éric Bischoff <email>e.bischoff@noos.fr</email>'>
-<!ENTITY JeromeBlanc       'Jérôme Blanc <email>01246774@brookes.ac.uk</email>'>
-<!ENTITY CyrilleBieuzent    'Cyrille Bieuzent <email>bieuzent@gmail.com</email>'>
-<!ENTITY YvesBrenner       'Yves Brenner <email>ybrenner@chez.com</email>'>
-<!ENTITY AdrienBoillot     'Adrien Boillot <email>bec.bunsen@laposte.net</email>'>
-<!ENTITY DanielBourrion    'DanielBourrion <email>daniel.bourrion@free.fr</email>'>
-<!ENTITY PierreBuard       'Pierre Buard <email>pierre.buard@gmail.com</email>'>
-<!ENTITY DanielCartron     'Daniel Cartron <email>d.cartron@senat.fr</email>'>
-<!ENTITY GillesCaulier     'Gilles Caulier <email>caulier.gilles@free.fr</email>'>
-<!ENTITY AlviseCavallari   'Alvise Cavallari <email>alvise.cavallari@kdemail.net</email>'>
-<!ENTITY PatrickChavas     'Patrick Chavas <email>pachavas@sun.cpe.fr</email>'>
-<!ENTITY ClementContet     'Clément Contet <email>keelize@yahoo.fr</email>'>
-<!ENTITY JoelleCornavin    'Joëlle Cornavin <email>jcorn@free.fr</email>'>
-<!ENTITY BenoitCosandier   'Benoit Cosandier <email>cosandier.benoit@bluewin.ch</email>'>
-<!ENTITY ThibautCousin     'Thibaut Cousin <email>cousin@in2p3.fr</email>'>
-<!ENTITY GerardDelafond    'Gérard Delafond <email>gerard@delafond.org</email>'>
-<!ENTITY InesDelafond      'Ines Delafond <email>ines@delafond.org</email>'>
-<!ENTITY CecileDelafond    'Cécile Delafond <email>cecile@delafond.org</email>'>
-<!ENTITY NicolasDelannoy    'Nicolas Delannoy <email>nicolas_delannoy@hotmail.fr</email>'>
-<!ENTITY OlivierDelaune    'Olivier Delaune <email>olivier.delaune@wanadoo.fr</email>'>
-<!ENTITY CharlesDemartigny 'Charles Demartigny <email>charles@demartigny.com</email>'>
-<!ENTITY SimonDepiets    'Simon Depiets <email>2df@tuxfamily.org</email>'>
-<!ENTITY YvesDessertine    'Yves Dessertine <email>kde@yvesd.net</email>'>
-<!ENTITY ChristopheDioux   'Christophe Dioux <email>chdioux@club-internet.fr</email>'>
-<!ENTITY PhillipDucharme   'Phillip Ducharme <email>philip.ducharme@hermes.usherb.ca</email>'>
-<!ENTITY NicolasDupuis     'Nicolas Dupuis <email>ndupuis@tiscali.be</email>'>
-<!ENTITY DanielDurand      'Daniel Durand <email>ddurand42@gmail.com</email>'>
-<!ENTITY HeleneDuwelzRebert 'Hélène Duwelz-Rebert <email>helened@herbalife.com</email>'>
-<!ENTITY GuillaumeDuwelzRebert 'Guillaume Duwelz-Rebert <email>gduwelz-rebert.cs@clearstream.com</email>'>
-<!ENTITY GuillaumeFahrner 'Guillaume Fahrner <email>Admin@SecurityHack.Org</email>'>
-<!ENTITY SamiFantar          'Sami Fantar <email>sami.fantar@laposte.net</email>'>
-<!ENTITY NilsSergioFernandez 'Nils Sergio Fernandez Rönningen <email>nilsfernandez@yahoo.fr</email>'>
-<!ENTITY JeanJacquesFinazzi 'Jean-Jacques Finazzi <email>jj.finazzi@club.fr</email>'>
-<!ENTITY SylvainFloury      'Sylvain Floury <email>contact@floury.org</email>'>
-<!ENTITY FredericFoiry       'Frédéric Foiry <email>frederic.foiry@wanadoo.fr</email>'>
-<!ENTITY JoseFournier        'José Fournier <email>jaaf.forums@zoraldia.com</email>'>
-<!ENTITY JeanJacquesFreulon  'Jean-Jacques Freulon <email>jeanjacques.freulon@free.fr</email>'>
-<!ENTITY SylvainGarsault  'Sylvain Garsault <email>sylvain.garsault@freesbee.fr</email>'>
-<!ENTITY LudovicGrossard   'Ludovic Grossard <email>grossard@kde.org</email>'>
-<!ENTITY StephaneGuedon   'Stéphane Guedon <email>stephane@22decembre.fr.nf</email>'>
-<!ENTITY JoelGuelluy   'Joël Guelluy <email>jguelluy@chez.com</email>'>
-<!ENTITY YvesGuillou   'Yves Guillou <email>yv_guil@club-internet.fr</email>'>
-<!ENTITY RobinGuitton   'Robin Guitton <email>robin.guitton@sud-ouest.org</email>'>
-<!ENTITY PhilippeGuilbert  'Philippe Guilbert <email>guilbertph@wanadoo.fr</email>'>
-<!ENTITY gregoireHubert  'Grégoire Hubert <email>greg@coolkeums.org</email>'>
-<!ENTITY YohannHamon  'Yohann Hamon <email>yohann_hamon@yahoo.fr</email>'>
-<!ENTITY QuentinHarbulot  'Quentin Harbulot <email>kant_120@hotmail.fr</email>'>
-<!ENTITY PierreHecart  'Pierre Hécart <email>phecart@gmail.com</email>'>
-<!ENTITY RobertJacolin     'Robert Jacolin <email>rjacolin@ifrance.com</email>'>
-<!ENTITY EquipeKDE         'l&apos;équipe française &kde;<email>doc@kde-france.org</email>'>
-<!ENTITY GoneriLeBouder    'Gonéri Le Bouder <email>goneri@gnuart.org</email>'>
-<!ENTITY NicolasLouveton    'Nicolas Louveton <email>nlouveton@gmail.com</email>'>
-<!ENTITY ChristopheLefebvre 'Christophe Lefebvre <email>clefebvre@netcourrier.com</email>'>
-<!ENTITY AnneMarieMahfouf  'Anne-Marie Mahfouf <email>annemarie.mahfouf@free.fr</email>'>
-<!ENTITY PatrickMichelon  'Patrick Michelon <email>patrick.michelon@free.fr</email>'>
-<!ENTITY JulienMorot  'Julien Morot <email>julien@momonux.org</email>'>
-<!ENTITY BaptisteMathus  'Baptiste Mathus <email>bmathus@free.fr</email>'>
-<!ENTITY Pierre-EmmanuelMuller 'Pierre-Emmanuel Müller <email>pem@levillage.org</email>'>
-<!ENTITY PaulMarcelinNana 'Paul-Marcelin Nana <email>paul.nana@tic.unilim.fr</email>'>
-<!ENTITY GregoryMarfjan 'Gregory Marfjan <email>gmarfjan@gmail.com</email>'>
-<!ENTITY YannNeveu 'Yann Neveu <email>yneveu@gmail.common</email>'>
-<!ENTITY CedricPasteur 'Cédric Pasteur <email>cedric.pasteur@free.fr</email>'>
-<!ENTITY PatricePawlak 'Patrice Pawlak <email>patrice.pawlak@free.fr</email>'>
-<!ENTITY RomainPelisse 'Romain Pelisse <email>belaran@gmail.com</email>'>
-<!ENTITY BrunoPinaud       'Bruno Pinaud <email>bpinaud@ifrance.com</email>'>
-<!ENTITY PeterPotrowl       'Peter Potrowl <email>peter017@gmail.com</email>'>
-<!ENTITY GillesPoulain       'Gilles Poulain <email>poulain.gilles@gmail.com</email>'>
-<!ENTITY RomainQuidet      'Romain Quidet <email>rquidet@yahoo.com</email>'>
-<!ENTITY LaurentRathle     'Laurent Rathle <email>lrathle@kde-france.org</email>'>
-<!ENTITY DamienRaudeMorvan 'Damien  Raude-Morvan <email>drazzib@drazzib.com</email>'>
-<!ENTITY OlivierRenaud     'Olivier Renaud <email>o.renaud@laposte.net</email>'>
-<!ENTITY SebastienRenard     'Sébastien Renard <email>Sebastien.Renard@digitalfox.homeip.net</email>'>
-<!ENTITY JosephRichard     'Joseph Richard <email>jrchcell@gmail.com</email>'>
-<!ENTITY ChristopheRolland 'Christophe Rolland <email>crolland@freesurf.fr</email>'>
-<!ENTITY BriceRothschild 'Brice Rothschild <email>brice.rothschild@gmail.com</email>'>
-<!ENTITY MickaelSibelle 'Mickaël Sibelle <email>kimael@gmail.com</email>'>
-<!ENTITY ArnaudMuchembled 'Arnaud Muchembled <email>arno.muchembled@orange.fr</email>'>
-<!ENTITY MathieuSchopfer 'Mathieu Schopfer <email>mat.schopfer@bluewin.ch</email>'>
-<!ENTITY PenelopeSorveyron 'Pénélope Sorveyron <email>goneri@free.fr</email>'>
-<!ENTITY NicolasTernissien   'Nicolas Ternissien <email>nicolast@libertysurf.fr</email>'>
-<!ENTITY GillesThioliere   'Gilles Thiolière <email>zhovirax@wanadoo.fr</email>'>
-<!ENTITY MathiasViallon   'Mathias Viallon <email>mathias.viallon@wanadoo.fr</email>'>
-<!ENTITY ThomasVergnaud   'Thomas Vergnaud <email>thomas.vergnaud@laposte.net</email>'>
-<!ENTITY YannVerley   'Yann Verley<email>yann.verley@free.fr</email>'>
-<!ENTITY StanislasZeller 'Stanislas Zeller <email>uncensored.assault@gmail.com</email>'>
+<!ENTITY DavidAmmouial              'David Ammouial <email></email>'>
+<!ENTITY FrederickAngelique         'Frederick Angelique <email>ti_orion@hotmail.fr</email>'>
+<!ENTITY PierreAuckenthaler         'Pierre Auckenthaler <email>pierre.auckenthaler@polytechnique.org</email>'>
+<!ENTITY KeziahAzad                 'Keziah Azad <email>kydeza@yahoo.fr</email>'>
+<!ENTITY XavierBesnard              'Xavier Besnard <email>ktranslator31@yahoo.fr</email>'>
+<!ENTITY EricBischoff               'Éric Bischoff <email>e.bischoff@noos.fr</email>'>
+<!ENTITY JeromeBlanc                'Jérôme Blanc <email>01246774@brookes.ac.uk</email>'>
+<!ENTITY CyrilleBieuzent            'Cyrille Bieuzent <email>bieuzent@gmail.com</email>'>
+<!ENTITY YvesBrenner                'Yves Brenner <email>ybrenner@chez.com</email>'>
+<!ENTITY AdrienBoillot              'Adrien Boillot <email>bec.bunsen@laposte.net</email>'>
+<!ENTITY DanielBourrion             'DanielBourrion <email>daniel.bourrion@free.fr</email>'>
+<!ENTITY PierreBuard                'Pierre Buard <email>pierre.buard@gmail.com</email>'>
+<!ENTITY DanielCartron              'Daniel Cartron <email>d.cartron@senat.fr</email>'>
+<!ENTITY GillesCaulier              'Gilles Caulier <email>caulier.gilles@free.fr</email>'>
+<!ENTITY AlviseCavallari            'Alvise Cavallari <email>alvise.cavallari@kdemail.net</email>'>
+<!ENTITY PatrickChavas              'Patrick Chavas <email>pachavas@sun.cpe.fr</email>'>
+<!ENTITY ClementContet              'Clément Contet <email>keelize@yahoo.fr</email>'>
+<!ENTITY JoelleCornavin             'Joëlle Cornavin <email>jcorn@free.fr</email>'>
+<!ENTITY BenoitCosandier            'Benoit Cosandier <email>cosandier.benoit@bluewin.ch</email>'>
+<!ENTITY ThibautCousin              'Thibaut Cousin <email>cousin@in2p3.fr</email>'>
+<!ENTITY GerardDelafond             'Gérard Delafond <email>gerard@delafond.org</email>'>
+<!ENTITY InesDelafond               'Ines Delafond <email>ines@delafond.org</email>'>
+<!ENTITY CecileDelafond             'Cécile Delafond <email>cecile@delafond.org</email>'>
+<!ENTITY NicolasDelannoy            'Nicolas Delannoy <email>nicolas_delannoy@hotmail.fr</email>'>
+<!ENTITY OlivierDelaune             'Olivier Delaune <email>olivier.delaune@wanadoo.fr</email>'>
+<!ENTITY CharlesDemartigny          'Charles Demartigny <email>charles@demartigny.com</email>'>
+<!ENTITY SimonDepiets               'Simon Depiets <email>2df@tuxfamily.org</email>'>
+<!ENTITY YvesDessertine             'Yves Dessertine <email>kde@yvesd.net</email>'>
+<!ENTITY ChristopheDioux            'Christophe Dioux <email>chdioux@club-internet.fr</email>'>
+<!ENTITY PhillipDucharme            'Phillip Ducharme <email>philip.ducharme@hermes.usherb.ca</email>'>
+<!ENTITY NicolasDupuis              'Nicolas Dupuis <email>ndupuis@tiscali.be</email>'>
+<!ENTITY DanielDurand               'Daniel Durand <email>ddurand42@gmail.com</email>'>
+<!ENTITY HeleneDuwelzRebert         'Hélène Duwelz-Rebert <email>helened@herbalife.com</email>'>
+<!ENTITY GuillaumeDuwelzRebert      'Guillaume Duwelz-Rebert <email>gduwelz-rebert.cs@clearstream.com</email>'>
+<!ENTITY GuillaumeFahrner           'Guillaume Fahrner <email>Admin@SecurityHack.Org</email>'>
+<!ENTITY SamiFantar                 'Sami Fantar <email>sami.fantar@laposte.net</email>'>
+<!ENTITY NilsSergioFernandez        'Nils Sergio Fernandez Rönningen <email>nilsfernandez@yahoo.fr</email>'>
+<!ENTITY JeanJacquesFinazzi         'Jean-Jacques Finazzi <email>jj.finazzi@club.fr</email>'>
+<!ENTITY SylvainFloury              'Sylvain Floury <email>contact@floury.org</email>'>
+<!ENTITY FredericFoiry              'Frédéric Foiry <email>frederic.foiry@wanadoo.fr</email>'>
+<!ENTITY JoseFournier               'José Fournier <email>jaaf.forums@zoraldia.com</email>'>
+<!ENTITY JeanJacquesFreulon         'Jean-Jacques Freulon <email>jeanjacques.freulon@free.fr</email>'>
+<!ENTITY SylvainGarsault            'Sylvain Garsault <email>sylvain.garsault@freesbee.fr</email>'>
+<!ENTITY LudovicGrossard            'Ludovic Grossard <email>grossard@kde.org</email>'>
+<!ENTITY StephaneGuedon             'Stéphane Guedon <email>stephane@22decembre.fr.nf</email>'>
+<!ENTITY JoelGuelluy                'Joël Guelluy <email>jguelluy@chez.com</email>'>
+<!ENTITY YvesGuillou                'Yves Guillou <email>yv_guil@club-internet.fr</email>'>
+<!ENTITY RobinGuitton               'Robin Guitton <email>robin.guitton@sud-ouest.org</email>'>
+<!ENTITY PhilippeGuilbert           'Philippe Guilbert <email>guilbertph@wanadoo.fr</email>'>
+<!ENTITY gregoireHubert             'Grégoire Hubert <email>greg@coolkeums.org</email>'>
+<!ENTITY YohannHamon                'Yohann Hamon <email>yohann_hamon@yahoo.fr</email>'>
+<!ENTITY QuentinHarbulot            'Quentin Harbulot <email>kant_120@hotmail.fr</email>'>
+<!ENTITY PierreHecart               'Pierre Hécart <email>phecart@gmail.com</email>'>
+<!ENTITY RobertJacolin              'Robert Jacolin <email>rjacolin@ifrance.com</email>'>
+<!ENTITY EquipeKDE                  'l&apos;équipe française &kde;<email>doc@kde-france.org</email>'>
+<!ENTITY GoneriLeBouder             'Gonéri Le Bouder <email>goneri@gnuart.org</email>'>
+<!ENTITY NicolasLouveton            'Nicolas Louveton <email>nlouveton@gmail.com</email>'>
+<!ENTITY ChristopheLefebvre         'Christophe Lefebvre <email>clefebvre@netcourrier.com</email>'>
+<!ENTITY AnneMarieMahfouf           'Anne-Marie Mahfouf <email>annemarie.mahfouf@free.fr</email>'>
+<!ENTITY PatrickMichelon            'Patrick Michelon <email>patrick.michelon@free.fr</email>'>
+<!ENTITY JulienMorot                'Julien Morot <email>julien@momonux.org</email>'>
+<!ENTITY BaptisteMathus             'Baptiste Mathus <email>bmathus@free.fr</email>'>
+<!ENTITY Pierre-EmmanuelMuller      'Pierre-Emmanuel Müller <email>pem@levillage.org</email>'>
+<!ENTITY PaulMarcelinNana           'Paul-Marcelin Nana <email>paul.nana@tic.unilim.fr</email>'>
+<!ENTITY GregoryMarfjan             'Gregory Marfjan <email>gmarfjan@gmail.com</email>'>
+<!ENTITY YannNeveu                  'Yann Neveu <email>yneveu@gmail.common</email>'>
+<!ENTITY CedricPasteur              'Cédric Pasteur <email>cedric.pasteur@free.fr</email>'>
+<!ENTITY PatricePawlak              'Patrice Pawlak <email>patrice.pawlak@free.fr</email>'>
+<!ENTITY RomainPelisse              'Romain Pelisse <email>belaran@gmail.com</email>'>
+<!ENTITY BrunoPinaud                'Bruno Pinaud <email>bpinaud@ifrance.com</email>'>
+<!ENTITY PeterPotrowl               'Peter Potrowl <email>peter017@gmail.com</email>'>
+<!ENTITY GillesPoulain              'Gilles Poulain <email>poulain.gilles@gmail.com</email>'>
+<!ENTITY RomainQuidet               'Romain Quidet <email>rquidet@yahoo.com</email>'>
+<!ENTITY LaurentRathle              'Laurent Rathle <email>lrathle@kde-france.org</email>'>
+<!ENTITY DamienRaudeMorvan          'Damien  Raude-Morvan <email>drazzib@drazzib.com</email>'>
+<!ENTITY OlivierRenaud              'Olivier Renaud <email>o.renaud@laposte.net</email>'>
+<!ENTITY SebastienRenard            'Sébastien Renard <email>Sebastien.Renard@digitalfox.homeip.net</email>'>
+<!ENTITY JosephRichard              'Joseph Richard <email>jrchcell@gmail.com</email>'>
+<!ENTITY ChristopheRolland          'Christophe Rolland <email>crolland@freesurf.fr</email>'>
+<!ENTITY BriceRothschild            'Brice Rothschild <email>brice.rothschild@gmail.com</email>'>
+<!ENTITY MickaelSibelle             'Mickaël Sibelle <email>kimael@gmail.com</email>'>
+<!ENTITY ArnaudMuchembled           'Arnaud Muchembled <email>arno.muchembled@orange.fr</email>'>
+<!ENTITY MathieuSchopfer            'Mathieu Schopfer <email>mat.schopfer@bluewin.ch</email>'>
+<!ENTITY PenelopeSorveyron          'Pénélope Sorveyron <email>goneri@free.fr</email>'>
+<!ENTITY NicolasTernissien          'Nicolas Ternissien <email>nicolast@libertysurf.fr</email>'>
+<!ENTITY GillesThioliere            'Gilles Thiolière <email>zhovirax@wanadoo.fr</email>'>
+<!ENTITY MathiasViallon             'Mathias Viallon <email>mathias.viallon@wanadoo.fr</email>'>
+<!ENTITY ThomasVergnaud             'Thomas Vergnaud <email>thomas.vergnaud@laposte.net</email>'>
+<!ENTITY YannVerley                 'Yann Verley<email>yann.verley@free.fr</email>'>
+<!ENTITY StanislasZeller            'Stanislas Zeller <email>uncensored.assault@gmail.com</email>'>
 
 <!-- OTHER USER ENTITIES -->
 
-<!ENTITY Alt			"<keycap>Alt</keycap>">
-<!ENTITY Correction     	"<keycap>Correction</keycap>">                            <!-- English: &Backspace; -->
-<!ENTITY BGS            	"bouton <mousebutton>gauche</mousebutton> de la souris">  <!-- English: &LMB; -->
-<!ENTITY BCS            	"bouton <mousebutton>central</mousebutton> de la souris"> <!-- English: &MMB; -->
-<!ENTITY BDS            	"bouton <mousebutton>droit</mousebutton> de la souris">   <!-- English: &RMB; -->
-<!ENTITY cad            	"c'est-à-dire">                                         <!-- English: &ie; -->
-<!ENTITY cdrom          	'<hardware>lecteur de CD-ROM</hardware>'>
-<!ENTITY centreAide     	"<application>Centre d'aide de &kde;</application>">
+<!ENTITY applications             "<productname>Applications</productname>">
+<!ENTITY Backspace                "<keysym>Retour arrière</keysym>">
+<!ENTITY Correction               "<keysym>Retour arrière</keysym>"> <!-- English: &Backspace; -->
+<!ENTITY Del                      "<keycap>Del</keycap>">
+<!ENTITY Down                     "<keysym>Bas</keysym>">
+<!ENTITY eg                       "<abbrev>p. ex.</abbrev>">
+<!ENTITY End                      "<keycap>End</keycap>">
+<!ENTITY Esc                      "<keycap>Esc</keycap>">
+<!ENTITY Home                     "<keycap>Home</keycap>">
+<!ENTITY cad                      "<abbrev>c'est-à-dire</abbrev>">
+<!ENTITY Ins                      "<keycap>Ins</keycap>">
+<!ENTITY Left                     "<keysym>Left</keysym>">
+<!ENTITY Meta                     "<keysym>Meta</keysym>">
+<!ENTITY plasma-mobile            "<productname>&kde; Plasma Mobile</productname>">
+<!ENTITY plasmapa                 "<productname>&kde; Plasma Pulseaudio</productname>">
+<!ENTITY PgUp                     "<keysym>PgUp</keysym>">
+<!ENTITY PgDn                     "<keysym>PgDn</keysym>">
+<!ENTITY Right                    "<keysym>Droite</keysym>">
+<!ENTITY Shift                    "<keycap>Shift</keycap>">
+<!ENTITY Space                    "<keysym>Espace</keysym>">
+<!ENTITY systemsettings           "<application>Réglages du système</application>">
+<!ENTITY Tab                      "<keycap>Tab</keycap>">
+<!ENTITY Up                       "<keysym>Up</keysym>">
+
+
+<!ENTITY Alt                    "<keycap>Alt</keycap>">
+<!ENTITY BGS                    "bouton <mousebutton>gauche</mousebutton> de la souris">                <!-- English: &LMB; -->
+<!ENTITY BCS                    "bouton <mousebutton>central</mousebutton> de la souris">               <!-- English: &MMB; -->
+<!ENTITY BDS                    "bouton <mousebutton>droit</mousebutton> de la souris">                 <!-- English: &RMB; -->
+<!ENTITY cdrom                  '<hardware>lecteur de CD-ROM</hardware>'>
+<!ENTITY centreAide             "<application>Centre d'aide de &kde;</application>">
 <!ENTITY centreConfiguration    '<application>Centre de configuration de &kde;</application>'>
-<!ENTITY configurationDuSysteme    '<application>configuration du système</application>'>
-<!ENTITY centreInformation    "<application>Centre d'information de &kde;</application>">
-<!ENTITY Ctrl        		"<keycap>Ctrl</keycap>">				  <!-- English: &Ctrl; -->
-<!ENTITY dpi            	'<acronym>dpi</acronym>'>
-<!ENTITY Echap          	'<keycap>Échap</keycap>'>                               <!-- English: &Esc; -->
-<!ENTITY Enter			'<keycap>Entrée</keycap>'>
-<!ENTITY Entree			'<keycap>Entrée</keycap>'>
-<!ENTITY etc            	"<abbrev>etc.</abbrev>">
-<!ENTITY FAQ            	'<acronym>FAQ</acronym>'>
-<!ENTITY mi			"messagerie instantanée">
-<!ENTITY kcontrol       	'<application>Centre de Configuration de &kde;</application>'>
-<!ENTITY kcontrolcenter 	'<application>Centre de Configuration de &kde;</application>'>
-<!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY khelpcenter    	'<application>Aide centralisée de &kde;</application>'>
-<!ENTITY partman 		"<application>gestionnaire de partitions de KDE</application>">
-<!ENTITY pex            	"par exemple">                                            <!-- English: &eg; -->
-<!ENTITY Maj            	'<keycap>Maj</keycap>'>                                   <!-- English: &Shift; -->
-<!ENTITY SE             	"système d'exploitation">                                <!-- English: &OS; -->
-<!ENTITY Tab                     "<keycap>Tab</keycap>">                                  <!-- English: Tab -->
+<!ENTITY configurationDuSysteme '<application>configuration du système</application>'>
+<!ENTITY centreInformation      "<application>Centre d'information de &kde;</application>">
+<!ENTITY Ctrl                   "<keycap>Ctrl</keycap>">                                                <!-- English: &Ctrl; -->
+<!ENTITY dpi                    '<acronym>dpi</acronym>'>
+<!ENTITY Echap                  '<keycap>Échap</keycap>'>                                               <!-- English: &Esc; -->
+<!ENTITY Enter                  '<keycap>Entrée</keycap>'>
+<!ENTITY Entree                 '<keycap>Entrée</keycap>'>
+<!ENTITY etc                    "<abbrev>etc.</abbrev>">
+<!ENTITY FAQ                    '<acronym>FAQ</acronym>'>
+<!ENTITY mi                     "messagerie instantanée">
+<!ENTITY kcontrol               '<application>Centre de Configuration de &kde;</application>'>
+<!ENTITY kcontrolcenter         '<application>Centre de Configuration de &kde;</application>'>
+<!ENTITY kde-frameworks         "<productname>&kde; Frameworks</productname>">
+<!ENTITY kde-sc                 "&kde; <acronym>SC</acronym>">
+<!ENTITY kde-sc-full            "<productname>&kde; Software Compilation</productname>">
+<!ENTITY kf5                    "<acronym>KF5</acronym>">
+<!ENTITY kf5-full               "&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY khelpcenter            '<application>Aide centralisée de &kde;</application>'>
+<!ENTITY partman                "<application>gestionnaire de partitions de KDE</application>">
+<!ENTITY pex                    "par exemple">                                                          <!-- English: &eg; -->
+<!ENTITY Maj                    '<keycap>Maj</keycap>'>                                                 <!-- English: &Shift; -->
+<!ENTITY SE                     "système d'exploitation">                                                   <!-- English: &OS; -->
+<!ENTITY Tab                    "<keycap>Tab</keycap>">                                                 <!-- English: Tab -->
 
-<!ENTITY menuk  "menu <guimenu>K</guimenu>">
-<!ENTITY partman "Gestionnaire de partitions de &kde;">  <!-- English: &partman; -->
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
-<!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
-<!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
-<!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
-<!ENTITY plasma-workspaces	"<productname>&kde; Plasma Workspaces</productname>">
-<!ENTITY krfb_fr "Partage de bureau"> <!--English:  &krfb; -->
-<!ENTITY systemsettings	"<application>Configuration du système</application>"> <!--English:  &systemsettings; -->
+<!ENTITY menuk                  "menu <guimenu>K</guimenu>">
+<!ENTITY partman                "Gestionnaire de partitions de &kde;">                                  <!-- English: &partman; -->
+<!ENTITY plasma-active          "<productname>&kde; Plasma Active</productname>">
+<!ENTITY plasma-media-center    "<productname>&kde; Plasma Media Center</productname>">
+<!ENTITY plasma-netbook         "<productname>&kde; Plasma Netbook</productname>">
+<!ENTITY plasma-desktop         "<productname>&kde; Plasma Desktop</productname>">
+<!ENTITY plasma-workspaces      "<productname>&kde; Plasma Workspaces</productname>">
+<!ENTITY krfb_fr                "Partage de bureau">                                                    <!--English:  &krfb; -->
+<!ENTITY systemsettings         "<application>Configuration du système</application>">                  <!--English:  &systemsettings; -->
 
-<!ENTITY Lequipe.rekonq "L'&eacute;quipe rekonq">
-<!ENTITY Lequipe.rekonq.mail "(rekonq@kde.org)">
+<!ENTITY Lequipe.rekonq         "L'&eacute;quipe rekonq">
+<!ENTITY Lequipe.rekonq.mail    "(rekonq@kde.org)">
