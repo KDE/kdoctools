@@ -133,10 +133,7 @@ int main(int argc, char **argv)
     QVector<const char *> params;
     {
         const QStringList paramList = parser.values(QStringLiteral("param"));
-        QStringList::ConstIterator it = paramList.constBegin();
-        QStringList::ConstIterator end = paramList.constEnd();
-        for (; it != end; ++it) {
-            const QString tuple = *it;
+        for (const QString &tuple : paramList) {
             const int ch = tuple.indexOf(QLatin1Char('='));
             if (ch == -1) {
                 DIE("Key-Value tuple" << tuple << "lacks a '='!");
