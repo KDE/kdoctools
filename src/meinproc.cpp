@@ -48,17 +48,6 @@ int main(int argc, char **argv)
 {
     // xsltSetGenericDebugFunc(stderr, NULL);
 
-    /*options.add("stylesheet <xsl>", ki18n("Stylesheet to use"));
-    options.add("stdout", ki18n("Output whole document to stdout"));
-    options.add("o");
-    options.add("output <file>", ki18n("Output whole document to file"));
-    options.add("htdig", ki18n("Create a ht://dig compatible index"));
-    options.add("check", ki18n("Check the document for validity"));
-    options.add("cache <file>", ki18n("Create a cache file for the document"));
-    options.add("srcdir <dir>", ki18n("Set the srcdir, for kdelibs"));
-    options.add("param <key>=<value>", ki18n("Parameters to pass to the stylesheet"));
-    options.add("+xml", ki18n("The file to transform"));*/
-
     QCoreApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("meinproc"));
     app.setApplicationVersion(QStringLiteral("5.0"));
