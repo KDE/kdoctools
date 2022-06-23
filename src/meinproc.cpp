@@ -75,7 +75,8 @@ int main(int argc, char **argv)
     parser.addPositionalArgument(QStringLiteral("xml"), QCoreApplication::translate("main", "The file to transform"));
     parser.process(app);
 
-    if (parser.positionalArguments().count() != 1) {
+    const QStringList filesToRead = parser.positionalArguments();
+    if (filesToRead.count() != 1) {
         parser.showHelp();
         return (1);
     }
@@ -91,7 +92,7 @@ int main(int argc, char **argv)
 
     LIBXML_TEST_VERSION
 
-    const QString checkFilename = parser.positionalArguments().first();
+    const QString checkFilename(filesToRead.first());
     CheckFileResult ckr = checkFile(checkFilename);
     switch (ckr) {
     case CheckFileSuccess:
