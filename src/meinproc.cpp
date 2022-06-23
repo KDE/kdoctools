@@ -38,51 +38,11 @@ using namespace KDocTools;
 extern "C" int xmlLoadExtDtdDefaultValue;
 #endif
 
-class MyPair
-{
-public:
-    QString word;
-    int base;
-};
-
-typedef QList<MyPair> PairList;
-
 #define DIE(x)                                                                                                                                                 \
     do {                                                                                                                                                       \
         qCCritical(KDocToolsLog) << "Error:" << x;                                                                                                             \
         exit(1);                                                                                                                                               \
     } while (0)
-
-void parseEntry(PairList &list, xmlNodePtr cur, int base)
-{
-    if (!cur) {
-        return;
-    }
-
-    base += atoi((const char *)xmlGetProp(cur, (const xmlChar *)"header"));
-    if (base > 10) { // 10 is the maximum
-        base = 10;
-    }
-
-    /* We don't care what the top level element name is */
-    cur = cur->xmlChildrenNode;
-    while (cur != nullptr) {
-        if (cur->type == XML_TEXT_NODE) {
-            QString words = QString::fromUtf8((char *)cur->content);
-            const QStringList wlist = words.simplified().split(QLatin1Char(' '), Qt::SkipEmptyParts);
-            for (QStringList::ConstIterator it = wlist.begin(); it != wlist.end(); ++it) {
-                MyPair m;
-                m.word = *it;
-                m.base = base;
-                list.append(m);
-            }
-        } else if (!xmlStrcmp(cur->name, (const xmlChar *)"entry")) {
-            parseEntry(list, cur, base);
-        }
-
-        cur = cur->next;
-    }
-}
 
 int main(int argc, char **argv)
 {
