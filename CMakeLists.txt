@@ -20,6 +20,7 @@ include(KDEGitCommitHooks)
 include(ECMSetupVersion)
 include(ECMMarkNonGuiExecutable)
 include(ECMQtDeclareLoggingCategory)
+include(ECMDeprecationSettings)
 include(CMakePackageConfigHelpers)
 include(GenerateExportHeader)
 include(ECMAddQch)
@@ -94,8 +95,11 @@ set(KDOCTOOLS_LANGUAGES_LIST af bg ca ca@valencia cs da de el en-GB en eo es et 
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055000)
+ecm_set_disabled_deprecation_versions(
+    QT 5.15.2
+    KF 5.95
+)
+
 if (KF5I18n_FOUND)
     ki18n_install(po)
     kdoctools_install(po)
