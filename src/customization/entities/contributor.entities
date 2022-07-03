@@ -299,6 +299,8 @@
 <!ENTITY Roger.Lum.mail '<email>rogerlum@gmail.com</email>'>
 <!ENTITY Anders.Lund '<personname><firstname>Anders</firstname><surname>Lund</surname></personname>'>
 <!ENTITY Anders.Lund.mail '<email>anders@alweb.dk</email>'>
+<!ENTITY Han.Young '<personname><firstname>Han</firstname><surname>Young</surname></personname>'>
+<!ENTITY Han.Young.mail '<email>hanyoung@protonmail.com</email>'>
 
 <!ENTITY Anne-Marie.Mahfouf '<personname><firstname>Anne-Marie</firstname><surname>Mahfouf</surname></personname>'>
 <!ENTITY Anne-Marie.Mahfouf.mail '<email>annma@kde.org</email>'>
