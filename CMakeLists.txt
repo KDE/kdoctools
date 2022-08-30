@@ -97,7 +97,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
 ecm_set_disabled_deprecation_versions(
     QT 5.15.2
-    KF 5.95
+    KF 5.97
 )
 
 if (KF5I18n_FOUND)
