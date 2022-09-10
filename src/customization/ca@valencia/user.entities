@@ -34,35 +34,35 @@
 <!ENTITY BMR	"botó <mousebutton>mig</mousebutton> del ratolí"><!-- English: &MMB; -->
 <!-- Producte -->
 <!ENTITY applications	"<productname>Aplicacions</productname>">
-<!ENTITY kde-frameworks	"<productname>Frameworks del &kde;</productname>">
-<!ENTITY kf5-full	"<productname>Frameworks <productnumber>5</productnumber> del &kde;</productname>">
-<!ENTITY plasma-mobile	"<productname>Plasma mòbil del &kde;</productname>">
-<!ENTITY plasma-media-center	"<productname>Centre multimèdia del Plasma pel &kde;</productname>">
-<!ENTITY plasma-netbook	"<productname>Plasma per ordinadors ultraportàtils del &kde;</productname>">
-<!ENTITY plasma-desktop	"<productname>Escriptori Plasma del &kde;</productname>">
-<!ENTITY plasma-workspaces	"<productname>Espais de treball Plasma del &kde;</productname>">
-<!ENTITY plasmapa      "<productname>Pulseaudio del Plasma pel &kde;</productname>">
+<!ENTITY kde-frameworks	"<productname>Frameworks de &kde;</productname>">
+<!ENTITY kf5-full	"<productname>Frameworks <productnumber>5</productnumber> de &kde;</productname>">
+<!ENTITY plasma-mobile	"<productname>Plasma mòbil de &kde;</productname>">
+<!ENTITY plasma-media-center	"<productname>Centre multimèdia de Plasma per &kde;</productname>">
+<!ENTITY plasma-netbook	"<productname>Plasma per a ordinadors ultraportàtils de &kde;</productname>">
+<!ENTITY plasma-desktop	"<productname>Escriptori Plasma de &kde;</productname>">
+<!ENTITY plasma-workspaces	"<productname>Espais de treball Plasma de &kde;</productname>">
+<!ENTITY plasmapa      "<productname>Pulseaudio de Plasma per &kde;</productname>">
 <!-- Varis -->
 <!ENTITY cdrom	"<hardware>unitat lectora de CD-ROM</hardware>">
 <!ENTITY centreinfo	"<application>Centre d'informació</application>"><!-- English: &infocenter; -->
 <!ENTITY ead	"<abbrev>és a dir</abbrev>"><!-- English: &ie; -->
 <!ENTITY etc	"<abbrev>etc.</abbrev>">
 <!ENTITY IGU	"<acronym>IGU</acronym>"><!-- English: &GUI; -->
-<!ENTITY partman "<application>Gestor de particions del KDE</application>">
+<!ENTITY partman "<application>Gestor de particions de KDE</application>">
 <!ENTITY pex	"<abbrev>p. ex.</abbrev>"><!-- English: &eg; -->
 <!ENTITY PMF	"<acronym>PMF</acronym>"><!-- English: &FAQ; -->
 <!ENTITY ppp	"<acronym>ppp</acronym>"><!-- English: &dpi; -->
 <!ENTITY safatasistema	"<application>safata del sistema</application>"><!-- English: &systemtray; -->
 <!ENTITY SO	"sistema operatiu"><!-- English: &OS; -->
-<!ENTITY systemsettings	"<application>Arranjament del sistema</application>">
+<!ENTITY systemsettings	"<application>Configuració del sistema</application>">
 
 <!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY centrecontrol	"<application>Centre de control del &kde;</application>"><!-- English: &kcontrolcenter; -->
+<!ENTITY centrecontrol	"<application>Centre de control de &kde;</application>"><!-- English: &kcontrolcenter; -->
 <!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kmenu	"Menú <guimenu>K</guimenu>">
 <!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
 <!ENTITY kde-sc-full	"<productname>Compilació de programari &kde;</productname>">
-<!ENTITY plasma-active	"<productname>Plasma Active del &kde;</productname>">
+<!ENTITY plasma-active	"<productname>Plasma Active de &kde;</productname>">
 
 <!-- ROLES OF TRANSLATORS -->
 <!ENTITY traductor.Antoni.Bella		'<othercredit role="translator"><firstname>Antoni</firstname><surname>Bella</surname><affiliation><address><email>antonibella5@yahoo.com</email></address></affiliation><contrib>Traductor</contrib></othercredit>'>

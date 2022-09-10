@@ -5,6 +5,6 @@ les aplicacions &kde;, visiteu el <ulink
 url="https://community.kde.org/Guidelines_and_HOWTOs/Build_from_source">
 wiki de la comunitat &kde;</ulink>.</para>
 
-<para>Atès que el &kde; empra el <command>cmake</command>, no hauria de produir-se
-cap complicació durant la compilació. Si vos trobeu amb cap problema, si us
-plau, informeu-ne a les llistes de correu del &kde;.</para>
+<para>Atés que &kde; empra <command>cmake</command>, no hauria de produir-se
+cap complicació durant la compilació. Si vos trobeu amb cap problema, per favor,
+informeu-ne a les llistes de correu de &kde;.</para>
