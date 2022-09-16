@@ -76,7 +76,7 @@ set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION}
                                              EXPORT_NAME DocTools
 )
 
-install(TARGETS KF5DocTools EXPORT KF5DocToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5DocTools EXPORT KF5DocToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(BUILD_QCH)
     ecm_add_qch(
@@ -124,7 +124,7 @@ target_link_libraries(meinproc5
 )
 
 target_compile_definitions(meinproc5 PRIVATE -DKDOCTOOLS_EXPORT=)
-install(TARGETS meinproc5 EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS meinproc5 EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)
     add_executable(KF5::meinproc5 IMPORTED GLOBAL)
@@ -221,7 +221,7 @@ add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
 target_link_libraries( docbookl10nhelper Qt${QT_MAJOR_VERSION}::Core )
 if(INSTALL_INTERNAL_TOOLS)
-    install(TARGETS docbookl10nhelper EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(TARGETS docbookl10nhelper EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 if(CMAKE_CROSSCOMPILING AND DOCBOOKL10NHELPER_EXECUTABLE)
@@ -247,7 +247,7 @@ set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
 add_executable( checkXML5 ${checkXML5_SRCS} )
 ecm_mark_nongui_executable( checkXML5 )
 target_link_libraries( checkXML5 Qt${QT_MAJOR_VERSION}::Core )
-install(TARGETS checkXML5 EXPORT KF5DocToolsToolsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS checkXML5 EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)
     add_executable(KF5::checkXML5 IMPORTED GLOBAL)
