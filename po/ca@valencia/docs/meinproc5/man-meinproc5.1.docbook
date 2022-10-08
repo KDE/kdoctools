@@ -244,7 +244,7 @@ El truc és mirar en el primer error, corregir-lo, guardeu el fitxer, i executeu
 ></term>
 <listitem>
 <para
->Full d'estil a utilitzar. </para>
+>Full d'estil que s'utilitzarà. </para>
 </listitem>
 </varlistentry>
 
@@ -268,7 +268,7 @@ El truc és mirar en el primer error, corregir-lo, guardeu el fitxer, i executeu
 > clau=valor</term>
 <listitem>
 <para
->Establix els paràmetres a passar al full d'estil. </para>
+>Establix els paràmetres que es passaran al full d'estil. </para>
 </listitem>
 </varlistentry>
 

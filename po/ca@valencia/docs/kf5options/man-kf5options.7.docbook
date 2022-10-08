@@ -133,7 +133,7 @@
 ><para
 >El nom del fitxer base de l'entrada de l'escriptori per a esta aplicació.</para>
 <para
->Açò és especialment útil per a aplicacions d'embolcall i aplicacions que en general tenen múltiples fitxers d'escriptori. D'esta manera, cada fitxer d'escriptori pot posar el seu propi nom a l'ordre «exec». </para
+>Açò és especialment útil per a aplicacions d'embolcall i aplicacions que en general tenen múltiples fitxers d'escriptori. D'esta manera, cada fitxer d'escriptori pot posar el seu propi nom a dins de l'ordre «exec». </para
 ></listitem>
 </varlistentry>
 

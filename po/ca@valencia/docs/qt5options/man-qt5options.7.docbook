@@ -129,7 +129,7 @@
 ><option
 >-display</option
 > <replaceable
->nom_màquina:número_pantalla</replaceable
+>nom_amfitrió:número_pantalla</replaceable
 ></arg
 > <arg choice="opt"
 ><option
@@ -293,7 +293,7 @@
 > </term>
 <listitem
 ><para
->Especifica els connectors addicionals a carregar. L'argument pot aparéixer múltiples vegades. </para
+>Especifica els connectors addicionals que es carregaran. L'argument pot aparéixer múltiples vegades. </para
 ></listitem>
 </varlistentry>
 
@@ -354,11 +354,11 @@
 ><option
 >-display</option
 > <replaceable
->nom_màquina:número_pantalla</replaceable
+>nom_amfitrió:número_pantalla</replaceable
 > </term>
 <listitem
 ><para
->Canvia les visualitzacions en &X11;. Anul·la la variable d'entorn <envar
+>Canvia les visualitzacions a &X11;. Anul·la la variable d'entorn <envar
 >DISPLAY</envar
 >. </para
 ></listitem>
@@ -373,7 +373,7 @@
 > </term>
 <listitem
 ><para
->Especifica la geometria de la finestra per a la finestra principal en &X11;. Per exemple: -geometry 100x100+50+50 </para
+>Especifica la geometria de la finestra per a la finestra principal a &X11;. Per exemple: -geometry 100x100+50+50 </para
 ></listitem>
 </varlistentry>
 
