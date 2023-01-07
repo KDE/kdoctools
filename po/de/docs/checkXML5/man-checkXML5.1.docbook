@@ -1,46 +1,74 @@
 <?xml version="1.0" ?>
 <!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
-<!ENTITY % English "INCLUDE">
+<!ENTITY % German "INCLUDE">
 ]>
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>checkXML5 User's Manual</title>
-<author><personname><firstname>Lauri</firstname><surname>Watts</surname></personname><email>lauri@kde.org</email></author>
-<date>2014-03-04</date>
-<releaseinfo>Frameworks 5.0</releaseinfo>
-<productname>KDE Frameworks</productname>
+<title
+>checkXML5-Benutzerhandbuch</title>
+<author
+><personname
+><firstname
+>Lauri</firstname
+><surname
+>Watts</surname
+></personname
+><email
+>lauri@kde.org</email
+></author>
+<date
+>2014-03-04</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle><command>checkXML5</command></refentrytitle>
-<manvolnum>1</manvolnum>
+<refentrytitle
+><command
+>checkXML5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname><command>checkXML5</command></refname>
-<refpurpose>An &XML; lint tool for &kde; DocBook &XML; documents</refpurpose>
+<refname
+><command
+>checkXML5</command
+></refname>
+<refpurpose
+>Ein &XML; lint-Werkzeug für &kde; DocBook &XML;-Dokumente</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
-<cmdsynopsis>
-<command>checkXML5</command> <arg><replaceable>filename</replaceable></arg>
-</cmdsynopsis>
+<cmdsynopsis
+><command
+>checkXML5</command
+> <arg
+><replaceable
+>dateiname</replaceable
+></arg
+> </cmdsynopsis>
 </refsynopsisdiv>
 
 <refsect1>
-<title>Description</title>
+<title
+>Beschreibung</title>
 
-<para><command>checkXML5</command> is a tool to check for syntax errors in &kde;
-DocBook &XML; files. It can also be used for other DocBook based
-&XML; files, but you should use the less specific xmllint(1) tool if
-you are not writing or otherwise working on &kde;
-documentation.</para>
+<para
+><command
+>checkXML5</command
+> ist ein Dienstprogramm zum Auffinden von Syntaxfehlern in &kde; DocBook &XML;-Dateien. Es kann auch für andere DocBook basierte &XML;-Dateien verwendet werden, aber hierfür sollten Sie das weniger spezielle Werkzeug xmllint(1) verwenden, sofern Sie nicht Dokumentation für &kde; schreiben oder anderweitig damit beschäftigt sind.</para>
 </refsect1>
 
 <refsect1>
-<title>See Also</title>
-<para>meinproc5(1) xmllint(1)</para>
+<title
+>Siehe auch</title>
+<para
+>meinproc5(1) xmllint(1)</para>
 </refsect1>
 </refentry>
 
