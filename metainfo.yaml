@@ -10,7 +10,7 @@ platforms:
 portingAid: false
 deprecated: false
 release: true
-cmakename: KF5DocTools
+cmakename: KF6DocTools
 
 public_lib: true
 group: Frameworks

@@ -27,8 +27,8 @@ include(ECMAddQch)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfigVersion.cmake"
-                        SOVERSION 5)
+                        PACKAGE_VERSION_FILE "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfigVersion.cmake"
+                        SOVERSION 6)
 
 option(MEINPROC_NO_KARCHIVE "Compile meinproc without KArchive dependency. Only for internal usage on KDE infrastructure." OFF)
 option(INSTALL_INTERNAL_TOOLS "Install internal tools too." OFF)
@@ -39,15 +39,15 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 set(REQUIRED_QT_VERSION 6.4.0)
 find_package(Qt${QT_MAJOR_VERSION}Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 
-# KF5 frameworks
+# KF6 frameworks
 if (NOT MEINPROC_NO_KARCHIVE)
-   find_package(KF5Archive ${KF_DEP_VERSION} REQUIRED)
+   find_package(KF6Archive ${KF_DEP_VERSION} REQUIRED)
 else()
    message(WARNING "KArchive dependency has been disabled. This should be done only for internal usage on KDE infrastructure.")
 endif()
 
-find_package(KF5I18n ${KF_DEP_VERSION})
-set_package_properties(KF5I18n PROPERTIES TYPE OPTIONAL
+find_package(KF6I18n ${KF_DEP_VERSION})
+set_package_properties(KF6I18n PROPERTIES TYPE OPTIONAL
    PURPOSE "Required to build the KDocTools translations")
 
 find_package(LibXslt)
@@ -89,18 +89,18 @@ if (WIN32)
 else ()
     set(KDOCTOOLS_MEINPROC_EXECUTABLE          ${CMAKE_CURRENT_BINARY_DIR}/src/meinproc5${CMAKE_EXECUTABLE_SUFFIX} )
 endif ()
-include(KF5DocToolsMacros.cmake)
+include(KF6DocToolsMacros.cmake)
 
 set(KDOCTOOLS_LANGUAGES_LIST af bg ca ca@valencia cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sq sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5DocTools")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
 ecm_set_disabled_deprecation_versions(
     QT 5.15.2
     KF 5.97
 )
 
-if (KF5I18n_FOUND)
+if (KF6I18n_FOUND)
     ki18n_install(po)
     kdoctools_install(po)
 endif()
@@ -111,34 +111,34 @@ if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-install(EXPORT KF5DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsTargets.cmake NAMESPACE KF5:: )
-install(EXPORT KF5DocToolsToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5DocToolsToolsTargets.cmake NAMESPACE KF5:: )
+install(EXPORT KF6DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6DocToolsTargets.cmake NAMESPACE KF6:: )
+install(EXPORT KF6DocToolsToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6DocToolsToolsTargets.cmake NAMESPACE KF6:: )
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5DocTools_QCH
-        FILE "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsQchTargets.cmake"
+        TARGETS KF6DocTools_QCH
+        FILE "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsQchTargets.cmake"
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5DocToolsQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6DocToolsQchTargets.cmake\")")
 endif()
 
 configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsConfig.cmake.in"
-  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
+  "${CMAKE_CURRENT_SOURCE_DIR}/KF6DocToolsConfig.cmake.in"
+  "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfig.cmake"
   PATH_VARS
     KDE_INSTALL_DATADIR_KF
   INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
 )
-configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF5DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsMacros.cmake COPYONLY)
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/KF6DocToolsMacros.cmake ${CMAKE_BINARY_DIR}/cmake/KF6DocToolsMacros.cmake COPYONLY)
 # we need a separate copy with local paths for install autotests
-export(EXPORT KF5DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsTargets.cmake NAMESPACE KF5::)
-export(EXPORT KF5DocToolsToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF5DocToolsToolsTargets.cmake NAMESPACE KF5::)
+export(EXPORT KF6DocToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF6DocToolsTargets.cmake NAMESPACE KF6::)
+export(EXPORT KF6DocToolsToolsTargets FILE ${CMAKE_BINARY_DIR}/cmake/KF6DocToolsToolsTargets.cmake NAMESPACE KF6::)
 
 install(FILES
-  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfig.cmake"
-  "${CMAKE_BINARY_DIR}/cmake/KF5DocToolsConfigVersion.cmake"
+  "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfig.cmake"
+  "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfigVersion.cmake"
   DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
   COMPONENT Devel
 )
@@ -146,7 +146,7 @@ install(FILES
 configure_file(config-kdoctools.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-kdoctools.h )
 
 install( FILES
-    KF5DocToolsMacros.cmake
+    KF6DocToolsMacros.cmake
     DESTINATION ${CMAKECONFIG_INSTALL_DIR} COMPONENT Devel )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

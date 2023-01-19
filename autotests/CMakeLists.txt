@@ -22,7 +22,7 @@ add_test(kdoctools_install ${CMAKE_CTEST_COMMAND}
     --build-options
         "-DCMAKE_MODULE_PATH=${CMAKE_MODULE_PATH}"
         "-DCMAKE_INSTALL_PREFIX:PATH=${CMAKE_CURRENT_BINARY_DIR}/kdoctools-install/destdir"
-        "-DKF5DocTools_DIR=${CMAKE_BINARY_DIR}/cmake"
+        "-DKF6DocTools_DIR=${CMAKE_BINARY_DIR}/cmake"
         "-DKDocTools_BINARY_DIR=${CMAKE_BINARY_DIR}"
         "-DKDOCTOOLS_CUSTOMIZATION_DIR=${KDOCTOOLS_CUSTOMIZATION_DIR}"
         "-DKDOCTOOLS_ENABLE_HTMLHANDBOOK=1"

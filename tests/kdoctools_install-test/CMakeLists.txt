@@ -1,3 +1,3 @@
-find_package(KF5DocTools REQUIRED)
+find_package(KF6DocTools REQUIRED)
 
 kdoctools_install(po)

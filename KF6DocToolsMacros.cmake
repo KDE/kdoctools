@@ -61,7 +61,7 @@
 #
 
 set(KDOCTOOLS_SERIALIZE_TOOL "" CACHE STRING "Tool to serialize resource-intensive commands in parallel builds")
-set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF5::meinproc5")
+set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF6::meinproc5")
 
 if(KDOCTOOLS_SERIALIZE_TOOL)
     # parallel build with many meinproc invocations can consume a huge amount of memory

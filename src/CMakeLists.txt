@@ -34,16 +34,16 @@ ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
 )
 
 # needed by KIO, need to export it
-add_library(KF5DocTools SHARED xslt.cpp xslt_kde.cpp ${kdoctoolslog_core_SRCS})
-generate_export_header(KF5DocTools BASE_NAME KDocTools EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h")
-add_library(KF5::DocTools ALIAS KF5DocTools)
+add_library(KF6DocTools SHARED xslt.cpp xslt_kde.cpp ${kdoctoolslog_core_SRCS})
+generate_export_header(KF6DocTools BASE_NAME KDocTools EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h")
+add_library(KF6::DocTools ALIAS KF6DocTools)
 if (NOT MEINPROC_NO_KARCHIVE)
-    set (_private_link_karchive "KF5::Archive")
+    set (_private_link_karchive "KF6::Archive")
 else()
     set (_private_link_karchive "")
 endif()
 
-target_link_libraries(KF5DocTools
+target_link_libraries(KF6DocTools
     PUBLIC
         Qt${QT_MAJOR_VERSION}::Core
     PRIVATE
@@ -53,12 +53,12 @@ target_link_libraries(KF5DocTools
         ${_private_link_karchive}
 )
 
-set_target_properties(KF5DocTools PROPERTIES
+set_target_properties(KF6DocTools PROPERTIES
     POSITION_INDEPENDENT_CODE TRUE
     EXPORT_NAME KDocTools
 )
 
-target_include_directories(KF5DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools>")
+target_include_directories(KF6DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools>")
 
 set(KDocTools_HEADERS
     docbookxslt.h
@@ -71,18 +71,18 @@ install(FILES
     COMPONENT Devel
 )
 
-set_target_properties(KF5DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION}
+set_target_properties(KF6DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION}
                                              SOVERSION ${KDOCTOOLS_SOVERSION}
                                              EXPORT_NAME DocTools
 )
 
-install(TARGETS KF5DocTools EXPORT KF5DocToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6DocTools EXPORT KF6DocToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(BUILD_QCH)
     ecm_add_qch(
-        KF5DocTools_QCH
+        KF6DocTools_QCH
         NAME KDocTools
-        BASE_NAME KF5DocTools
+        BASE_NAME KF6DocTools
         VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -108,7 +108,7 @@ if(MEINPROC_NO_KARCHIVE)
     add_definitions(-DMEINPROC_NO_KARCHIVE) #we don't have saveToCache when compiling without KArchive, which is used in xslt_kde.cpp
 else ()
     set(meinproc_additional_SRCS xslt_kde.cpp)
-    set(meinproc_additional_LIBS KF5::Archive)
+    set(meinproc_additional_LIBS KF6::Archive)
 endif()
 
 add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
@@ -124,13 +124,13 @@ target_link_libraries(meinproc5
 )
 
 target_compile_definitions(meinproc5 PRIVATE -DKDOCTOOLS_EXPORT=)
-install(TARGETS meinproc5 EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS meinproc5 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)
-    add_executable(KF5::meinproc5 IMPORTED GLOBAL)
-    set_target_properties(KF5::meinproc5 PROPERTIES IMPORTED_LOCATION ${MEINPROC5_EXECUTABLE})
+    add_executable(KF6::meinproc5 IMPORTED GLOBAL)
+    set_target_properties(KF6::meinproc5 PROPERTIES IMPORTED_LOCATION ${MEINPROC5_EXECUTABLE})
 else()
-    add_executable(KF5::meinproc5 ALIAS meinproc5)
+    add_executable(KF6::meinproc5 ALIAS meinproc5)
 endif()
 
 ########### customize includes for xslt ###############
@@ -221,18 +221,18 @@ add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
 target_link_libraries( docbookl10nhelper Qt${QT_MAJOR_VERSION}::Core )
 if(INSTALL_INTERNAL_TOOLS)
-    install(TARGETS docbookl10nhelper EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+    install(TARGETS docbookl10nhelper EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
 
 if(CMAKE_CROSSCOMPILING AND DOCBOOKL10NHELPER_EXECUTABLE)
-    add_executable(KF5::docbookl10nhelper IMPORTED GLOBAL)
-    set_target_properties(KF5::docbookl10nhelper PROPERTIES IMPORTED_LOCATION ${DOCBOOKL10NHELPER_EXECUTABLE})
+    add_executable(KF6::docbookl10nhelper IMPORTED GLOBAL)
+    set_target_properties(KF6::docbookl10nhelper PROPERTIES IMPORTED_LOCATION ${DOCBOOKL10NHELPER_EXECUTABLE})
 else()
-    add_executable(KF5::docbookl10nhelper ALIAS docbookl10nhelper)
+    add_executable(KF6::docbookl10nhelper ALIAS docbookl10nhelper)
 endif()
 
 add_custom_command( TARGET docbookl10nhelper POST_BUILD
-    COMMAND $<TARGET_FILE:KF5::docbookl10nhelper>
+    COMMAND $<TARGET_FILE:KF6::docbookl10nhelper>
     "${DOCBOOKXSL_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}/customization/xsl"
     "${CMAKE_CURRENT_BINARY_DIR}/customization/xsl"
 )
@@ -247,11 +247,11 @@ set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
 add_executable( checkXML5 ${checkXML5_SRCS} )
 ecm_mark_nongui_executable( checkXML5 )
 target_link_libraries( checkXML5 Qt${QT_MAJOR_VERSION}::Core )
-install(TARGETS checkXML5 EXPORT KF5DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS checkXML5 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)
-    add_executable(KF5::checkXML5 IMPORTED GLOBAL)
-    set_target_properties(KF5::checkXML5 PROPERTIES IMPORTED_LOCATION ${CHECKXML5_EXECUTABLE})
+    add_executable(KF6::checkXML5 IMPORTED GLOBAL)
+    set_target_properties(KF6::checkXML5 PROPERTIES IMPORTED_LOCATION ${CHECKXML5_EXECUTABLE})
 else()
-    add_executable(KF5::checkXML5 ALIAS checkXML5)
+    add_executable(KF6::checkXML5 ALIAS checkXML5)
 endif()
