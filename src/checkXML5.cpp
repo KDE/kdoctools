@@ -23,9 +23,9 @@ int main(int argc, char **argv)
         return (1);
     }
 
-    const QString exec = QStandardPaths::findExecutable(QStringLiteral("meinproc5"));
+    const QString exec = QStandardPaths::findExecutable(QStringLiteral("meinproc6"));
     if (exec.isEmpty()) {
-        qCCritical(KDocToolsLog) << "Could not find meinproc5 executable in PATH";
+        qCCritical(KDocToolsLog) << "Could not find meinproc6 executable in PATH";
         return 1;
     }
 

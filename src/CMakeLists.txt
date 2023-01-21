@@ -117,9 +117,9 @@ else ()
     set(meinproc_additional_LIBS KF6::Archive)
 endif()
 
-add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
-ecm_mark_nongui_executable(meinproc5)
-target_link_libraries(meinproc5
+add_executable(meinproc6 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_additional_SRCS} ${kdoctoolslog_core_SRCS})
+ecm_mark_nongui_executable(meinproc6)
+target_link_libraries(meinproc6
     PRIVATE
         Qt6::Core
         ${LIBXML2_LIBRARIES}
@@ -128,14 +128,14 @@ target_link_libraries(meinproc5
         ${meinproc_additional_LIBS}
 )
 
-target_compile_definitions(meinproc5 PRIVATE -DKDOCTOOLS_EXPORT=)
-install(TARGETS meinproc5 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+target_compile_definitions(meinproc6 PRIVATE -DKDOCTOOLS_EXPORT=)
+install(TARGETS meinproc6 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
-if(CMAKE_CROSSCOMPILING AND MEINPROC5_EXECUTABLE)
-    add_executable(KF6::meinproc5 IMPORTED GLOBAL)
-    set_target_properties(KF6::meinproc5 PROPERTIES IMPORTED_LOCATION ${MEINPROC5_EXECUTABLE})
+if(CMAKE_CROSSCOMPILING AND MEINPROC6_EXECUTABLE)
+    add_executable(KF6::meinproc6 IMPORTED GLOBAL)
+    set_target_properties(KF6::meinproc6 PROPERTIES IMPORTED_LOCATION ${MEINPROC6_EXECUTABLE})
 else()
-    add_executable(KF6::meinproc5 ALIAS meinproc5)
+    add_executable(KF6::meinproc6 ALIAS meinproc6)
 endif()
 
 ########### customize includes for xslt ###############

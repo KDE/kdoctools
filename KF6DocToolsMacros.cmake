@@ -5,13 +5,13 @@
 # SPDX-License-Identifier: BSD-3-Clause
 #
 #  KDOCTOOLS_CREATE_HANDBOOK( docbookfile [INSTALL_DESTINATION installdest] [SUBDIR subdir])
-#   Create the handbook from the docbookfile (using meinproc5)
+#   Create the handbook from the docbookfile (using meinproc6)
 #   The resulting handbook will be installed to <installdest> when using
 #   INSTALL_DESTINATION <installdest>, or to <installdest>/<subdir> if
 #   SUBDIR <subdir> is specified.
 #
 #  KDOCTOOLS_CREATE_MANPAGE( docbookfile section [INSTALL_DESTINATION installdest])
-#   Create the manpage for the specified section from the docbookfile (using meinproc5)
+#   Create the manpage for the specified section from the docbookfile (using meinproc6)
 #   The resulting manpage will be installed to <installdest> when using
 #   INSTALL_DESTINATION <installdest>.
 #
@@ -49,7 +49,7 @@
 #   If ${KDE_INSTALL_DOCBUNDLEDIR} is not set, share/doc/HTML is used instead.
 #   If ${KDE_INSTALL_MANDIR} is not set, share/man/<lang> is used instead.
 #
-#  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc5 executable
+#  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc6 executable
 #
 #  KDOCTOOLS_SERIALIZE_TOOL - wrapper to serialize potentially resource-intensive commands during
 #                      parallel builds (set to 'icecc' when using icecream)
@@ -57,11 +57,11 @@
 # The following variables are defined for the various tools required to
 # compile KDE software:
 #
-#  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc5 executable
+#  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc6 executable
 #
 
 set(KDOCTOOLS_SERIALIZE_TOOL "" CACHE STRING "Tool to serialize resource-intensive commands in parallel builds")
-set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF6::meinproc5")
+set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF6::meinproc6")
 
 if(KDOCTOOLS_SERIALIZE_TOOL)
     # parallel build with many meinproc invocations can consume a huge amount of memory

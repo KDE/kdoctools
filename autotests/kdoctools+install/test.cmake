@@ -4,7 +4,7 @@ set(HTMLPATH ${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DOCBUNDLEDIR})
 set(FILES
 # from kdoctools_install
     ${MANPATH}/man1/checkXML5.1
-    ${MANPATH}/man1/meinproc5.1
+    ${MANPATH}/man1/meinproc6.1
     ${MANPATH}/man7/kf5options.7
     ${MANPATH}/man7/qt5options.7
 # from add_subdirectory
