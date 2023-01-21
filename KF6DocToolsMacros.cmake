@@ -32,8 +32,8 @@
 #      fr/
 #        docs/
 #          foo/
-#            kioslave5/
-#              fooslave/
+#            kioworker6/
+#              fooworker/
 #                index.docbook
 #            footool.1.docbook
 #            footool.conf.5.docbook
@@ -43,7 +43,7 @@
 #   - Create man pages from footool.1.docbook and footool.conf.5.docbook,
 #     install them in ${KDE_INSTALL_MANDIR}/fr
 #   - Create handbooks from index.docbook files, install the one from the
-#     fooslave/ directory in ${KDE_INSTALL_DOCBUNDLEDIR}/fr/kioslave5/fooslave
+#     fooworker/ directory in ${KDE_INSTALL_DOCBUNDLEDIR}/fr/kioworker6/fooworker
 #     and the one from the docs/ directory in ${KDE_INSTALL_DOCBUNDLEDIR}/fr
 #
 #   If ${KDE_INSTALL_DOCBUNDLEDIR} is not set, share/doc/HTML is used instead.

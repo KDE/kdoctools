@@ -7,9 +7,9 @@
 ]>
 
 <!--
-Use this template for kioslave, systemsettings (kcontrol) modules and simple/short application docbooks
+Use this template for KIO worker, systemsettings (kcontrol) modules and simple/short application docbooks
 Otherwise use use template.docbook for application docbooks
-Rename this template to index.docbook and place into the directory doc/[kcontrol|kioslave5]
+Rename this template to index.docbook and place into the directory doc/[kcontrol|kioworker6]
 -->
 
 <article id="foo" lang="&language;">
