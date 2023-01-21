@@ -20,6 +20,7 @@
 <!ENTITY infocenter	"<application>Info Center</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY LMB    "<mousebutton>left</mousebutton> mouse button">
 <!ENTITY MMB    "<mousebutton>middle</mousebutton> mouse button">
 <!ENTITY OS	"operating system"><!-- <acronym>OS</acronym>-->

@@ -98,6 +98,7 @@
 
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 
 <!ENTITY kfind-mianownik    '<application>Znajdź pliki (KFind)</application>'>
 <!ENTITY kfind-biernik    '<application>Znajdź pliki (KFind)</application>'>

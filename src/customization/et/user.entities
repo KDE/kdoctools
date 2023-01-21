@@ -38,6 +38,7 @@
 <!ENTITY infocenter     "<application>Infokeskus</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">

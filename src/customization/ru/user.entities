@@ -23,6 +23,7 @@
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY Left	"<keysym>Стрелка влево</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "<mousebutton>левая</mousebutton> кнопка мыши">
 <!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->

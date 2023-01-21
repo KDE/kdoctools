@@ -20,6 +20,7 @@
 <!ENTITY infocenter	"<application>KDE 資訊中心</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY khelpcenter "<application>KDE 輔助中心</application>">
 <!ENTITY LMB    "滑鼠<mousebutton>左鍵</mousebutton>">
 <!ENTITY MMB    "滑鼠<mousebutton>中鍵</mousebutton>">

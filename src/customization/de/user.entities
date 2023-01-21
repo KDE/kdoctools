@@ -26,6 +26,7 @@
 <!ENTITY Ins	"<keycap>Einfg</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY khelpcenter-de "<application>&kde;-Hilfezentrum</application>" >
 <!ENTITY Left	"<keysym>Pfeil links</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "<mousebutton>linke</mousebutton> Maustaste">

@@ -41,6 +41,7 @@
 <!ENTITY infocenter	"<application>Infosenter</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY LGPL	"Lesser General Public License"><!-- Name of LGPL license -->
 <!ENTITY LMB    "<mousebutton>venstre</mousebutton> museknapp">
 <!ENTITY MMB    "<mousebutton>midtre</mousebutton> museknapp">

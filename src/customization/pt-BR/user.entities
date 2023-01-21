@@ -24,6 +24,7 @@
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY BEM 	"botão <mousebutton>esquerdo</mousebutton> do mouse">  <!-- English: &LMB; -->
 <!ENTITY LMB 	"botão <mousebutton>esquerdo</mousebutton> do mouse">
 <!ENTITY BMM 	"botão <mousebutton>do meio</mousebutton> do mouse">   <!-- English: &MMB; -->

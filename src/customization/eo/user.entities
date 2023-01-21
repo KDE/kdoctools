@@ -18,6 +18,7 @@
 <!ENTITY ie     "t.s." ><!-- ie -->
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY khelpcenter "<application>Helpcentro</application>" >
 <!ENTITY LMB    "<mousebutton>musbutono maldekstra</mousebutton>">
 <!ENTITY MMB    "<mousebutton>musbutono meza</mousebutton>">

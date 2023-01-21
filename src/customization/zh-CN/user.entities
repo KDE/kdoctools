@@ -20,6 +20,7 @@
 <!ENTITY infocenter	"<application>信息中心</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY LMB    "鼠标<mousebutton>左</mousebutton>键">
 <!ENTITY MMB    "鼠标<mousebutton>中</mousebutton>键">
 <!ENTITY OS	"操作系统"><!-- <acronym>OS</acronym>-->

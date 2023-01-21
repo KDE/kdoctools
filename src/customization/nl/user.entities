@@ -158,6 +158,7 @@
 <!ENTITY Ins    "<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks "<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full       "&kde;-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full       "&kde;-frameworks; <productnumber>6</productnumber>">
 <!ENTITY Left   "<keysym>Left</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB     "<mousebutton>linkermuisknop</mousebutton>">
 <!ENTITY Mac     '<trademark class="registered">Mac</trademark>'>

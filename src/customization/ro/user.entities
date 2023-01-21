@@ -31,6 +31,7 @@
 <!ENTITY kcontrol               '<application>Centrul de Control &kde;</application>'>
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY kinfocenter            '<application>Centrul de Informaţii &kde;</application>'>
 <!ENTITY khelpcenter            '<application>Centrul de Ajutor &kde;</application>'>
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">

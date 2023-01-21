@@ -26,6 +26,7 @@
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY Left	"<keysym>←</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "tasto <mousebutton>sinistro</mousebutton> del mouse">
 <!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->

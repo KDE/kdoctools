@@ -36,6 +36,7 @@
 <!ENTITY applications	"<productname>Aplicacions</productname>">
 <!ENTITY kde-frameworks	"<productname>Frameworks del &kde;</productname>">
 <!ENTITY kf5-full	"<productname>Frameworks <productnumber>5</productnumber> del &kde;</productname>">
+<!ENTITY kf6-full	"<productname>Frameworks <productnumber>6</productnumber> del &kde;</productname>">
 <!ENTITY plasma-mobile	"<productname>Plasma mòbil del &kde;</productname>">
 <!ENTITY plasma-media-center	"<productname>Centre multimèdia del Plasma pel &kde;</productname>">
 <!ENTITY plasma-netbook	"<productname>Plasma per ordinadors ultraportàtils del &kde;</productname>">

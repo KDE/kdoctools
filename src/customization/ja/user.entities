@@ -13,4 +13,5 @@
 <!ENTITY ie     "<abbrev>例</abbrev>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY Shift	"<keycap>Shift</keycap>">

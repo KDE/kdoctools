@@ -21,6 +21,7 @@
 <!ENTITY ie 	"isto é"> 
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY BER 	"botón <mousebutton>esquerdo</mousebutton> do rato">  <!-- English: &LMB; -->
 <!ENTITY LMB 	"botón <mousebutton>esquerdo</mousebutton> do rato">
 <!ENTITY BMR 	"botón <mousebutton>central</mousebutton> do rato">   <!-- English: &MMB; -->

@@ -26,6 +26,7 @@
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; 프레임워크</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
+<!ENTITY kf6-full	"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY Left	"<keysym>왼쪽</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "<mousebutton>왼쪽</mousebutton> 마우스 단추">
 <!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
