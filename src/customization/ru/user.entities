@@ -43,12 +43,4 @@
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>Стрелка вверх</keysym>"> <!-- Cursor key-->
 
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY kcontrolcenter	"<application>Параметры системы</application>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "<guimenu>K</guimenu>-меню">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
-
 <!ENTITY khelpcenter	"<application>Центр справки &kde;</application>" ><!-- khelpcenter -->

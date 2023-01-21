@@ -158,14 +158,12 @@
 <!ENTITY Ins    "<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks "<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full       "&kde;-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kmenu  "<guimenu>K</guimenu>-menu">
 <!ENTITY Left   "<keysym>Left</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB     "<mousebutton>linkermuisknop</mousebutton>">
 <!ENTITY Mac     '<trademark class="registered">Mac</trademark>'>
 <!ENTITY Meta   "<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB     "<mousebutton>middelstemuisknop</mousebutton>">
 <!ENTITY partman "<application>KDE Partitiebeheer</application>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!ENTITY plasma-mobile  "<productname>&kde; Plasma Mobile</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook "<productname>&kde; Plasma Netbook</productname>">
@@ -186,11 +184,6 @@
 
 <!-- Entities voor applicaties die niet dezelfde naam hebben -->
 <!-- hiervoor gebruik je beter de vertaalde naam -->
-<!ENTITY kcontrolcenter "<application>KDE Configuratiecentrum</application>">
-<!ENTITY kcc     "<application>KDE Configuratiecentrum</application>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY khc     "<application>KDE Helpcentrum</application>">
 <!ENTITY kic     "<application>KDE Informatiecentrum</application>">
 <!ENTITY palm     "PalmOS(tm)-apparaat">

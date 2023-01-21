@@ -30,7 +30,6 @@
 <!ENTITY MMB 	"botão <mousebutton>do meio</mousebutton> do mouse">
 <!ENTITY OS	"sistema operacional"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>Gerenciador de partições do KDE</application>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
@@ -48,11 +47,3 @@
 <!ENTITY systemtray "<application>área de notificação</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>Acima</keysym>"> <!-- Cursor key-->
-
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY kcontrolcenter	"<application>Centro de Controle do &kde;</application>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "menu <guimenu>K</guimenu>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-

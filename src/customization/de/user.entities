@@ -55,15 +55,3 @@
 <!ENTITY systemtray "<application>Systemabschnitt</application>">
 <!ENTITY Tab 	"<keycap>Tab</keycap>"> <!-- Tab -->
 <!ENTITY Up	"<keysym>Pfeil hoch</keysym>"> <!-- Cursor key-->
-
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY mondphase "<application>Mondphase</application>"> <!-- kmoon -->
-<!ENTITY kcc "<application>&kde;-Kontrollzentrum</application>" ><!-- kcc -->
-<!ENTITY kcontrolcenter "<application>&kde;-Kontrollzentrum</application>">
-<!ENTITY kde "K-Arbeitsumgebung" ><!-- kde -->
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "<guimenu>K</guimenu>-Men&uuml;"> <!-- kmenu -->
-<!ENTITY kwm    "<application>kwm</application>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">

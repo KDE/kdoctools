@@ -36,14 +36,8 @@
 <!ENTITY jne    "<abbrev>jne.</abbrev>">        <!-- English: &etc; -->
 
 <!ENTITY infocenter     "<application>Infokeskus</application>">
-<!ENTITY kcontrolcenter "<application>&kde; juhtimiskeskus</application>">
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kmenu  "<guimenu>K</guimenu> menüü">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
@@ -53,7 +47,6 @@
 <!ENTITY FAQ    '<acronym>KKK</acronym>'>
 <!ENTITY OS     "operatsioonisüsteem">		<!-- <acronym>OS</acronym>-->
 <!ENTITY systemsettings	"<application>Süsteemi seadistused</application>">
-<!ENTITY kcontrolcenter	    "KDE juhtimiskeskus">
 
 <!-- Custom entities -->
 

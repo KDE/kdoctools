@@ -26,7 +26,6 @@
 <!ENTITY Ins	"<keycap>Ins</keycap>">
 <!ENTITY kde-frameworks	"<productname>&kde; 프레임워크</productname>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY Left	"<keysym>왼쪽</keysym>"> <!-- Cursor key-->
 <!ENTITY LMB    "<mousebutton>왼쪽</mousebutton> 마우스 단추">
 <!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
@@ -49,11 +48,3 @@
 <!ENTITY systemtray "<application>시스템 트레이</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>위</keysym>"> <!-- Cursor key-->
-
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY kcontrolcenter	"<application>&kde; 제어 센터</application>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "<guimenu>K</guimenu> 메뉴">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; 소프트웨어 모음</productname>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">

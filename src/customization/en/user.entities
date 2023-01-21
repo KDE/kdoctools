@@ -48,12 +48,3 @@
 <!ENTITY systemtray "<application>system tray</application>">
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>Up</keysym>"> <!-- Cursor key-->
-
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY kcontrolcenter	"<application>&kde; Control Center</application>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "<guimenu>K</guimenu> menu">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
-

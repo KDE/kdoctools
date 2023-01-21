@@ -49,13 +49,6 @@
 <!ENTITY Tab	"<keycap>Tab</keycap>">
 <!ENTITY Up	"<keysym>↑</keysym>"> <!-- Cursor key-->
 
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY kcontrolcenter	"<application>Centro di controllo</application>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu  "menu <guimenu>K</guimenu>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!--                                                     -->
 <!-- Note (EB): you can translate the entity names as well:
      &cioe;

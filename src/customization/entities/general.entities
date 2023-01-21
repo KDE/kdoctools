@@ -481,80 +481,10 @@
 
 
 <!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY aktion	"<application>aKtion</application>">
-<!ENTITY arts	"<application>aRts</application>">
-<!ENTITY arts-builder	"<application>aRts-builder</application>">
-<!ENTITY artscontrol	"<application>artscontrol</application>">
-<!ENTITY artsd	"<application>artsd</application>">
-<!ENTITY artsdsp	"<application>artsdsp</application>">
-<!ENTITY artsserver	"<application>artsserver</application>">
-<!ENTITY artsshell	"<application>artsshell</application>">
-<!ENTITY artswrapper	"<application>artswrapper</application>">
 <!ENTITY atlantik	"<application>Atlantik</application>">
-<!ENTITY brahms	"<application>Brahms</application>">
-<!ENTITY catalogmanager	"<application>Catalog Manager</application>">
-<!ENTITY DCOP	"<acronym>DCOP</acronym>">
-<!ENTITY flashkard "<application>FlashKard</application>">
-<!ENTITY kab2	"<application>Kab2</application>">
-<!ENTITY kaboodle	"<application>Kaboodle</application>">
-<!ENTITY kandy	"<application>Kandy</application>">
-<!ENTITY kaphorism	"<application>KAphorism</application>">
-<!ENTITY karbon14	"<application>Karbon14</application>">
-<!ENTITY kasteroids	"<application>KAsteroids</application>">
-<!ENTITY kbabel	"<application>KBabel</application>">
-<!ENTITY kbabeldict	"<application>KBabelDict</application>">
-<!ENTITY kbiff	"<application>KBiff</application>">
-<!ENTITY kbugbuster	"<application>kbugbuster</application>">
-<!ENTITY kchat	"<application>KChat</application>">
-<!ENTITY kdat	"<application>KDat</application>">
-<!ENTITY kdcop  "<application>kdcop</application>">
 <!ENTITY kde-ftp	'<ulink url="ftp://ftp.kde.org/pub/kde/">ftp://ftp.kde.org/pub/kde/</ulink>'>
 <!ENTITY kdenlive	"<application>Kdenlive</application>">
-<!ENTITY kdm	"<application>kdm</application>">
-<!ENTITY kdmrc  "<filename>kdmrc</filename>">
-<!ENTITY kdict	"<application>KDict</application>">
-<!ENTITY kdvi	"<application>KDVI</application>">
-<!ENTITY kenolaba 	"<application>Kenolaba</application>">
-<!ENTITY kedit	"<application>KEdit</application>">
-<!ENTITY keduca	"<application>KEduca</application>">
-<!ENTITY keystone	"<application>Keystone</application>">
-<!ENTITY khexedit	"<application>KHexEdit</application>">
-<!ENTITY kljettool	"<application>KLjettool</application>">
-<!ENTITY klpq	"<application>Klpq</application>">
-<!ENTITY klprfax	"<application>Klprfax</application>">
-<!ENTITY knorskverbs	"<application>KNorskVerbs</application>">
-<!ENTITY kontour	"<application>Kontour</application>">
-<!ENTITY kdeprint       "<application>KDEPrint</application>">
-<!ENTITY kdesktop	"<application>KDesktop</application>">
 <!ENTITY kdesvn	"<application>Kdesvn</application>">
-<!ENTITY kugar	"<application>Kugar</application>">
 <!ENTITY kuickshow	"<application>KuickShow</application>">
-<!ENTITY kodometer	"<application>KOdometer</application>">
-<!ENTITY koffice	"<application>KOffice</application>">
-<!ENTITY koncd	"<application>KOnCD</application>">
-<!ENTITY korn	"<application>KOrn</application>">
-<!ENTITY koshell	"<application>KOShell</application>">
-<!ENTITY kotalkd	"<application>KOTalkd</application>">
-<!ENTITY kprinter       "<application>kprinter</application>">
-<!ENTITY kpresenter	"<application>KPresenter</application>">
-<!ENTITY kreatecd	"<application>KreateCD</application>">
-<!ENTITY krec	"<application>KRec</application>">
-<!ENTITY kword	"<application>KWord</application>">
-<!ENTITY Linux-Mandrake	"<trademark>Mandrakelinux</trademark>">
-<!ENTITY Mandrake	"<trademark>Mandrake</trademark>">
-<!ENTITY moonphase	"<application>Moon Phase</application>">
 <!ENTITY Netscape	'<trademark class="registered">Netscape</trademark>'>
-<!ENTITY NeXTSTEP	"<trademark>NeXTSTEP</trademark>">
-<!ENTITY noatun	"<application>Noatun</application>">
 <!ENTITY package "This application isn't part of a KDE package">
-<!ENTITY kpanel	"<application>KPanel</application>">
-<!ENTITY kscore	"<application>KScore</application>">
-<!ENTITY ksnake	"<application>KSnake</application>">
-<!ENTITY ksysv	"<application>KSysV</application>">
-<!ENTITY kview	"<application>KView</application>">
-<!ENTITY kviewshell	"<application>KViewshell</application>">
-<!ENTITY tkmidi	"<application>tkmidi</application>">
-<!ENTITY quanta "<application>Quanta</application>">
-<!ENTITY quantaplus	"<application>Quanta Plus</application>">
-<!ENTITY reslisa	"<application>ResLisa</application>">
-<!ENTITY zui "<application>Zooming User Interface</application>">

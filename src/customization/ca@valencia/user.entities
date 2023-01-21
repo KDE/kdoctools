@@ -56,14 +56,6 @@
 <!ENTITY SO	"sistema operatiu"><!-- English: &OS; -->
 <!ENTITY systemsettings	"<application>Configuració del sistema</application>">
 
-<!-- Deprecated, will be removed at a future time, do not use -->
-<!ENTITY centrecontrol	"<application>Centre de control de &kde;</application>"><!-- English: &kcontrolcenter; -->
-<!ENTITY kf5	"<acronym>KF5</acronym>">
-<!ENTITY kmenu	"Menú <guimenu>K</guimenu>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>Compilació de programari &kde;</productname>">
-<!ENTITY plasma-active	"<productname>Plasma Active de &kde;</productname>">
-
 <!-- ROLES OF TRANSLATORS -->
 <!ENTITY traductor.Antoni.Bella		'<othercredit role="translator"><firstname>Antoni</firstname><surname>Bella</surname><affiliation><address><email>antonibella5@yahoo.com</email></address></affiliation><contrib>Traductor</contrib></othercredit>'>
 <!ENTITY revisor.Antoni.Bella		'<othercredit role="reviewer"><firstname>Antoni</firstname><surname>Bella</surname><affiliation><address><email>antonibella5@yahoo.com</email></address></affiliation><contrib>Revisor</contrib></othercredit>'>

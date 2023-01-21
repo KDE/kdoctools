@@ -96,26 +96,8 @@
 <!ENTITY kcalc-narzednik    '<application>Kalkulatorem</application>'>
 <!ENTITY kcalc-miejscownik    '<application>Kalkulatorze</application>'>
 
-<!ENTITY kcontrolcenter-mianownik    '<application>Centrum sterowania &kde;</application>'>
-<!ENTITY kcontrolcenter-dopelniacz    '<application>Centrum sterowania &kde;</application>'>
-<!ENTITY kcontrolcenter-celownik    '<application>Centrum sterowania &kde;</application>'>
-<!ENTITY kcontrolcenter-biernik    '<application>Centrum sterowania &kde;</application>'>
-<!ENTITY kcontrolcenter-miejscownik    '<application>Centrum sterowania &kde;</application>'>
-<!ENTITY kcontrol-biernik    '&kcontrolcenter-biernik;'>
-<!ENTITY kcontrolcenter    '&kcontrolcenter-mianownik;'>
-
 <!ENTITY kde-frameworks	"<productname>&kde; Frameworks</productname>">
-<!ENTITY kde-sc	"&kde; <acronym>SC</acronym>">
-<!ENTITY kde-sc-full	"<productname>&kde; Software Compilation</productname>">
-<!ENTITY kf5	"<acronym>KF5</acronym>">
 <!ENTITY kf5-full	"&kde-frameworks; <productnumber>5</productnumber>">
-
-<!ENTITY kdm-mianownik    '<application>KDM</application>'>
-<!ENTITY kdm-dopelniacz    '<application>KDM</application>'>
-<!ENTITY kdm-celownik    '<application>KDM</application>'>
-<!ENTITY kdm-biernik    '<application>KDM</application>'>
-<!ENTITY kdm-narzednik    '<application>KDM</application>'>
-<!ENTITY kdm-miejscownik    '<application>KDM</application>'>
 
 <!ENTITY kfind-mianownik    '<application>Znajdź pliki (KFind)</application>'>
 <!ENTITY kfind-biernik    '<application>Znajdź pliki (KFind)</application>'>
@@ -151,13 +133,6 @@
 <!ENTITY kmail-biernik    '<application>Kmaila</application>'>
 <!ENTITY kmail-narzednik    '<application>Kmailem</application>'>
 <!ENTITY kmail-miejscownik    '<application>Kmailu</application>'>
-
-<!ENTITY kmenu-mianownik    'Menu K'>
-<!ENTITY kmenu-dopelniacz    '&kmenu-mianownik;'>
-<!ENTITY kmenu-celownik    '&kmenu-mianownik;'>
-<!ENTITY kmenu-biernik    '&kmenu-mianownik;'>
-<!ENTITY kmenu-miejscownik    '&kmenu-mianownik;'>
-<!ENTITY kmenu    '&kmenu-mianownik;'>
 
 <!ENTITY kmenuedit-mianownik    '<application>Edytor menu &kde;</application>'>
 <!ENTITY kmenuedit-dopelniacz    '<application>Edytora menu &kde;</application>'>
@@ -256,9 +231,6 @@
 <!ENTITY Mozilla-narzednik    'Mozilli'>
 <!ENTITY Mozilla-miejscownik    'Mozilli'>
 
-<!ENTITY noatun-mianownik    '<application>Noatun</application>'>
-<!ENTITY noatun-dopelniacz    '<application>Noatuna</application>'>
-
 <!ENTITY okular-mianownik    '<application>Okular</application>'>
 <!ENTITY okular-dopelniacz    '<application>Okulara</application>'>
 <!ENTITY okular-celownik    '<application>Okularowi</application>'>
@@ -273,7 +245,6 @@
 <!ENTITY plasma-narzednik    '<application>Plazmą</application>'>
 <!ENTITY plasma-miejscownik    '<application>Plazmie</application>'>
 
-<!ENTITY plasma-active	"<productname>&kde; Plasma Active</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Media Center</productname>">
 <!ENTITY plasma-netbook	"<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-desktop	"<productname>&kde; Plasma Desktop</productname>">
