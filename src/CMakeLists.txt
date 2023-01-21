@@ -246,17 +246,17 @@ add_custom_command( TARGET docbookl10nhelper POST_BUILD
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/customization/xsl/all-l10n.xml
     DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/xsl/ )
 
-########### checkxml5 helper ###############
+########### checkXML6 helper ###############
 
-set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
-add_executable( checkXML5 ${checkXML5_SRCS} )
-ecm_mark_nongui_executable( checkXML5 )
-target_link_libraries( checkXML5 Qt6::Core )
-install(TARGETS checkXML5 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+set( checkXML6_SRCS checkXML6.cpp ${kdoctoolslog_core_SRCS})
+add_executable( checkXML6 ${checkXML6_SRCS} )
+ecm_mark_nongui_executable( checkXML6 )
+target_link_libraries( checkXML6 Qt6::Core )
+install(TARGETS checkXML6 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
-if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)
-    add_executable(KF6::checkXML5 IMPORTED GLOBAL)
-    set_target_properties(KF6::checkXML5 PROPERTIES IMPORTED_LOCATION ${CHECKXML5_EXECUTABLE})
+if(CMAKE_CROSSCOMPILING AND CHECKXML6_EXECUTABLE)
+    add_executable(KF6::checkXML6 IMPORTED GLOBAL)
+    set_target_properties(KF6::checkXML6 PROPERTIES IMPORTED_LOCATION ${CHECKXML6_EXECUTABLE})
 else()
-    add_executable(KF6::checkXML5 ALIAS checkXML5)
+    add_executable(KF6::checkXML6 ALIAS checkXML6)
 endif()

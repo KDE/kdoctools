@@ -5,33 +5,33 @@
 
 <refentry lang="&language;">
 <refentryinfo>
-<title>checkXML5 User's Manual</title>
+<title>checkXML6 User's Manual</title>
 <author><personname><firstname>Lauri</firstname><surname>Watts</surname></personname><email>lauri@kde.org</email></author>
 <date>2014-03-04</date>
-<releaseinfo>Frameworks 5.0</releaseinfo>
+<releaseinfo>Frameworks 6.0</releaseinfo>
 <productname>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle><command>checkXML5</command></refentrytitle>
+<refentrytitle><command>checkXML6</command></refentrytitle>
 <manvolnum>1</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname><command>checkXML5</command></refname>
+<refname><command>checkXML6</command></refname>
 <refpurpose>An &XML; lint tool for &kde; DocBook &XML; documents</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
 <cmdsynopsis>
-<command>checkXML5</command> <arg><replaceable>filename</replaceable></arg>
+<command>checkXML6</command> <arg><replaceable>filename</replaceable></arg>
 </cmdsynopsis>
 </refsynopsisdiv>
 
 <refsect1>
 <title>Description</title>
 
-<para><command>checkXML5</command> is a tool to check for syntax errors in &kde;
+<para><command>checkXML6</command> is a tool to check for syntax errors in &kde;
 DocBook &XML; files. It can also be used for other DocBook based
 &XML; files, but you should use the less specific xmllint(1) tool if
 you are not writing or otherwise working on &kde;
