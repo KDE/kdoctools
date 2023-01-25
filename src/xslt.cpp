@@ -24,9 +24,6 @@
 #include <QFile>
 #include <QStandardPaths>
 #include <QString>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <QTextCodec>
-#endif
 #include <QUrl>
 #include <QVector>
 
@@ -295,69 +292,14 @@ QString splitOut(const QString &parsed, int index)
 
 QByteArray fromUnicode(const QString &data)
 {
-#if defined(Q_OS_WIN) || QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     return data.toUtf8();
-#else
-    QTextCodec *locale = QTextCodec::codecForLocale();
-    QByteArray result;
-    constexpr int bufferSize = 30000;
-    char buffer[bufferSize];
-    uint buffer_len = 0;
-    uint len = 0;
-    int offset = 0;
-    const int part_len = 5000;
-
-    QString part;
-
-    while (offset < data.length()) {
-        part = data.mid(offset, part_len);
-        QByteArray test = locale->fromUnicode(part);
-        if (locale->toUnicode(test) == part) {
-            result += test;
-            offset += part_len;
-            continue;
-        }
-        len = part.length();
-        buffer_len = 0;
-        for (uint i = 0; i < len; i++) {
-            QByteArray test = locale->fromUnicode(part.mid(i, 1));
-            if (locale->toUnicode(test) == part.mid(i, 1)) {
-                if (buffer_len + test.length() + 1 > bufferSize) {
-                    break;
-                }
-                strcpy(buffer + buffer_len, test.data());
-                buffer_len += test.length();
-            } else {
-                QString res = QStringLiteral("&#%1;").arg(part.at(i).unicode());
-                test = locale->fromUnicode(res);
-                if (buffer_len + test.length() + 1 > bufferSize) {
-                    break;
-                }
-                strcpy(buffer + buffer_len, test.data());
-                buffer_len += test.length();
-            }
-        }
-        result += QByteArray(buffer, buffer_len + 1);
-        offset += part_len;
-    }
-    return result;
-#endif
 }
 
 void replaceCharsetHeader(QString &output)
 {
-    QString name;
-#if defined(Q_OS_WIN) || QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
-    name = "utf-8";
     // may be required for all xml output
     if (output.contains("<table-of-contents>"))
-        output.replace(QLatin1String("<?xml version=\"1.0\"?>"), QLatin1String("<?xml version=\"1.0\" encoding=\"%1\"?>").arg(name));
-#else
-    name = QLatin1String(QTextCodec::codecForLocale()->name());
-    name.replace(QLatin1String("ISO "), QLatin1String("iso-"));
-    output.replace(QLatin1String("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">"),
-                   QLatin1String("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=%1\">").arg(name));
-#endif
+        output.replace(QLatin1String("<?xml version=\"1.0\"?>"), QLatin1String("<?xml version=\"1.0\" encoding=\"utf-8\"?>"));
 }
 
 QByteArray KDocTools::extractFileToBuffer(const QString &content, const QString &filename)

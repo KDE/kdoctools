@@ -45,7 +45,7 @@ endif()
 
 target_link_libraries(KF6DocTools
     PUBLIC
-        Qt${QT_MAJOR_VERSION}::Core
+        Qt6::Core
     PRIVATE
         ${LIBXML2_LIBRARIES}
         ${LIBXSLT_LIBRARIES}
@@ -115,12 +115,11 @@ add_executable(meinproc5 meinproc.cpp meinproc_common.cpp xslt.cpp ${meinproc_ad
 ecm_mark_nongui_executable(meinproc5)
 target_link_libraries(meinproc5
     PRIVATE
-        Qt${QT_MAJOR_VERSION}::Core
+        Qt6::Core
         ${LIBXML2_LIBRARIES}
         ${LIBXSLT_LIBRARIES}
         ${LIBXSLT_EXSLT_LIBRARIES}
         ${meinproc_additional_LIBS}
-        ${_qt5_compat_lib}
 )
 
 target_compile_definitions(meinproc5 PRIVATE -DKDOCTOOLS_EXPORT=)
@@ -219,7 +218,7 @@ endforeach(_currentcustomizedir ${customizedir})
 set( docbookl10nhelper_SRCS docbookl10nhelper.cpp ${kdoctoolslog_core_SRCS})
 add_executable( docbookl10nhelper ${docbookl10nhelper_SRCS} )
 ecm_mark_nongui_executable( docbookl10nhelper )
-target_link_libraries( docbookl10nhelper Qt${QT_MAJOR_VERSION}::Core )
+target_link_libraries( docbookl10nhelper Qt6::Core )
 if(INSTALL_INTERNAL_TOOLS)
     install(TARGETS docbookl10nhelper EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 endif()
@@ -246,7 +245,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/customization/xsl/all-l10n.xml
 set( checkXML5_SRCS checkXML5.cpp ${kdoctoolslog_core_SRCS})
 add_executable( checkXML5 ${checkXML5_SRCS} )
 ecm_mark_nongui_executable( checkXML5 )
-target_link_libraries( checkXML5 Qt${QT_MAJOR_VERSION}::Core )
+target_link_libraries( checkXML5 Qt6::Core )
 install(TARGETS checkXML5 EXPORT KF6DocToolsToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 if(CMAKE_CROSSCOMPILING AND CHECKXML5_EXECUTABLE)

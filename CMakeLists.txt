@@ -37,7 +37,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 
 # Dependencies
 set(REQUIRED_QT_VERSION 6.4.0)
-find_package(Qt${QT_MAJOR_VERSION}Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
+find_package(Qt6Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
 
 # KF6 frameworks
 if (NOT MEINPROC_NO_KARCHIVE)
@@ -96,8 +96,8 @@ set(KDOCTOOLS_LANGUAGES_LIST af bg ca ca@valencia cs da de el en-GB en eo es et 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
 ecm_set_disabled_deprecation_versions(
-    QT 5.15.2
-    KF 5.97
+    QT 6.4
+    KF 5.102
 )
 
 if (KF6I18n_FOUND)
