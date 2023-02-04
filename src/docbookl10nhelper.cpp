@@ -134,7 +134,6 @@ int main(int argc, char **argv)
     int parsingState = 0;
 
     LangListType allLangs;
-    LangListType customLangs;
 
     bool foundRxEntity = false;
     bool foundRxEntity2 = false;
@@ -201,10 +200,7 @@ int main(int argc, char **argv)
         QString langCode = langFile.left(langFile.length() - 4);
 
         QPair<QString, QString> cl = qMakePair(langCode, langFile);
-        if ((allLangs.searchLang(langCode)) > 0) {
-            /* custom language found in upstream list */
-            customLangs += cl;
-        } else {
+        if ((allLangs.searchLang(langCode)) < 0) {
             /* custom language not found in upstream list */
             allLangs += cl;
         }
