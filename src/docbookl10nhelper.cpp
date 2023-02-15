@@ -119,9 +119,6 @@ int main(int argc, char **argv)
         return (1);
     }
 
-    const QString all10nFName = destDir + QStringLiteral("all-l10n.xml");
-    const QString customl10nFName = destDir + QStringLiteral("kde-custom-l10n.xml");
-
     /*
      * for each language defined in the original l10n.xml, copy
      * it into all-l10n.xml and store it in a list;
@@ -209,6 +206,7 @@ int main(int argc, char **argv)
 
     int res = 0;
 
+    const QString all10nFName = destDir + QStringLiteral("all-l10n.xml");
     if (foundRxEntity) {
         /* old style (docbook-xsl<=1.75) */
         res = writeLangFile(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
