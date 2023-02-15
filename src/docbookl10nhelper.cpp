@@ -41,41 +41,6 @@ int writeLangFile(const QString &fname, const QString &dtdPath, const LangListTy
 
     QTextStream outStream(&outFile);
     outStream << "<?xml version='1.0'?>\n";
-    outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\" [").arg(dtdPath) << QLatin1Char('\n');
-
-    LangListType::const_iterator i = langMap.constBegin();
-    while (i != langMap.constEnd()) {
-        // qCDebug(KDocToolsLog) << (*i).first << ": " << (*i).second;
-        outStream << QStringLiteral("<!ENTITY %1 SYSTEM \"%2\">").arg((*i).first).arg((*i).second) << QLatin1Char('\n');
-        ++i;
-    }
-    outStream << "]>\n";
-
-    if (!langMap.isEmpty()) {
-        outStream << "<l:i18n xmlns:l=\"http://docbook.sourceforge.net/xmlns/l10n/1.0\">\n";
-        i = langMap.constBegin();
-        while (i != langMap.constEnd()) {
-            outStream << QStringLiteral("&%1;").arg((*i).first) << QLatin1Char('\n');
-            ++i;
-        }
-        outStream << "</l:i18n>\n";
-    }
-
-    outFile.close();
-
-    return (0);
-}
-
-int writeLangFileNew(const QString &fname, const QString &dtdPath, const LangListType &langMap)
-{
-    QFile outFile(fname);
-    if (!outFile.open(QIODevice::WriteOnly)) {
-        qCCritical(KDocToolsLog) << QStringLiteral("Could not write %1").arg(outFile.fileName());
-        return (1);
-    }
-
-    QTextStream outStream(&outFile);
-    outStream << "<?xml version='1.0'?>\n";
     outStream << QStringLiteral("<!DOCTYPE l:i18n SYSTEM \"%1\">").arg(dtdPath) << QLatin1Char('\n');
 
     if (!langMap.isEmpty()) {
@@ -123,17 +88,13 @@ int main(int argc, char **argv)
      * for each language defined in the original l10n.xml, copy
      * it into all-l10n.xml and store it in a list;
      **/
-    const QRegularExpression rxDocType(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s+\\[\\s*$"));
-    const QRegularExpression rxDocType2(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s*>$"));
-    const QRegularExpression rxEntity(QStringLiteral("^\\s*<!ENTITY\\s+([^\\s]+)\\s+SYSTEM\\s+\"([^\\s]+)\">\\s*$"));
-    const QRegularExpression rxEntity2(QStringLiteral("^\\s*<l:l10n language=\"([^\\s]+)\"\\s+href=\"([^\\s]+)\"/>\\s*$"));
+    const QRegularExpression rxDocType(QStringLiteral("^\\s*<!DOCTYPE\\s+l:i18n\\s+SYSTEM\\s+\"l10n\\.dtd\"\\s*>$"));
+    const QRegularExpression rxEntity(QStringLiteral("^\\s*<l:l10n language=\"([^\\s]+)\"\\s+href=\"([^\\s]+)\"/>\\s*$"));
     QTextStream inStream(&i18nFile);
     int parsingState = 0;
 
     LangListType allLangs;
 
-    bool foundRxEntity = false;
-    bool foundRxEntity2 = false;
     while (!inStream.atEnd()) {
         QString line = inStream.readLine();
 
@@ -142,29 +103,15 @@ int main(int argc, char **argv)
             if (rxDocType.match(line).hasMatch()) {
                 parsingState = 1;
                 // qCDebug(KDocToolsLog) << "DTD found";
-            } else if (rxDocType2.match(line).hasMatch()) {
-                parsingState = 1;
-                // qCDebug(KDocToolsLog) << "DTD found";
             }
             break;
         case 1:
-            QString langCode, langFile;
-            QRegularExpressionMatch match = rxEntity.match(line);
-            if (match.hasMatch() && !foundRxEntity2) {
-                foundRxEntity = true;
-                langCode = match.captured(1);
-                langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
+            const QRegularExpressionMatch match = rxEntity.match(line);
+            if (match.hasMatch()) {
+                const QString langCode = match.captured(1);
+                const QString langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
                 allLangs += qMakePair(langCode, langFile);
                 // qCDebug(KDocToolsLog) << langCode << " - " << langFile;
-            } else if (!foundRxEntity) {
-                match = rxEntity2.match(line);
-                if (match.hasMatch()) {
-                    foundRxEntity2 = true;
-                    langCode = match.captured(1);
-                    langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
-                    allLangs += qMakePair(langCode, langFile);
-                    // qCDebug(KDocToolsLog) << langCode << " - " << langFile;
-                }
             }
             break;
         }
@@ -204,15 +151,6 @@ int main(int argc, char **argv)
         ++i;
     }
 
-    int res = 0;
-
     const QString all10nFName = destDir + QStringLiteral("all-l10n.xml");
-    if (foundRxEntity) {
-        /* old style (docbook-xsl<=1.75) */
-        res = writeLangFile(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
-    } else {
-        res = writeLangFileNew(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
-    }
-
-    return (res);
+    return writeLangFile(all10nFName, l10nDir + QStringLiteral("common/l10n.dtd"), allLangs);
 }
