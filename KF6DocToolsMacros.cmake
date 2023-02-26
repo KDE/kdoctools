@@ -227,17 +227,17 @@ function(kdoctools_install podir)
     foreach(lang_dir ${lang_dirs})
         get_filename_component(lang ${lang_dir} NAME)
 
-        file(GLOB_RECURSE docbooks "${lang_dir}/docs/*.docbook")
+        file(GLOB_RECURSE docbooks RELATIVE "${lang_dir}" "${lang_dir}/docs/*.docbook")
         foreach(docbook ${docbooks})
             string(REGEX MATCH "\\.([0-9])\\.docbook" match ${docbook})
             if (match)
-                kdoctools_create_manpage(${docbook} ${CMAKE_MATCH_1}
+                kdoctools_create_manpage("${lang_dir}/${docbook}" ${CMAKE_MATCH_1}
                     INSTALL_DESTINATION ${KDE_INSTALL_MANDIR}/${lang}
                 )
             else()
-                string(REGEX MATCH "${lang_dir}/docs/(.*)/index.docbook" match ${docbook})
+                string(REGEX MATCH "^docs/(.*)/index.docbook" match ${docbook})
                 if (match)
-                    kdoctools_create_handbook(${docbook}
+                    kdoctools_create_handbook("${lang_dir}/${docbook}"
                         INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/${lang}
                         SUBDIR ${CMAKE_MATCH_1}
                     )
