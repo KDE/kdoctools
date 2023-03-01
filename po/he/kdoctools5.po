@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdoctools5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-02 00:42+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2017-05-16 06:49-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:137
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "מפענח גיליון סגנון"
 
-#: xslt.cpp:163
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "מפענח מסמך"
 
-#: xslt.cpp:188
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "מחיל את גיליון הסגנון"
 
-#: xslt.cpp:196
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "כותב מסמך"

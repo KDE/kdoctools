@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-02 00:42+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2007-09-12 00:31+0200\n"
 "Last-Translator: Manfred Wiese <m.j.wiese@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,22 +19,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:137
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Stilvörlaag warrt dörkeken"
 
-#: xslt.cpp:163
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "Dokment warrt dörkeken"
 
-#: xslt.cpp:188
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Stilvörlaag warrt anwendt"
 
-#: xslt.cpp:196
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "Dokment warrt schreven"

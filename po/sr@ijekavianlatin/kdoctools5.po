@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2019-12-24 02:49+0100\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2014-05-19 22:29+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -23,17 +23,17 @@ msgstr ""
 msgid "Parsing stylesheet"
 msgstr "Raščlanjujem opis stila..."
 
-#: xslt.cpp:161
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "Raščlanjujem dokument..."
 
-#: xslt.cpp:187
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Primenjujem opis stila..."
 
-#: xslt.cpp:195
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "Upisujem dokument..."

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-02 00:42+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2005-01-04 11:21-0600\n"
 "Last-Translator: Deepayan Sarkar <deepayan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -15,22 +15,22 @@ msgstr ""
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:137
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "স্টাইলশীট পার্স করা হচ্ছে"
 
-#: xslt.cpp:163
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "নথী পার্স করা হচ্ছে"
 
-#: xslt.cpp:188
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "স্টাইলশীট প্রয়োগ করা হচ্ছে"
 
-#: xslt.cpp:196
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "নথী লেখা হচ্ছে"

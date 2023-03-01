@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdoctools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-02 00:42+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2019-08-30 09:53+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Generator: Lokalize 19.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:137
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Estilo-orriaren azterketa sintaktikoa egitea"
 
-#: xslt.cpp:163
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "Dokumentuaren azterketa sintaktikoa egitea"
 
-#: xslt.cpp:188
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Estilo-orria ezartzea"
 
-#: xslt.cpp:196
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "Dokumentua idaztea"

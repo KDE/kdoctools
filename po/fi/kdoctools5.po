@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-02 00:42+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2014-02-27 23:44+0200\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:137
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Jäsennetään tyylisivua"
 
-#: xslt.cpp:163
+#: xslt.cpp:160
 #, kde-format
 msgid "Parsing document"
 msgstr "Jäsennetään tiedostoa"
 
-#: xslt.cpp:188
+#: xslt.cpp:185
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Otetaan tyylisivu käyttöön"
 
-#: xslt.cpp:196
+#: xslt.cpp:193
 #, kde-format
 msgid "Writing document"
 msgstr "Kirjoitetaan tiedostoa"
