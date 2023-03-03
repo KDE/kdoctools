@@ -25,8 +25,9 @@ include(CMakePackageConfigHelpers)
 include(GenerateExportHeader)
 include(ECMAddQch)
 
+set(kdoctools_version_header "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h"
+                        VERSION_HEADER "${kdoctools_version_header}"
                         PACKAGE_VERSION_FILE "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfigVersion.cmake"
                         SOVERSION 6)
 
@@ -113,6 +114,11 @@ endif()
 
 install(EXPORT KF6DocToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6DocToolsTargets.cmake NAMESPACE KF6:: )
 install(EXPORT KF6DocToolsToolsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6DocToolsToolsTargets.cmake NAMESPACE KF6:: )
+install(
+    FILES ${kdoctools_version_header}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools
+    COMPONENT Devel
+)
 
 if (BUILD_QCH)
     ecm_install_qch_export(
