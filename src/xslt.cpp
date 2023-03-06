@@ -22,10 +22,10 @@
 #include <QByteArray>
 #include <QDir>
 #include <QFile>
+#include <QList>
 #include <QStandardPaths>
 #include <QString>
 #include <QUrl>
-#include <QVector>
 
 #if !defined(SIMPLE_XSLT)
 extern HelpProtocol *slave;
@@ -130,7 +130,7 @@ static xmlParserInputPtr xsltprocExternalEntityLoader(const char *_URL, const ch
 }
 #endif
 
-QString KDocTools::transform(const QString &pat, const QString &tss, const QVector<const char *> &params)
+QString KDocTools::transform(const QString &pat, const QString &tss, const QList<const char *> &params)
 {
     QString parsed;
 
@@ -183,7 +183,7 @@ QString KDocTools::transform(const QString &pat, const QString &tss, const QVect
     }
 
     INFO(i18n("Applying stylesheet"));
-    QVector<const char *> p = params;
+    QList<const char *> p = params;
     p.append(nullptr);
     xmlDocPtr res = xsltApplyStylesheet(style_sheet, doc, const_cast<const char **>(&p[0]));
     xmlFreeDoc(doc);

@@ -14,8 +14,8 @@
 #ifndef _KDOCTOOLS_XSLT_H_
 #define _KDOCTOOLS_XSLT_H_
 
+#include <QList>
 #include <QStandardPaths>
-#include <QVector>
 #include <kdoctools_export.h>
 
 class QByteArray;
@@ -31,7 +31,7 @@ namespace KDocTools
  * Transform and return the content of file with the specified XSLT stylesheet
  * (both already in memory) using the optional parameters.
  */
-KDOCTOOLS_EXPORT QString transform(const QString &file, const QString &stylesheet, const QVector<const char *> &params = QVector<const char *>());
+KDOCTOOLS_EXPORT QString transform(const QString &file, const QString &stylesheet, const QList<const char *> &params = QList<const char *>());
 
 /**
  * Extract the content of a single file from the content string

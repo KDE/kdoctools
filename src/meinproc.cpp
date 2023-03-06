@@ -130,7 +130,7 @@ int main(int argc, char **argv)
         }
     }
 
-    QVector<const char *> params;
+    QList<const char *> params;
     {
         const QStringList paramList = parser.values(QStringLiteral("param"));
         for (const QString &tuple : paramList) {
