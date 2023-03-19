@@ -5,12 +5,11 @@
 <shortcut>
 <keycombo action="simul"><keycap>F1</keycap></keycombo>
 </shortcut>
-<guimenu>Help</guimenu>
-<guimenuitem>Contents...</guimenuitem>
+<guimenu>Yardım</guimenu>
+<guimenuitem>&kappname; El Kitabı</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Invokes the KDE Help system</action> starting at the
-&kappname; help pages. (this document).</para></listitem>
+<listitem><para>KDE Yardım sistemini, &kappname; yardım sayfalarından başlayarak <action>çağırır</action> (bu belge).</para></listitem>
 </varlistentry>
 
 <varlistentry>
@@ -18,41 +17,35 @@
 <shortcut>
 <keycombo action="simul">&Shift;<keycap>F1</keycap></keycombo>
 </shortcut>
-<guimenu>Help</guimenu>
-<guimenuitem>What's This?</guimenuitem>
+<guimenu>Yardım</guimenu>
+<guimenuitem>Bu Nedir?</guimenuitem>
 </menuchoice>
 </term>
-<listitem><para><action>Changes the mouse cursor to a combination arrow and
-question mark.</action>  Clicking on items within &kappname; will open a help
-window (if one exists for the particular item) explaining the item's
-function.</para></listitem>
+<listitem><para><action>Fare imlecini bir imleç ve soru işaretinden oluşan bir kombinasyona çevirir.</action> &kappname; içinde nesnelere tıklamak, (o öge için varsa) ögenin işlevini açıklayan bir yardım penceresi açar.</para></listitem>
 </varlistentry>
 
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>Report Bug...</guimenuitem>
+<guimenu>Yardım</guimenu>
+<guimenuitem>Hata Bildir...</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>Opens the Bug report dialog</action> where you can
-report a bug or request a <quote>wishlist</quote> feature.</para></listitem>
+<listitem><para>Bir hata bildirebileceğiniz veya bir <quote>özellik</quote> isteyebileceğiniz <action>Hata Raporu iletişim kutusunu açar</action>.</para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>About &kappname;</guimenuitem>
+<guimenu>Yardım</guimenu>
+<guimenuitem>&kappname; Hakkında</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>This will display version and author
-information.</action></para></listitem>
+<listitem><para><action>Bu, sürüm ve yazar bilgisini görüntüler.</action></para></listitem>
 </varlistentry>
 
 <varlistentry>
 <term><menuchoice>
-<guimenu>Help</guimenu>
-<guimenuitem>About KDE</guimenuitem>
+<guimenu>Yardım</guimenu>
+<guimenuitem>KDE Hakkında</guimenuitem>
 </menuchoice></term>
-<listitem><para><action>This displays the KDE version and other basic
-information.</action></para></listitem>
+<listitem><para><action>Bu, KDE sürümünü ve başka temel bilgileri görüntüler.</action></para></listitem>
 </varlistentry>
 </variablelist>
