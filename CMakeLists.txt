@@ -95,7 +95,7 @@ include(KF6DocToolsMacros.cmake)
 set(KDOCTOOLS_LANGUAGES_LIST af bg ca ca@valencia cs da de el en-GB en eo es et fi fo fr gl he hu id it ja ko lt nds nl nn no pl pt-BR pt ro ru sk sl sq sr sr@latin sr@ijekavian sr@ijekavianlatin sv th tr uk wa xh xx zh-CN zh-TW)
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6DocTools")
-add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools6\")
 ecm_set_disabled_deprecation_versions(
     QT 6.4
     KF 5.102
