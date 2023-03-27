@@ -15,7 +15,7 @@
 <!ENTITY underLGPL          PUBLIC "-//KDE//DOCUMENT LGPL Licence Declaration//ES"
   "entities/underLGPL.docbook"                       ><!-- level: para -->
 <!ENTITY underCCBYSA4       PUBLIC "-//KDE//DOCUMENT CC BY-SA 4.0 Licence Declaration//ES"
-  "../en/entities/underCCBYSA4.docbook"                   ><!-- level: para -->
+  "entities/underCCBYSA4.docbook"                   ><!-- level: para -->
 <!ENTITY underFDL           PUBLIC "-//KDE//DOCUMENT FDL Licence Declaration//ES"
   "entities/underFDL.docbook"                       ><!-- level: para -->
 <!ENTITY underBSDLicense    PUBLIC "-//KDE//DOCUMENT BSD Licence Declaration//ES"
