@@ -9,21 +9,26 @@
 <!ENTITY Alt			"<keycap>Seçenek</keycap>">
 <!ENTITY Backspace		"<keycap>Geri Sil</keycap>">
 <!ENTITY Ctrl			"<keycap>Kontrol</keycap>">
-<!ENTITY Enter			"<keycap>Giriş</keycap>">
-<!ENTITY Home			"<keycap>Baş</keycap>">
-<!ENTITY End			"<keycap>Son</keycap>">
-<!ENTITY Space			"<keycap>Boşluk</keycap>">
+<!ENTITY Del			"<keycap>Sil</keycap>">
+<!ENTITY Down			"<keycap>Aşağı Ok</keycap>">
 <!ENTITY Dönüş			"<keycap>Dönüş</keycap>">
-<!ENTITY PgUp			"<keycap>Sayfa Yukarı</keycap>">
-<!ENTITY PgDn			"<keycap>Sayfa Aşağı</keycap>">
+<!ENTITY End			"<keycap>Son</keycap>">
+<!ENTITY Enter			"<keycap>Giriş</keycap>">
 <!ENTITY Esc			"<keycap>Vazgeç</keycap>">
 <!ENTITY FAQ			'<acronym>SSS</acronym>'>
+<!ENTITY Home			"<keycap>Baş</keycap>">
 <!ENTITY LMB			"<mousebutton>Sol</mousebutton> Fare Düğmesi">
 <!ENTITY MMB			"<mousebutton>Orta</mousebutton> Fare Düğmesi">
+<!ENTITY Meta			"<keycap>Meta</keycap>">
 <!ENTITY OS			"İşletim Sistemi"> <!-- <acronym>OS</acronym>-->
+<!ENTITY PgDn			"<keycap>Sayfa Aşağı</keycap>">
+<!ENTITY PgUp			"<keycap>Sayfa Yukarı</keycap>">
+<!ENTITY Return			"<keycap>Dönüş</keycap>">
 <!ENTITY RMB			"<mousebutton>Sağ</mousebutton> Fare Düğmesi">
 <!ENTITY Shift			"<keycap>Üst Karakter</keycap>">
+<!ENTITY Space			"<keycap>Boşluk</keycap>">
 <!ENTITY Tab			"<keycap>Sekme</keycap>">
+<!ENTITY Up			"<keycap>Yukarı Ok</keycap>">
 <!ENTITY cataloguemanager	"<application>Katalog Yöneticisi</application>">
 <!ENTITY cdrom			'<hardware>CD-ROM</hardware>'>
 <!ENTITY dpi			'<acronym>dpi</acronym>'>
@@ -35,6 +40,7 @@
 <!ENTITY kde-frameworks		"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kf6-full		"&kde-frameworks; <productnumber>6</productnumber>">
+<!ENTITY kdevelop		"<application>K Geliştir</application>">
 <!ENTITY kfloppy		"<application>K Disket</application>">
 <!ENTITY khelpcenter		"<application>KDE Yardım Merkezi</application>">
 <!ENTITY krunner		"<application>K Çalıştır</application>">
