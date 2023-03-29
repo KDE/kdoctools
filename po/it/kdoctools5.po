@@ -1,9 +1,10 @@
 # translation of kio_help4.po to Italian
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-#
 # Daniele Medri <madrid@linuxmeeting.net>, 2003.
 # Federico Cozzi <federicocozzi@federicocozzi.it>, 2004.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2004, 2005, 2007.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2023.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
@@ -17,6 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: xslt.cpp:140
 #, kde-format
