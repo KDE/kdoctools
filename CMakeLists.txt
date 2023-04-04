@@ -22,7 +22,7 @@ include(ECMMarkNonGuiExecutable)
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(CMakePackageConfigHelpers)
-include(GenerateExportHeader)
+include(ECMGenerateExportHeader)
 include(ECMAddQch)
 
 set(kdoctools_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kdoctools_version.h")

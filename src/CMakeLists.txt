@@ -35,7 +35,6 @@ ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
 
 # needed by KIO, need to export it
 add_library(KF6DocTools SHARED xslt.cpp xslt_kde.cpp ${kdoctoolslog_core_SRCS})
-generate_export_header(KF6DocTools BASE_NAME KDocTools EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h")
 add_library(KF6::DocTools ALIAS KF6DocTools)
 
 set_target_properties(KF6DocTools PROPERTIES
@@ -43,6 +42,15 @@ set_target_properties(KF6DocTools PROPERTIES
     SOVERSION   ${KDOCTOOLS_SOVERSION}
     EXPORT_NAME DocTools
     POSITION_INDEPENDENT_CODE TRUE
+)
+
+ecm_generate_export_header(KF6DocTools
+    BASE_NAME KDocTools
+    EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h"
+    GROUP_BASE_NAME KF
+    VERSION ${KF_VERSION}
+    USE_VERSION_HEADER
+    DEPRECATED_BASE_VERSION 0
 )
 
 if (NOT MEINPROC_NO_KARCHIVE)
