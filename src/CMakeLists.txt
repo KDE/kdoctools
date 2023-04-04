@@ -37,6 +37,14 @@ ecm_qt_declare_logging_category(kdoctoolslog_core_SRCS
 add_library(KF6DocTools SHARED xslt.cpp xslt_kde.cpp ${kdoctoolslog_core_SRCS})
 generate_export_header(KF6DocTools BASE_NAME KDocTools EXPORT_FILE_NAME "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h")
 add_library(KF6::DocTools ALIAS KF6DocTools)
+
+set_target_properties(KF6DocTools PROPERTIES
+    VERSION     ${KDOCTOOLS_VERSION}
+    SOVERSION   ${KDOCTOOLS_SOVERSION}
+    EXPORT_NAME DocTools
+    POSITION_INDEPENDENT_CODE TRUE
+)
+
 if (NOT MEINPROC_NO_KARCHIVE)
     set (_private_link_karchive "KF6::Archive")
 else()
@@ -53,11 +61,6 @@ target_link_libraries(KF6DocTools
         ${_private_link_karchive}
 )
 
-set_target_properties(KF6DocTools PROPERTIES
-    POSITION_INDEPENDENT_CODE TRUE
-    EXPORT_NAME KDocTools
-)
-
 target_include_directories(KF6DocTools INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools>")
 
 set(KDocTools_HEADERS
@@ -69,11 +72,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KDocTools
     COMPONENT Devel
-)
-
-set_target_properties(KF6DocTools PROPERTIES VERSION   ${KDOCTOOLS_VERSION}
-                                             SOVERSION ${KDOCTOOLS_SOVERSION}
-                                             EXPORT_NAME DocTools
 )
 
 install(TARGETS KF6DocTools EXPORT KF6DocToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
