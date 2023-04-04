@@ -25,7 +25,7 @@ include(CMakePackageConfigHelpers)
 include(GenerateExportHeader)
 include(ECMAddQch)
 
-set(kdoctools_version_header "${CMAKE_CURRENT_BINARY_DIR}/kdoctools_version.h")
+set(kdoctools_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/kdoctools_version.h")
 ecm_setup_version(PROJECT VARIABLE_PREFIX KDOCTOOLS
                         VERSION_HEADER "${kdoctools_version_header}"
                         PACKAGE_VERSION_FILE "${CMAKE_BINARY_DIR}/cmake/KF6DocToolsConfigVersion.cmake"
