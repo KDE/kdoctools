@@ -1,4 +1,4 @@
-# Translation of kdoctools5 to Northern Sami
+# Translation of kdoctools6 to Northern Sami
 #
 # Børre Gaup <boerre@skolelinux.no>, 2004, 2005, 2007, 2008, 2010.
 msgid ""
