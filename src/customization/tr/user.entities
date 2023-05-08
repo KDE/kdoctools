@@ -43,7 +43,9 @@
 <!ENTITY kdevelop		"<application>K Geliştir</application>">
 <!ENTITY kfloppy		"<application>K Disket</application>">
 <!ENTITY khelpcenter		"<application>KDE Yardım Merkezi</application>">
+<!ENTITY kgpg		"<application>K GPG</application>">
 <!ENTITY krunner		"<application>K Çalıştır</application>">
+<!ENTITY ktorrent		"<application>K Torrent</application>">
 <!ENTITY kwallet5		"<application>K Cüzdan</application> <productnumber>5</productnumber>">
 <!ENTITY kwalletmanager5	"<application>K Cüzdan Yöneticisi</application> <productnumber>5</productnumber>">
 <!ENTITY lmb			"<mousebutton>sol</mousebutton> fare düğmesi">
@@ -55,3 +57,4 @@
 <!ENTITY sweeper		"<application>Süpürücü</application>">
 <!ENTITY systemsettings		"<application>Sistem Ayarları</application>">
 <!ENTITY systemtray		"<application>Sistem Tepsisi</application>">
+<!ENTITY spectacle		"<application>Deklanşör</application>">
