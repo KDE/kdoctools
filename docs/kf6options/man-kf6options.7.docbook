@@ -8,18 +8,18 @@
 <title>&frameworks; Command Line Documentation</title>
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
 <date>2016-05-13</date>
-<releaseinfo>Frameworks 5.22</releaseinfo>
+<releaseinfo>Frameworks 6.0</releaseinfo>
 <productname>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle>kf5options</refentrytitle>
+<refentrytitle>kf6options</refentrytitle>
 <manvolnum>7</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname>kf5options</refname>
-<refpurpose>Common commandline options for all applications based on &kf5-full;</refpurpose>
+<refname>kf6options</refname>
+<refpurpose>Common commandline options for all applications based on &kf6-full;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -76,7 +76,7 @@ file can put its own name into the exec command.
 
 <refsect1>
 <title>See Also</title>
-<para>qt5options(7)</para>
+<para>qt6options(7)</para>
 
 </refsect1>
 

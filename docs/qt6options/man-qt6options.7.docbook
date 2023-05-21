@@ -9,17 +9,17 @@
 <author>&Lauri.Watts; &Lauri.Watts.mail;</author>
 <author>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
 <date>2016-06-04</date>
-<releaseinfo>Qt 5.4</releaseinfo>
+<releaseinfo>Qt 6</releaseinfo>
 <productname>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
-<refentrytitle>qt5options</refentrytitle>
+<refentrytitle>qt6options</refentrytitle>
 <manvolnum>7</manvolnum>
 </refmeta>
 
 <refnamediv>
-<refname>qt5options</refname>
+<refname>qt6options</refname>
 <refpurpose>Common commandline options for all applications based on the &Qt; toolkit</refpurpose>
 </refnamediv>
 
@@ -244,7 +244,7 @@ Display the version string of the application.
 
 <refsect1>
 <title>See Also</title>
-<para><replaceable>kf5options</replaceable>(7)</para>
+<para><replaceable>kf6options</replaceable>(7)</para>
 
 </refsect1>
 
@@ -252,9 +252,9 @@ Display the version string of the application.
 <title>Authors</title>
 <para>Man page originally written by &Lauri.Watts; &Lauri.Watts.mail;</para>
 <para>Updated to &frameworks; 5 by &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
-<para>The infos for this man page are from <ulink url="https://doc.qt.io/qt-5/qapplication.html#QApplication">QApplication documentation</ulink>,
-<ulink url="https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication">QGuiApplication documentation</ulink>
-and <ulink url="https://doc.qt.io/qt-5/qcommandlineparser.html">QCommandLineParser documentation</ulink>.</para>
+<para>The infos for this man page are from <ulink url="https://doc.qt.io/qt-6/qapplication.html#QApplication">QApplication documentation</ulink>,
+<ulink url="https://doc.qt.io/qt-6/qguiapplication.html#QGuiApplication">QGuiApplication documentation</ulink>
+and <ulink url="https://doc.qt.io/qt-6/qcommandlineparser.html">QCommandLineParser documentation</ulink>.</para>
 </refsect1>
 
 </refentry>

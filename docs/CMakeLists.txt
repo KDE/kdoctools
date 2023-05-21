@@ -1,5 +1,5 @@
 add_subdirectory(checkXML6)
 add_subdirectory(meinproc6)
 
-add_subdirectory(kf5options)
-add_subdirectory(qt5options)
+add_subdirectory(kf6options)
+add_subdirectory(qt6options)

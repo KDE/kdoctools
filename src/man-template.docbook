@@ -104,8 +104,8 @@ url="help:/ --commandname-- ">help:/<!--command--></ulink>
 <userinput><command>khelpcenter</command>
 <parameter>help:/<!--command--></parameter></userinput>).</member>
 <!--for man pages replace "help:/" with "man:/" in this member-->
-<member>kf5options(7)</member> <!-- only for application with a GUI-->
-<member>qt5options(7)</member> <!-- only for application with a GUI-->
+<member>kf6options(7)</member> <!-- only for application with a GUI-->
+<member>qt6options(7)</member> <!-- only for application with a GUI-->
 <!--<member>foo(1)</member> more man page references if applicable-->
 <member>There is also further information available at <!--link to
 website if applicable--></member>
