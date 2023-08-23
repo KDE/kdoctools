@@ -133,7 +133,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 <para
 ><command
 >meinproc5</command
-> convertix fitxers DocBook a &HTML;. </para>
+> convertix fitxers en DocBook a &HTML;. </para>
 </refsect1>
 
 <refsect1>
@@ -292,7 +292,7 @@ El truc és mirar en el primer error, corregir-lo, guardeu el fitxer, i executeu
 </literallayout
 > a on <replaceable
 >fitxer-docbook</replaceable
-> generalment serà index.docbook. Esta ordre crea pàgines &HTML; del fitxer DocBook. Cal tindre en compte que estes pàgines només són visibles en els navegadors basats en &kde; (com &konqueror;). </para>
+> generalment serà index.docbook. Esta ordre crea pàgines &HTML; del fitxer en DocBook. Cal tindre en compte que estes pàgines només són visibles en els navegadors basats en &kde; (com &konqueror;). </para>
 <para
 >Si necessiteu veure l'eixida &HTML; en un altre navegador (per exemple, si el feu disponible en línia), utilitzeu <literallayout>
 <userinput
