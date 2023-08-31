@@ -36,11 +36,13 @@
 <!ENTITY etc			"vb.">
 <!ENTITY ie			"başka bir deyişle">
 <!ENTITY infocenter		"<application>Bilgi Merkezi</application>">
+<!ENTITY gwenview		"<application>Akbakış</application>">
 <!ENTITY kbounce		"<application>K Zıpla</application>">
 <!ENTITY kde-frameworks		"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kf6-full		"&kde-frameworks; <productnumber>6</productnumber>">
 <!ENTITY kdevelop		"<application>K Geliştir</application>">
+<!ENTITY kdiskfree		"<application>K Boş Alan</application>">
 <!ENTITY kfloppy		"<application>K Disket</application>">
 <!ENTITY khelpcenter		"<application>KDE Yardım Merkezi</application>">
 <!ENTITY kgpg		"<application>K GPG</application>">
@@ -58,3 +60,5 @@
 <!ENTITY systemsettings		"<application>Sistem Ayarları</application>">
 <!ENTITY systemtray		"<application>Sistem Tepsisi</application>">
 <!ENTITY spectacle		"<application>Deklanşör</application>">
+<!ENTITY kteatime		"<application>K Çay Saati</application>">
+
