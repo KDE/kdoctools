@@ -41,6 +41,7 @@
 <!ENTITY kde-frameworks		"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kf6-full		"&kde-frameworks; <productnumber>6</productnumber>">
+<!ENTITY kcalc		"<application>K Hesap</application>">
 <!ENTITY kdevelop		"<application>K Geliştir</application>">
 <!ENTITY kdiskfree		"<application>K Boş Alan</application>">
 <!ENTITY kfloppy		"<application>K Disket</application>">
