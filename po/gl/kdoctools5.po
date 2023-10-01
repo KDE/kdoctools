@@ -23,22 +23,22 @@ msgstr ""
 #: xslt.cpp:140
 #, kde-format
 msgid "Parsing stylesheet"
-msgstr "Estase a procesar a folla de estilos"
+msgstr "Procesando a folla de estilos"
 
 #: xslt.cpp:163
 #, kde-format
 msgid "Parsing document"
-msgstr "Estase a procesar o documento"
+msgstr "Procesando o documento"
 
 #: xslt.cpp:188
 #, kde-format
 msgid "Applying stylesheet"
-msgstr "Estase a aplicar a folla de estilos"
+msgstr "Aplicando a folla de estilos"
 
 #: xslt.cpp:196
 #, kde-format
 msgid "Writing document"
-msgstr "Estase a escribir o documento"
+msgstr "Escribindo o documento"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
