@@ -54,6 +54,8 @@
 <!ENTITY korganizer		"<application>K Organizatör</application>">
 <!ENTITY kruler		        "<application>K Cetvel</application>">
 <!ENTITY krunner		"<application>K Çalıştır</application>">
+<!ENTITY ktimer		    "<application>K Sayaç</application>">
+<!ENTITY ktimetracker		"<application>K Zamanölçer</application>">
 <!ENTITY ktorrent		"<application>K Torrent</application>">
 <!ENTITY kwallet5		"<application>K Cüzdan</application> <productnumber>5</productnumber>">
 <!ENTITY kwalletmanager5	"<application>K Cüzdan Yöneticisi</application> <productnumber>5</productnumber>">
