@@ -154,9 +154,6 @@ div.sect2 {
 }
 
 .programlisting, pre.screen {
-    -khtml-border-radius: 7px;
-
-    /* This will work someday */
     border-radius: 7px;
 
     /* To support border radius on our OSS browser friends when
@@ -176,7 +173,6 @@ div.sect2 {
     color: black;
     border: 1px solid rgb(190, 190, 190);
 
-    -khtml-border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
@@ -187,7 +183,6 @@ div.sect2 {
     border: 1px dotted #BBF;
     font-weight: normal;
 
-    -khtml-border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -197,7 +192,6 @@ div.sect2 {
     background-color: #DFDFFF;
     font-weight: bold;
 
-    -khtml-border-radius: 2px;
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
     border-radius: 2px;
