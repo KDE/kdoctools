@@ -42,6 +42,7 @@
 <!ENTITY kde-frameworks		"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		"&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kf6-full		"&kde-frameworks; <productnumber>6</productnumber>">
+<!ENTITY kbackup		"<application>K Yedek</application>">
 <!ENTITY kcalc		        "<application>K Hesap</application>">
 <!ENTITY kcharselect		"<application>K Karakterci</application>">
 <!ENTITY kdevelop		"<application>K Geliştir</application>">
@@ -54,6 +55,7 @@
 <!ENTITY korganizer		"<application>K Organizatör</application>">
 <!ENTITY kruler		        "<application>K Cetvel</application>">
 <!ENTITY krunner		"<application>K Çalıştır</application>">
+<!ENTITY ksystemlog		"<application>K Sistem Günlüğü</application>">
 <!ENTITY ktimer		    "<application>K Sayaç</application>">
 <!ENTITY ktimetracker		"<application>K Zamanölçer</application>">
 <!ENTITY ktorrent		"<application>K Torrent</application>">
