@@ -29,6 +29,11 @@
 <!ENTITY Space			"<keycap>Boşluk</keycap>">
 <!ENTITY Tab			"<keycap>Sekme</keycap>">
 <!ENTITY Up			"<keycap>Yukarı Ok</keycap>">
+<!ENTITY Down			"<keycap>Aşağı Ok</keycap>">
+<!ENTITY Right			"<keycap>Sağ Ok</keycap>">
+<!ENTITY Left			"<keycap>Sol Ok</keycap>">
+
+<!ENTITY applications	"<productname>Uygulamalar</productname>">
 <!ENTITY cataloguemanager	"<application>Katalog Yöneticisi</application>">
 <!ENTITY cdrom			'<hardware>CD-ROM</hardware>'>
 <!ENTITY dpi			'<acronym>dpi</acronym>'>
