@@ -358,7 +358,7 @@
 > </term>
 <listitem
 ><para
->Canvia les visualitzacions a &X11;. Anul·la la variable d'entorn <envar
+>Canvia les visualitzacions en &X11;. Anul·la la variable d'entorn <envar
 >DISPLAY</envar
 >. </para
 ></listitem>
@@ -373,7 +373,7 @@
 > </term>
 <listitem
 ><para
->Especifica la geometria de la finestra per a la finestra principal a &X11;. Per exemple: -geometry 100x100+50+50 </para
+>Especifica la geometria de la finestra per a la finestra principal en &X11;. Per exemple: -geometry 100x100+50+50 </para
 ></listitem>
 </varlistentry>
 
@@ -399,7 +399,7 @@
 > </term>
 <listitem
 ><para
->Utilitza el motor de tipus de lletra FreeType. </para
+>Utilitza el motor de fonts FreeType. </para
 ></listitem>
 </varlistentry>
 

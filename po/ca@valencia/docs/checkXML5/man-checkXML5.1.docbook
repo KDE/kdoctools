@@ -61,7 +61,7 @@
 <para
 ><command
 >checkXML5</command
-> és una eina per a comprovar els errors de sintaxi en els fitxers DocBook en &XML; de &kde;. També es pot emprar per a d'altres DocBook basats en fitxers &XML;, però hauríeu d'utilitzar una eina menys específica xmllint(1) si no esteu escrivint o treballant en la documentació de &kde;.</para>
+> és una eina per a comprovar els errors de sintaxi en els fitxers DocBook en &XML; de &kde;. També es pot emprar per a d'altres DocBook basats en fitxers &XML;, però hauríeu d'utilitzar l'eina menys específica xmllint(1) si no esteu escrivint o treballant en la documentació de &kde;.</para>
 </refsect1>
 
 <refsect1>
