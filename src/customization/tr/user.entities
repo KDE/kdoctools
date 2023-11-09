@@ -17,6 +17,7 @@
 <!ENTITY Esc			"<keycap>Vazgeç</keycap>">
 <!ENTITY FAQ			'<acronym>SSS</acronym>'>
 <!ENTITY Home			"<keycap>Baş</keycap>">
+<!ENTITY Ins			"<keycap>Ekle</keycap>">
 <!ENTITY LMB			"<mousebutton>Sol</mousebutton> Fare Düğmesi">
 <!ENTITY MMB			"<mousebutton>Orta</mousebutton> Fare Düğmesi">
 <!ENTITY Meta			"<keycap>Meta</keycap>">
