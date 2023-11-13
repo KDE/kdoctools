@@ -226,7 +226,7 @@
 ><para
 >Uygulama yerleşimi yönünü <methodname
 >Qt::RightToLeft</methodname
-> olarak ayarlayın. Bu seçenek hata ayıklama için düşünülmüştür, üretimde kullanılmamalıdır. Öntanımlı değer otomatik olarak kullanıcı yerelinden algılanır (ayrıca bkz <methodname
+> olarak ayarlayın. Bu seçenek hata ayıklama için düşünülmüştür, üretimde kullanılmamalıdır. Öntanımlı değer kendiliğinden kullanıcı yerelinden algılanır (ayrıca bkz <methodname
 >QLocale::textDirection()</methodname
 >). </para
 ></listitem>
