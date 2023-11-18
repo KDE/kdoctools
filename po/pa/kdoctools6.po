@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2007-12-29 07:35+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi <punjabi-l10n@users.sf.net>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "stylesheet ਨੂੰ ਪਾਰਸ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, kde-format
 msgid "Parsing document"
 msgstr "ਡੌਕੂਮੈਂਟ ਪਾਰਸ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "stylesheet ਲਾਗੂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, kde-format
 msgid "Writing document"
 msgstr "ਡੌਕੂਮੈਂਟ ਲਿਖਿਆ ਜਾਂਦਾ ਹੈ"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2022-04-01 13:42+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -23,22 +23,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Biçem tablosu ayrıştırılıyor"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, kde-format
 msgid "Parsing document"
 msgstr "Belge ayrıştırılıyor"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Biçem tablosu uygulanıyor"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, kde-format
 msgid "Writing document"
 msgstr "Belge yazılıyor"

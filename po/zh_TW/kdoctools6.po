@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2007-08-20 09:18+0800\n"
 "Last-Translator: Franklin Weng <franklin at goodhorse dot idv dot tw>\n"
 "Language-Team: Chinese Traditional <zh-l10n@lists.linux.org.tw>\n"
@@ -19,22 +19,22 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "處理樣式表"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, kde-format
 msgid "Parsing document"
 msgstr "處理文件"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "套用樣式表"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, kde-format
 msgid "Writing document"
 msgstr "正在寫入文件"

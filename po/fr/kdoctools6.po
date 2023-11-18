@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2013-04-24 10:22+0200\n"
 "Last-Translator: xavier <ktranslator31@yahoo.fr>\n"
 "Language-Team: French <kde-i18n-doc@kde.org>\n"
@@ -28,22 +28,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Analyse de la feuille de style"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, kde-format
 msgid "Parsing document"
 msgstr "Analyse du document"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Application de la feuille de style"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, kde-format
 msgid "Writing document"
 msgstr "Écriture du document"

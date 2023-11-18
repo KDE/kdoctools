@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2006-02-27 20:38+0100\n"
 "Last-Translator: Richard Allen <ra@ra.is>\n"
 "Language-Team: Icelandic <kde-isl@molar.is>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "\n"
 "\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Þátta stílsíðu"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, kde-format
 msgid "Parsing document"
 msgstr "Þátta skjalið"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Virkja stílsíðu"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, kde-format
 msgid "Writing document"
 msgstr "Skrifa skjalið"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2023-11-18 01:34+0000\n"
 "PO-Revision-Date: 2014-05-01 01:02-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,22 +14,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: xslt.cpp:137
+#: xslt.cpp:138
 #, fuzzy, kde-format
 msgid "Parsing stylesheet"
 msgstr "スタイルシートを解析中"
 
-#: xslt.cpp:160
+#: xslt.cpp:161
 #, fuzzy, kde-format
 msgid "Parsing document"
 msgstr "ドキュメントを解析中"
 
-#: xslt.cpp:185
+#: xslt.cpp:186
 #, fuzzy, kde-format
 msgid "Applying stylesheet"
 msgstr "スタイルシートを適用中"
 
-#: xslt.cpp:193
+#: xslt.cpp:194
 #, fuzzy, kde-format
 msgid "Writing document"
 msgstr "ドキュメントを書き込み中"
