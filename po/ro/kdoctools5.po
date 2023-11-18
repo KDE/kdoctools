@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:25+0000\n"
+"POT-Creation-Date: 2023-11-18 00:39+0000\n"
 "PO-Revision-Date: 2009-01-14 15:05+0200\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@lists.kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:141
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Analizez foaia de stil"
 
-#: xslt.cpp:163
+#: xslt.cpp:164
 #, kde-format
 msgid "Parsing document"
 msgstr "Analizez documentul"
 
-#: xslt.cpp:188
+#: xslt.cpp:189
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Aplic foaia de stil"
 
-#: xslt.cpp:196
+#: xslt.cpp:197
 #, kde-format
 msgid "Writing document"
 msgstr "Scriu documentul"

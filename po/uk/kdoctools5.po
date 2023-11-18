@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdoctools5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:25+0000\n"
+"POT-Creation-Date: 2023-11-18 00:39+0000\n"
 "PO-Revision-Date: 2010-07-29 21:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation@linux.org.ua>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:141
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Синтаксичний аналіз таблиці стилів"
 
-#: xslt.cpp:163
+#: xslt.cpp:164
 #, kde-format
 msgid "Parsing document"
 msgstr "Аналіз документа"
 
-#: xslt.cpp:188
+#: xslt.cpp:189
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Застосування таблиці стилів"
 
-#: xslt.cpp:196
+#: xslt.cpp:197
 #, kde-format
 msgid "Writing document"
 msgstr "Запис документа"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:25+0000\n"
+"POT-Creation-Date: 2023-11-18 00:39+0000\n"
 "PO-Revision-Date: 2009-06-21 20:18+0200\n"
 "Last-Translator: Andrej Dundović <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:141
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Raščlanjenje stilskog oblikovanja"
 
-#: xslt.cpp:163
+#: xslt.cpp:164
 #, kde-format
 msgid "Parsing document"
 msgstr "Raščlanjenje dokumenta"
 
-#: xslt.cpp:188
+#: xslt.cpp:189
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Primjenjivanje stilskog oblikovanja"
 
-#: xslt.cpp:196
+#: xslt.cpp:197
 #, kde-format
 msgid "Writing document"
 msgstr "Zapisivanje dokumenta"

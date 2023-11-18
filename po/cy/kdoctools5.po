@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:25+0000\n"
+"POT-Creation-Date: 2023-11-18 00:39+0000\n"
 "PO-Revision-Date: 2003-11-20 23:14+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "X-Generator: KBabel 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: xslt.cpp:140
+#: xslt.cpp:141
 #, kde-format
 msgid "Parsing stylesheet"
 msgstr "Dosrannu'r len arddull"
 
-#: xslt.cpp:163
+#: xslt.cpp:164
 #, kde-format
 msgid "Parsing document"
 msgstr "Dosrannu'r ddogfen"
 
-#: xslt.cpp:188
+#: xslt.cpp:189
 #, kde-format
 msgid "Applying stylesheet"
 msgstr "Gweithredu'r len arddull"
 
-#: xslt.cpp:196
+#: xslt.cpp:197
 #, kde-format
 msgid "Writing document"
 msgstr "Ysgrifennu'r ddogfen"
