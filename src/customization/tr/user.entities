@@ -34,10 +34,13 @@
 <!ENTITY Right			"<keycap>Sağ Ok</keycap>">
 <!ENTITY Left			"<keycap>Sol Ok</keycap>">
 
-<!ENTITY applications	"<productname>Uygulamalar</productname>">
+<!ENTITY applications		"<productname>Uygulamalar</productname>">
+<!ENTITY calligrasheets	"<application>Calligra Tablolar</application>">
+<!ENTITY calligrastage		"<application>Calligra Sahne</application>">
+<!ENTITY calligrawords		"<application>Calligra Sözcükler</application>">
 <!ENTITY cataloguemanager	"<application>Katalog Yöneticisi</application>">
-<!ENTITY cdrom			'<hardware>CD-ROM</hardware>'>
-<!ENTITY dpi			'<acronym>dpi</acronym>'>
+<!ENTITY cdrom			"<hardware>CD-ROM</hardware>">
+<!ENTITY dpi			"<acronym>DPI</acronym>">
 <!ENTITY eg			"örneğin">
 <!ENTITY etc			"vb.">
 <!ENTITY ie			"başka bir deyişle">
