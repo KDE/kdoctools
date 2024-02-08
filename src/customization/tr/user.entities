@@ -46,7 +46,6 @@
 <!ENTITY ie			"başka bir deyişle">
 <!ENTITY infocenter		"<application>Bilgi Merkezi</application>">
 <!ENTITY filelight		"<application>Dosya Feneri</application>">
-<!ENTITY gwenview		"<application>Akbakış</application>">
 <!ENTITY kbounce		"<application>K Zıpla</application>">
 <!ENTITY kde-frameworks		"<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		"&kde-frameworks; <productnumber>5</productnumber>">
@@ -79,6 +78,5 @@
 <!ENTITY sweeper		"<application>Süpürücü</application>">
 <!ENTITY systemsettings		"<application>Sistem Ayarları</application>">
 <!ENTITY systemtray		"<application>Sistem Tepsisi</application>">
-<!ENTITY spectacle		"<application>Deklanşör</application>">
 <!ENTITY kteatime		"<application>K Çay Saati</application>">
 
