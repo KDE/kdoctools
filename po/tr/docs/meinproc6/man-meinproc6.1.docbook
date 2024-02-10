@@ -231,7 +231,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ></term>
 <listitem>
 <para
->Tüm belgeyi stdout'a çıktılayın. </para>
+>Tüm belgeyi stdout’a çıktılayın. </para>
 </listitem>
 </varlistentry>
 
@@ -257,7 +257,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ></term>
 <listitem>
 <para
->kdoctools'un aranacağı kök dizini ayarlayın. </para>
+>kdoctools’un aranacağı kök dizini ayarlayın. </para>
 </listitem>
 </varlistentry>
 
@@ -282,7 +282,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 <para
 ><command
 >meinproc6</command
->'u kullanmanın en kolay yolu şöyledir: <literallayout>
+>’u kullanmanın en kolay yolu şöyledir: <literallayout>
 <userinput
 ><command
 >meinproc6</command
@@ -292,7 +292,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 </literallayout
 >. Burada <replaceable
 >docbook-dosyası</replaceable
-> genelde index.docbook'tur. Bu komut, DocBook dosyalarından &HTML; sayfaları oluşturur. Bu sayfaların yalnızca &kde; tabanlı tarayıcılarda görüntülenebileceğini not edin (&konqueror; gibi). </para>
+> genelde index.docbook’tur. Bu komut, DocBook dosyalarından &HTML; sayfaları oluşturur. Bu sayfaların yalnızca &kde; tabanlı tarayıcılarda görüntülenebileceğini not edin (&konqueror; gibi). </para>
 <para
 >&HTML; çıktısını başka bir tarayıcıde görüntülemeniz gerekiyorsa (örneğin internete koyacaksanız) <literallayout>
 <userinput
