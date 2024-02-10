@@ -546,3 +546,5 @@
 <!ENTITY Alex.Zepeda.mail '<email>zipzippy@sonic.net</email>'>
 <!ENTITY Nikolas.Zimmermann '<personname><firstname>Nikolas</firstname><surname>Zimmermann</surname></personname>'>
 <!ENTITY Nikolas.Zimmermann.mail '<email>wildfox@kde.org</email>'>
+<!ENTITY Jakob.Petsovits '<personname><firstname>Jakob</firstname><surname>Petsovits</surname></personname>'>
+<!ENTITY Jakob.Petsovits.mail '<email>jpetso@petsovits.com</email>'>
