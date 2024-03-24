@@ -84,6 +84,9 @@ function (kdoctools_create_handbook docbook)
     if(NOT DEFINED ARGS_SUBDIR)
         message(FATAL_ERROR "SUBDIR needs to be defined when calling kdoctools_create_handbook")
     endif()
+    if (INSTALL_DESTINATION IN_LIST ARGS_KEYWORDS_MISSING_VALUES)
+        message(FATAL_ERROR "INSTALL_DESTINATION got an empty value set when calling kdoctools_create_handbook")
+    endif()
 
     # Init vars
     get_filename_component(docbook ${docbook} ABSOLUTE)
@@ -163,6 +166,10 @@ function (kdoctools_create_manpage docbook section)
     set(oneValueArgs INSTALL_DESTINATION)
     set(multiValueArgs)
     cmake_parse_arguments(ARGS "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
+
+    if (INSTALL_DESTINATION IN_LIST ARGS_KEYWORDS_MISSING_VALUES)
+        message(FATAL_ERROR "INSTALL_DESTINATION got an empty value set when calling kdoctools_create_manpage")
+    endif()
 
     # Init vars
     get_filename_component(docbook ${docbook} ABSOLUTE)
