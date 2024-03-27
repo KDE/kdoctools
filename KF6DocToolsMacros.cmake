@@ -60,6 +60,10 @@
 #  KDOCTOOLS_MEINPROC_EXECUTABLE - the meinproc6 executable
 #
 
+# Resetting policies for code in this module scope
+# Needed for IN_LIST usage ( CMP0057 )
+cmake_policy(VERSION 3.16)
+
 set(KDOCTOOLS_SERIALIZE_TOOL "" CACHE STRING "Tool to serialize resource-intensive commands in parallel builds")
 set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF6::meinproc6")
 
