@@ -1,14 +1,14 @@
 # translation of kio_help4.po to Swedish
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2007.
+# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2004, 2005, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_help4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-18 00:39+0000\n"
 "PO-Revision-Date: 2007-08-15 22:35+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "Skriver dokument"
 
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
-#~ msgstr "stefan.asserhall@bredband.net"
+#~ msgstr "stefan.asserhall@gmail.com"
 
 #~ msgid "Output file"
 #~ msgstr "Utdatafil"
