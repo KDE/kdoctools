@@ -2,7 +2,7 @@
 # Esperantaj mesaĝoj por "kio_help4"
 # Copyright (C) 2007 Free Software Foundation, Inc.
 #
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2007.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2007.
 # Michael Moroni <michael.moroni@mailoo.org>, 2012.
 msgid ""
 msgstr ""
