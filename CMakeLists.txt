@@ -36,6 +36,12 @@ option(INSTALL_INTERNAL_TOOLS "Install internal tools too." OFF)
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
+option(RELOCATABLE_DOCBOOK_FILES "Generate relative paths to docbook and XSL files (for e.g. Windows and cross-compilation)" OFF)
+if(WIN32)
+    set(RELOCATABLE_DOCBOOK_FILES ON)
+    message(STATUS "Automatic enable RELOCATABLE_DOCBOOK_FILES for Windows platform")
+endif()
+
 # Dependencies
 set(REQUIRED_QT_VERSION 6.5.0)
 find_package(Qt6Core ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)

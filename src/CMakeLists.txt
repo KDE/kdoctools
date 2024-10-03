@@ -6,20 +6,18 @@ set (_custom_dtd_kdex "customization/dtd/kdedbx45.dtd")
 configure_file(${_custom_dtd_kdex}.cmake ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex} )
 # WARNING: this is due to severe limitations on the windows platform to keep the dtd relocatable
 # see the .xsl.cmake files for a more verbose explanation below
-if(NOT WIN32)
+if(NOT RELOCATABLE_DOCBOOK_FILES)
     install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}
         DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd )
 else()
-    get_filename_component(NORMALIZED_DTD_INSTALL_PATH "${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd" ABSOLUTE)
     # file(RELATIVE_PATH ...) returns wrong values for paths containing /../ (it doesn't normalize the path)
     # To work around this we make sure the variable passed has all /../ elements
     # removed using get_filename_component(... ABSOLUTE)
+    get_filename_component(NORMALIZED_DTD_INSTALL_PATH "${CMAKE_SYSROOT}/${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization/dtd" ABSOLUTE)
+    file(RELATIVE_PATH DocBookXML4_DTD_DIR_relative "${NORMALIZED_DTD_INSTALL_PATH}" ${DocBookXML4_DTD_DIR})
+    kdoctools_encode_uri(DocBookXML4_DTD_DIR_relative)
     install(CODE
-        "file(RELATIVE_PATH DocBookXML4_DTD_DIR \"${NORMALIZED_DTD_INSTALL_PATH}\" \"${DocBookXML4_DTD_DIR}\")
-        set(PERL_EXECUTABLE \"${PERL_EXECUTABLE}\")
-        include(\"${CMAKE_SOURCE_DIR}/cmake/uriencode.cmake\")
-        set(CMAKE_MODULE_PATH \"${CMAKE_MODULE_PATH}\")
-        kdoctools_encode_uri(DocBookXML4_DTD_DIR)
+        "set(DocBookXML4_DTD_DIR \"${DocBookXML4_DTD_DIR_relative}\")
         configure_file(\"${CMAKE_CURRENT_SOURCE_DIR}/${_custom_dtd_kdex}.cmake\" \"${CMAKE_CURRENT_BINARY_DIR}/${_custom_dtd_kdex}.install\")"
     )
     get_filename_component(_custom_dtd_kdex_name ${_custom_dtd_kdex} NAME)
@@ -144,20 +142,19 @@ endif()
 # the .xsl with relative paths because these files are not installed while
 # building kdoctools. Instead, we will reconfigure those files at install time
 # with relative paths.
-
 file( GLOB _kdeincludexslt_ALL "customization/kde-include*.xsl.cmake" )
 foreach( _kdeincludexslt ${_kdeincludexslt_ALL} )
     get_filename_component( _kdeincludexslt_name ${_kdeincludexslt} NAME )
     string( REGEX REPLACE ".cmake$" "" _kdeincludexslt_out "${_kdeincludexslt_name}" )
     set( _kdeincludexslt_binarypath "${CMAKE_CURRENT_BINARY_DIR}/customization/${_kdeincludexslt_out}" )
     configure_file( ${_kdeincludexslt} ${_kdeincludexslt_binarypath} )
-    if(NOT WIN32)
+    if(NOT RELOCATABLE_DOCBOOK_FILES)
         install(FILES ${_kdeincludexslt_binarypath}
             DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization )
     else()
         install(CODE
-            "FILE(RELATIVE_PATH DOCBOOKXSL_DIR \${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization ${DOCBOOKXSL_DIR})
-            CONFIGURE_FILE( \"${_kdeincludexslt}\" \"${_kdeincludexslt_binarypath}.install\" )")
+            "file(RELATIVE_PATH DOCBOOKXSL_DIR ${CMAKE_SYSROOT}/\${CMAKE_INSTALL_PREFIX}/${KDE_INSTALL_DATADIR_KF}/kdoctools/customization ${DOCBOOKXSL_DIR})
+            configure_file( \"${_kdeincludexslt}\" \"${_kdeincludexslt_binarypath}.install\" )")
             install(FILES "${_kdeincludexslt_binarypath}.install" DESTINATION ${KDE_INSTALL_DATADIR_KF}/kdoctools/customization RENAME ${_kdeincludexslt_out})
     endif()
 endforeach( _kdeincludexslt ${_kdeincludexslt_ALL} )
