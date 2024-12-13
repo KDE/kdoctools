@@ -106,7 +106,7 @@
 <!ENTITY blogilo "<application>Blogilo</application>">
 <!ENTITY bomber "<application>Bomber</application>">
 <!ENTITY bovo	"<application>Bovo</application>">
-<!ENTITY BSD "<trademark>BSD</trademark>">
+<!ENTITY BSD "<acronym>BSD</acronym>">
 <!ENTITY calligra "Calligra">
 <!ENTITY calligraflow "<application>Calligra Flow</application>">
 <!ENTITY calligraplan "<application>Calligra Plan</application>">
