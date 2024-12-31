@@ -6,7 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
     
     Send suggestions, comments, etc. to the KDE Docbook mailing list
-    <kde-docbook@kde.org>.
+    <kde-doc-english@kde.org>.
 
 
     This file sets up the mechanism to load the language-specific
@@ -18,7 +18,7 @@
 
     Every language for which there is documentation must be added
     here.  (English is the default.)  Please send requests for
-    additions to kde-docbook@kde.org.
+    additions to kde-doc-english@kde.org.
 
     Refer to this file as
 
