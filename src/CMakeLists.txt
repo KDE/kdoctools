@@ -73,6 +73,8 @@ set(KDocTools_HEADERS
     docbookxslt.h
 )
 
+ecm_generate_qdoc(KF6DocTools kdoctools.qdocconf)
+
 install(FILES
     ${KDocTools_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/kdoctools_export.h
@@ -81,28 +83,6 @@ install(FILES
 )
 
 install(TARGETS KF6DocTools EXPORT KF6DocToolsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
-
-if(BUILD_QCH)
-    ecm_add_qch(
-        KF6DocTools_QCH
-        NAME KDocTools
-        BASE_NAME KF6DocTools
-        VERSION ${KF_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KDocTools_HEADERS}
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        LINK_QCHS
-            Qt6Core_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            KDOCTOOLS_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
 
 ########### next target ###############
 
