@@ -102,7 +102,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6DocTools")
 add_definitions(-DTRANSLATION_DOMAIN=\"kdoctools6\")
 ecm_set_disabled_deprecation_versions(
     QT 6.10.0
-    KF 6.17.0
+    KF 6.18.0
 )
 
 if (KF6I18n_FOUND)
