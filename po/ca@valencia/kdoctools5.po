@@ -3,9 +3,9 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Sebastià Pla i Sanz <sps@sastia.com>, 2000, 2004, 2005, 2006.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2003.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007.
+# SPDX-FileCopyrightText: 2000, 2004, 2005, 2006 Sebastià Pla i Sanz <sps@sastia.com>
+# SPDX-FileCopyrightText: 2003 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2007 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdoctools\n"
