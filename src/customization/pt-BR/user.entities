@@ -15,10 +15,12 @@
 <!ENTITY Down	"<keysym>Abaixo</keysym>"> <!-- Cursor key-->
 <!ENTITY dpi	'<acronym>ppp</acronym>'>
 <!ENTITY eg     "por exemplo">
+<!ENTITY End	"<keycap>End</keycap>">
 <!ENTITY Enter	"<keycap>Enter</keycap>">
 <!ENTITY Esc	"<keycap>Esc</keycap>">
 <!ENTITY etc    "<abbrev>etc.</abbrev>">
-<!ENTITY FAQ	"Perguntas frequentes (do inglês <acronym>FAQ</acronym>)">
+<!ENTITY FAQ	"Perguntas frequentes">
+<!ENTITY Home	"<keycap>Home</keycap>">
 <!ENTITY ie 	"isto é">
 <!ENTITY infocenter	"<application>Centro de informação</application>">
 <!ENTITY Ins	"<keycap>Ins</keycap>">
@@ -28,6 +30,7 @@
 <!ENTITY BEM 	"botão <mousebutton>esquerdo</mousebutton> do mouse">  <!-- English: &LMB; -->
 <!ENTITY LMB 	"botão <mousebutton>esquerdo</mousebutton> do mouse">
 <!ENTITY BMM 	"botão <mousebutton>do meio</mousebutton> do mouse">   <!-- English: &MMB; -->
+<!ENTITY Meta	"<keysym>Meta</keysym>"> <!-- Super key or Windows key -->
 <!ENTITY MMB 	"botão <mousebutton>do meio</mousebutton> do mouse">
 <!ENTITY OS	"sistema operacional"><!-- <acronym>OS</acronym>-->
 <!ENTITY partman "<application>Gerenciador de partições do KDE</application>">
