@@ -52,7 +52,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 </author>
 -->
 <date
->2014-05-08</date>
+>2014‒05‒08</date>
 <releaseinfo
 >Frameworks 5.0</releaseinfo>
 <productname
@@ -202,7 +202,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 >Çıktı biraz göz korkutucu olabilir; çünkü küçük bir hata bir dizi hataya neden olabilir. 
 İşin püf noktası, ilk hataya bakmak, bu hatayı düzeltmek, dosyayı kaydetmek ve <command
 >meinproc6</command
->'yı yeniden çalıştırmaktır.
+>’yı yeniden çalıştırmaktır.
 </screen>
 </listitem>
 </varlistentry>
@@ -220,7 +220,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 <para
 >Tüm dosyayı <parameter
 >dosya</parameter
->'ya çıktılayın. </para>
+>’ya çıktılayın. </para>
 </listitem>
 </varlistentry>
 
@@ -332,7 +332,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 >Hatalar</title>
 <para
 >Hataları bildirmek için lütfen <ulink url="https://bugs.kde.org"
->&kde;'nin hata izleyicisini</ulink
+>&kde;’nin hata izleyicisini</ulink
 > kullanın.</para>
 </refsect1>
 
