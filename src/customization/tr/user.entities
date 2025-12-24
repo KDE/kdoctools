@@ -80,4 +80,5 @@
 <!ENTITY systemsettings		    "<application>Sistem Ayarları</application>">
 <!ENTITY systemtray		        "<application>Sistem Tepsisi</application>">
 <!ENTITY kteatime		        "<application>K Çay Saati</application>">
-
+<!ENTITY kontact		        "<application>Kontak</application>">
+<!ENTITY kmail		            "<application>K Posta</application>">
