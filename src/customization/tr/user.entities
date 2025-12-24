@@ -82,3 +82,5 @@
 <!ENTITY kteatime		        "<application>K Çay Saati</application>">
 <!ENTITY kontact		        "<application>Kontak</application>">
 <!ENTITY kmail		            "<application>K Posta</application>">
+<!ENTITY kaddressbook           "<application>K Adres Defteri</application>">
+<!ENTITY akregator              "<application>Akregatör</application>">
