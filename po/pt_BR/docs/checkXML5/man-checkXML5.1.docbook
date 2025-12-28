@@ -40,7 +40,7 @@
 >checkXML5</command
 ></refname>
 <refpurpose
->Uma ferramenta de validação de &XML; para os documentos de DocBook em &XML; do &kde;.</refpurpose>
+>Uma ferramenta de validação de &XML; para os documentos de DocBook em &XML;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -71,3 +71,4 @@
 >meinproc5(1) xmllint(1)</para>
 </refsect1>
 </refentry>
+

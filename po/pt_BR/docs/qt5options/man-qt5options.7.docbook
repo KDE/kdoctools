@@ -6,7 +6,7 @@
 <refentry lang="&language;">
 <refentryinfo>
 <title
->Documentação da linha de comandos do Qt</title>
+>Documentação da linha de comando do &Qt;</title>
 <author
 >&Lauri.Watts; &Lauri.Watts.mail;</author>
 <author
@@ -14,7 +14,7 @@
 <date
 >04/06/2016</date>
 <releaseinfo
->&Qt; 5.4</releaseinfo>
+>Qt 5.4</releaseinfo>
 <productname
 >KDE Frameworks</productname>
 </refentryinfo>
@@ -30,7 +30,7 @@
 <refname
 >qt5options</refname>
 <refpurpose
->As opções comuns da linha de comando que se baseiem nas bibliotecas do Qt</refpurpose>
+>As opções comuns da linha de comando que se baseiem nas bibliotecas do &Qt;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -151,7 +151,7 @@
 ></arg
 > <arg choice="opt"
 ><option
->-h, --help e -? no Windows</option
+>-h, --help e -? no &Windows;</option
 ></arg
 > <arg choice="opt"
 ><option
@@ -183,7 +183,9 @@
 > </term>
 <listitem
 ><para
->Define o estilo gráfico do aplicativo. Os valores possíveis dependem da configuração do sistema. Se o Qt for compilado com estilos adicionais ou se tiver estilos adicionais como plugins, estes ficarão disponíveis na opção -style da linha de comandos.</para>
+>Define o estilo da &GUI; do aplicativo. Os valores possíveis dependem da configuração do sistema. Se o &Qt; for compilado com estilos adicionais ou se tiver estilos adicionais como plugins, estes ficarão disponíveis na opção <option
+>-style</option
+> da linha de comando.</para>
 </listitem>
 </varlistentry>
 
@@ -252,7 +254,7 @@
 > </term>
 <listitem
 ><para
->Define o plugin do QPA (Qt Platform Abstraction). </para
+>Define o plugin do QPA (&Qt;Platform Abstraction). </para
 ></listitem>
 </varlistentry>
 
@@ -304,7 +306,7 @@
 > </term>
 <listitem
 ><para
->Define a geometria da janela principal, usando a sintaxe do X11. Por exemplo: -qwindowgeometry 100x100+50+50 </para
+>Define a geometria da janela principal, usando a sintaxe do &X11;. Por exemplo: -qwindowgeometry 100x100+50+50 </para
 ></listitem>
 </varlistentry>
 
@@ -356,7 +358,9 @@
 > </term>
 <listitem
 ><para
->Muda de tela no X11. Substitui a variável de ambiente DISPLAY. </para
+>Muda de tela no &X11;. Substitui a variável de ambiente <envar
+>DISPLAY</envar
+>. </para
 ></listitem>
 </varlistentry>
 
@@ -369,7 +373,7 @@
 > </term>
 <listitem
 ><para
->Define a geometria da janela principal no X11. Por exemplo: -geometry 100x100+50+50. </para
+>Define a geometria da janela principal no &X11;. Por exemplo: -geometry 100x100+50+50. </para
 ></listitem>
 </varlistentry>
 
@@ -382,7 +386,7 @@
 > </term>
 <listitem
 ><para
->Só está disponível na -platform windows. O 'xp' usa as janelas nativas com o estilo do XP e o 'none' desativa-as.</para
+>Só está disponível na plataforma &Windows;. O 'XP' usa as janelas nativas com o estilo do XP e o 'none' desativa-as.</para
 ></listitem>
 </varlistentry>
 
@@ -403,7 +407,7 @@
 <varlistentry>
 <term>
 <option
->-h, --help e -? no Windows</option>
+>-h, --help and -? no &Windows;</option>
 </term>
 <listitem
 ><para
@@ -443,7 +447,7 @@
 <para
 >Página de manual escrita originalmente por &Lauri.Watts; &Lauri.Watts.mail;</para>
 <para
->Atualizada para o Frameworks 5 por &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+>Atualizada para o &frameworks; 5 por &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
 <para
 >As informações desta página de manual são da <ulink url="https://doc.qt.io/qt-5/qapplication.html#QApplication"
 >documentação do QApplication</ulink

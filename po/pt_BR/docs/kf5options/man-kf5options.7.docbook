@@ -6,7 +6,7 @@
 <refentry lang="&language;">
 <refentryinfo>
 <title
->Documentação da linha de comandos do Frameworks</title>
+>Documentação da linha de comando do &frameworks;</title>
 <author
 >&Lauri.Watts; &Lauri.Watts.mail;</author>
 <date
@@ -28,7 +28,7 @@
 <refname
 >kf5options</refname>
 <refpurpose
->Opções comuns de linha de comando para todos os aplicativos baseados no KDE Frameworks 5</refpurpose>
+>Opções comuns de linha de comando para todos os aplicativos baseados no &kf5-full;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -79,7 +79,7 @@
 ></term>
 <listitem
 ><para
->Apresenta as opções disponíveis a partir da linha de comando</para>
+>Apresenta as opções disponíveis a partir da linha de comando.</para>
 </listitem>
 </varlistentry>
 
@@ -155,7 +155,7 @@
 <para
 >A página de manual foi escrita originalmente por &Lauri.Watts; &Lauri.Watts.mail; para o kdelibs4</para>
 <para
->Atualizada para o Frameworks 5 por &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+>Atualizada para o &frameworks; 5 por &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
 </refsect1>
 
 </refentry>
