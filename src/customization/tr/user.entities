@@ -62,6 +62,7 @@
 <!ENTITY knetwalk		        "<application>K Geçit</application>">
 <!ENTITY korganizer		        "<application>K Organizatör</application>">
 <!ENTITY kruler		            "<application>K Cetvel</application>">
+<!ENTITY kronometer		        "<application>Kronometre</application>">
 <!ENTITY krunner		        "<application>K Çalıştır</application>">
 <!ENTITY ksystemlog		        "<application>K Sistem Günlüğü</application>">
 <!ENTITY ktimer		            "<application>K Sayaç</application>">
