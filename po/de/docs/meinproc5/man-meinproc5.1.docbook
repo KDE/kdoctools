@@ -291,9 +291,9 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ></literallayout
 >, wobei es sich bei der <replaceable
 >Docbook-Datei</replaceable
-> zumeist um die Datei index.docbook handelt. Mit diesem Aufruf werden &HTML;-Dateien erzeugt. Beachten Sie bitte, dass Sie die so erzeugten Dateien nur mit &kde;-basierten Browsern wie z. B. &konqueror; betrachten können. </para>
+> zumeist um die Datei index.docbook handelt. Mit diesem Aufruf werden &HTML;-Dateien erzeugt. Beachten Sie bitte, dass Sie die so erzeugten Dateien nur mit &kde;-basierten Browsern wie z. B. &konqueror; betrachten können. </para>
 <para
->Wenn die erzeugten &HTML;-Dateien auch mit anderen Browsern betrachtet werden sollen (z. B. weil die Dateien im Internet veröffentlicht werden sollen), so verwenden Sie den Aufruf <literallayout
+>Wenn die erzeugten &HTML;-Dateien auch mit anderen Browsern betrachtet werden sollen (z. B. weil die Dateien im Internet veröffentlicht werden sollen), so verwenden Sie den Aufruf <literallayout
 ><userinput
 ><command
 >meinproc5</command
