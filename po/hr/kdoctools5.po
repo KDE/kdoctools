@@ -1,13 +1,10 @@
-# Translation of kio_help4 to Croatian
-#
-# Andrej Dundović <adundovi@gmail.com>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: kio_help4 0\n"
+"Project-Id-Version: kdoctools\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 09:00+0000\n"
-"PO-Revision-Date: 2009-06-21 20:18+0200\n"
-"Last-Translator: Andrej Dundović <adundovi@gmail.com>\n"
+"PO-Revision-Date: 2026-08-18 09:59+0200\n"
+"Last-Translator: Igor Dobrača <igor.dobraca@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
@@ -15,28 +12,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 0.3\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 
 #: xslt.cpp:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Parsing stylesheet"
 msgid "Parsing stylesheet"
 msgstr "Raščlanjenje stilskog oblikovanja"
 
 #: xslt.cpp:164
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Parsing document"
 msgid "Parsing document"
 msgstr "Raščlanjenje dokumenta"
 
 #: xslt.cpp:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Applying stylesheet"
 msgid "Applying stylesheet"
 msgstr "Primjenjivanje stilskog oblikovanja"
 
 #: xslt.cpp:197
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Writing document"
 msgid "Writing document"
 msgstr "Zapisivanje dokumenta"
 
