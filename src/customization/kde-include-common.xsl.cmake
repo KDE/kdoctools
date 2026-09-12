@@ -5,7 +5,7 @@
    <xsl:import href="@DOCBOOKXSL_DIR@/html/chunk.xsl"/>
 
    <xsl:param name="l10n.xml" select="document('xsl/all-l10n.xml')"/>
-   <xsl:param name="local.l10n.xml" select="document(concat('xsl/',/*/@lang,'.xml'))"/>
+   <xsl:param name="local.l10n.xml" select="document(concat('xsl/',translate(/*/@lang,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-','abcdefghijklmnopqrstuvwxyz_'),'.xml'))"/>
 
    <xsl:template name="generate.html.title"/>
 </xsl:stylesheet>
