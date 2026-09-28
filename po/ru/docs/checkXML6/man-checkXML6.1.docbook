@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Руководство пользователя checkXML6</title>
+<author
+><personname
+><firstname
+>Lauri</firstname
+><surname
+>Watts</surname
+></personname
+><email
+>lauri@kde.org</email
+></author>
+<date
+>4 марта 2014 г.</date>
+<releaseinfo
+>Frameworks 6.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>checkXML6</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>checkXML6</command
+></refname>
+<refpurpose
+>Инструмент проверки &XML; для документов &kde; в формате DocBook &XML;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>checkXML6</command
+> <arg
+><replaceable
+>имя-файла</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Описание</title>
+
+<para
+><command
+>checkXML6</command
+> — инструмент проверки синтаксиса файлов &kde; DocBook &XML;. Его можно использовать и для других файлов &XML; на основе DocBook, но если работа не связана с документацией &kde;, лучше взять менее специализированный инструмент xmllint(1).</para>
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+<para
+>meinproc6(1) xmllint(1)</para>
+</refsect1>
+</refentry>
+

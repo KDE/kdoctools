@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>Руководство пользователя meinproc6</title>
+<!-- There is no author in the meinproc.cpp file 
+Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
+
+<author>
+<firstname
+>Matthias </firstname>
+<surname
+>Hoelzer-Kluepfel</surname>
+<affiliation>
+<address
+><email
+>hoelzer@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Stephan</firstname>
+<surname
+>Kulow</surname>
+<affiliation>
+<address
+><email
+>coolo@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Cornelius</firstname>
+<surname
+>Schumacher</surname>
+<affiliation>
+<address
+><email
+>schumacher@kde.org</email
+></address>
+</affiliation>
+</author>
+-->
+<date
+>8 мая 2014 г.</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>meinproc6</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>meinproc6</command
+></refname>
+<refpurpose
+>Преобразователь &XML; от &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>Обзор</title>
+
+<cmdsynopsis
+><command
+>meinproc6</command
+> <arg choice="opt"
+>-h, --help</arg
+> <arg choice="opt"
+>-v, --version</arg
+> <arg choice="opt"
+>--cache<replaceable
+> файл</replaceable
+></arg
+> <arg choice="opt"
+>--check</arg
+> <arg choice="opt"
+>--srcdir<replaceable
+> каталог</replaceable
+></arg
+> <arg choice="opt"
+>--param <replaceable
+>ключ</replaceable
+>=<replaceable
+>значение</replaceable
+></arg
+> <group
+> <group
+> <arg
+>-o</arg
+> <arg
+>--output</arg
+> </group
+> <replaceable
+> файл</replaceable
+> </group
+> <arg choice="opt"
+>--stdout</arg
+> <arg choice="opt"
+>--stylesheet<replaceable
+> xsl</replaceable
+></arg
+> <arg choice="plain"
+>файл DocBook</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Описание</title>
+
+<para
+><command
+>meinproc6</command
+> преобразует файлы DocBook в &HTML;. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Общие параметры</title>
+<para>
+<variablelist>
+
+<varlistentry>
+  <term
+><option
+>-h</option
+>, <option
+>--help</option
+></term>
+<listitem>
+<para
+>Показать справку о параметрах. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+>, <option
+>--version</option
+></term>
+<listitem>
+<para
+>Показать сведения о версии. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1>
+<title
+>Параметры приложения</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>--cache</option
+> <parameter
+>файл</parameter
+></term>
+<listitem>
+<para
+>Создать файл кэша для документа. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--check</option
+></term>
+<listitem>
+<para
+>Проверить документ на корректность.</para>
+<screen
+>Вывод может обескуражить: одна небольшая ошибка порождает целый каскад. 
+Главное — найти первую ошибку, исправить её, сохранить файл и снова запустить <command
+>meinproc6</command
+>.
+</screen>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-o</option
+>, <option
+>--output</option
+><parameter
+> файл</parameter
+></term>
+<listitem>
+<para
+>Вывести весь документ в <parameter
+>файл</parameter
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stdout</option
+></term>
+<listitem>
+<para
+>Вывести весь документ в стандартный поток вывода. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <parameter
+>xsl</parameter
+></term>
+<listitem>
+<para
+>Использовать указанную таблицу стилей. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--srcdir</option
+> <parameter
+>каталог</parameter
+></term>
+<listitem>
+<para
+>Задать корневой каталог для поиска kdoctools. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--param</option
+> ключ=значение</term>
+<listitem>
+<para
+>Задать параметры, передаваемые таблице стилей. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Использование</title>
+<para
+>Чаще всего <command
+>meinproc6</command
+> запускают просто так: <literallayout>
+<userinput
+><command
+>meinproc6</command
+> <replaceable
+>файл_docbook</replaceable>
+</userinput>
+</literallayout
+> где <replaceable
+>файл_docbook</replaceable
+> — обычно index.docbook. Эта команда создаёт страницы &HTML; из файла DocBook. Учтите, что эти страницы открываются только в браузерах на основе &kde; (например, &konqueror;). </para>
+<para
+>Чтобы просматривать результат &HTML; в другом браузере (например, при публикации в Интернете), используйте <literallayout>
+<userinput
+><command
+>meinproc6</command
+> --stylesheet <replaceable
+>таблица_стилей</replaceable
+> <replaceable
+>файл_docbook</replaceable>
+</userinput>
+</literallayout
+> где <replaceable
+>таблица_стилей</replaceable
+> — полный путь к одной из таблиц стилей &XSL; в каталоге &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. Для публикации в Интернете подойдут <command
+>kde-web.xsl</command
+> и <command
+>kde-chunk-online.xsl</command
+>. Подробнее — в файле <filename
+>README</filename
+> в этом каталоге. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+<para
+><replaceable
+>kf6options</replaceable
+>(7), <replaceable
+>qt6options</replaceable
+>(7)</para>
+</refsect1>
+
+<refsect1>
+<title
+>Ошибки</title>
+<para
+>Сообщения об ошибках отправляйте в <ulink url="https://bugs.kde.org"
+>систему отслеживания ошибок &kde;</ulink
+>.</para>
+</refsect1>
+
+</refentry>
+
+
+

@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Russian "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>Документация по параметрам командной строки &frameworks;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>13 мая 2016 г.</date>
+<releaseinfo
+>Frameworks 6.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf6options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf6options</refname>
+<refpurpose
+>Общие параметры командной строки для всех приложений на основе &kf6-full;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>приложение KDE</replaceable
+></command
+> <arg choice="opt"
+><option
+>-h, --help</option
+></arg
+> <arg choice="opt"
+><option
+>-v, --version</option
+></arg
+> <arg choice="opt"
+><option
+>--author</option
+></arg
+> <arg choice="opt"
+><option
+>--license</option
+></arg
+> <arg choice="opt"
+><option
+>--desktopfile</option
+> <replaceable
+>имя файла</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Параметры</title>
+
+<para
+>Эти параметры применимы ко всем приложениям &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>-h</option
+> <option
+>--help</option
+></term>
+<listitem
+><para
+>Выводит список параметров командной строки.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+> <option
+>--version</option
+></term>
+<listitem>
+<para
+>Выводит сведения о версии <replaceable
+>приложения KDE</replaceable
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--author</option
+></term>
+<listitem
+><para
+>Выводит список авторов <replaceable
+>приложения KDE</replaceable
+> в окне терминала.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--license</option
+></term>
+<listitem
+><para
+>Показывает сведения о лицензии.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--desktopfile</option
+> <replaceable
+>имя файла</replaceable
+></term>
+<listitem
+><para
+>Базовое имя файла .desktop этого приложения.</para>
+<para
+>Это полезно прежде всего для приложений-обёрток и вообще для приложений с несколькими файлами .desktop: каждый файл .desktop может передать своё имя в команде exec. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+<para
+>qt6options(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Авторы</title>
+<para
+>Страница руководства изначально написана &Lauri.Watts; &Lauri.Watts.mail; для kdelibs4</para>
+<para
+>Обновление для &frameworks; 5: &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+</refsect1>
+
+</refentry>
