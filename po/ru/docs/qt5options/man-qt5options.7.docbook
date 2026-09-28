@@ -6,13 +6,17 @@
 <refentry lang="&language;">
 <refentryinfo>
 <title
->Руководство пользователя KDE</title>
+>Документация по командной строке &Qt;</title>
 <author
 >&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
 <date
->2 февраля 2004 г.</date>
+>4 июня 2016 г.</date>
+<releaseinfo
+>Qt 5.4</releaseinfo>
 <productname
->KDE</productname>
+>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
@@ -26,17 +30,133 @@
 <refname
 >qt5options</refname>
 <refpurpose
->Общие ключи командной строки для всех приложений, основанных на Qt</refpurpose>
+>Общие параметры командной строки для всех приложений на основе библиотеки &Qt;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
 <cmdsynopsis
 ><command
 ><replaceable
->Qt приложение</replaceable
+>приложение Qt</replaceable
 ></command
 > <arg choice="opt"
->Qt Generic Options</arg
+><option
+>-style=</option
+> <replaceable
+>стиль</replaceable
+> / <option
+>-style</option
+> <replaceable
+>стиль</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-stylesheet=</option
+> <replaceable
+>таблица-стилей</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>таблица-стилей</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-widgetcount</option
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>порт</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platform</option
+> <replaceable
+>имя-платформы[:параметры]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformpluginpath</option
+> <replaceable
+>путь</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformtheme</option
+> <replaceable
+>тема-платформы</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-plugin</option
+> <replaceable
+>модуль</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowgeometry</option
+> <replaceable
+>геометрия</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowicon</option
+> <replaceable
+>значок</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowtitle</option
+> <replaceable
+>заголовок</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-session</option
+> <replaceable
+>сеанс</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-display</option
+> <replaceable
+>имя-узла:номер-экрана</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-geometry</option
+> <replaceable
+>геометрия</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-h, --help and -? on &Windows;</option
+></arg
+> <arg choice="opt"
+><option
+>-v --version</option
+></arg
 > </cmdsynopsis>
 </refsynopsisdiv>
 
@@ -48,269 +168,262 @@
 <para
 >Эти ключи применяются ко всем приложениям &Qt; :</para>
 
-<variablelist
-> <!-- all this could be entitiesan entity -->
+<variablelist>
+<!--https://doc.qt.io/qt-5/qapplication.html#QApplication-->
 <varlistentry>
 <term
 ><option
->--display</option
-> <parameter
->displayname</parameter
-> </term>
-<listitem>
-<para
->Использовать дисплей X-сервера <parameter
->displayname</parameter
->.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--session</option
-> <parameter
->sessionId</parameter
-> </term>
-<listitem>
-<para
->Восстановить сеанс приложения по ключу <parameter
->sessionId</parameter
-></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--cmap</option>
-</term>
-<listitem>
-<para
->Ограничить количество используемых цветов на 8-битном дисплее.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--ncols</option
-> <parameter
->count</parameter
-> </term>
-<listitem>
-<para
->Ограничить количество используемых цветов на 8-битном дисплее.Этот параметр работает только для приложений, использующих режим<methodname
->QApplication::ManyColor.</methodname
-></para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--nograb</option>
-</term>
-<listitem>
-<para
->Запрещает &Qt; перехватывать мышь или клавиатуру</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--dograb</option>
-</term>
-<listitem>
-<para
->При запуске в отладчике применять<option
->--nograb</option
->.Используйте <option
->--dograb</option
->,чтобы явно включить этот режим</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--sync</option>
-</term>
-<listitem>
-<para
->Включает синхронный режим для отладки.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--fn</option
->,<option
->--font</option
-> <parameter
->fontname</parameter
-> </term>
-<listitem>
-<para
->Определяет шрифт приложения.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--bg</option
->,<option
->--background</option
-> <parameter
->color</parameter
-> </term>
-<listitem>
-<para
->Задаёт цвет фона по умолчанию и палитру приложения (светлые и тёмные тени вычисляются автоматически).</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--fg</option
->,<option
->--foreground</option
-> <parameter
->color</parameter
-> </term>
-<listitem>
-<para
->Определяет цвет текста по умолчанию.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--btn</option
->,<option
->--button</option
-> <parameter
->color</parameter
-> </term>
-<listitem>
-<para
->Определяет цвет кнопок по умолчанию.</para>
-</listitem>
-</varlistentry>
-
-
-<varlistentry>
-<term
-><option
->--name</option
-> <parameter
->name</parameter
-> </term>
-<listitem>
-<para
->Определяет имя приложения.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--title</option
-> <parameter
->title</parameter
-> </term>
-<listitem>
-<para
->Устанавливает заголовок приложения.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--visual</option
-> <parameter
->TrueColor</parameter
-> </term>
-<listitem>
-<para
->Приложение будет работать с 8-битным дисплеем как с полноцветным устройством.</para>
-</listitem>
-</varlistentry>
-
-
-<varlistentry>
-<term
-><option
->--inputstyle</option
-> <parameter
->inputstyle</parameter
-> </term>
-<listitem>
-<para
->Устанавливает тип ввода XIM (X Input Method).Возможные значения:<parameter
->onthespot</parameter
->, <parameter
->overthespot</parameter
->, <parameter
->offthespot</parameter
-> and <parameter
->root</parameter
->.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--im</option
-> <parameter
->XIM server</parameter
-> </term>
-<listitem>
-<para
->Устанавливает сервер XIM.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--noxim</option>
-</term>
-<listitem>
-<para
->Запретить XIM</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term>
-<option
->--reverse</option>
-</term>
-<listitem>
-<para
->Отразить расположение виджетов</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><option
->--stylesheet</option
+>-style=</option
 > <replaceable
->file.qss</replaceable
+>стиль</replaceable
+> / <option
+>-style</option
+> <replaceable
+>стиль</replaceable
 > </term>
-<listitem>
-<para
->Применяет стиль Qt к графическим элементам приложения</para>
+<listitem
+><para
+>Задать стиль &GUI; приложения. Допустимые значения зависят от настройки системы. Если &Qt; собрана с дополнительными стилями или содержит их в виде модулей, эти стили также доступны параметру командной строки <option
+>-style</option
+>.</para>
 </listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-stylesheet=</option
+> <replaceable
+>таблица-стилей</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>таблица-стилей</replaceable
+> </term>
+<listitem
+><para
+>Задать таблицу стилей приложения. Значением должен быть путь к файлу с таблицей стилей. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-widgetcount</option>
+</term>
+<listitem
+><para
+>По завершении вывести отладочное сообщение о числе неуничтоженных виджетов и о наибольшем числе виджетов, существовавших одновременно. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-reverse</option>
+</term>
+<listitem
+><para
+>Задать направление компоновки приложения <methodname
+>Qt::RightToLeft</methodname
+>. Параметр предназначен для отладки и не должен использоваться в рабочей среде. По умолчанию направление определяется автоматически по локали пользователя (смотрите также <methodname
+>QLocale::textDirection()</methodname
+>). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>порт</replaceable
+> </term>
+<listitem
+><para
+>Включить отладчик QML/JS на указанном порту. Значение задаётся в формате port:1234[,block], где необязательная часть block заставляет приложение ждать подключения отладчика. </para
+></listitem>
+</varlistentry>
+<!--https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication-->
+<varlistentry>
+<term
+><option
+>-platform</option
+> <replaceable
+>имя-платформы[:параметры]</replaceable
+> </term>
+<listitem
+><para
+>Указать модуль платформенной абстракции &Qt; (QPA). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformpluginpath</option
+> <replaceable
+>путь</replaceable
+> </term>
+<listitem
+><para
+>Указать путь к модулям платформы. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformtheme</option
+> <replaceable
+>тема-платформы</replaceable
+> </term>
+<listitem
+><para
+>Указать тему платформы. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-plugin</option
+> <replaceable
+>модуль</replaceable
+> </term>
+<listitem
+><para
+>Указать дополнительные модули для загрузки. Параметр возможно указывать несколько раз. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowgeometry</option
+> <replaceable
+>геометрия</replaceable
+> </term>
+<listitem
+><para
+>Задать геометрию главного окна в синтаксисе &X11;. Например: -qwindowgeometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowicon</option
+> <replaceable
+>значок</replaceable
+> </term>
+<listitem
+><para
+>Задать значок окна по умолчанию. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowtitle</option
+> <replaceable
+>заголовок</replaceable
+> </term>
+<listitem
+><para
+>Задать заголовок первого окна. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-session</option
+> <replaceable
+>сеанс</replaceable
+> </term>
+<listitem
+><para
+>Восстановить приложение из предыдущего сеанса. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-display</option
+> <replaceable
+>имя-узла:номер-экрана</replaceable
+> </term>
+<listitem
+><para
+>Переключить дисплей в &X11;. Переопределяет переменную окружения <envar
+>DISPLAY</envar
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-geometry</option
+> <replaceable
+>геометрия</replaceable
+> </term>
+<listitem
+><para
+>Задать геометрию главного окна в &X11;. Например: -geometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+> </term>
+<listitem
+><para
+>Доступно только на платформе &Windows;. Значение xp включает диалоги в системном стиле, none — отключает их.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+> </term>
+<listitem
+><para
+>Использовать движок шрифтов FreeType. </para
+></listitem>
+</varlistentry>
+
+<!--https://doc.qt.io/qt-5/qcommandlineparser.html -->
+<varlistentry>
+<term>
+<option
+>-h, --help, а также -? в &Windows;</option>
+</term>
+<listitem
+><para
+>Вывести все параметры и описание приложения. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-v --version</option>
+</term>
+<listitem
+><para
+>Показать строку версии приложения. </para
+></listitem>
 </varlistentry>
 
 </variablelist>
@@ -332,7 +445,17 @@
 <title
 >Авторы</title>
 <para
->Страница руководства была написана &Lauri.Watts; &Lauri.Watts.mail;</para>
+>Первоначально страница руководства была написана &Lauri.Watts; &Lauri.Watts.mail;</para>
+<para
+>Обновлена для &frameworks; 5: &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+<para
+>Сведения для этой страницы руководства взяты из <ulink url="https://doc.qt.io/qt-5/qapplication.html#QApplication"
+>документации QApplication</ulink
+>, <ulink url="https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication"
+>документации QGuiApplication</ulink
+> и <ulink url="https://doc.qt.io/qt-5/qcommandlineparser.html"
+>документации QCommandLineParser</ulink
+>.</para>
 </refsect1>
 
 </refentry>

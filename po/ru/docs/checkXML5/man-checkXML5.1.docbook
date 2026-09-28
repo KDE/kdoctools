@@ -6,7 +6,7 @@
 <refentry lang="&language;">
 <refentryinfo>
 <title
->Руководство пользователя &kde;</title>
+>Руководство пользователя checkXML5</title>
 <author
 ><personname
 ><firstname
@@ -18,7 +18,11 @@
 >lauri@kde.org</email
 ></author>
 <date
->3 июля 2003 г.</date>
+>4 марта 2014 г.</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
 </refentryinfo>
 
 <refmeta>
@@ -36,7 +40,7 @@
 >checkXML5</command
 ></refname>
 <refpurpose
->Утилита &XML; lint для документов &kde; DocBook &XML;.</refpurpose>
+>Средство проверки &XML; для документов &kde; в формате DocBook &XML;</refpurpose>
 </refnamediv>
 
 <refsynopsisdiv>
@@ -67,3 +71,4 @@
 >meinproc5(1) xmllint(1)</para>
 </refsect1>
 </refentry>
+

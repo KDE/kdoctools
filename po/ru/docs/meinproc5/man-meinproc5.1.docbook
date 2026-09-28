@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Russian "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>Руководство пользователя meinproc5</title>
+<!-- There is no author in the meinproc.cpp file 
+Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
+
+<author>
+<firstname
+>Matthias </firstname>
+<surname
+>Hoelzer-Kluepfel</surname>
+<affiliation>
+<address
+><email
+>hoelzer@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Stephan</firstname>
+<surname
+>Kulow</surname>
+<affiliation>
+<address
+><email
+>coolo@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Cornelius</firstname>
+<surname
+>Schumacher</surname>
+<affiliation>
+<address
+><email
+>schumacher@kde.org</email
+></address>
+</affiliation>
+</author>
+-->
+<date
+>8 мая 2014 г.</date>
+<releaseinfo
+>Frameworks 5.0</releaseinfo>
+<productname
+>KDE Frameworks</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>meinproc5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>meinproc5</command
+></refname>
+<refpurpose
+>Преобразователь &XML; из состава &kde;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>Обзор</title>
+
+<cmdsynopsis
+><command
+>meinproc5</command
+> <arg choice="opt"
+>-h, --help</arg
+> <arg choice="opt"
+>-v, --version</arg
+> <arg choice="opt"
+>--cache<replaceable
+> файл</replaceable
+></arg
+> <arg choice="opt"
+>--check</arg
+> <arg choice="opt"
+>--srcdir<replaceable
+> каталог</replaceable
+></arg
+> <arg choice="opt"
+>--param <replaceable
+>ключ</replaceable
+>=<replaceable
+>значение</replaceable
+></arg
+> <group
+> <group
+> <arg
+>-o</arg
+> <arg
+>--output</arg
+> </group
+> <replaceable
+> файл</replaceable
+> </group
+> <arg choice="opt"
+>--stdout</arg
+> <arg choice="opt"
+>--stylesheet<replaceable
+> xsl</replaceable
+></arg
+> <arg choice="plain"
+>docbook_file</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>Описание</title>
+
+<para
+><command
+>meinproc5</command
+> преобразует файлы DocBook в &HTML;. </para>
+</refsect1>
+
+<refsect1>
+<title
+>Общие параметры</title>
+<para>
+<variablelist>
+
+<varlistentry>
+  <term
+><option
+>-h</option
+><option
+>--help</option
+></term>
+<listitem>
+<para
+>Показать справку по параметрам. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+><option
+>--version</option
+></term>
+<listitem>
+<para
+>Показать сведения о версии. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1>
+<title
+>Параметры приложения</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>--cache</option
+> <parameter
+>файл</parameter
+></term>
+<listitem>
+<para
+>Создать файл кэша для документа. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--check</option
+></term>
+<listitem>
+<para
+>Проверить документ на корректность.</para>
+<screen
+>Вывод может показаться пугающим: одна небольшая ошибка порождает целый каскад сообщений. 
+Приём такой: смотрите на первую ошибку, исправляйте её, сохраняйте файл и снова запускайте <command
+>meinproc5</command
+>.
+</screen>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-o</option
+>, <option
+>--output</option
+><parameter
+> файл</parameter
+></term>
+<listitem>
+<para
+>Вывести документ целиком в <parameter
+>файл</parameter
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stdout</option
+></term>
+<listitem>
+<para
+>Вывести документ целиком в стандартный вывод. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <parameter
+>xsl</parameter
+></term>
+<listitem>
+<para
+>Используемая таблица стилей. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--srcdir</option
+> <parameter
+>каталог</parameter
+></term>
+<listitem>
+<para
+>Задать корневой каталог для поиска kdoctools. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--param</option
+> ключ=значение</term>
+<listitem>
+<para
+>Задать параметры, передаваемые таблице стилей. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>Использование</title>
+<para
+>Обычно <command
+>meinproc5</command
+> запускают просто так: <literallayout>
+<userinput
+><command
+>meinproc5</command
+> <replaceable
+>docbook-file</replaceable>
+</userinput>
+</literallayout
+> где <replaceable
+>docbook-file</replaceable
+> — как правило, index.docbook. Эта команда создаёт страницы &HTML; из файла DocBook. Учтите, что такие страницы отображаются только в браузерах на основе &kde;, например в &konqueror;. </para>
+<para
+>Если результат в формате &HTML; нужно смотреть в другом браузере (например, при размещении в Интернете), используйте <literallayout>
+<userinput
+><command
+>meinproc5</command
+> --stylesheet <replaceable
+>stylesheet-name</replaceable
+> <replaceable
+>docbook-file</replaceable>
+</userinput>
+</literallayout
+> где <replaceable
+>stylesheet-name</replaceable
+> — полный путь к одной из таблиц стилей &XSL; в каталоге &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. Чтобы получить результат, пригодный для веб-страниц, возможно использовать <command
+>kde-web.xsl</command
+> или <command
+>kde-chunk-online.xsl</command
+>. Подробности — в файле <filename
+>README</filename
+> в том же каталоге. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>Смотрите также</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7), <replaceable
+>qt5options</replaceable
+>(7)</para>
+</refsect1>
+
+<refsect1>
+<title
+>Ошибки</title>
+<para
+>Сообщайте об ошибках через <ulink url="https://bugs.kde.org"
+>систему отслеживания ошибок &kde;</ulink
+>.</para>
+</refsect1>
+
+</refentry>
+
+
+
