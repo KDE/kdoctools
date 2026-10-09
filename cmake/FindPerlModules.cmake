@@ -44,8 +44,6 @@ if (PERL_EXECUTABLE)
             set(PerlModules_all_modules_found FALSE)
         endif()
         find_package_handle_standard_args(PerlModules_${_comp}
-            FOUND_VAR
-                PerlModules_${_comp}_FOUND
             REQUIRED_VARS
                 PerlModules_${_comp_sanitised}_FOUND
             )
@@ -53,8 +51,6 @@ if (PERL_EXECUTABLE)
 endif()
 
 find_package_handle_standard_args(PerlModules
-    FOUND_VAR
-        PerlModules_FOUND
     REQUIRED_VARS
         PerlModules_all_modules_found
     HANDLE_COMPONENTS

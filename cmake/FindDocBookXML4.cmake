@@ -74,6 +74,6 @@ locate_version (${DocBookXML4_DTD_VERSION} DocBookXML4_DTD_DIR)
 include(FindPackageHandleStandardArgs)
 find_package_handle_standard_args (DocBookXML4
     REQUIRED_VARS DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION
-    FOUND_VAR DocBookXML4_FOUND)
+)
 
 mark_as_advanced (DocBookXML4_DTD_DIR DocBookXML4_DTD_VERSION)
