@@ -45,43 +45,16 @@
 <!ENTITY etc			        "vb.">
 <!ENTITY ie			            "başka bir deyişle">
 <!ENTITY infocenter		        "<application>Bilgi Merkezi</application>">
-<!ENTITY filelight		        "<application>Dosya Feneri</application>">
-<!ENTITY kbounce		        "<application>K Zıpla</application>">
 <!ENTITY kde-frameworks		    "<productname>&kde; Frameworks</productname>">
 <!ENTITY kf5-full		        "&kde-frameworks; <productnumber>5</productnumber>">
 <!ENTITY kf6-full		        "&kde-frameworks; <productnumber>6</productnumber>">
-<!ENTITY kbackup		        "<application>K Yedek</application>">
-<!ENTITY kcalc		            "<application>K Hesap</application>">
-<!ENTITY kcharselect		    "<application>K Karakterci</application>">
-<!ENTITY kdevelop		        "<application>K Geliştir</application>">
-<!ENTITY kdiskfree		        "<application>K Boş Alan</application>">
-<!ENTITY kfind		            "<application>K Bul</application>">
-<!ENTITY kfloppy		        "<application>K Disket</application>">
 <!ENTITY khelpcenter		    "<application>KDE Yardım Merkezi</application>">
-<!ENTITY kgpg		            "<application>K GPG</application>">
-<!ENTITY knetwalk		        "<application>K Geçit</application>">
-<!ENTITY korganizer		        "<application>K Organizatör</application>">
-<!ENTITY kruler		            "<application>K Cetvel</application>">
 <!ENTITY kronometer		        "<application>Kronometre</application>">
-<!ENTITY krunner		        "<application>K Çalıştır</application>">
-<!ENTITY ksystemlog		        "<application>K Sistem Günlüğü</application>">
-<!ENTITY ktimer		            "<application>K Sayaç</application>">
-<!ENTITY ktimetracker		    "<application>K Zamanölçer</application>">
-<!ENTITY ktorrent		        "<application>K Torrent</application>">
-<!ENTITY kwallet5		        "<application>K Cüzdan</application> <productnumber>5</productnumber>">
-<!ENTITY kwalletmanager5	    "<application>K Cüzdan Yöneticisi</application> <productnumber>5</productnumber>">
 <!ENTITY lmb			        "<mousebutton>sol</mousebutton> fare düğmesi">
 <!ENTITY partman		        "<application>Bölüntü Yöneticisi</application>">
 <!ENTITY plasma-desktop		    "<productname>&kde; Plasma Masaüstü</productname>">
 <!ENTITY plasma-media-center	"<productname>&kde; Plasma Ortam Merkezi</productname>">
 <!ENTITY plasma-netbook		    "<productname>&kde; Plasma Netbook</productname>">
 <!ENTITY plasma-workspaces	    "<productname>&kde; Plasma Çalışma Alanları</productname>">
-<!ENTITY rsibreak		        "<application>RSI Molası</application>">
-<!ENTITY sweeper		        "<application>Süpürücü</application>">
 <!ENTITY systemsettings		    "<application>Sistem Ayarları</application>">
 <!ENTITY systemtray		        "<application>Sistem Tepsisi</application>">
-<!ENTITY kteatime		        "<application>K Çay Saati</application>">
-<!ENTITY kontact		        "<application>Kontak</application>">
-<!ENTITY kmail		            "<application>K Posta</application>">
-<!ENTITY kaddressbook           "<application>K Adres Defteri</application>">
-<!ENTITY akregator              "<application>Akregatör</application>">
