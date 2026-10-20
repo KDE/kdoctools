@@ -45,6 +45,7 @@
 <!ENTITY Thom.Castermans      '<othercredit role="translator"><firstname>Thom</firstname><surname>Castermans</surname><affiliation><address><email>thomcastermans@kde.nl</email></address></affiliation><contrib>Vertaler/Nalezer</contrib></othercredit>'>
 <!ENTITY Ronald.Stroethoff      '<othercredit role="translator"><firstname>Ronald</firstname><surname>Stroethoff</surname><affiliation><address><email>stroet43@zonnet.nl</email></address></affiliation><contrib>Vertaler</contrib></othercredit>'>
 <!ENTITY Ivo.de.Klerk      '<othercredit role="translator"><firstname>Ivo M.</firstname><surname>de Klerk</surname><affiliation><address><email>imklerk@hetnet.nl</email></address></affiliation><contrib>Vertaler</contrib></othercredit>'>
+<!ENTITY Joep.Truijens      '<othercredit role="translator"><firstname>Joep</firstname><surname>Truijens</surname><affiliation><address><email>joep.truijens@hermesmail.nl</email></address></affiliation><contrib>Vertaler</contrib></othercredit>'>
 <!ENTITY kde.nl.groep       "<email>i18n@kde.nl</email>">
 
 <!-- Tekstschema's -->
@@ -89,6 +90,7 @@
 <!ENTITY vertaling.thom         "<para>Dit document is vertaald in het Nederlands door &Thom.Castermans;.</para>">
 <!ENTITY vertaling.ronald       "<para>Dit document is vertaald in het Nederlands door &Ronald.Stroethoff;.</para>">
 <!ENTITY vertaling.ivo          "<para>Dit document is vertaald in het Nederlands door &Ivo.de.Klerk;.</para>">
+<!ENTITY vertaling.joep         "<para>Dit document is vertaald in het Nederlands door &Joep.Truijens;.</para>">
 
 
 <!-- Gebruiken als template voor nieuwe vertalers/nalezers
