@@ -12,12 +12,12 @@
 #include <QFile>
 #include <QIODevice>
 #include <QList>
-#include <QPair>
 #include <QRegularExpression>
 #include <QStringList>
 #include <QTextStream>
+#include <utility>
 
-class LangListType : public QList<QPair<QString, QString>>
+class LangListType : public QList<std::pair<QString, QString>>
 {
 public:
     int searchLang(const QString &el)
@@ -110,7 +110,7 @@ int main(int argc, char **argv)
             if (match.hasMatch()) {
                 const QString langCode = match.captured(1);
                 const QString langFile = l10nDir + QStringLiteral("common/") + match.captured(2);
-                allLangs += qMakePair(langCode, langFile);
+                allLangs += std::make_pair(langCode, langFile);
                 // qCDebug(KDocToolsLog) << langCode << " - " << langFile;
             }
             break;
@@ -143,7 +143,7 @@ int main(int argc, char **argv)
         /* remove trailing .xml */
         QString langCode = langFile.left(langFile.length() - 4);
 
-        QPair<QString, QString> cl = qMakePair(langCode, langFile);
+        std::pair<QString, QString> cl = std::make_pair(langCode, langFile);
         if ((allLangs.searchLang(langCode)) < 0) {
             /* custom language not found in upstream list */
             allLangs += cl;
