@@ -64,8 +64,15 @@
 # Needed for IN_LIST usage ( CMP0057 )
 cmake_policy(VERSION 3.16)
 
+include(FeatureSummary)
+
 set(KDOCTOOLS_SERIALIZE_TOOL "" CACHE STRING "Tool to serialize resource-intensive commands in parallel builds")
 set(KDOCTOOLS_MEINPROC_EXECUTABLE "KF6::meinproc6")
+
+option(BUILD_HTML_DOCS "Generate HTML documentation for the project" ON)
+option(BUILD_MAN_DOCS "Generate man page documentation for the project" ON)
+add_feature_info(BUILD_HTML_DOCS BUILD_HTML_DOCS "Generate HTML documentation for the project.")
+add_feature_info(BUILD_MAN_DOCS BUILD_MAN_DOCS "Generate man page documentation for the project.")
 
 if(KDOCTOOLS_SERIALIZE_TOOL)
     # parallel build with many meinproc invocations can consume a huge amount of memory
@@ -242,12 +249,14 @@ function(kdoctools_install podir)
         foreach(docbook ${docbooks})
             string(REGEX MATCH "\\.([0-9])\\.docbook" match ${docbook})
             if (match)
-                kdoctools_create_manpage("${lang_dir}/${docbook}" ${CMAKE_MATCH_1}
-                    INSTALL_DESTINATION ${KDE_INSTALL_MANDIR}/${lang}
-                )
+                if (BUILD_MAN_DOCS)
+                    kdoctools_create_manpage("${lang_dir}/${docbook}" ${CMAKE_MATCH_1}
+                        INSTALL_DESTINATION ${KDE_INSTALL_MANDIR}/${lang}
+                    )
+                endif()
             else()
                 string(REGEX MATCH "^docs/(.*)/index.docbook" match ${docbook})
-                if (match)
+                if (match AND BUILD_HTML_DOCS)
                     kdoctools_create_handbook("${lang_dir}/${docbook}"
                         INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/${lang}
                         SUBDIR ${CMAKE_MATCH_1}
