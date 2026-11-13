@@ -1,0 +1,461 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>توثيق سطر أوامر &Qt;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+>&Burkhard.Lueck; &Burkhard.Lueck.mail;</author>
+<date
+>2016-06-04</date>
+<releaseinfo
+>كيوت 5.4</releaseinfo>
+<productname
+>إطار كِيدِي</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>qt5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>qt5options</refname>
+<refpurpose
+>خيارات سطر أوامر مشتركة لجميع التطبيقات المبنية على مجموعة أدوات &Qt;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>تطبيق Qt</replaceable
+></command
+> <arg choice="opt"
+><option
+>-style=</option
+> <replaceable
+>نمط</replaceable
+> / <option
+>-style</option
+> <replaceable
+>نمط</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-stylesheet=</option
+> <replaceable
+>ورقة أنماط</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>ورقة أنماط</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-widgetcount</option
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>منفذ</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platform</option
+> <replaceable
+>اسم_المنصة[:خيارات]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformpluginpath</option
+> <replaceable
+>مسار</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-platformtheme</option
+> <replaceable
+>سمة_المنصة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-plugin</option
+> <replaceable
+>ملحق</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowgeometry</option
+> <replaceable
+>هندسة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowicon</option
+> <replaceable
+>أيقونة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-qwindowtitle</option
+> <replaceable
+>عنوان</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-reverse</option
+></arg
+> <arg choice="opt"
+><option
+>-session</option
+> <replaceable
+>جلسة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-display</option
+> <replaceable
+>اسم_المضيف:رقم_الشاشة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-geometry</option
+> <replaceable
+>هندسة</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+></arg
+> <arg choice="opt"
+><option
+>-h, --help و -? على &Windows;</option
+></arg
+> <arg choice="opt"
+><option
+>-v --version</option
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+
+<refsect1>
+<title
+>خيارات</title>
+
+<para
+>تنطبق الخيارات التالية على جميع تطبيقات &Qt;:</para>
+
+<variablelist>
+<!--https://doc.qt.io/qt-5/qapplication.html#QApplication-->
+<varlistentry>
+<term
+><option
+>-style=</option
+> <replaceable
+>نمط</replaceable
+> / <option
+>-style</option
+> <replaceable
+>نمط</replaceable
+> </term>
+<listitem
+><para
+>اضبط نمط الواجهة الرسومية للتطبيق. تعتمد القيم الممكنة على تهيئة النظام. إذا جُمع &Qt; مع أنماط إضافية أو توفرت أنماط إضافية كملحقات، فستكون متاحة لخيار سطر الأوامر <option
+>-style</option
+>.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-stylesheet=</option
+> <replaceable
+>ورقة أنماط</replaceable
+> / <option
+>-stylesheet</option
+> <replaceable
+>ورقة أنماط</replaceable
+> </term>
+<listitem
+><para
+>اضبط ورقة أنماط التطبيق. يجب أن تكون القيمة مسارًا لملف يحتوي على ورقة الأنماط. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-widgetcount</option>
+</term>
+<listitem
+><para
+>اطبع رسالة تنقيح في النهاية حول عدد الأدوات الذكية غير المدمرة والحد الأقصى لعدد الأدوات الذكية الموجودة في نفس الوقت. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-reverse</option>
+</term>
+<listitem
+><para
+>اضبط اتجاه تخطيط التطبيق إلى <methodname
+>Qt::RightToLeft</methodname
+>. يُقصد بهذا الخيار المساعدة في التنقيح ولا ينبغي استخدامه في الإنتاج. تُكتشف القيمة المبدئية آليًا من إعدادات المستخدم المحلية (انظر أيضًا <methodname
+>QLocale::textDirection()</methodname
+>). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qmljsdebugger=</option
+> <replaceable
+>منفذ</replaceable
+> </term>
+<listitem
+><para
+>فعّل مصحح QML/JS بمنفذ محدد. يجب أن تكون القيمة بالتنسيق port:1234[,block]، حيث block اختياري وسيجعل التطبيق ينتظر حتى يتصل به مصحح. </para
+></listitem>
+</varlistentry>
+<!--https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication-->
+<varlistentry>
+<term
+><option
+>-platform</option
+> <replaceable
+>اسم_المنصة[:خيارات]</replaceable
+> </term>
+<listitem
+><para
+>حدد ملحق تجريد منصة &Qt; (QPA). </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformpluginpath</option
+> <replaceable
+>مسار</replaceable
+> </term>
+<listitem
+><para
+>حدد المسار إلى ملحقات المنصة. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-platformtheme</option
+> <replaceable
+>سمة_المنصة</replaceable
+> </term>
+<listitem
+><para
+>حدد سمة المنصة. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-plugin</option
+> <replaceable
+>ملحق</replaceable
+> </term>
+<listitem
+><para
+>حدد ملحقات إضافية لتحميلها. قد تظهر الوسيطة مرات متعددة. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowgeometry</option
+> <replaceable
+>هندسة</replaceable
+> </term>
+<listitem
+><para
+>حدد هندسة النافذة للنافذة الرئيسة باستخدام صياغة &X11;. مثال: -qwindowgeometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowicon</option
+> <replaceable
+>أيقونة</replaceable
+> </term>
+<listitem
+><para
+>اضبط أيقونة النافذة المبدئية. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-qwindowtitle</option
+> <replaceable
+>عنوان</replaceable
+> </term>
+<listitem
+><para
+>اضبط عنوان النافذة الأولى. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-session</option
+> <replaceable
+>جلسة</replaceable
+> </term>
+<listitem
+><para
+>استعد التطبيق من جلسة سابقة. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-display</option
+> <replaceable
+>اسم_المضيف:رقم_الشاشة</replaceable
+> </term>
+<listitem
+><para
+>بدّل الشاشات على &X11;. يتجاوز متغير البيئة <envar
+>DISPLAY</envar
+>. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-geometry</option
+> <replaceable
+>الهندسة</replaceable
+> </term>
+<listitem
+><para
+>حدّد هندسة النافذة للنافذة الرئيسة على &X11;. مثال: -geometry 100x100+50+50 </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-dialogs=</option
+> <replaceable
+>[xp|none]</replaceable
+> </term>
+<listitem
+><para
+>متوفّر فقط لمنصة &Windows;. يستخدم XP حوارات النمط الأصلي وتعطّلها none.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-fontengine=</option
+> <replaceable
+>freetype</replaceable
+> </term>
+<listitem
+><para
+>استخدم محرّط خطوط FreeType. </para
+></listitem>
+</varlistentry>
+
+<!--https://doc.qt.io/qt-5/qcommandlineparser.html -->
+<varlistentry>
+<term>
+<option
+>-h، --help و -? على &Windows;</option>
+</term>
+<listitem
+><para
+>اطبع جميع الخيارات ووصف التطبيق. </para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term>
+<option
+>-v --version</option>
+</term>
+<listitem
+><para
+>اعرض سلسلة إصدار التطبيق. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>المؤلفون</title>
+<para
+>صفحة الدليل كُتبت أصلًا بواسطة &Lauri.Watts; &Lauri.Watts.mail;</para>
+<para
+>حُدّثت إلى &frameworks; 5 بواسطة &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+<para
+>المعلومات لهذه الصفحة الدليلية مأخوذة من <ulink url="https://doc.qt.io/qt-5/qapplication.html#QApplication"
+>توثيق QApplication</ulink
+>، <ulink url="https://doc.qt.io/qt-5/qguiapplication.html#QGuiApplication"
+>توثيق QGuiApplication</ulink
+> و <ulink url="https://doc.qt.io/qt-5/qcommandlineparser.html"
+>توثيق QCommandLineParser</ulink
+>.</para>
+</refsect1>
+
+</refentry>

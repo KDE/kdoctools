@@ -1,0 +1,341 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+  <!ENTITY % Arabic "INCLUDE"
+><!-- change language only here -->
+]>
+
+<refentry lang="&language;">
+
+<refentryinfo>
+<title
+>دليل مستخدم meinproc5</title>
+<!-- There is no author in the meinproc.cpp file 
+Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man2html?meinproc+1
+
+<author>
+<firstname
+>Matthias </firstname>
+<surname
+>Hoelzer-Kluepfel</surname>
+<affiliation>
+<address
+><email
+>hoelzer@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Stephan</firstname>
+<surname
+>Kulow</surname>
+<affiliation>
+<address
+><email
+>coolo@kde.org</email
+></address>
+</affiliation>
+</author>
+
+<author>
+<firstname
+>Cornelius</firstname>
+<surname
+>Schumacher</surname>
+<affiliation>
+<address
+><email
+>schumacher@kde.org</email
+></address>
+</affiliation>
+</author>
+-->
+<date
+>2014-05-08</date>
+<releaseinfo
+>أُطر العمل 5.0</releaseinfo>
+<productname
+>إطار كِيدِي</productname>
+
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>meinproc5</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>meinproc5</command
+></refname>
+<refpurpose
+>مترجم كيدي لـ XML</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<title
+>الموجز</title>
+
+<cmdsynopsis
+><command
+>meinproc5</command
+> <arg choice="opt"
+>-h, --help</arg
+> <arg choice="opt"
+>-v, --version</arg
+> <arg choice="opt"
+>--cache<replaceable
+> ملف</replaceable
+></arg
+> <arg choice="opt"
+>--check</arg
+> <arg choice="opt"
+>--srcdir<replaceable
+> دليل</replaceable
+></arg
+> <arg choice="opt"
+>--param <replaceable
+>مفتاح</replaceable
+>=<replaceable
+>قيمة</replaceable
+></arg
+> <group
+> <group
+> <arg
+>-o</arg
+> <arg
+>--output</arg
+> </group
+> <replaceable
+> ملف</replaceable
+> </group
+> <arg choice="opt"
+>--stdout</arg
+> <arg choice="opt"
+>--stylesheet<replaceable
+> xsl</replaceable
+></arg
+> <arg choice="plain"
+>ملف_docbook</arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>الوصف</title>
+
+<para
+><command
+>meinproc5</command
+> يحول ملفات DocBook إلى HTML. </para>
+</refsect1>
+
+<refsect1>
+<title
+>خيارات عامة</title>
+<para>
+<variablelist>
+
+<varlistentry>
+  <term
+><option
+>-h</option
+><option
+>--help</option
+></term>
+<listitem>
+<para
+>أظهر المساعدة حول الخيارات. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+><option
+>--version</option
+></term>
+<listitem>
+<para
+>أظهر معلومات الإصدار. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+</para>
+</refsect1>
+
+<refsect1>
+<title
+>خيارات التطبيق</title>
+<variablelist>
+
+<varlistentry>
+<term
+><option
+>--cache</option
+> <parameter
+>ملف</parameter
+></term>
+<listitem>
+<para
+>أنشئ ملف خبيئة للمستند. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--check</option
+></term>
+<listitem>
+<para
+>افحص المستند للتأكد من صحته.</para>
+<screen
+>قد يكون المخرجات مربكة بعض الشيء، لأن خطأ صغيرًا واحدًا يمكن أن يتسبب في سلسلة من الأخطاء. الحيلة هي النظر إلى الخطأ الأول، وإصلاح ذلك الخطأ، وحفظ الملف، وتشغيل <command
+>meinproc5</command
+> مرة أخرى.
+</screen>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-o</option
+>, <option
+>--output</option
+><parameter
+> ملف</parameter
+></term>
+<listitem>
+<para
+>أخرج المستند بأكمله إلى <parameter
+>ملف</parameter
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stdout</option
+></term>
+<listitem>
+<para
+>أخرج المستند بأكمله إلى stdout. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--stylesheet</option
+> <parameter
+>xsl</parameter
+></term>
+<listitem>
+<para
+>ورقة الأنماط المراد استخدامها. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--srcdir</option
+> <parameter
+>دليل</parameter
+></term>
+<listitem>
+<para
+>اضبط الدليل الجذر للبحث عن kdoctools. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--param</option
+> مفتاح=قيمة</term>
+<listitem>
+<para
+>اضبط الوسائط لتمريرها إلى ورقة الأنماط. </para>
+</listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>الاستخدام</title>
+<para
+>الطريقة الأكثر شيوعًا لتشغيل الأمر `<command
+>meinproc5</command
+>` هي ببساطة كالتالي: `<literallayout>
+<userinput
+><command
+>meinproc5</command
+> <replaceable
+>docbook-file</replaceable>
+</userinput>
+</literallayout
+>` حيث يكون `<replaceable
+>docbook-file</replaceable
+>` عادةً هو `index.docbook`. يُنشئ هذا الأمر صفحات HTML من ملف DocBook. يُرجى ملاحظة أن هذه الصفحات لا يمكن عرضها إلا في المتصفحات المبنية على بيئة كيدي (مثل متصفح كنكرر). </para>
+<para
+>إذا كنت بحاجة إلى عرض مُخرجات HTML في متصفح آخر (على سبيل المثال، إذا كنت تنشرها على الإنترنت)، فاستخدم <literallayout>
+<userinput
+><command
+>meinproc5</command
+> --stylesheet <replaceable
+>stylesheet-name</replaceable
+> <replaceable
+>docbook-file</replaceable>
+</userinput>
+</literallayout
+> حيث <replaceable
+>stylesheet-name</replaceable
+> هو المسار الكامل لأحد ملفات أنماط XSL الموجودة في &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/. لإنتاج مُخرجات مناسبة للويب، يمكنك استخدام <command
+>kde-web.xsl</command
+> أو <command
+>kde-chunk-online.xsl</command
+>. راجع ملف <filename
+>README</filename
+> في ذلك المجلد لمزيد من التفاصيل. </para>
+
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+<para
+><replaceable
+>kf5options</replaceable
+>(7), <replaceable
+>qt5options</replaceable
+>(7)</para>
+</refsect1>
+
+<refsect1>
+<title
+>علل كِيدِي</title>
+<para
+>يرجى استخدام <ulink url="https://bugs.kde.org"
+>متتبع علل كيدي</ulink
+> للإبلاغ عن العلل.</para>
+</refsect1>
+
+</refentry>
+
+
+

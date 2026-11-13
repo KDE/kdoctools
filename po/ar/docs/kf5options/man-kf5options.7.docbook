@@ -1,0 +1,161 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>توثيق سطر الأوامر لـ &frameworks;</title>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<date
+>2016-05-13</date>
+<releaseinfo
+>أُطر العمل 6.22</releaseinfo>
+<productname
+>أُطر العمل 6.22</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+>kf5options</refentrytitle>
+<manvolnum
+>7</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+>kf5options</refname>
+<refpurpose
+>خيارات سطر الأوامر المشتركة لجميع التطبيقات المبنية على &kf5-full;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+><replaceable
+>تطبيق كيدي</replaceable
+></command
+> <arg choice="opt"
+><option
+>-h, --help</option
+></arg
+> <arg choice="opt"
+><option
+>-v, --version</option
+></arg
+> <arg choice="opt"
+><option
+>--author</option
+></arg
+> <arg choice="opt"
+><option
+>--license</option
+></arg
+> <arg choice="opt"
+><option
+>--desktopfile</option
+> <replaceable
+>اسم الملف</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>خيارات</title>
+
+<para
+>تنطبق الخيارات التالية على جميع تطبيقات &kde;:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><option
+>-h</option
+> <option
+>--help</option
+></term>
+<listitem
+><para
+>يسرد هذا الخيارات المتاحة في سطر الأوامر.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>-v</option
+> <option
+>--version</option
+></term>
+<listitem>
+<para
+>يسرد معلومات الإصدار لـ <replaceable
+>تطبيق كيدي</replaceable
+>.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--author</option
+></term>
+<listitem
+><para
+>يسرد مؤلفي <replaceable
+>تطبيق كيدي</replaceable
+> في نافذة الطرفية.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--license</option
+></term>
+<listitem
+><para
+>يعرض معلومات الترخيص.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><option
+>--desktopfile</option
+> <replaceable
+>اسم الملف</replaceable
+></term>
+<listitem
+><para
+>اسم الملف الأساسي لمدخل سطح المكتب لهذا التطبيق.</para>
+<para
+>هذا مفيد بشكل خاص للتطبيقات المغلفة والتطبيقات التي تحتوي عمومًا على ملفات سطح مكتب متعددة. وبالتالي يمكن لكل ملف سطح مكتب وضع اسمه الخاص في أمر exec. </para
+></listitem>
+</varlistentry>
+
+</variablelist>
+
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+<para
+>qt5options(7)</para>
+
+</refsect1>
+
+<refsect1>
+<title
+>المؤلفون</title>
+<para
+>صفحة الدليل كُتبت أصلًا بواسطة &Lauri.Watts; &Lauri.Watts.mail; لـ kdelibs4</para>
+<para
+>حُدثت إلى &frameworks; 5 بواسطة &Burkhard.Lueck; &Burkhard.Lueck.mail;</para>
+</refsect1>
+
+</refentry>
