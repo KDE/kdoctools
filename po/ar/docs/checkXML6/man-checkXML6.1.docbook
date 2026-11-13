@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<!DOCTYPE refentry PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" "dtd/kdedbx45.dtd" [
+<!ENTITY % Arabic "INCLUDE">
+]>
+
+<refentry lang="&language;">
+<refentryinfo>
+<title
+>دليل مستخدم checkXML6</title>
+<author
+><personname
+><firstname
+>Lauri</firstname
+><surname
+>Watts</surname
+></personname
+><email
+>lauri@kde.org</email
+></author>
+<date
+>2014-03-04</date>
+<releaseinfo
+>أُطر العمل 6.0</releaseinfo>
+<productname
+>إطار كِيدِي</productname>
+</refentryinfo>
+
+<refmeta>
+<refentrytitle
+><command
+>checkXML6</command
+></refentrytitle>
+<manvolnum
+>1</manvolnum>
+</refmeta>
+
+<refnamediv>
+<refname
+><command
+>checkXML6</command
+></refname>
+<refpurpose
+>أداة فحص &XML; لمستندات &kde; DocBook &XML;</refpurpose>
+</refnamediv>
+
+<refsynopsisdiv>
+<cmdsynopsis
+><command
+>checkXML6</command
+> <arg
+><replaceable
+>اسم_الملف</replaceable
+></arg
+> </cmdsynopsis>
+</refsynopsisdiv>
+
+<refsect1>
+<title
+>الوصف</title>
+
+<para
+><command
+>checkXML6</command
+> هي أداة للتحقق من الأخطاء النحوية في ملفات &kde; DocBook &XML;. يمكن استخدامها أيضًا لملفات &XML; الأخرى القائمة على DocBook، لكن ينبغي استخدام أداة xmllint(1) الأقل تخصصًا إذا لم تكن تكتب أو تعمل على توثيق &kde;.</para>
+</refsect1>
+
+<refsect1>
+<title
+>انظر أيضًا</title>
+<para
+>meinproc6(1) xmllint(1)</para>
+</refsect1>
+</refentry>
+
