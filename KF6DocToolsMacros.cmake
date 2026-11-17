@@ -246,23 +246,31 @@ function(kdoctools_install podir)
         get_filename_component(lang ${lang_dir} NAME)
 
         file(GLOB_RECURSE docbooks RELATIVE "${lang_dir}" "${lang_dir}/docs/*.docbook")
-        foreach(docbook ${docbooks})
-            string(REGEX MATCH "\\.([0-9])\\.docbook" match ${docbook})
-            if (match)
-                if (BUILD_MAN_DOCS)
-                    kdoctools_create_manpage("${lang_dir}/${docbook}" ${CMAKE_MATCH_1}
-                        INSTALL_DESTINATION ${KDE_INSTALL_MANDIR}/${lang}
-                    )
-                endif()
-            else()
-                string(REGEX MATCH "^docs/(.*)/index.docbook" match ${docbook})
-                if (match AND BUILD_HTML_DOCS)
-                    kdoctools_create_handbook("${lang_dir}/${docbook}"
-                        INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/${lang}
-                        SUBDIR ${CMAKE_MATCH_1}
-                    )
-                endif()
+        if (docbooks)
+            string(REPLACE "_" "-" kdoctoolslang ${lang})
+            if (NOT EXISTS ${KDOCTOOLS_CUSTOMIZATION_DIR}/${kdoctoolslang}/strings.entities)
+                message(WARNING "This component has doc translations for ${lang} but this KDocTools doesn't support it; skipping ${lang}")
+                continue()
             endif()
-        endforeach()
+
+            foreach(docbook ${docbooks})
+                string(REGEX MATCH "\\.([0-9])\\.docbook" match ${docbook})
+                if (match)
+                    if (BUILD_MAN_DOCS)
+                        kdoctools_create_manpage("${lang_dir}/${docbook}" ${CMAKE_MATCH_1}
+                            INSTALL_DESTINATION ${KDE_INSTALL_MANDIR}/${lang}
+                        )
+                    endif()
+                else()
+                    string(REGEX MATCH "^docs/(.*)/index.docbook" match ${docbook})
+                    if (match AND BUILD_HTML_DOCS)
+                        kdoctools_create_handbook("${lang_dir}/${docbook}"
+                            INSTALL_DESTINATION ${KDE_INSTALL_DOCBUNDLEDIR}/${lang}
+                            SUBDIR ${CMAKE_MATCH_1}
+                        )
+                    endif()
+                endif()
+            endforeach()
+        endif()
     endforeach()
 endfunction()
