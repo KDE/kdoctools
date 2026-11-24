@@ -186,7 +186,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ></term>
 <listitem>
 <para
->Belge için bir önbellek dosyası oluşturun. </para>
+>Belge için bir ön bellek dosyası oluşturun. </para>
 </listitem>
 </varlistentry>
 
@@ -244,7 +244,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ></term>
 <listitem>
 <para
->Kullanılacak biçem sayfası. </para>
+>Kullanılacak stil sayfası. </para>
 </listitem>
 </varlistentry>
 
@@ -268,7 +268,7 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 > key=value</term>
 <listitem>
 <para
->Biçem sayfasına geçirilecek parametreleri ayarlayın. </para>
+>Stil sayfasına geçirilecek parametreleri ayarlayın. </para>
 </listitem>
 </varlistentry>
 
@@ -299,14 +299,14 @@ Also, based on the information from http://olympus.het.brown.edu/cgi-bin/man/man
 ><command
 >meinproc6</command
 > --stylesheet <replaceable
->biçem sayfası adı</replaceable
+>stil sayfası adı</replaceable
 > <replaceable
 >docbook-dosyası</replaceable>
 </userinput>
 </literallayout
 > kullanın. Burada, <replaceable
->biçem sayfası</replaceable
->, &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/ içindeki &XSL; biçem sayfalarıdır. Web için uygun çıktı üretmek için <command
+>stil sayfası</replaceable
+>, &lt;kdoctools_installation_prefix&gt;/share/kf5/kdoctools/customization/ içindeki &XSL; stil sayfalarıdır. Web için uygun çıktı üretmek için <command
 >kde-web.xsl</command
 > veya <command
 >kde-chunk-online.xsl</command

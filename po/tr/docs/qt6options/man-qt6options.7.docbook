@@ -43,7 +43,7 @@
 ><option
 >-style=</option
 > <replaceable
->biçem</replaceable
+>stil</replaceable
 > / <option
 >-style</option
 > <replaceable
@@ -53,11 +53,11 @@
 ><option
 >-stylesheet=</option
 > <replaceable
->biçem sayfası</replaceable
+>stil sayfası</replaceable
 > / <option
 >-stylesheet</option
 > <replaceable
->biçem sayfası</replaceable
+>stil sayfası</replaceable
 ></arg
 > <arg choice="opt"
 ><option
@@ -175,15 +175,15 @@
 ><option
 >-style=</option
 > <replaceable
->biçem</replaceable
+>stil</replaceable
 > / <option
 >-style</option
 > <replaceable
->biçem</replaceable
+>stil</replaceable
 > </term>
 <listitem
 ><para
->Uygulama &GUI; biçemini ayarlayın. Olası değerler, sistem yapılandırmasına bağlıdır. &Qt; ek biçemlerle derlenir veya eklenti olarak ek biçemlere sahipse bunlar <option
+>Uygulama &GUI; stilini ayarlayın. Olası değerler, sistem yapılandırmasına bağlıdır. &Qt; ek stillerle derlenir veya eklenti olarak ek stillere sahipse bunlar <option
 >-style</option
 > komut satırı seçeneğinde kullanılabilir.</para>
 </listitem>
@@ -194,15 +194,15 @@
 ><option
 >-stylesheet=</option
 > <replaceable
->biçem sayfası</replaceable
+>stil sayfası</replaceable
 > / <option
 >-stylesheet</option
 > <replaceable
->biçem sayfası</replaceable
+>stil sayfası</replaceable
 > </term>
 <listitem
 ><para
->Uygulama biçem sayfasını ayarlayın. Değer, biçem sayfasını içeren dosyanın yolu olmalıdır. </para
+>Uygulama stil sayfasını ayarlayın. Değer, stil sayfasını içeren dosyanın yolu olmalıdır. </para
 ></listitem>
 </varlistentry>
 
@@ -226,7 +226,7 @@
 ><para
 >Uygulama yerleşimi yönünü <methodname
 >Qt::RightToLeft</methodname
-> olarak ayarlayın. Bu seçenek hata ayıklama için düşünülmüştür, üretimde kullanılmamalıdır. Öntanımlı değer kendiliğinden kullanıcı yerelinden algılanır (ayrıca bkz <methodname
+> olarak ayarlayın. Bu seçenek hata ayıklama için düşünülmüştür, üretimde kullanılmamalıdır. Varsayılan değer kendiliğinden kullanıcı yerelinden algılanır (ayrıca bkz <methodname
 >QLocale::textDirection()</methodname
 >). </para
 ></listitem>
@@ -319,7 +319,7 @@
 > </term>
 <listitem
 ><para
->Öntanımlı pencere simgesini ayarlayın. </para
+>Varsayılan pencere simgesini ayarlayın. </para
 ></listitem>
 </varlistentry>
 
@@ -386,7 +386,7 @@
 > </term>
 <listitem
 ><para
->Yalnızca &Windows; platformu. XP yerel biçemli iletişim kutuları kullanır ve hiçbiri bunları devre dışı bırakmaz.</para
+>Yalnızca &Windows; platformu. XP yerel stilli iletişim kutuları kullanır ve hiçbiri bunları devre dışı bırakmaz.</para
 ></listitem>
 </varlistentry>
 
@@ -399,7 +399,7 @@
 > </term>
 <listitem
 ><para
->FreeType yazıtipi işletkesini kullanın. </para
+>FreeType yazı tipi işletkesini kullanın. </para
 ></listitem>
 </varlistentry>
 
