@@ -171,6 +171,10 @@ int main(int argc, char **argv)
         DIE("Unable to parse" << checkFilename);
     }
 
+    for (auto p : std::as_const(params)) {
+        delete[] p;
+    }
+
 #ifndef MEINPROC_NO_KARCHIVE
     if (!cache.isEmpty()) {
         if (!saveToCache(output, cache)) {
